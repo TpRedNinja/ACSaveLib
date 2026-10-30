@@ -9,5 +9,8 @@
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="Names\names.txt" LogicalName="AcSaveLib.names.txt" />
+    <EmbeddedResource Include="Games\Ac1\ac1_props.tsv" LogicalName="AcSaveLib.ac1_props.tsv" />
+    <EmbeddedResource Include="Games\Ac1\ac1_classes.tsv" LogicalName="AcSaveLib.ac1_classes.tsv" />
+    <EmbeddedResource Include="Games\Ac1\ac1_flags.tsv" LogicalName="AcSaveLib.ac1_flags.tsv" />
   </ItemGroup>
 </Project>

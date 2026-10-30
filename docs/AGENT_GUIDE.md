@@ -25,6 +25,9 @@ give identical mission output on 5 saves.
 - Python `lzallright` for quick LZO experiments.
 - CRC32 dictionary brute-forcer: tools/brute.c.
 
+## AC1
+AC1 is a different format family from AC4 (big-endian, plain, path-based fields). Read docs/FORMAT_AC1.md and FIELDS_AC1.md. The owner has AC1_notes.md (RE findings, 1400+ lines), AchievementProject.md and AC1Missions.json; ACViewer does not open AC1 saves.
+
 ## Property names
 Properties are stored as CRC32(name), not as text. Confirmed names live in src/AcSaveLib/Names/names.txt (~239). Unconfirmed candidates must NOT go in names.txt.
 All keys in the five sample saves are resolved. How the names were found (repeat this for a new game or new fields):

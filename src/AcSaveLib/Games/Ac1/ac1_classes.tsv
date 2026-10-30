@@ -1,0 +1,973 @@
+# AC1 class IDs: id<TAB>name<TAB>category (from the owner class_names.json; first name listed)
+2092	MapManager	save
+2093	DNAMemoryManager	save
+3003	SaveGameDataManager	save
+3004	HorseData	save
+3008	Persistence	save
+3009	TutorialManager	save
+3010	Accomplishment Manager	save
+58447219	MultiWorld	mission
+58447220	Acre_01	mission
+58447221	Acre_02	mission
+58447222	Acre_03	mission
+58447223	QA_Walkthrough	mission
+102823220	Arsuf_Save_point_002	save
+102823261	Arsuf_Save_point_004	save
+102823303	Crusader OOB fight	mission
+116270018	Damas_01	mission
+116270019	Damas_02	mission
+116270020	Damas_03	mission
+116270021	Damas_04	mission
+116270022	Damas_05	mission
+116270645	Jeru_02	mission
+116270646	Jeru_03	mission
+116270647	Jeru_04	mission
+116270648	Jeru_01	mission
+116271052	Masyaf_01	mission
+116271080	Arsuf_01	mission
+116271442	kingdom-Acre	mission
+116271445	kiingdom-damas	mission
+116271447	Kingdom-Damas	mission
+116271451	kingdom-jeru	mission
+116271452	kingdom-masyaf	mission
+116271453	kingdom-arsuf	mission
+152750855	M03_S03_1stPerson	mission
+152750995	M03_S04_Gentle_Push	mission
+157498761	Clue1_Eavesdropping	mission
+165386406	M03_S05_High/Low_Profile	mission
+165386730	M03_S06_Grab_And_Throw	mission
+165387106	M03_S07_Sprint	mission
+165387135	M03_S08_Social_Status_Icon	mission
+165387492	M03_S11_Witness_Indicator_Red	mission
+165393044	M03_S12_Social_Status_Open_Conflict	mission
+165393547	M03_S13_Social_Status_Cool_Down	mission
+165393567	M03_S14_Social_Status_Blending	mission
+165393601	M03_S15_Social_Status_Blended	mission
+206969173	Scholars_HelpingTrap_FM2	mission
+206969185	Vigilantes_HelpingTrap_FM3	mission
+206971577	Vigilantes_HelpingTrap_FM4	mission
+206971827	Vigilantes_HelpingTrap_FM5	mission
+206972543	Vigilantes_HelpingTrap_FM7	mission
+206972554	VigilantesHelping_Trap_FM6	mission
+241103822	Interrogation_M3_IN1	mission
+259423279	Post-MM Emir	mission
+266619414	M08_Morning_HideObjects	save
+266619421	M08_Evening_HideObjects	save
+266620767	M15_Evening_HideObjects	save
+266620774	M15_Morning_HideObjects	save
+266620781	M28_Evening_HideObjects	save
+266620788	M28_Morning_HideObjects	save
+266620795	M47_Evening_HideObjects	save
+266620802	M47_Morning_HideObjects	save
+266620809	M60_Evening_HideObjects	save
+266620816	M60_Morning_HideObjects	save
+266620823	M70_Evening_HideObjects	save
+266620830	M70_Morning_HideObjects	save
+266624937	M02_Morning_HideObjects	save
+285248128	Contextual Tutorials	save
+285248147	ContextTuto_ActionView	save
+285248148	ContextTuto_CoolDownYellow	save
+285248150	ContextTuto_BlendedGreen	save
+285248151	ContextTuto_BlendingBlue	save
+285248152	ContextTuto_Block	save
+285248153	ContextTuto_BureauClosed	save
+285248154	ContextTuto_CriticalState	save
+285248155	ContextTuto_DaggerPickpocket	save
+285248156	ContextTuto_FastAttack	save
+285248157	ContextTuto_FightingOnHorse	save
+285248158	ContextTuto_HighLowProfileCombat	save
+285248159	ContextTuto_Investigation	save
+285248160	ContextTuto_MapMarker	save
+285248161	ContextTuto_OCRed	save
+285248162	ContextTuto_PickpocketFailed	save
+285248165	ContextTuto_StrongAttack	save
+285248166	ContextTuto_Tackle	save
+285248167	ContextTuto_TargetGuardTower	save
+285248169	ReminderTuto_BenchHidePlace	save
+285248170	ReminderTuto_BlockDeflect	save
+285248171	ReminderTuto_CinematicGlitch	save
+285248174	ReminderTuto_FightOnHorse	save
+285248175	ReminderTuto_Grab	save
+285248176	ReminderTuto_GrabBreaker	save
+285248178	ReminderTuto_Interrogation	save
+285248179	ReminderTuto_PickpocketFailed	save
+285248180	ReminderTuto_ReachHighPoint	save
+285248181	ReminderTuto_RunFromGuard	save
+285248182	ReminderTuto_WitnessIndicator	save
+319818050	M03_S10_Stealth_Asssination	mission
+319828395	M03_S16_Social_Status_Anonymous	mission
+319830643	M03_S17_Blend	mission
+319830723	M03_S18_Synch_Bar	mission
+319830724	M03_S19_Eagle_Vision	mission
+319831773	M03_S20_Animus_Tutorial_Complete	mission
+343897480	Global_FastAttack_Tutorial	save
+343897488	Global_Block_Tutorial	save
+343897496	Global_StrongAttack_Tutorial	save
+343897504	Global_Profil_Tutorial	save
+345926341	OCRed	mission
+373982428	MemLog_DefendTheVillage	save
+373982429	MemLog_DefeatTemplars	save
+398316529	CoolDownYellow	mission
+398316786	BlendingBlue	mission
+406234273	M13_Tamir_Investigation	mission
+406234274	M13_Tamir_Mission	mission
+406234496	M20_Garnier_Investigation	mission
+406234497	M20_Garnier_Mission	mission
+406234541	M26_Talal_Investigation	mission
+406234542	M26_Talal_Mission	mission
+406234579	M33_Vizier_Investigation	mission
+406234580	M33_Vizier_Mission	mission
+415098416	ActionView	mission
+415098417	BureauClosed	mission
+415098418	FightingOnHorse	mission
+415098419	PickpocketFailed	mission
+415098422	CriticalState	mission
+425401000	M52_Sibrand_Investigation	mission
+425401001	M52_Sibrand_Mission	mission
+425401046	M39_Emir_Investigation	mission
+425401081	M58_Jubair_Investigation	mission
+425401082	M58_Jubair_Mission	mission
+425401135	M65_Maria_Investigation	mission
+425401136	M65_Maria_Mission	mission
+437710627	M99_S01_DNA	mission
+464021810	DoneAMemoryReplay 1	save
+464021811	SpawnOnAnimus 1	save
+464021856	DoneAMemoryReplay 2	save
+464021857	SpawnOnAnimus 2	save
+464021872	DoneAMemoryReplay 3	save
+464021873	SpawnOnAnimus 3	save
+464021888	DoneAMemoryReplay 4	save
+464021889	SpawnOnAnimus 4	save
+464021904	DoneAMemoryReplay	save
+464021905	SpawnOnAnimus 5	save
+464021922	SpawnOnAnimus 6	save
+464021923	DoneAMemoryReplay	save
+464021936	DoneAMemoryReplay 7	save
+464021937	SpawnOnAnimus 7	save
+465351044	M06_CloseFortressDoor	mission
+465351045	M06_OpenFortressDoor	mission
+466424812	ContextTuto_AssassinationMission_Tamir	save
+466424819	ContextTuto_AssassinationMission 1	save
+466424829	ContextTuto_AssassinationMission_Garnier	save
+466424836	ContextTuto_AssassinationMission	save
+466424846	ContextTuto_AssassinationMission_Talal	save
+466424847	ContextTuto_AssassinationMission	save
+466577366	Global_Investigation_Tutorial	save
+466577510	Global_TargetAtGuardTower_Tutorial	save
+466578445	Global_Tackle_Tutorial	save
+466580462	Dismount_Tutorial_Popup	mission
+466580463	ReachHighPoint_Tutorial_Popup	mission
+535323015	Mx_Sx_Scene_StartNight 1	save
+535323022	M60_Evening	mission
+535323023	M60_Night	mission
+535323024	M60_Morning	mission
+546662125	FreeMission_FM8_Reward_Vigilantes	mission
+554046891	Global_Dagger_Tutorial_001	save
+554046892	Global_Dagger_Tutorial_002	save
+554046893	Global_Dagger_Tutorial_003	save
+554046894	Global_Dagger_Tutorial_004	save
+554046895	Global_Dagger_Tutorial_005	save
+561971875	War_Camera_Mastershot	mission
+572236845	MemoryLog_Village	mission
+572236906	MemoryLog_Templars	mission
+586830382	1st Map Marker - Get Ark	save
+586830383	2nd Map Marker - Go to Sinan	save
+586832507	BlendedGreen	mission
+609714042	FightMaster_Tutorial_C	mission
+609714043	FightMaster_Tutorial_D	mission
+609714088	CountOr Mission 1	mission
+616069199	M03_S19_Eagle_Vision_Assassination	mission
+616069448	M03_S19_Eagle_Vision_Investigation	mission
+627692322	AssassinsCreed	mission
+627692323	M26_Talal	mission
+627692326	Mandatory_Pickpocket_P1	mission
+631612104	Bureau_Initial 1	mission
+631612105	Bureau_PostMM 1	mission
+631612106	Bureau_PreMM 1	mission
+634600621	MM71_KillSinan	mission
+642457611	M33_Vizier	mission
+642457614	Bureau_Initial 2	mission
+642457615	Bureau_PostMM 2	mission
+642457616	Bureau_PreMM 2	mission
+642457618	FreeMission_FM1	mission
+657353456	FreeMission_FM1	mission
+657650702	Mandatory 3: Pickpocket 1 - (M3_Pp1)	mission
+657650703	Mandatory 2: Eavesdropping 1 - (M2_Ed1)	mission
+670458469	M20_Garnier	mission
+670458652	Pickpocket_M3_PP1	mission
+674798380	Menu_Ingame_001	save
+676742679	FreeMission_FM2	mission
+676742691	FreeMission_FM3	mission
+678197412	M99_S02_HUD	mission
+691976047	Eavesdropping_OP2_ED2	mission
+695892940	Menu_Ingame_001	save
+697802958	Set_MM_Sinan_Ambiance	mission
+707524755	ReminderRunFromGuard	save
+707524765	ReminderBenchHidePlace	save
+707524766	ReminderFightOnHorse	save
+707524786	ReminderReachHighPoint	save
+707524793	ReminderWitnessIndicator	save
+714192675	UnlockDoorToParadise	mission
+718407179	Bureau_WhileMM 1	mission
+718407180	FreeMission_FM2	mission
+718407181	FreeMission_FM3	mission
+718407182	FreeMission_FM4	mission
+718407183	FreeMission_FM5	mission
+724302789	Global_MapMarker_Tutorial	save
+727423003	Arsuf Marker	save
+727505287	FreeMission_FM6	mission
+727505288	FreeMission_FM7	mission
+727505289	FreeMission_FM8	mission
+727505290	FreeMission_FM9	mission
+731185190	Menu_Ingame_001	save
+737193383	ContextualTutorial_KilledInnocence	save
+737193384	Global_KilledInnocence	save
+742071941	Pickpocket_OP3_PP3	mission
+742071947	M45_Montferrat	mission
+742072096	Eavesdropping_M1_ED1	mission
+742072101	Pickpocket_OP3_PP3	mission
+742072107	M52_Sibrand	mission
+746183747	M69_RobertDeSable_MM	mission
+785552757	Bureau_PreMM 3	mission
+785552758	Bureau_Initial 3	mission
+785552759	Bureau_PostMM 3	mission
+785820516	Bureau_WhileMM 2	mission
+797871678	FreeMission_FM1	mission
+798515786	M58_Jubair	mission
+806401044	Menu_Ingame_001	save
+812061837	MM_Talal	mission
+812121442	FreeMission_FM3	mission
+812121443	FreeMission_FM4	mission
+812121576	FreeMission_FM5	mission
+814645553	E3_RHP_Intro	mission
+814772548	FreeMission_FM6	mission
+815244731	FreeMission_FM7	mission
+815244845	FreeMission_FM8	mission
+815244980	FreeMission_FM9	mission
+817218959	Kingdom	mission
+817888058	Bureau_Initial 4	mission
+817888059	Bureau_WhileMM 3	mission
+817888060	Bureau_PreMM  4	mission
+817888061	Bureau_PostMM 4	mission
+821141044	Optional_Eavesdropping_ED4	mission
+830872728	FreeMission_FM1	mission
+830872736	M13_Tamir	mission
+830872751	Bureau_PreMM 5	mission
+830872752	Bureau_Initial 5	mission
+830872753	Bureau_WhileMM 4	mission
+830872754	Bureau_PostMM 5	mission
+830872755	FreeMission_FM2	mission
+830872756	FreeMission_FM3	mission
+830873566	Optional 1: Eavesdropping 2 - (Op1_Ed2)	mission
+830873567	Optional 3: Pickpocket 2 - (Op3_Pp2)	mission
+854073123	M65_Maria	mission
+854073124	M39_Emir	mission
+854073140	Mandatory_Pickpocket_PP1	mission
+854073144	Bureau_Initial 6	mission
+854073145	Bureau_PreMM 6	mission
+854073146	Bureau_WhileMM 5	mission
+854073147	Bureau_PostMM 6	mission
+854073148	Mandatory_Eavesdropping_ED1	mission
+854073361	Bureau_WhileMM 6	mission
+854073362	Bureau_PostMM 7	mission
+854073363	Bureau_PreMM 7	mission
+854073364	Bureau_Initial	mission
+854073368	Mandatory_Pickpocket_PP1	mission
+854073371	Eavesdropping_ED1	mission
+862344031	FreeMission_FM4	mission
+862684080	FreeMission_FM5	mission
+862684331	FreeMission_FM6	mission
+862684467	FreeMission_FM7	mission
+862684500	FreeMission_FM8	mission
+863631498	ReachHighPoint_HP1	mission
+872515326	MM_Tamir	mission
+872515335	MM_Vizier	mission
+874127674	FreeMission_FM10	mission
+874127769	ReachHighPoint_HP01	mission
+874127770	ReachHighPoint_HP02	mission
+874127771	ReachHighPoint_HP03	mission
+874127772	MM_Garnier	mission
+880774168	M70_Night	mission
+880774169	M70_Morning	mission
+880774170	M70_Evening	mission
+880774186	M70_S01_NightSpeech	mission
+880778325	M70_S02_OptionalHints	mission
+880778326	Mx_Sx_Scene_StartNight 2	save
+880778482	M70_S04_LucyNightBarks	mission
+880778483	M99_S22_HideInventory	mission
+880778585	M99_SO8_NightSleep	mission
+880778586	M99_S18_DestroyLucy	mission
+880778600	M70_S03_MorningBarks	mission
+880785416	M72_S01_NightSpeech	mission
+880786086	M60_S03_MorningSpeech	mission
+880786088	Mx_Sx_Scene_StartMemoryBlock	mission
+881016221	MM_KillSinan	mission
+882332864	ReachHighPoint_HP1	mission
+882332865	ReachHighPoint_HP2	mission
+882332866	ReachHighPoint_HP3	mission
+882332867	MM_Montferrat	mission
+882332868	Bureau_Initial 8	mission
+882332869	Bureau_PreMM 8	mission
+882332870	Bureau_PostMM 8	mission
+882332871	FreeMission_FM1	mission
+882332873	FreeMission_FM3	mission
+882333067	ReachHighPoint_HP1	mission
+882333068	ReachHighPoint_HP2	mission
+882333069	ReachHighPoint_HP3	mission
+882333070	Bureau_Initial	mission
+882333071	Bureau_PreMM 9	mission
+882333072	MM_Sibrand	mission
+882333073	Bureau_WhileMM 7	mission
+882333074	Bureau_PostMM 9	mission
+882333075	FreeMission_FM1_Port	mission
+882333076	FreeMission_FM2	mission
+882333077	FreeMission_FM3	mission
+882333078	FreeMission_FM4	mission
+882333079	FreeMission_FM5	mission
+882333080	FreeMission_FM6	mission
+882333081	FreeMission_FM7	mission
+930370231	Vizier Popup To Masyaf	mission
+930370256	Jubair Popup To Masyaf	mission
+930370267	Sibran Popup To Masyaf	mission
+931568108	ReachHighPoint_HP1	mission
+931568116	ReachHighPoint_HP2	mission
+931568117	ReachHighPoint_HP3	mission
+941289772	Reach High Point 1	mission
+945315325	ReachHighPoint_HP2	mission
+945315326	ReachHighPoint_HP3	mission
+945315327	ReachHighPoint_HP1	mission
+956522643	ReachHighPoint_HP1	mission
+956522644	ReachHighPoint_HP2	mission
+956522645	ReachHighPoint_HP3	mission
+956522661	ReachHighPoint_HP1	mission
+956522662	ReachHighPoint_HP2	mission
+956522663	ReachHighPoint_HP3	mission
+956522691	ReachHighPoint_HP2	mission
+956522692	ReachHighPoint_HP3	mission
+959063896	Bureau_WhileMM 8	mission
+977766738	ReachHighPoint_HP1	mission
+977766739	ReachHighPoint_HP2	mission
+977766740	ReachHighPoint_HP3	mission
+1005212771	T15 - Free-step Tutorial Part 1	save
+1005212773	T17 - Assassination Tutorial	save
+1005212774	T 18 - Glitch Tutorial	save
+1005212776	T 20 - Free-step Tutorial Part 2	save
+1005212777	T21 - Walling Tutorial	save
+1005212779	Malik Path	mission
+1005212780	Malik Brother Path	mission
+1005212782	M02_SolomonTemple	mission
+1013569902	M69_RobertDeSable	mission
+1016827336	Main - Before Brefing	mission
+1016827387	Main - After Must See	mission
+1040056258	M05_HorseTutorial	mission
+1040056261	01_EnterMasyaf	mission
+1040056263	GPS_Tutorial	mission
+1045371048	M06_MasyafUnderAttack	mission
+1045371051	T28 Quick Inventory Tutorial	mission
+1045371065	Fake Fights	mission
+1045371076	06_LogTrap	mission
+1051401290	Solomon Temple Limitation	mission
+1074881164	Contain Player in Masyaf	mission
+1074881165	Contain Player out of Fortress	save
+1083626741	Mx_Sx_Scene_StartMemoryBlock 2	save
+1083629131	M60_S03_MorningBarks	mission
+1083630517	M28_S04_LucyNightBarks	mission
+1083631678	M60_S04_LucyNightBarks	mission
+1083631729	M99_SO8_NightSleep	mission
+1083631730	M99_SO8_NightSleep	mission
+1084682560	Crowd_Manager	mission
+1100876471	Memory Block 1	mission
+1100876486	Memory Block 1 - Masyaf	mission
+1102381365	03_LOF_RaufMS	mission
+1102385968	Wounded Assassin	mission
+1102396239	Contain Player in Kingdom	mission
+1111382387	OutOfBound_Damas	save
+1111382388	OutOfBound_Acre	save
+1111382389	OutOfBound_Jerusalem	save
+1111382423	OutOfBound_Damas	save
+1111382424	OutOfBound_Acre	save
+1111382425	OutOfBound_Jerusalem	save
+1116882508	Jerusalem MB3 OMB	mission
+1116882535	Jerusalem MB5 OMB	mission
+1116882559	Acre MB3 OMB	mission
+1116882612	Damascus MB3 OMB	mission
+1147913948	03_ReportToSinan	mission
+1165355488	Close_Tower_Trap	mission
+1180844313	02_AssassinsRetreat	mission
+1181353001	01_RaufPanic	mission
+1225424110	Global_PickpocketFailed_Reminder	save
+1255998758	Global_Interrogation_Reminder	save
+1255998952	Global_Grab_Reminder	save
+1255999064	Global_GrabBreak_Reminder	save
+1255999116	Global_BlockDeflect_Reminder	save
+1304473665	02_Abbas	mission
+1304473667	Abbas_Loop	mission
+1315020873	FreeMission_10	mission
+1315020874	FreeMission_FM10_Reward_Vigilantes	mission
+1327767258	Free_Mission_FM6	mission
+1327767259	Vigilantes_HelpingTrap_FM6	mission
+1330022021	Damascus intro Master shot	mission
+1330022082	Acre Intro Mastershot	mission
+1330022148	Jerusalem Intro Mastershot	mission
+1366708164	TUT_FortressRules	mission
+1366708398	RaufPanic_Loop	mission
+1407868332	ContextTuto_Sprint	save
+1407868333	Global_SprintTutorial	save
+1418489382	MM_Maria	mission
+1448386234	AssassinationTuto Presentation Cam	mission
+1465300009	M08_S04_LucyNightBarks	mission
+1465300017	M15_S04_LucyNightBarks	mission
+1466409140	FreeMission_FM5_Reward_Vigilantes	mission
+1469615614	Damascus_Bureau_Leader_No_Mission 1	mission
+1469615624	Jerusalem_Bureau_Leader_No_Mission	mission
+1469615632	Acre_Bureau_Leader_No_Mission	mission
+1469615633	Damascus_Bureau_Leader_No_Mission 2	mission
+1487995171	M58_Jubair_MissionOpened	mission
+1498504117	04_LOF_ClimbTower	mission
+1500256392	White room retry re-init	mission
+1503077546	EnableEnticer_FM8_Vigilantes	mission
+1519634205	02_InvestigationAdvice	mission
+1519634206	Sinan_Breifing_Loop	mission
+1519634207	InvestigationAdvice_Loop	mission
+1554136056	CameraClimb	mission
+1562422988	EnableEnticer_FM1_Vigilante	mission
+1565350250	FastAttack_Tutorial	mission
+1565350251	Block_Tutorial	mission
+1565350252	StrongAttack_Tutorial	mission
+1565350253	Profile_Tutorial	mission
+1601331424	M13_Tamir_MissionOpened	mission
+1601331552	M20_Garnier_MissionOpened	mission
+1601331578	M26_Talal_MissionOpened	mission
+1601331604	M45_Montferrat_MissionOpened	mission
+1601331630	M39_Emir_MissionOpened	mission
+1601331656	M33_Vizier_MissionOpened	mission
+1601331682	M52_Sibrand_MissionOpened	mission
+1601331733	M65_Maria_MissionOpened	mission
+1657684342	MM_Jubair	mission
+1696855778	M70_S03_MorningSpeech	mission
+1715158576	FreeMission_FM4_Reward_Scholars	mission
+1726886021	HelpingVillagers	mission
+1727640117	FreeMission_FM9	mission
+1727640118	Vigilantes_HelpingTrap_FM9	mission
+1767662539	Bureau_WhileMM 9	mission
+1767729675	Damascus	mission
+1767729676	Scholars Helping Trap 1	mission
+1770135655	Clue4_Pickpocket_Lucy	mission
+1831185910	FightMaster_Tutorial_A	mission
+1834010952	RunningAssassins	mission
+1850112386	InjuredVillagers	mission
+1857452235	MM_Emir	mission
+1881346978	Arsuf_Save_point_001	save
+1881347033	Arsuf_Save_point_003	save
+1901545395	FreeMissionTutorial	mission
+1907157554	ReachHighPoint_HP4	mission
+1907158142	ReachHighPoint_HP5	mission
+1907158730	ReachHighPoint_HP6	mission
+1907159369	ReachHighPoint_HP7	mission
+1907161047	ReachHighPoint_HP8	mission
+1907161619	ReachHighPoint_HP9	mission
+1907162252	ReachHighPoint_HP10	mission
+1912653018	ReachHighPoint_HP4	mission
+1912653068	ReachHighPoint_HP5	mission
+1912655817	ReachHighPoint_HP6	mission
+1919347621	ReachHighPoint_HP7	mission
+1919348065	ReachHighPoint_HP8	mission
+1919348543	ReachHighPoint_HP9	mission
+1919348986	ReachHighPoint_RHP10	mission
+1924095589	ReachHighPoint_HP11	mission
+1934704658	Clue5_Conference_Door_Code	mission
+1946537847	ReachHighPoint_HP4	mission
+1949745651	ReachHighPoint_HP4	mission
+1949749624	ReachHighPoint_HP5	mission
+1958793622	ReachHighPoint_HP6	mission
+1958795260	ReachHighPoint_HP7	mission
+1961885561	ReachHighPoint_HP4	mission
+1961885615	ReachHighPoint_HP5	mission
+1964032213	ReachHighPoint_HP6	mission
+1964032546	ReachHighPoint_HP7	mission
+1964032880	ReachHighPoint_HP8	mission
+1964033668	ReachHighPoint_HP9	mission
+1970492929	Investigation Completed	mission
+1970493057	Investigation Completed	mission
+1970493082	Investigation Completed	mission
+1970493100	Investigation Ccompleted	mission
+1970493115	Investigation Completed	mission
+1970493132	Investigation Completed	mission
+1970493147	Investigation Completed	mission
+1970493163	Investigation Completed	mission
+1970493182	Investigation Completed	mission
+1990703067	FortressAbilityController	mission
+1996477482	Global_CinematicGlitch_Reminder	save
+1998672061	ReachHighPoint_HP4	mission
+1998672180	ReachHighPoint_HP5	mission
+1998672266	ReachHighPoint_HP6	mission
+1998672403	ReachHighPoint_HP7	mission
+1998672523	ReachHighPoint_HP8	mission
+1998672645	ReachHighPoint_HP9	mission
+2000285568	ReachHighPoint_HP4	mission
+2000285734	ReachHighPoint_HP5	mission
+2000285960	ReachHighPoint_HP6	mission
+2000286044	ReachHighPoint_HP7	mission
+2003412668	ReachHighPoint_HP04	mission
+2003412722	ReachHighPoint_HP05	mission
+2003412744	ReachHighPoint_HP06	mission
+2003412772	ReachHighPoint_HP07	mission
+2003412800	ReachHighPoint_HP08	mission
+2003412828	ReachHighPoint_HP09	mission
+2003413395	ReachHighPoint_HP10	mission
+2003413423	ReachHighPoint_HP11	mission
+2009059749	ReachHighPoint_HP4	mission
+2009060168	ReachHighPoint_HP5	mission
+2009060231	ReachHighPoint_HP6	mission
+2015060383	FreeMission_FM8_Reward_Scholars	mission
+2015791115	ReachHighPoint_HP5	mission
+2015791650	ReachHighPoint_HP6	mission
+2015793106	ReachHighPoint_HP7	mission
+2015793459	ReachHighPoint_HP8	mission
+2015793524	ReachHighPoint_HP9	mission
+2041162034	ContextTuto_NoEagleVision	save
+2041162035	Global_NoEagleVisionTuto	save
+2043775268	M15_Day2	mission
+2043775280	M15_S01_NightSpeech	mission
+2043775566	Mx_Sx_Scene_StartNight 4	save
+2043775567	M15_S02_OptionalHints	mission
+2043775569	Mx_Sx_Scene_StartNight	mission
+2043777684	M99_S21_DestroyLucy	mission
+2043788689	M15_S03_MorningSpeech	mission
+2067992634	Interrogation_M2_INT1	mission
+2078130654	MassacreScenes	mission
+2093050103	ContextTuto_AssassinationMission_Montferrat	save
+2093050241	ContextTuto_AssassinationMission 4	save
+2093051223	ContextTuto_AssassinationMission_Sibrand	save
+2093051224	ContextTuto_AssassinationMission	save
+2093051239	ContextTuto_AssassinationMission_Emir	save
+2093051240	ContextTuto_AssassinationMission	save
+2093051254	ContextTuto_AssassinationMission_Maria	save
+2093051255	ContextTuto_AssassinationMission	save
+2093051297	ContextTuto_AssassinationMission_Vizier	save
+2093051298	ContextTuto_AssassinationMission 8	save
+2093051311	ContextTuto_AssassinationMission_Jubair	save
+2093051312	ContextTuto_AssassinationMission 9	save
+2202146831	M28_Day3	mission
+2202148717	M28_S01_NightSpeech	mission
+2202154374	M28_S02_OptionalHints	mission
+2202154476	Mx_Sx_Scene_StartNight 4	save
+2221553818	FightScenarios	mission
+2266055958	M99_S21_DestroyLucy	mission
+2266055959	M99_S08_NightSleep	mission
+2266061525	M47_Day4	mission
+2266061526	M47_S01_NightSpeech	mission
+2266061964	M99_S03_DesmondDoorRestricted	mission
+2266061965	M99_S21_DestroyLucy	mission
+2266061966	M99_SO8_NightSleep	mission
+2266061967	M47_S02_MorningSpeech	mission
+2266061970	Mx_Sx_Scene_StartMemoryBlock 3	save
+2282147960	FightMaster_Tutorial_B	mission
+2308058387	Memory Block 2	mission
+2308058638	Memory Block 3	mission
+2308058656	Memory Block 4	mission
+2308058680	Memory Block 5	mission
+2308058698	Memory Block 6	mission
+2311396771	OverrideDefaultSpawner	save
+2311396893	OverrideDefaultSpawner1	save
+2311396894	OverrideDefaultSpawner3	save
+2311396912	OverrideDefaultSpawner4	save
+2311731110	CloseMasyafDoors	mission
+2311731111	OpenMasyafDoors	mission
+2363908924	FreeMission_FM11	mission
+2363908926	FreeMission_FM12	mission
+2379333997	M60_Day5	mission
+2384068285	M60_S01_NightSpeech	mission
+2384068286	M60_S02_OptionalHints	mission
+2385071363	M02_AnimusIntro	mission
+2385071367	M02_S01_AnimusIntro	mission
+2385072451	M03_MemoryCorridor	mission
+2391047376	M28_S06_ReEnableAnimus	mission
+2391047414	M99_S32_ResetDoor	mission
+2391047442	M99_S32_ResetDoor	mission
+2391047451	M99_S32_ResetDoor	mission
+2444672619	Special RHP Reminder	save
+2468147745	M08_S08_BathroomSet	mission
+2468147776	M15_S07_BathroomSet	mission
+2468147798	M28_S09_BathroomSet	mission
+2468147822	M47_S04_BathroomSet	mission
+2468147844	M60_S05_BathroomSet	mission
+2468147866	M70_S05_BathroomSet	mission
+2468147888	M72_S03_BathroomSet	mission
+2487054822	ActivateMasyafFlags	mission
+2502675588	FreeMission_FM10	mission
+2502675605	FreeMission_FM11	mission
+2529886158	InvestigationContextualTuto_Damas	save
+2539729074	MasyafCrowd_Picpocket	mission
+2546550750	InvestigationContextualTuto_Acre	save
+2546643619	InvestigationContextualTuto_Jeru	save
+2547657982	X-Tra_MM_Scenes	mission
+2553721648	Outskirts Setup Acre	save
+2553721653	Free Mission 1	mission
+2561692860	M15_Day2_Night	mission
+2561692870	M15_Day2_Morning	mission
+2561697886	Mx_Sx_Scene_StartMemoryBlock 4	save
+2561700097	M99_S22_HideInventory	mission
+2582888175	ShowCityCam	mission
+2588646576	Free Mission 2	mission
+2589622815	Enable Enticer 1	mission
+2590315478	Al Mualim - MB03 briefing	mission
+2590315479	Al-Mualim - Talal Debrief	mission
+2590315480	Al Mualim - Garnier Debrief	mission
+2590315481	Post-Garnier MM	mission
+2590315482	Post-Talal MM	mission
+2590315485	Unload MB3	mission
+2592877460	M72_S04_Secret_Ending	mission
+2592879436	M08_SO6_DresserClosed	mission
+2592880407	M08_SO7_DresserLockBark	mission
+2592880413	M08_S07_DresserLockBark	mission
+2686475585	M15_S05_MorningBarks	mission
+2687824818	Mandatory_Interrogation_IN1	mission
+2696337822	Templar Player Attackers	mission
+2698756996	End Memory Block 3	mission
+2698757038	End Memory Block 4	mission
+2698757057	End Memory Block 5	mission
+2698757145	End Memory Block 2	mission
+2716095706	M99_S32_ResetDoor	mission
+2716336547	MissionItemInformerAssassination 1	mission
+2716336548	MissionItemInformerFlag 1	mission
+2716336612	MissionItemInformerAssassination 1	mission
+2716336613	MissionItemInformerFlag 1	mission
+2716336679	MissionInformerAssassination 1	mission
+2725135542	Outskirts Setup Jerusalem	save
+2757456867	Skydome FX	mission
+2778624178	MissionInformerAssassinationArcher	mission
+2794950200	Reach High Point 2	mission
+2794950213	Reach High Point 3	mission
+2794950214	Reach High Point 4	mission
+2794950215	Reach High Point 5	mission
+2794950216	Reach High Point 6	mission
+2794950217	Reach High Point 7	mission
+2794950218	Reach High Point 8	mission
+2794950219	Reach High Point 9	mission
+2794950220	Reach High Point 10	mission
+2794950221	Reach High Point 11	mission
+2797450938	MB02_Masyaf_Investigation	mission
+2797450943	03_EavesdroppingMission	mission
+2797450944	05_InterrogationMission	mission
+2797450945	04_PickpocketMission	mission
+2797450946	01_Sinan_Breifing	mission
+2840340991	MB03_M20_Garnier_Archers_ASK1	mission
+2840534711	MissionItemInformerAssassinationArcher 1	mission
+2845651727	Garnier Popup To Masyaf	mission
+2845651728	Talal Popup To Masyaf	mission
+2851031757	MB04_M45_Montferrat_Archers_ASK1	mission
+2855464721	MB02_M13_Tamir_Freerun_FR1	mission
+2855883905	AfterRetryAndAfterMM	mission
+2855900913	Informer Race 1	mission
+2855994236	Informer Race 1	mission
+2858065936	MB04_M33_Vizier_Kiosks_BK1	mission
+2858907720	MB05_M58_Jubair_Freerun_FR1	mission
+2861389450	MB04_M45_Montferrat_Kiosks_BK1	mission
+2889396528	ContextTuto_BlendHorse	save
+2906314750	M58_Jubair_Kiosks_BK1	mission
+2907566297	MissionInformerEscort 1	mission
+2907567261	MissionItemInformerEscort 1	mission
+2909688964	MB02_M13_Tamir_Escort_ES1	mission
+2913486109	MissionItemInformerEscort 1	mission
+2916042500	AdvacnceFightRemoveAbilities	mission
+2920551781	M72_S05_Post_Credits	mission
+2920555669	M15_S08_Lucy_Computer_Special	mission
+2920561702	M99_S33_Post_Pickpocket_Lucy	mission
+2927098981	Present - While MB01	mission
+2927098994	Present - While MB02	mission
+2927098995	Present - While MB03	mission
+2927098996	Present - While MB04	mission
+2927098997	Present - While MB05	mission
+2927098998	Present - While MB06	mission
+2927098999	M70_Day6	mission
+2927099000	Memory Block 7	mission
+2927099001	M72_Day7	mission
+2927099002	M01_Flashback	mission
+2927099067	Present - While MB07	mission
+2927099109	Load MB1	mission
+2927099110	Unload MB1	save
+2927099520	Unload MB2	mission
+2927099522	Unload MB4	mission
+2927099523	Unload MB5	mission
+2927099526	Unload MB6	mission
+2927099528	Unload MB7	mission
+2927099584	Al Mualim - MB04 Briefing	mission
+2927099585	Montferrat Popup To Masyaf	mission
+2927099586	Post-MM Montferrat	mission
+2927099587	Al Mualim - Montferrat Debrief A	mission
+2927099588	Emir Popup To Masyaf	mission
+2927099590	Al-Mualim - Emir Debrief A	mission
+2927099592	Post-MM Vizier	mission
+2927099593	Al-Mualim - Vizier Debrief A	mission
+2927099675	Al-Mu- MB05 Briefing	mission
+2927099676	Post-MM Sibrand	mission
+2927099678	Al-Mualim - Sibrand Debrief	mission
+2927099680	Post-MM Jubair	mission
+2927099681	Al-Mualim- Jubair Debrief	mission
+2927099735	Al-Mualim - MB06 Briefing	mission
+2927099736	End Memory Block 6	mission
+2927099749	MB02 - Side Quest	mission
+2927440048	M28_Evening	mission
+2927440063	M28_Morning	mission
+2927440070	M28_S03_MorningSpeech	mission
+2927440072	M28_S04_MorningBarks	mission
+2927440096	Mx_Sx_Scene_StartMemoryBlock 5	save
+2931000742	NPC path to Temple	mission
+2931000743	Assassination Tutorial	mission
+2931000744	Assassins see Ark and Robert	mission
+2931000745	Altair fails Robert Assassination	mission
+2964819019	MB03 - Side Quest	mission
+2964819020	M20 Acre Side Quest	mission
+2964819021	M26 Jerusalem Side Quest	mission
+2964819110	MB04 - Side Quest	mission
+2964819111	M39 Jerusalem Side Quest	mission
+2964819112	M33 Damascus Side Quest	mission
+2964819113	M45 Acre Side Quest	mission
+2964819154	MB05 - Side Quest	mission
+2964819155	M58 Damascus Side Quest	mission
+2964819156	M52 Acre Side Quest	mission
+2964819196	MB06 - Side Quest	mission
+2964819197	M65 Jerusalem Side Quest	mission
+2978756926	Flashback Scene	mission
+2981679381	Re-Enable Animus	mission
+2981681769	Quick Teleport 1	mission
+2981681770	Quick Teleport 2	mission
+2981681771	Quick Teleport 3	mission
+2981681772	CountOr Mission 2	mission
+2981681823	Quick Teleport 1	mission
+2981681824	CountOr Mission 1	mission
+2981681825	Quick Teleport 2	mission
+2981681844	Quick Teleport 1	mission
+2985281449	Kingdom_MasterSHAT	mission
+2988485864	Door_Access	mission
+3014305743	AdvancedFightTutorial_MasterScene	mission
+3015165868	M13 Damascus Side Quest	mission
+3051153015	M72_Night	mission
+3051245431	MissionItemInformerFlag 1	mission
+3051245432	MissionItemInformerAssassination 1	mission
+3051245439	MissionItemInformerAssassination 2	mission
+3051245771	MissionItemInformerFlag 1	mission
+3051245772	MissionItemInformerAssassination 1	mission
+3051245833	MissionItemInformerAssassination 1	mission
+3051245889	MissionItemInformerAssassination 1	mission
+3060749368	Scholars Helping Trap 1	mission
+3063950381	Load Memory Corridor	mission
+3064184129	Hard Save mission action open	mission
+3073572177	Library_Guards	mission
+3080552060	Victims_Scenes	mission
+3083308811	M08_Day1	mission
+3083308812	M08_Morning	mission
+3083308813	M08_Night	mission
+3083308881	M08_S01_NightSpeech	mission
+3083308893	M08_S03_OptionalHints	mission
+3083308894	M08_S02_Eavesdropping	mission
+3083308908	Mx_Sx_Scene_StartNight 5	save
+3083308922	M99_S08_NightSleep	mission
+3083311019	M99_S18_DestroyLucy	mission
+3083311196	M08_S05_MorningSpeech	mission
+3083311220	Mx_Sx_Scene_StartMemoryBlock	mission
+3083311221	M08_S06_MorningBarks	mission
+3083311640	M99_S22_HideInventory	mission
+3084801128	07_RankDown	mission
+3100782877	Arsuf_Out_Of_Bound	save
+3100782878	OutOfBound_Kingdom	save
+3100782922	Arsuf_Out_Of_Bound	save
+3112165732	ReminderTuto_ThrowDaggers	save
+3112165733	ReminderThrowDaggers	save
+3119386425	Second_Target	mission
+3119386426	First_Target	mission
+3119386427	Al Mualim - Montferrat Debrief B	mission
+3119386428	First_Target	mission
+3119386429	Second_Target	mission
+3119386430	Al-Mualim - Emir Debrief B	mission
+3119386431	Second_Target	mission
+3119386432	First_Target	mission
+3119386433	Al-Mualim - Vizier Debrief B	mission
+3119397862	Unload_FlashBack	mission
+3137256715	Al-Mualim 1	mission
+3216160637	Load_Masyaf	mission
+3217499545	Free Mission DamasOutskirts	mission
+3217499600	Scholars Helping Trap DamasOutskirts	mission
+3217504208	Alchemist Stay Dead	mission
+3263581237	M08_S04_DoorLockBark	mission
+3263582083	M15_S06_DressedOpenedBark	mission
+3265486033	Free_Mission_FM1	mission
+3265486034	Vigilantes_Helping_Trap_FM1	mission
+3268124141	Kingdom_Tutorials	mission
+3268124142	PreReachHighPoint_Tutorial_Popup	mission
+3268124143	ReachHighPoint_Tutorial	mission
+3270701912	M39_Emir_Mission	mission
+3272180488	Free_Mission_FM2	mission
+3272180489	Vigilantes_Helping_Trap_FM2	mission
+3272180959	Free_Mission_FM3	mission
+3272180960	Vigilantes_Helping_Trap_FM3	mission
+3272181200	Free_Mission_FM4	mission
+3272181201	Vigilantes_Helping_Trap_FM4	mission
+3272181358	FreeMission_FM5	mission
+3272181359	Vigilantes HelpingTrap_FM5	mission
+3272181787	Free_Mission_FM7	mission
+3272181788	Vigilantes_Helping_Trap_FM7	mission
+3272181925	Free_Mission_FM8	mission
+3272181926	Vigilantes_Helping_Trap_FM8	mission
+3273617594	Horse_Tutorials	mission
+3273617656	Tutorial_AssassinHorse	mission
+3273617657	Tutorial_HorseSteer	mission
+3273617658	Tutorial_HorseJump	mission
+3287768859	Mandatory 3:  Interrogation 1 - (M3_Int1)	mission
+3301065875	Mandatory 1: Pickpocket 1 - (M1_Pp1)	mission
+3306076327	Mandatory_Interrogation_IN1	mission
+3326198408	M08_S06_DresserClosed	mission
+3334294010	Scholars_HelpingTrap_FM2	mission
+3334295198	Vigilantes_HelpingTrap_FM3	mission
+3334295550	Vigilantes_HelpingTrap_FM4	mission
+3334295764	Vigilantes_HelpingTrap_FM5	mission
+3334296004	Vigilantes_HelpingTrap_FM6	mission
+3334296356	Vigilantes_HelpingTrap_FM7	mission
+3349011213	M08_Evening	mission
+3349011986	M15_Evening	mission
+3349016829	M08_S07_DresserLockBark	mission
+3354083771	Scholars Helping Trap 1 Emir	mission
+3354083772	Free Mission Scholars Emir_FM6	mission
+3354083773	Scholars Helping Trap 2 Emir	mission
+3354637636	Interrogation_M3_IN1	mission
+3363890018	FreeMission_FM4	mission
+3363890019	FreeMission_FM5	mission
+3363890020	FreeMission_FM6	mission
+3363890021	FreeMission_FM7	mission
+3363890022	FreeMission_FM8	mission
+3363890023	FreeMission_FM9	mission
+3363890024	FreeMission_FM10	mission
+3363890025	FreeMission_FM11	mission
+3363890026	FreeMission_FM12	mission
+3369434443	ActivateTeleportChoice	mission
+3369434444	ActivateTeleportChoice_Masyaf	mission
+3369434448	ActivateTeleportChoice_Damascus	mission
+3369434449	ActivateTeleportChoice_Jerusalem	mission
+3369434450	ActivateTeleportChoice_Acre	mission
+3372359583	FreeMission_FM7_Reward_Scholars	mission
+3373232974	AltairFailsAssassination	mission
+3380847410	FreeMission_FM1_Reward_Scholars	mission
+3380847419	FreeMission_FM2_Reward_Vigilantes	mission
+3380848343	FreeMission_FM3_Reward_Vigilantes	mission
+3380848346	FreeMission_FM4_Reward_Vigilantes	mission
+3380848652	FreeMission_FM5_Reward_Vigilantes	mission
+3380848653	FreeMission_FM6_Reward_Vigilantes	mission
+3380848654	FreeMission_FM7_Reward_Vigilantes	mission
+3380848685	FreeMission_FM8_Reward_Vigilantes	mission
+3380848686	FreeMission_FM9_Reward_Vigilantes	mission
+3380848687	FreeMission_FM10_Reward_Vigilantes	mission
+3380848718	FreeMission_FM11_Reward_Vigilantes	mission
+3380848729	FreeMission_FM12_Reward_Vigilantes	mission
+3417216553	Mandatory 1: Interrogation 1 - (M1_Int1)	mission
+3448809545	Game Start	mission
+3453309830	05_LOF_Must-See&Tuto	mission
+3453309831	SpawnTheArmy	save
+3457460000	FreeMission_FM2	mission
+3457460001	FreeMission_FM4	mission
+3457460002	FreeMission_FM5	mission
+3457460003	FreeMission_FM6	mission
+3457460004	FreeMission_FM7	mission
+3457460060	Scholars_HelpingTrap_FM1	mission
+3460045345	FreeMission_FM1_Reward_Vigilantes	mission
+3460045347	FreeMission_FM3_Reward_Vigilantes	mission
+3460045351	FreeMission_FM5_Reward_Vigilantes	mission
+3460045352	FreeMission_FM7_Reward_Vigilantes	mission
+3460045353	FreeMission_FM8_Reward_Vigilantes	mission
+3460045354	FreeMission_FM9	mission
+3460045355	FreeMission_FM9_Reward_Vigilantes	mission
+3460045455	FreeMission_FM2_Reward_Scholars	mission
+3466535094	PostReachHighPoint_Tutorial_Popup	mission
+3480358571	M45_Montferrat_Mission	mission
+3480358572	M45_Montferrat_Investigation	mission
+3488878065	OverrideDefaultSpawner2	save
+3506289656	Present	mission
+3506289662	Clue2_Bedroom_Door_Code	mission
+3520121776	FreeMission_FM8	mission
+3520121777	Vigilantes_HelpingTrap_FM8	mission
+3554667229	M28_Night	mission
+3554667439	M08_S08_EavesdroppingOver_Vidic	mission
+3554668321	M08_S09_EavesdroppingOver_Lucy	mission
+3558500980	FreeMission_FM1_Reward_Vigilantes	mission
+3558500981	FreeMission_FM2_Reward_Vigilantes	mission
+3558500982	FreeMission_FM3_Reward_Vigilantes	mission
+3558500983	FreeMission_FM4_Reward_Vigilantes	mission
+3558500984	FreeMission_FM6_Reward_Vigilantes	mission
+3558500985	FreeMission_FM7_Reward_Vigilantes	mission
+3558501335	M08_S07_WhileMB01	mission
+3558501358	M08_S07_WhileMB01	mission
+3558501368	M08_S07_WhileMB01	mission
+3558501374	M28_S07_WHILEMB04	mission
+3558501383	Scholars Helping Trap 1	mission
+3600854974	FinishEllipse	mission
+3600855732	FinishEllipse	mission
+3600855743	FinishEllipse	mission
+3616374283	00_Elipse&Save_MUA	mission
+3616374284	Elipse&Save_LOF	mission
+3657974351	FinishEllipse	mission
+3660431962	FinishEllipse	mission
+3660431973	FinishEllipse	mission
+3660438314	FinishEllipse	mission
+3660438338	FinishEllipse	mission
+3660438348	FinishEllipse	mission
+3670586139	E3_Menu_Start	mission
+3695189471	M47_Evening	mission
+3695189472	M47_Night	mission
+3695189473	M47_Morning	mission
+3695189544	M99_S22_HideInventory	mission
+3695195502	M47_S03_MorningBarks	mission
+3724222250	FreeMission_FM9_Reward_Scholars	mission
+3724222261	FreeMission_FM10_Reward_Scholars	mission
+3724222272	FreeMission_FM11_Reward_Scholars	mission
+3782971145	Free_Mission_FM1	mission
+3782971146	Vigilantes_HelpingTrap_FM1	mission
+3782971358	Free_Mission_FM2	mission
+3782971359	Vigilantes_HelpingTrap_FM2	mission
+3782971572	Free_Mission_FM3	mission
+3782971573	Vigilantes_HelpingTrap_FM3	mission
+3782971760	Free_Mission_FM4	mission
+3782971761	Scholars_HelpingTrap_FM4	mission
+3784371220	Secret_Ending_Achievement	mission
+3789055520	Free_Mission_FM5	mission
+3789055521	Scholars_HelpingTrap_FM5	mission
+3807191505	Mandatory 2; Eavesdropping - (M2_Ed1)	mission
+3807191506	Mandatory 3L Interrogation 1 - (M3_Int1)	mission
+3807191974	FreeMission_FM8	mission
+3816732872	Interrogation_Mission_IN1	mission
+3825390494	EnableEnticer_FM1_Scholars	mission
+3825390495	EnableEnticer_FM2_Scholars	mission
+3825390614	EnableEnticer_FM7_Vigilantes	mission
+3825390733	EnableEnticer_FM3_Scholars	mission
+3825390852	EnableEnticer_FM4_Vigilantes	mission
+3825390971	EnableEnticer_FM5_Vigilantes	mission
+3825391115	EnableEnticer_FM6_Vigilantes	mission
+3825391519	EnableEnticer_FM9_Vigilantes	mission
+3825391792	EnableEnticer_FM10_Vigilantes	mission
+3825391960	EnableEnticer_FM11_Vigilantes	mission
+3825392299	EnableEnticer_FM12_Vigilantes	mission
+3831298048	FreeMission_FM1	mission
+3831298049	FreeMission_FM1_Reward_Vigilantes	mission
+3831298504	FreeMission_FM2	mission
+3831298505	FreeMission_FM2_Reward_Vigilantes	mission
+3835968595	FreeMission_FM3	mission
+3835968596	FreeMission_FM3_Reward_Vigilantes	mission
+3835968754	FreeMission_FM4	mission
+3835968755	FreeMission_FM4_Reward_Vigilantes	mission
+3835968966	FreeMission_FM5	mission
+3835968967	FreeMission_FM5_Reward_Vigilantes	mission
+3835969181	FreeMission_FM7	mission
+3835969182	FreeMission_FM7_Reward_Vigilantes	mission
+3835969398	FreeMission_FM6	mission
+3835969399	FreeMission_FM6_Reward_Vigilantes	mission
+3837031326	M03_S01_Synch_Bar_Philosophy	mission
+3837031450	M03_S02_Puppeteering_Concept	mission
+3859493573	Masyaf_Camera_Intro	mission
+3859876984	Optional 3: Pickpocket 3 - (Op3_Pp3)	mission
+3869520215	Clue3_Pickpocket_Vidic	mission
+3918083802	TalkToStartAdvanceFight	mission
+3958573502	M28_S07_WhileMB04	mission
+3958573508	M28_S07_WhileMB04	mission
+3958573514	M28_S07_WhileMB04	mission
+4021657352	M99_S25_Lucy_Computer	mission
+4021657383	M99_S26_Vidic_Computer	mission
+4021658457	M99_S27_Conference_Computer	mission
