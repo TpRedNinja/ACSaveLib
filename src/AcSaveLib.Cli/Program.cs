@@ -43,6 +43,21 @@ switch (args[2])
             }
         break;
     }
+    case "models":
+    {
+        var pp = save.PlayerProgression; var pl = pp.Player;
+        Console.WriteLine($"ContextId={save.ContextId}");
+        Console.WriteLine($"Characters={pp.Characters.Count} snapshots={pp.CharacterSnapshots.Count} player containers={pl?.Containers.Count} money={pl?.Money} life={pl?.Life}/{pl?.MaxLife} shipLife={pl?.ShipLife} weapon={pl?.SelectedWeapon} equip={pl?.SelectedEquipment}");
+        Console.WriteLine($"Notorieties={pp.WorldNotorieties.Count} wanted={pp.WantedLevel} convoys={pp.NavalConvoys.Count} weaponKills={pp.WeaponKills.Count} toolKills={pp.ToolKills.Count} presentDay={pp.PresentDayEntityStates.Count} ammo={pp.RangedWeaponLoadedAmmo.Count}");
+        Console.WriteLine($"Accomplishments={save.Accomplishments.Entries.Count} completed={save.Accomplishments.Entries.Count(e => e.Completed)}");
+        Console.WriteLine($"Stats={save.GameStats.StatEntries.Count} toPost={save.GameStats.StatEntriesToPost.Count}");
+        Console.WriteLine($"Animus unlocked={save.AnimusDatabase.UnlockedEntries.Count} data={save.AnimusDatabase.EntriesData.Count}");
+        Console.WriteLine($"MapIcon worlds={save.MapIcons.SavedIcons.Count} icons={save.MapIcons.SavedIcons.Sum(w => w.Icons.Count)}");
+        Console.WriteLine($"Messages={save.Messaging.Messages.Count} emails del/group/new={save.PresentEmails.IsEmailDeleted.Count}/{save.PresentEmails.EmailGroupUnlocked.Count}/{save.PresentEmails.IsEmailNew.Count}");
+        Console.WriteLine($"Rewards={save.PresentRewards.RewardItems.Count} Fleet boats={save.Fleet.CapturedBoats.Count} missionIds={save.Fleet.OnlineMissionIds.Count}");
+        Console.WriteLine($"UITutorial vrTimes={save.UITutorial.VRMissionBestTimes.Count} delta chars={save.SnapshotDelta.PlayerCharacterItemsDelta.Count}");
+        break;
+    }
     case "missions":
         foreach (var (label, h) in new[] { ("Narrative", save.Narrative), ("Side", save.Side) })
             foreach (var g in h.Groups)
@@ -77,6 +92,7 @@ static void Dump(Node n, int depth, int maxDepth)
     string pad = new string(' ', depth * 2);
     switch (n.Kind)
     {
+        case NodeKind.Value when n.Text != null: Console.WriteLine($"{pad}{n.Name} = \"{n.Text}\""); break;
         case NodeKind.Value: Console.WriteLine($"{pad}{n.Name} = {n.Value}{(n.Value > 9999 ? $" (0x{n.Value:X})" : "")} [t{n.TypeId:x4}]"); break;
         case NodeKind.Raw: Console.WriteLine($"{pad}{n.Name} RAW {n.Bytes.Length}B t{n.TypeId:x4}"); break;
         case NodeKind.Object:
@@ -84,6 +100,11 @@ static void Dump(Node n, int depth, int maxDepth)
             if (depth < maxDepth) foreach (var c in n.Children) Dump(c, depth + 1, maxDepth);
             break;
         case NodeKind.Array:
+            if (n.ElementSize > 0)
+            {
+                Console.WriteLine($"{pad}{n.Name}[{n.Packed.Count}] packed u{n.ElementSize * 8}: {string.Join(" ", n.Packed.Take(12).Select(v => v.ToString("X")))}{(n.Packed.Count > 12 ? " ..." : "")}");
+                break;
+            }
             Console.WriteLine($"{pad}{n.Name}[{n.Elements.Count}]");
             if (depth < maxDepth)
                 foreach (var e in n.Elements) { Console.WriteLine($"{pad}  - {e.Name}"); foreach (var c in e.Children) Dump(c, depth + 2, maxDepth); }

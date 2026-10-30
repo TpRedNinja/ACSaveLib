@@ -22,6 +22,12 @@ namespace AcSaveLib.Stream
         public List<Node> Children { get; init; } = new();
         /// <summary>Elements for Kind==Array.</summary>
         public List<ArrayElement> Elements { get; init; } = new();
+        /// <summary>Text for LString items (type 0x001b): UTF-16, length-prefixed in characters. Null otherwise.</summary>
+        public string? Text { get; init; }
+        /// <summary>Elements for packed arrays of plain numbers (Kind==Array, ElementSize &gt; 0): u8/u16/u32/u64 values.</summary>
+        public List<ulong> Packed { get; init; } = new();
+        /// <summary>Byte size of each packed element, 0 if this is not a packed array.</summary>
+        public int ElementSize { get; init; }
         /// <summary>Offset of the item (its length field) inside the property stream.</summary>
         public int Offset { get; init; }
 

@@ -2,35 +2,32 @@
 
 Order as in ACViewer. "Decoded" = typed model exists and values match ACViewer.
 
-| Field | Status |
-|---|---|
-| ContextID | present, not modeled |
-| NarrativeMissionHistory | DECODED |
-| SideMissionHistory | DECODED |
-| CurrentMission (u64) | DECODED |
-| World (u64) | DECODED (meaning of ID unmapped) |
-| PlayerPortal (u64) | DECODED (meaning of ID unmapped) |
-| AnimusDatabaseData | structure parses, children unnamed |
-| MapIconData | structure parses, children unnamed |
-| MapFogData | structure parses, children unnamed |
-| MessagingDatabaseData | structure parses, children unnamed |
-| UITutorialData | structure parses, children unnamed |
-| PresentEmailsData | structure parses, children unnamed |
-| PresentRewardSaveData | structure parses, children unnamed |
-| AccomplishmentManagerData | structure parses, children unnamed |
-| GameStatsSaveData | structure parses, children unnamed |
-| CommunityChallengeSaveData | structure parses, children unnamed |
-| PlayerProgSaveData | structure parses, children unnamed |
-| SnapshotPlayerProgSaveData | structure parses, children unnamed |
-| SnapshotPlayerProgressionDelta | structure parses, children unnamed |
-| FleetSaveGameData | structure parses, children unnamed |
+| Field | Status | Model (Games/Ac4) |
+|---|---|---|
+| ContextID | DECODED (0 in every sample) | Ac4SaveFile.ContextId |
+| NarrativeMissionHistory / SideMissionHistory | DECODED | MissionModels.cs |
+| CurrentMission, World, PlayerPortal (u64) | DECODED (ID names via ForgeIndex) | Ac4SaveFile |
+| AnimusDatabaseData | DECODED | AnimusDatabase |
+| MapIconData | DECODED | MapIconData |
+| MapFogData | names known; MapFogInfo was empty in every sample, element layout UNKNOWN | MapFogData (count only) |
+| MessagingDatabaseData | DECODED (checked on Sequence 3 save with 10 messages) | MessagingDatabase |
+| UITutorialData | DECODED except the six tutorial lists (empty in samples, element layout UNKNOWN) | UITutorialData |
+| PresentEmailsData | DECODED | PresentEmails |
+| PresentRewardSaveData | DECODED; `IsAvailable` name matched by hash only, never seen on screen | PresentRewards |
+| AccomplishmentManagerData | DECODED | AccomplishmentManager |
+| GameStatsSaveData | DECODED | GameStats |
+| CommunityChallengeSaveData | UnsavedProgress empty in every sample, layout UNKNOWN | CommunityChallenge (count only) |
+| PlayerProgSaveData | DECODED except ArmorStates, BackupInventoryItems, WeaponAmmoCountData (empty or unseen, counts only) | PlayerProgression, ProgressionCharacterData |
+| SnapshotPlayerProgSaveData | DECODED (same class as PlayerProgSaveData) | PlayerProgression |
+| SnapshotPlayerProgressionDelta | DECODED (checked on Sequence 3) | SnapshotDelta |
+| FleetSaveGameData | DECODED | FleetData |
 
-~146 distinct unnamed child keys across the sample saves (`... ac4 <file> unknown`). Next steps: name them
-(see AGENT_GUIDE "Property names"), then add typed models under Games/Ac4/ and tick them off here.
-Unverified brute-force name candidates (NOT confirmed, may be false positives): Item, Items, ItemList, WantedLevel,
-NotorietyLevel, IsCompleted, IsFound, UnlockedEntries, AccomplishmentEntries, EmailGroupUnlocked, IsEmailNew, ItemsDelta,
-RewardItems, StatEntries, EntriesData, SelectedWeapon, SelectedEquipment, LockedInventoryItems, CurrentItemCount,
-ChestArmorLevel, ExtraData, Entity, EntityStateArray.
+All property NAMES in the five sample saves are resolved (`ac4 <file> unknown` prints 0). Verified values (wr.save, matches ACViewer):
+money 199854 (ProgressionCharacterData[9], container category 1), 1044 accomplishment entries, 499 stat entries, 231 animus entries,
+13 map icon worlds, 25 captured boat slots, 100 online mission IDs. `ac4 <file> models` prints these counts.
+
+Not confirmed: meaning of stat IDs, accomplishment IDs, enum value names (only values are stored), `TimePlayed` unit,
+`EntryTime` is a Unix time by magnitude only, `OasisWeaponName`/`OasisLineId` are text-table line IDs (not Forge IDs).
 
 ## Entity ID names (CONFIRMED source: ACViewer Forge index files)
 The owner's ACViewer exports `DataPC*.index.txt` (lines `0x<16 hex>: Name.Type`, ~664k IDs, ~100 MB; NOT stored in the repo).

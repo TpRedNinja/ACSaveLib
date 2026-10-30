@@ -9,7 +9,7 @@ and never touches raw bytes.
 ## Status
 | Game | Decrypt | Decompress | Property stream | Mission data | Other fields |
 |---|---|---|---|---|---|
-| AC4 Black Flag | done | done | done | done (Narrative + Side) | not named/decoded yet, see docs/FIELDS_AC4.md |
+| AC4 Black Flag | done | done | done | done (Narrative + Side) | typed models for all known fields, see docs/FIELDS_AC4.md |
 | the other 14 | not started | | | | see docs/GAMES.md |
 
 ## Quick start
@@ -18,6 +18,7 @@ dotnet build src/AcSaveLib.Cli --no-restore      # see docs/BUILDING.md if resto
 dotnet src/AcSaveLib.Cli/bin/Debug/net8.0/AcSaveLib.Cli.dll ac4 <file.save> summary
 ... ac4 <file.save> missions
 ... ac4 <file.save> tree [depth] [name]
+... ac4 <file.save> models      # counts and key values of every typed model
 ... ac4 <file.save> unknown
 ... crc <PropertyName>
 ```

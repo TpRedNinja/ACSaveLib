@@ -7,7 +7,7 @@
 | 3 | Brotherhood | not started |
 | 4 | Revelations | not started |
 | 5 | Assassin's Creed III | not started |
-| 6 | Black Flag (AC4) | IN PROGRESS: decrypt/decompress/parse/missions done |
+| 6 | Black Flag (AC4) | IN PROGRESS: decrypt/decompress/parse done; all known fields have typed models (see FIELDS_AC4.md) |
 | 7 | Rogue | not started |
 | 8 | Unity | not started |
 | 9 | Syndicate | not started |
