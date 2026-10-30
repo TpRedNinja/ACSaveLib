@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DC9720D0-C0B6-4E71-8310-37CC5A413930}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcSaveLib", "src\AcSaveLib\AcSaveLib.csproj", "{553CA720-0E5B-4DEA-9FC8-8604F05DDE86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcSaveLib.Cli", "src\AcSaveLib.Cli\AcSaveLib.Cli.csproj", "{37C85D1F-0EA3-480A-A2FB-9A4C5DB77003}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{553CA720-0E5B-4DEA-9FC8-8604F05DDE86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{553CA720-0E5B-4DEA-9FC8-8604F05DDE86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{553CA720-0E5B-4DEA-9FC8-8604F05DDE86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{553CA720-0E5B-4DEA-9FC8-8604F05DDE86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37C85D1F-0EA3-480A-A2FB-9A4C5DB77003}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37C85D1F-0EA3-480A-A2FB-9A4C5DB77003}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37C85D1F-0EA3-480A-A2FB-9A4C5DB77003}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37C85D1F-0EA3-480A-A2FB-9A4C5DB77003}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{553CA720-0E5B-4DEA-9FC8-8604F05DDE86} = {DC9720D0-C0B6-4E71-8310-37CC5A413930}
+		{37C85D1F-0EA3-480A-A2FB-9A4C5DB77003} = {DC9720D0-C0B6-4E71-8310-37CC5A413930}
+	EndGlobalSection
+EndGlobal
