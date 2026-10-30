@@ -32,11 +32,15 @@ namespace AcSaveLib.Container
         {
             if (!HasSignature(d, pos)) throw new InvalidDataException($"No container signature at {pos}.");
             int q = pos + HeaderLength;
+            int nextSig = IndexOfSignature(d, pos + 8);
+            int limit = nextSig >= 0 ? nextSig : d.Length;
             using var ms = new MemoryStream();
-            while (q + 13 <= d.Length && d[q] == 1)
+            while (q + 13 <= limit && d[q] == 1)
             {
+                uint cs = BitConverter.ToUInt32(d, q + 1), us = BitConverter.ToUInt32(d, q + 5);
+                // A trailer byte after the last block can equal the 0x01 marker; reject blocks that do not fit before the next container.
+                if (cs == 0 || us == 0 || (long)q + 13 + cs > limit) break;
                 q++;
-                uint cs = BitConverter.ToUInt32(d, q), us = BitConverter.ToUInt32(d, q + 4);
                 // d[q+8..q+12] = checksum (algorithm not identified; ignored)
                 var block = Lzo1x.Decompress(d, q + 12, (int)cs, (int)us);
                 ms.Write(block, 0, block.Length);
