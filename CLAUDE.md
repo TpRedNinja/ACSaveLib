@@ -12,7 +12,7 @@ Owner handle: TpRedNinja (do not use a real name anywhere, including credits and
 - The owner decides what happens next. Do not pick or start the next task, and do not add things to notes or plans they did not ask for.
 - Give simple, concrete steps (git has been a friction point: say exactly which commands to run).
 - Builds in Visual Studio 2026; WPF cannot be built in the sandbox. Always write `using System.IO;` explicitly in C#.
-- ACViewer (owner's viewer) works for AC4 only. It does not open AC1 saves. The owner sends screenshots as ground truth; its Dump button crashes.
+- ACViewer (owner's viewer) opens saves of AC2 through Mirage (verified by the owner; Valhalla, Black Flag Resynced and Shadows are unverified). It does not open AC1 saves. The owner sends screenshots as ground truth; its Dump button crashes.
 
 ## Notes rules (same as the owner's GameNotesGuide.md)
 - One statement per fact. Write a new finding as GUESS or LIKELY, then rewrite the same line as confirmed when verified. No duplicate or contradicting lines; keep the higher-confidence one.
@@ -47,5 +47,5 @@ Saves (`*.save`, `*.sav`) and `samples/` are gitignored. Never edit a user save 
 ## Current status (update when it changes)
 - AC4 Black Flag: decrypt, decompress, parse, typed models for all known fields. Open: layouts of fields that are always empty in samples (MapFogInfo, six UI tutorial lists, community challenge progress, ArmorStates, BackupInventoryItems, WeaponAmmoCountData), ID meaning tables, TimePlayed unit, chunk checksum, 16-byte gap between containers. See `docs/FIELDS_AC4.md`.
 - AC1: byte-exact parse/write, mission states, accomplishments (44 achievements), collectibles with flag IDs, names resolved except 3 hashes. Open: Templars-killed index list, meaning of `IsCompleted` vs mission state, configs 0/2/3/4/5 titles. See `docs/FIELDS_AC1.md`.
-- AC2: plain file, same CRC32-keyed property stream as AC4 (read-only). Mission history, collectible counters and gained item IDs, accomplishments, money. Open: names for ~110 property keys, ID meaning tables, TimePlayed unit, header id, meaning of sync 0 entries. See `docs/FIELDS_AC2.md`.
+- AC2: plain file, same CRC32-keyed property stream as AC4 (read-only). Mission history, collectible counters and gained item IDs, accomplishments, money. Stats, villa, animus and PSP names are confirmed in ACViewer. Options/profile names confirmed. Open: ID meaning tables, TimePlayed unit, header id, meaning of sync 0 entries. See `docs/FIELDS_AC2.md`.
 - Other games: not started (see `docs/GAMES.md`; mainline only, list can grow).

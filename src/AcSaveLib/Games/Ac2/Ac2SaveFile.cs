@@ -36,6 +36,19 @@ namespace AcSaveLib.Games.Ac2
         /// <summary>True if the save holds a game (AssassinSaveGameData), false for a profile-only save.</summary>
         public bool HasGameData { get; private set; }
 
+        public bool IsValid { get; private set; }
+        /// <summary>Header flag IsCorrupt (name confirmed in ACViewer; 0 in all samples). Can be checked before overwriting a slot.</summary>
+        public bool IsCorrupt { get; private set; }
+        public bool LoadOrSaveOptionsFailed { get; private set; }
+        public bool IsOptions { get; private set; }
+        /// <summary>SaveGameName: "Desmond" in game saves, "Options" in options saves.</summary>
+        public string SaveGameName { get; private set; } = "";
+        /// <summary>Present when the save holds AssassinGlobalProfileData (options/bonus saves such as 2.save).</summary>
+        public Ac2Options? Options { get; private set; }
+        public Ac2Profile? Profile { get; private set; }
+        public Ac2GameStats GameStats { get; private set; } = new();
+        public Ac2Villa Villa { get; private set; } = new();
+
         public uint Version { get; private set; }
         public uint DlcPackagesBits { get; private set; }
         public uint CodeChangelist { get; private set; }
@@ -91,6 +104,16 @@ namespace AcSaveLib.Games.Ac2
             Version = header.U32("Version");
             DlcPackagesBits = header.U32("DLCPackagesBits");
             CodeChangelist = header.U32("CodeChangelist");
+            IsValid = header.Bool("IsValid");
+            IsCorrupt = header.Bool("IsCorrupt");
+            LoadOrSaveOptionsFailed = header.Bool("LoadOrSaveOptionsFailed");
+            IsOptions = header.Bool("IsOptions");
+            var nameNode = header.Get("SaveGameName");
+            if (nameNode != null && nameNode.Bytes.Length >= 4)
+            {
+                int len = (int)BitConverter.ToUInt32(nameNode.Bytes, 0);
+                if (len >= 0 && len <= nameNode.Bytes.Length - 4) SaveGameName = System.Text.Encoding.ASCII.GetString(nameNode.Bytes, 4, len);
+            }
             TimePlayed = header.U32("TimePlayed");
             PlayerGlobalSynch = header.U32("PlayerGlobalSynch");
             SaveGameDate = header.U32("SaveGameDate");
@@ -98,6 +121,13 @@ namespace AcSaveLib.Games.Ac2
             CurrentMission = header.U64("CurrentMission");
             var objs = Root.FirstOrDefault(n => n.Name == "SaveGameDataObjects");
             if (objs != null) DataObjects = objs.Elements;
+            var profile = DataObjects.FirstOrDefault(e => e.Name == "AssassinGlobalProfileData");
+            if (profile != null)
+            {
+                var pp = new Props(profile.Children);
+                Options = Ac2Options.From(pp.Obj("PlayerOptionsSaveData"));
+                Profile = Ac2Profile.From(pp);
+            }
             var game = DataObjects.FirstOrDefault(e => e.Name == "AssassinSaveGameData");
             if (game == null) return;
             HasGameData = true;
@@ -105,6 +135,8 @@ namespace AcSaveLib.Games.Ac2
             Narrative = Ac2MissionHistory.From(game.Find("NarrativeMissionHistory"));
             Side = Ac2MissionHistory.From(game.Find("SideMissionHistory"));
             PlayerPortal = g.U64("PlayerPortal");
+            GameStats = Ac2GameStats.From(g.Obj("GameStatsSaveData"));
+            Villa = Ac2Villa.From(g.Obj("VillaSaveData"));
             foreach (var e in g.Obj("AccomplishmentManagerData").Elements("AccomplishmentEntries"))
                 Accomplishments.Add(new Ac2AccomplishmentEntry { ObjectId = e.U64("ObjectID"), Inactive = e.Bool("Inactive"), Completed = e.Bool("Completed"), CurrentCount = e.U32("CurrentCount") });
             var prog = g.Obj("PlayerProgSaveData");
