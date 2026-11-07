@@ -9,7 +9,13 @@ namespace AcSaveLib.Stream
     /// </summary>
     public static class PropertyReader
     {
-        public static List<Node> Parse(byte[] d, int start, int end)
+        public static List<Node> Parse(byte[] d, int start, int end) => Parse(d, start, end, false);
+
+        /// <summary>
+        /// <paramref name="ac2Layout"/> enables the AC2 variants: objects whose second key copy sits at body+23 (children from body+35)
+        /// and fixed packed arrays of type 0x..17 / 0x..97 (u32 count, then count elements of 1, 2, 4 or 8 bytes).
+        /// </summary>
+        public static List<Node> Parse(byte[] d, int start, int end, bool ac2Layout)
         {
             var list = new List<Node>();
             int p = start;
@@ -39,7 +45,7 @@ namespace AcSaveLib.Stream
                         if (q + 12 > aend) break;
                         uint ek = BitConverter.ToUInt32(d, q), size = BitConverter.ToUInt32(d, q + 4), l2 = BitConverter.ToUInt32(d, q + 8);
                         var el = new ArrayElement { Key = ek };
-                        el.Children.AddRange(Parse(d, q + 12, (int)Math.Min((long)q + 12 + l2, aend)));
+                        el.Children.AddRange(Parse(d, q + 12, (int)Math.Min((long)q + 12 + l2, aend), ac2Layout));
                         node.Elements.Add(el);
                         q += 8 + (int)size;
                     }
@@ -92,11 +98,34 @@ namespace AcSaveLib.Stream
                     }
                 }
 
-                if (len >= 39 && zeros && d[b + 12] == 0x0b && (type == 0x13 || type == 0x16) && SameFour(d, b + 4, b + 27))
+                // AC2 fixed packed array (0x0017 seen: 6 x u8): body = key | ext | type | 0b | u32 count | count * elemSize bytes.
+                if (ac2Layout && (type & 0xff) is 0x17 or 0x97 && (type >> 8) != 0x0b && len >= 17 && d[b + 12] == 0x0b)
                 {
-                    var node = new Node { Key = key, Kind = NodeKind.Object, TypeId = type, Offset = p, Value = BitConverter.ToUInt32(d, b + 4) };
-                    node.Children.AddRange(Parse(d, b + 39, b + len));
-                    list.Add(node); p = b + len; continue;
+                    uint cnt = BitConverter.ToUInt32(d, b + 13);
+                    long payload = len - 17;
+                    if (cnt > 0 && payload % cnt == 0 && payload / cnt is 1 or 2 or 4 or 8)
+                    {
+                        int es = (int)(payload / cnt);
+                        var pn = new Node { Key = key, Kind = NodeKind.Array, TypeId = type, Offset = p, Value = cnt, ElementSize = es };
+                        for (int i = 0; i < cnt; i++)
+                        {
+                            ulong v = 0;
+                            for (int j = es - 1; j >= 0; j--) v = (v << 8) | d[b + 17 + i * es + j];
+                            pn.Packed.Add(v);
+                        }
+                        list.Add(pn); p = b + len; continue;
+                    }
+                }
+
+                // Object: second key copy at body+27 (AC4) or body+23 (AC2); children follow the copy + size + length (12 bytes).
+                foreach (int copyAt in ac2Layout ? new[] { 27, 23 } : new[] { 27 })
+                {
+                    if (len >= copyAt + 12 && zeros && d[b + 12] == 0x0b && (type == 0x13 || type == 0x16) && SameFour(d, b + 4, b + copyAt))
+                    {
+                        var node = new Node { Key = key, Kind = NodeKind.Object, TypeId = type, Offset = p, Value = BitConverter.ToUInt32(d, b + 4) };
+                        node.Children.AddRange(Parse(d, b + copyAt + 12, b + len, ac2Layout));
+                        list.Add(node); p = b + len; goto next;
+                    }
                 }
 
                 if (zeros && d[b + 12] == 0x0b && len - 13 <= 12)
@@ -114,6 +143,7 @@ namespace AcSaveLib.Stream
                 Buffer.BlockCopy(d, b, raw, 0, len);
                 list.Add(new Node { Key = key, Kind = NodeKind.Raw, TypeId = type, Bytes = raw, Offset = p });
                 p = b + len;
+                next:;
             }
             return list;
         }

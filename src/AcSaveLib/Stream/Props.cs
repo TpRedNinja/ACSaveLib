@@ -22,6 +22,14 @@ namespace AcSaveLib.Stream
             return null;
         }
 
+        /// <summary>Child by raw key, for properties whose name is not known yet.</summary>
+        public Node? GetByKey(uint key)
+        {
+            if (_items == null) return null;
+            foreach (var n in _items) if (n.Key == key) return n;
+            return null;
+        }
+
         public ulong U64(string name) => Get(name)?.Value ?? 0;
         public uint U32(string name) => (uint)(Get(name)?.Value ?? 0);
         public int S32(string name) => unchecked((int)(uint)(Get(name)?.Value ?? 0));

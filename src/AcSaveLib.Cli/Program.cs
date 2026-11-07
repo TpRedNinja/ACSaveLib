@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using System.Text;
 using AcSaveLib.Games.Ac1;
+using AcSaveLib.Games.Ac2;
 using AcSaveLib.Games.Ac4;
 using AcSaveLib.Names;
 using AcSaveLib.Stream;
@@ -14,6 +15,7 @@ using AcSaveLib.Stream;
 //   AcSaveLib.Cli crc <name>
 if (args.Length >= 2 && args[0] == "crc") { Console.WriteLine(PropertyNames.Crc32(args[1]).ToString("x8")); return 0; }
 if (args.Length >= 3 && args[0] == "ac1") return Ac1Cli.Run(args);
+if (args.Length >= 3 && args[0] == "ac2") return Ac2Cli.Run(args);
 if (args.Length < 3 || args[0] != "ac4") { Console.WriteLine("usage: AcSaveLib.Cli ac4 <file.save> summary|missions|tree [depth] [name]|unknown"); return 1; }
 
 var save = Ac4SaveFile.Load(args[1]);
