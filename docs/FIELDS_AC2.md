@@ -3,10 +3,10 @@ Models: `src/AcSaveLib/Games/Ac2/Ac2Models.cs`, `Ac2SaveFile.cs`. CLI: `ac2 <fil
 
 ## Header properties
 - Version 17, MagicNumber 0x00FEDBAC, DLCPackagesBits (6 in all samples), CodeChangelist (236390 in all samples).
-- IsOptions: 1 for options-only saves (SaveGameName "Options"), 0 for game saves (SaveGameName is a short string stored as a u32 pair, not decoded).
+- IsValid, IsOptions (1 for options-only saves, SaveGameName "Options"; 0 for game saves, SaveGameName "Desmond"), LoadOrSaveOptionsFailed and IsCorrupt: names and values CONFIRMED in ACViewer. IsCorrupt is 0 in all samples; a converter can read it to reject a damaged save.
 - PlayerGlobalSynch: 100 in the 100% save, 54 in the sequence 7 Benvenuto save. LIKELY the sync percentage. Not compared with the in-game value.
 - SaveGameDate: Unix seconds (CONFIRMED plausible: 2017-08-17 for the 100% save).
-- TimePlayed: unit not confirmed.
+- TimePlayed: unit not confirmed (ACViewer shows 5629 for a sequence 2 save).
 
 ## Mission history (NarrativeMissionHistory, SideMissionHistory)
 - `GroupSaveData[]` of { Group (hash), MissionSaveData[] of { Mission (hash), HighestSynchronization, BriefingDisplayedOnce, BriefingAccepted, MissionStepSaveData[] { Step, IsCheckpoint, Succeeded }, MissionConstraintSaveData[] } }.
@@ -22,7 +22,10 @@ Models: `src/AcSaveLib/Games/Ac2/Ac2Models.cs`, `Ac2SaveFile.cs`. CLI: `ac2 <fil
 ## Other
 - Money: LIKELY `CurrentItemCount` of the first inventory container of the first PlayerCharacterData (category hash 0x12F6B6F1, the AC4 InvItem_Money hash); 953500 in the 100% save. Not compared with the in-game value.
 - AccomplishmentManagerData.AccomplishmentEntries: 81 entries { ObjectID, Inactive, Completed, CurrentCount }; 48 completed in the 100% save. Not mapped to achievements.
-- GameStatsSaveData: TimePlayed, Kills, Disarms and further unnamed counters.
-- PlayerCharacterData (3 characters), armor states, PlayerAttributesBuilderData, WorldNotorietyList, AnimusDatabaseData, UITutorialData, VillaSaveData: present, unmodelled (`ac2 <file> tree`).
+- GameStatsSaveData: 22 u32 counters, all named, names CONFIRMED in ACViewer (TimePlayed, TotalTimeBlended, DeathOccurrences, Kills, HiddenBladeAssassinations, AirAssassinations, DoubleAirAssassinations, Disarms, TotalMoneyEarned, TotalMoneySpent, NotoriousOccurrences, BorgiaCourrierKills, CourtesansHired, MercenariesHired, ThievesHired, OverallDistanceCovered, HeightClimbed, DistanceOnGround, DistanceSwam, DistanceHorse, DistanceGondolas, DistanceFlown) plus WeaponUsedSavedInfo[]. Units are not confirmed. Model: `Ac2GameStats`.
+- VillaSaveData: StrongholdValue, CurrentGoldIncome, CurrentIncomeDelay, PendingIncomeValueForAfs, PendingStrValueForAfs, BuildingsLevels (u8 x 11), CodexPagesDecodedStatus (bool x 30), CodexPagesCurrentRotation (s16 x 30). Names CONFIRMED in ACViewer; `SnapshotVillaSaveData` is a second copy. Model: `Ac2Villa`.
+- AnimusDatabaseData: ADBEntries, CodexFound (bool x 30), LetterFoundCountLeft (s8 x 18), ADBGlyphs and 14 tutorial/speech flags (ADBEntryFoundSpeechPlayed ... LGS04PresentationShown). Names CONFIRMED in ACViewer. Not modelled.
+- PSPState and SnapshotPSPState (class PSPTransferredStuff): PSPConnectionDone, PSPGoldCoins, PSPSilverCoins, PSPBronzeCoins, PSPWeaponUnlocked, HiddenBladeArmorCodex, HiddenBladeSlimBladeCodex, HiddenBladeGunCodex, LifeCodex. Names CONFIRMED in ACViewer. Not modelled.
+- PlayerCharacterData (3 characters), armor states, PlayerAttributesBuilderData, WorldNotorietyList, UITutorialData: present, unmodelled (`ac2 <file> tree`).
 - Property key 0x2ABEA3BC (child object of PlayerCharacterData that holds InventoryContainerList) has no name.
-- About 110 property keys still have no name (`ac2 <file> unknown`).
+- Keys still without a name: the 28 keys of PlayerOptionsSaveData (not found in ACViewer), the animus-entry and glyph element fields, the tutorial element fields, WeaponUsedSavedInfo fields, and a few others (`ac2 <file> unknown`).

@@ -88,4 +88,61 @@ namespace AcSaveLib.Games.Ac2
         public uint AssassinSeals => At(3);
         public uint Chests => At(6);
     }
+
+    /// <summary>GameStatsSaveData. Names confirmed in ACViewer; units are not confirmed.</summary>
+    public sealed class Ac2GameStats
+    {
+        public uint TimePlayed { get; init; }
+        public uint TotalTimeBlended { get; init; }
+        public uint DeathOccurrences { get; init; }
+        public uint Kills { get; init; }
+        public uint HiddenBladeAssassinations { get; init; }
+        public uint AirAssassinations { get; init; }
+        public uint DoubleAirAssassinations { get; init; }
+        public uint Disarms { get; init; }
+        public uint TotalMoneyEarned { get; init; }
+        public uint TotalMoneySpent { get; init; }
+        public uint NotoriousOccurrences { get; init; }
+        public uint BorgiaCourrierKills { get; init; }
+        public uint CourtesansHired { get; init; }
+        public uint MercenariesHired { get; init; }
+        public uint ThievesHired { get; init; }
+        public uint OverallDistanceCovered { get; init; }
+        public uint HeightClimbed { get; init; }
+        public uint DistanceOnGround { get; init; }
+        public uint DistanceSwam { get; init; }
+        public uint DistanceHorse { get; init; }
+        public uint DistanceGondolas { get; init; }
+        public uint DistanceFlown { get; init; }
+
+        public static Ac2GameStats From(Props p) => new Ac2GameStats
+        {
+            TimePlayed = p.U32("TimePlayed"), TotalTimeBlended = p.U32("TotalTimeBlended"), DeathOccurrences = p.U32("DeathOccurrences"),
+            Kills = p.U32("Kills"), HiddenBladeAssassinations = p.U32("HiddenBladeAssassinations"), AirAssassinations = p.U32("AirAssassinations"),
+            DoubleAirAssassinations = p.U32("DoubleAirAssassinations"), Disarms = p.U32("Disarms"), TotalMoneyEarned = p.U32("TotalMoneyEarned"),
+            TotalMoneySpent = p.U32("TotalMoneySpent"), NotoriousOccurrences = p.U32("NotoriousOccurrences"), BorgiaCourrierKills = p.U32("BorgiaCourrierKills"),
+            CourtesansHired = p.U32("CourtesansHired"), MercenariesHired = p.U32("MercenariesHired"), ThievesHired = p.U32("ThievesHired"),
+            OverallDistanceCovered = p.U32("OverallDistanceCovered"), HeightClimbed = p.U32("HeightClimbed"), DistanceOnGround = p.U32("DistanceOnGround"),
+            DistanceSwam = p.U32("DistanceSwam"), DistanceHorse = p.U32("DistanceHorse"), DistanceGondolas = p.U32("DistanceGondolas"), DistanceFlown = p.U32("DistanceFlown"),
+        };
+    }
+
+    /// <summary>VillaSaveData (Monteriggioni). Names confirmed in ACViewer.</summary>
+    public sealed class Ac2Villa
+    {
+        public uint StrongholdValue { get; init; }
+        public uint CurrentGoldIncome { get; init; }
+        public uint CurrentIncomeDelay { get; init; }
+        public uint PendingIncomeValueForAfs { get; init; }
+        public uint PendingStrValueForAfs { get; init; }
+        public List<byte> BuildingsLevels { get; init; } = new();
+        public List<bool> CodexPagesDecodedStatus { get; init; } = new();
+
+        public static Ac2Villa From(Props p) => new Ac2Villa
+        {
+            StrongholdValue = p.U32("StrongholdValue"), CurrentGoldIncome = p.U32("CurrentGoldIncome"), CurrentIncomeDelay = p.U32("CurrentIncomeDelay"),
+            PendingIncomeValueForAfs = p.U32("PendingIncomeValueForAfs"), PendingStrValueForAfs = p.U32("PendingStrValueForAfs"),
+            BuildingsLevels = p.PackedU8("BuildingsLevels"), CodexPagesDecodedStatus = p.PackedBool("CodexPagesDecodedStatus"),
+        };
+    }
 }

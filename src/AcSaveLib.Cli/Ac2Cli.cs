@@ -22,6 +22,7 @@ public static class Ac2Cli
             case "models":
             {
                 Console.WriteLine($"title={save.Title} version={save.Version} dlcBits={save.DlcPackagesBits} changelist={save.CodeChangelist}");
+                Console.WriteLine($"name={save.SaveGameName} valid={save.IsValid} corrupt={save.IsCorrupt} optionsFailed={save.LoadOrSaveOptionsFailed} options={save.IsOptions}");
                 Console.WriteLine($"timePlayed={save.TimePlayed} globalSynch={save.PlayerGlobalSynch} date={DateTimeOffset.FromUnixTimeSeconds(save.SaveGameDate):u}");
                 if (!save.HasGameData) { Console.WriteLine("profile-only save (no game data)"); break; }
                 Console.WriteLine($"world=0x{save.CurrentWorld:X} currentMission=0x{save.CurrentMission:X} portal=0x{save.PlayerPortal:X}");
@@ -32,6 +33,7 @@ public static class Ac2Cli
                 }
                 var c = save.CollectedAmounts;
                 Console.WriteLine($"money={save.Money} gainedItems={save.GainedInventoryItems.Count} codex={c.CodexPages} feathers={c.Feathers} statuettes={c.Statuettes} seals={c.AssassinSeals} chests={c.Chests} counters=[{string.Join(",", c.Values)}]");
+                Console.WriteLine($"stats: kills={save.GameStats.Kills} earned={save.GameStats.TotalMoneyEarned} spent={save.GameStats.TotalMoneySpent} height={save.GameStats.HeightClimbed} villaValue={save.Villa.StrongholdValue}");
                 Console.WriteLine($"accomplishments={save.Accomplishments.Count} completed={save.Accomplishments.Count(a => a.Completed)}");
                 break;
             }
