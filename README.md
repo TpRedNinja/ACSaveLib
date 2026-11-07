@@ -12,7 +12,7 @@ Mainline games in release order. Short name, full name, then progress.
 | Short | Game | Encryption | Compression | Property stream | Data decoded |
 |---|---|---|---|---|---|
 | AC1 | Assassin's Creed | no encryption | no compression | done (byte-exact) | mission states, accomplishments, collectibles; names resolved (3 hashes open), see docs/FIELDS_AC1.md |
-| AC2 | Assassin's Creed II | - | - | - | not started |
+| AC2 | Assassin's Creed II | no encryption | no compression | done (same CRC32-keyed stream as AC4, read-only) | mission history, collectible counters and item IDs, accomplishments, money; see docs/FIELDS_AC2.md |
 | ACB | Assassin's Creed Brotherhood | - | - | - | not started |
 | ACR | Assassin's Creed Revelations | - | - | - | not started |
 | AC3 | Assassin's Creed III Remastered | - | - | - | not started |

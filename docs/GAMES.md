@@ -3,7 +3,7 @@
 | # | Short | Game | Status |
 |---|---|---|---|
 | 1 | AC1 | Assassin's Creed | IN PROGRESS: parse/write byte-exact, mission states, accomplishments, collectibles (see FIELDS_AC1.md) |
-| 2 | AC2 | Assassin's Creed II | not started |
+| 2 | AC2 | Assassin's Creed II | IN PROGRESS: parse done on 33 saves (0 unparsed items, read-only); mission history, collectibles, accomplishments, money (see FORMAT_AC2.md, FIELDS_AC2.md) |
 | 3 | ACB | Assassin's Creed Brotherhood | not started |
 | 4 | ACR | Assassin's Creed Revelations | not started |
 | 5 | AC3 | Assassin's Creed III Remastered | not started |
