@@ -377,3 +377,4 @@ InventoryContainer
 MaximumItemCount
 PlayerCharacterDataSnapshots
 UplayUnlocked
+IsNotorious
