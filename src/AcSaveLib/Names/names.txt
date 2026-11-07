@@ -360,3 +360,13 @@ UniqueKeyMap2Unlocked
 UniqueKeyMap3Unlocked
 UniqueKeyMap4Unlocked
 CompletedUplayActions
+EntryFoundOrderNumber
+GlyphFoundOrderNumber
+AFSDisplayedCount
+IsLGSSolved
+IsMiniGameSolved
+GlyphEntity
+OasisMessageLineID
+OasisTitleLineID
+WeaponInventoryItemObjectID
+UsedTime
