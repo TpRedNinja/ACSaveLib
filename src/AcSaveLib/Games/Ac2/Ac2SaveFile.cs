@@ -43,6 +43,9 @@ namespace AcSaveLib.Games.Ac2
         public bool IsOptions { get; private set; }
         /// <summary>SaveGameName: "Desmond" in game saves, "Options" in options saves.</summary>
         public string SaveGameName { get; private set; } = "";
+        /// <summary>Present when the save holds AssassinGlobalProfileData (options/bonus saves such as 2.save).</summary>
+        public Ac2Options? Options { get; private set; }
+        public Ac2Profile? Profile { get; private set; }
         public Ac2GameStats GameStats { get; private set; } = new();
         public Ac2Villa Villa { get; private set; } = new();
 
@@ -118,6 +121,13 @@ namespace AcSaveLib.Games.Ac2
             CurrentMission = header.U64("CurrentMission");
             var objs = Root.FirstOrDefault(n => n.Name == "SaveGameDataObjects");
             if (objs != null) DataObjects = objs.Elements;
+            var profile = DataObjects.FirstOrDefault(e => e.Name == "AssassinGlobalProfileData");
+            if (profile != null)
+            {
+                var pp = new Props(profile.Children);
+                Options = Ac2Options.From(pp.Obj("PlayerOptionsSaveData"));
+                Profile = Ac2Profile.From(pp);
+            }
             var game = DataObjects.FirstOrDefault(e => e.Name == "AssassinSaveGameData");
             if (game == null) return;
             HasGameData = true;

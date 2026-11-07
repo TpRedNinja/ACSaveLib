@@ -24,6 +24,12 @@ public static class Ac2Cli
                 Console.WriteLine($"title={save.Title} version={save.Version} dlcBits={save.DlcPackagesBits} changelist={save.CodeChangelist}");
                 Console.WriteLine($"name={save.SaveGameName} valid={save.IsValid} corrupt={save.IsCorrupt} optionsFailed={save.LoadOrSaveOptionsFailed} options={save.IsOptions}");
                 Console.WriteLine($"timePlayed={save.TimePlayed} globalSynch={save.PlayerGlobalSynch} date={DateTimeOffset.FromUnixTimeSeconds(save.SaveGameDate):u}");
+                if (save.Options != null && save.Profile != null)
+                {
+                    var o = save.Options; var pr = save.Profile;
+                    Console.WriteLine($"options: subtitles={o.DisplaySubtitles} brightness={o.Brightness} skins={o.Skin01Unlocked}/{o.Skin02Unlocked}/{o.Skin03Unlocked}/{o.Skin04Unlocked} lgs={o.LGS01Unlocked}/{o.LGS02Unlocked}/{o.LGS03Unlocked}/{o.LGS04Unlocked} mansion={o.MansionUnlocked} ezioDisguise={o.EziosDisguiseUnlocked} sharpestBlades={o.SharpestBladesUnlocked} fanPack={o.FanPackUnlocked}");
+                    Console.WriteLine($"profile: uplayMap={pr.UPlayMapUnlocked} uplaySkin={pr.UPlaySkinUnlocked} keyMaps={pr.UniqueKeyMap1Unlocked}/{pr.UniqueKeyMap2Unlocked}/{pr.UniqueKeyMap3Unlocked}/{pr.UniqueKeyMap4Unlocked} uplayActions=[{string.Join(",", pr.CompletedUplayActions)}]");
+                }
                 if (!save.HasGameData) { Console.WriteLine("profile-only save (no game data)"); break; }
                 Console.WriteLine($"world=0x{save.CurrentWorld:X} currentMission=0x{save.CurrentMission:X} portal=0x{save.PlayerPortal:X}");
                 foreach (var (label, h) in new[] { ("Narrative", save.Narrative), ("Side", save.Side) })

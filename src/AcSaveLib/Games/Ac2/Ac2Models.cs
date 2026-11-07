@@ -145,4 +145,82 @@ namespace AcSaveLib.Games.Ac2
             BuildingsLevels = p.PackedU8("BuildingsLevels"), CodexPagesDecodedStatus = p.PackedBool("CodexPagesDecodedStatus"),
         };
     }
+
+    /// <summary>PlayerOptionsSaveData (in AssassinGlobalProfileData, the options-only save). Names confirmed in ACViewer.</summary>
+    public sealed class Ac2Options
+    {
+        public bool DisplaySubtitles { get; init; }
+        public uint LastConsoleLanguage { get; init; }
+        public uint SoundLanguage { get; init; }
+        public float MusicVolume { get; init; }
+        public float VoiceVolume { get; init; }
+        public float SoundFXVolume { get; init; }
+        public bool Vibration { get; init; }
+        public float CameraHorizontalAxisSensitivity { get; init; }
+        public float CameraVerticalAxisSensitivity { get; init; }
+        public bool InvertCameraHorizontalAxis { get; init; }
+        public bool InvertCameraVerticalAxis { get; init; }
+        public bool InvertFirstPersonCameraHorizontalAxis { get; init; }
+        public bool InvertFirstPersonCameraVerticalAxis { get; init; }
+        public byte CameraInserts { get; init; }
+        public byte Brightness { get; init; }
+        public bool Blood { get; init; }
+        public bool FlyingMachineControls { get; init; }
+        public bool Health { get; init; }
+        public bool Controls { get; init; }
+        public bool MissionState { get; init; }
+        public bool WeaponSelect { get; init; }
+        public bool MiniMap { get; init; }
+        public bool Money { get; init; }
+        public bool Factions { get; init; }
+        public bool SSI { get; init; }
+        /// <summary>Bonus content unlock flags: LGS01..04, Skin01..04, FanPack, SharpestBlades, EziosDisguise, Mansion.</summary>
+        public bool LGS01Unlocked { get; init; }
+        public bool LGS02Unlocked { get; init; }
+        public bool LGS03Unlocked { get; init; }
+        public bool LGS04Unlocked { get; init; }
+        public bool Skin01Unlocked { get; init; }
+        public bool Skin02Unlocked { get; init; }
+        public bool Skin03Unlocked { get; init; }
+        public bool Skin04Unlocked { get; init; }
+        public bool FanPackUnlocked { get; init; }
+        public bool SharpestBladesUnlocked { get; init; }
+        public bool EziosDisguiseUnlocked { get; init; }
+        public bool MansionUnlocked { get; init; }
+
+        public static Ac2Options From(Props p) => new Ac2Options
+        {
+            DisplaySubtitles = p.Bool("DisplaySubtitles"), LastConsoleLanguage = p.Enum("LastConsoleLanguage"), SoundLanguage = p.Enum("SoundLanguage"),
+            MusicVolume = p.Float("MusicVolume"), VoiceVolume = p.Float("VoiceVolume"), SoundFXVolume = p.Float("SoundFXVolume"), Vibration = p.Bool("Vibration"),
+            CameraHorizontalAxisSensitivity = p.Float("CameraHorizontalAxisSensitivity"), CameraVerticalAxisSensitivity = p.Float("CameraVerticalAxisSensitivity"),
+            InvertCameraHorizontalAxis = p.Bool("InvertCameraHorizontalAxis"), InvertCameraVerticalAxis = p.Bool("InvertCameraVerticalAxis"),
+            InvertFirstPersonCameraHorizontalAxis = p.Bool("InvertFirstPersonCameraHorizontalAxis"), InvertFirstPersonCameraVerticalAxis = p.Bool("InvertFirstPersonCameraVerticalAxis"),
+            CameraInserts = p.U8("CameraInserts"), Brightness = p.U8("Brightness"), Blood = p.Bool("Blood"), FlyingMachineControls = p.Bool("FlyingMachineControls"),
+            Health = p.Bool("Health"), Controls = p.Bool("Controls"), MissionState = p.Bool("MissionState"), WeaponSelect = p.Bool("WeaponSelect"),
+            MiniMap = p.Bool("MiniMap"), Money = p.Bool("Money"), Factions = p.Bool("Factions"), SSI = p.Bool("SSI"),
+            LGS01Unlocked = p.Bool("LGS01Unlocked"), LGS02Unlocked = p.Bool("LGS02Unlocked"), LGS03Unlocked = p.Bool("LGS03Unlocked"), LGS04Unlocked = p.Bool("LGS04Unlocked"),
+            Skin01Unlocked = p.Bool("Skin01Unlocked"), Skin02Unlocked = p.Bool("Skin02Unlocked"), Skin03Unlocked = p.Bool("Skin03Unlocked"), Skin04Unlocked = p.Bool("Skin04Unlocked"),
+            FanPackUnlocked = p.Bool("FanPackUnlocked"), SharpestBladesUnlocked = p.Bool("SharpestBladesUnlocked"), EziosDisguiseUnlocked = p.Bool("EziosDisguiseUnlocked"), MansionUnlocked = p.Bool("MansionUnlocked"),
+        };
+    }
+
+    /// <summary>Profile-level unlocks stored next to the options (AssassinGlobalProfileData). Names confirmed in ACViewer.</summary>
+    public sealed class Ac2Profile
+    {
+        public bool UPlayMapUnlocked { get; init; }
+        public bool UPlaySkinUnlocked { get; init; }
+        public bool UniqueKeyMap1Unlocked { get; init; }
+        public bool UniqueKeyMap2Unlocked { get; init; }
+        public bool UniqueKeyMap3Unlocked { get; init; }
+        public bool UniqueKeyMap4Unlocked { get; init; }
+        public List<bool> CompletedUplayActions { get; init; } = new();
+
+        public static Ac2Profile From(Props p) => new Ac2Profile
+        {
+            UPlayMapUnlocked = p.Bool("UPlayMapUnlocked"), UPlaySkinUnlocked = p.Bool("UPlaySkinUnlocked"),
+            UniqueKeyMap1Unlocked = p.Bool("UniqueKeyMap1Unlocked"), UniqueKeyMap2Unlocked = p.Bool("UniqueKeyMap2Unlocked"),
+            UniqueKeyMap3Unlocked = p.Bool("UniqueKeyMap3Unlocked"), UniqueKeyMap4Unlocked = p.Bool("UniqueKeyMap4Unlocked"),
+            CompletedUplayActions = p.PackedBool("CompletedUplayActions"),
+        };
+    }
 }
