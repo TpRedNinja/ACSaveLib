@@ -370,3 +370,10 @@ OasisMessageLineID
 OasisTitleLineID
 WeaponInventoryItemObjectID
 UsedTime
+PlayerProgressionSaveData
+PlayerInventorySpecification
+LogicalInventory
+InventoryContainer
+MaximumItemCount
+PlayerCharacterDataSnapshots
+UplayUnlocked
