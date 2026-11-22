@@ -24,7 +24,7 @@ Owner handle: TpRedNinja (do not use a real name anywhere, including credits and
 - `src/AcSaveLib/` library: `Crypto`, `Compression`, `Container`, `Names`, `Stream` (AC4 property stream), `Games/Ac4`, `Games/Ac1`, `Games/Ac2`
 - `src/AcSaveLib.Cli/` CLI: `ac4 <file> summary|missions|tree|models|unknown|named`, `ac1 <file> summary|roundtrip|models|object|unknown`, `ac2 <file> summary|models|missions|tree|raw|unknown`, `crc <name>`
 - `docs/`: `AGENT_GUIDE.md` (rules and how names were found), `ARCHITECTURE.md`, `BUILDING.md`, `ADDING_A_GAME.md`, `GAMES.md` (game list and status), `FORMAT_*.md`, `FIELDS_*.md`
-- `tools/`: reference scripts (`ac4save_reference.py`, `ac1_sav_full.py`, `brute.c`)
+- `tools/`: reference scripts (`ac4save_reference.py`, `acb_reference.py`, `ac1_sav_full.py`, `brute.c`)
 
 ## Build and check
 ```
@@ -48,4 +48,6 @@ Saves (`*.save`, `*.sav`) and `samples/` are gitignored. Never edit a user save 
 - AC4 Black Flag: decrypt, decompress, parse, typed models for all known fields. Open: layouts of fields that are always empty in samples (MapFogInfo, six UI tutorial lists, community challenge progress, ArmorStates, BackupInventoryItems, WeaponAmmoCountData), ID meaning tables, TimePlayed unit, chunk checksum, 16-byte gap between containers. See `docs/FIELDS_AC4.md`.
 - AC1: byte-exact parse/write, mission states, accomplishments (44 achievements), collectibles with flag IDs, names resolved except 3 hashes. Open: Templars-killed index list, meaning of `IsCompleted` vs mission state, configs 0/2/3/4/5 titles. See `docs/FIELDS_AC1.md`.
 - AC2: plain file, same CRC32-keyed property stream as AC4 (read-only). Mission history, collectible counters and gained item IDs, accomplishments, money. Stats, villa, animus and PSP names are confirmed in ACViewer. Options/profile names confirmed. Open: ID meaning tables, TimePlayed unit, header id, meaning of sync 0 entries. See `docs/FIELDS_AC2.md`.
+- ACB Brotherhood: no encryption, LZO2A chunked containers (same layout as AC4), AC2-style property stream; every block of 6 saves decodes, top-level fields named by `names.txt` except 5 keys. Only `tools/acb_reference.py` reads it; not in C# yet. See `docs/FORMAT_ACB.md`.
+- ACR Revelations: options save is plain (same container as ACB); game saves are encrypted with an unidentified scheme. See `docs/FORMAT_ACR.md`.
 - Other games: not started (see `docs/GAMES.md`; mainline only, list can grow).
