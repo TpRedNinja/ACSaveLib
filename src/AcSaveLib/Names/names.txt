@@ -509,3 +509,6 @@ ContractCompletionOrderIndex
 AssignedTraineesInfos
 ThumbnailImage
 TraineeNameOasisID
+SceneOutput
+DeactiveSceneOnSet
+IsNewlyGained

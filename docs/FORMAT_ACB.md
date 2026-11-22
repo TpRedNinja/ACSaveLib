@@ -43,7 +43,16 @@ Names match the CRC32 of the keys and are shown by ACViewer.
 - TraineesGuildContractsSaveData: ContractAssignmentHistoryIndex, UsedGenericContractToAddIndex, ContractAssignmentsInProgress, StaticContractAssignementUnlocked, ContractsToUnlockVerifyPrerequisites, AvailableGenericContractAssignment, UsedGenericContractAssignment, ContractAssignmentHistory (100 x ContractHistoryParams), ContractHistorySinceLastVisit, NewContractAssignmentsSinceLastVisit.
 - ContractHistoryParams: ContractAssignment (handle), ContractSucceeded, ContractDifficulty, ContractDuration, ContractXPReward, ContractFlorinsReward, ContractLocation (S32), ContractCompletionOrderIndex (U8), AssignedTraineesInfos (ContractHistoryTraineeParams[]: TraineeUniqueID, ThumbnailImage (TextureMapSpec handle), TraineeNameOasisID, Level, Dead).
 
-## Names found by CRC32 word search (likely)
-Matched by brute force at fitting positions; not seen in a viewer.
-- BuildingSaveData: Building (handle). SceneOutputWrapper: SceneEntity, SceneComponent. MissionConstraintSaveData: CurrentRunFailed.
-- Keys still unnamed: 5f03fd21, 097a6081, c0a01091, 03030303 and the unnamed keys listed in `FIELDS_ACB.md`.
+## Player progression, notoriety, buildings, constraints (confirmed in ACViewer, DeathHound100 save)
+- PlayerProgSaveData: UncollectedInventoryItemsOnMap (InventoryItemSettings handles), PlayerCharacterData[11], PlayerCharacterDataSnapshots[12], QuestItemsCollectedAmounts (U32[11]), UplayUnlocked, DataInitialized, WorldNotorietyList[19], LeoShopPlayedScenes, OverridePlayerEntityBuilder, UnlockFacebook1/2, CashFacebook, CashFightClub (S32), MainWorldHorse/OtherWorldHorse/ReplayOrVRHorse.
+- PlayerCharacterData: PlayerCharacter (enum PlayerCharacter, value 6 = PlayerCharacter_ACR_EzioUltimate), PlayerInventorySpecification (LogicalInventory), GainedInventoryItems (handles), ArmorStates, Life, MaxLife, BrokenHealth (S32), LockedInventoryItems, QuickSlotItems (enum EquipmentSlot[4]), PlayerAttributesBuilderData[1].
+- PlayerAttributesBuilderData: PlayerEntityBuilder (handle), AgeLevel, ChestArmorLevel, BootLevel, RightArmLevel, ShoulderLevel, LeftArmLevel, RightArmHBLevel, PoisonBladeLevel, MetalFistLevel, KnivesLevel, HealthObjectPouchLevel, SmokeBombPouchLevel, ParachutesPouchLevel, CapeLevel, ColorLevel, NarrativeLevel, AssassinMarkLevel (all U8).
+- WorldNotorietyValue: NotorietyWorld (World handle), NotorietyValue (Float), IsNotorious (Bool).
+- SceneOutputWrapper: SceneEntity (Entity handle), SceneComponent (Scene handle), SceneOutput (SceneOutput handle), DeactiveSceneOnSet (Bool).
+- BuildingSaveData: Building (WorldUpgradeSettings handle), IsNewlyGained (Bool). BuildingsRules holds BuildingRuleSaveData entries (ACViewer shows them NotValid; their element key 03030303 is not a CRC32 of a known name).
+- WorldUpgradeSaveData: CurrentGoldChestAmount, CurrentIncomeDelay, PendingIncomeValueForAfs (U32).
+- MissionSaveData: Mission, HighestSynchronization, BriefingDisplayedOnce, BriefingAccepted, MissionStepSaveData (Step handle, IsCheckpoint, Succeeded), MissionConstraintSaveData (ConstraintID, PlayerSelected, CurrentRunFailed, BestRunSucceeded, ConditionData of ConditionID and MetaValue). MissionHistory Identifier is enum MissionHistoryTrackIdentifiers (0 = MissionHistoryTrack_Narrative).
+
+## Unnamed keys
+- 00000012 (trailing raw item), 03030303 (BuildingRuleSaveData element key), ead92d83 (WorldEconomySaveData shop array), dfaa4e68 and 0900aa54 (U32 pair in each WorldEconomyShopSaveData), 4f436d86, 55c432c6, 9ed74287, d99bbfde (four U32 fields after the shop array). ACViewer itself shows these as hashes.
+- CRC word search offers 0900aa54 = MoneyEarned and 9ed74287 = PendingIncome [guess]; no viewer shows them.
