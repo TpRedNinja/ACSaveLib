@@ -16,4 +16,5 @@ Names come from CRC32 matches to property keys; ACViewer screenshots of the no-p
 - AccomplishmentManagerData: AccomplishmentEntries (ObjectID, Inactive, Completed, CurrentCount).
 
 ## Open
-- Meaning of the 14 unnamed keys listed in `FORMAT_ACB.md`/notes, Step and ContractAssignment handles, units of stats.
+- Unnamed keys: 00000012, 03030303, 0900aa54, 097a6081, 4f436d86, 55c432c6, 5f03fd21, 9ed74287, c0a01091, d99bbfde, dfaa4e68, ead92d83.
+- Step and ContractAssignment handles, units of stats.

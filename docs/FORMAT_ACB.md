@@ -36,8 +36,14 @@ container 1 (header properties) | 16 byte gap | container 2 (main property strea
 
 The forge index text files (`DataPC_*.index.txt`, one line per object: `0x<16 hex>: Name.Class`) resolve most handle values in the save: World, PlayerPortal, mission group and mission ids, inventory item ids and entity builder ids. Step ids, contract assignment ids, world upgrade ids and shop setting ids were not found in the provided index files.
 
+## Trainee and contract objects (confirmed in ACViewer, DeathHound100 save)
+Names match the CRC32 of the keys and are shown by ACViewer.
+- TraineesGuildManagerSaveData: TraineeUniqueIDCounter, UsedMaleTraineeNamesOasisIDs (S32[]), UsedFemaleTraineeNamesOasisIDs (S32[]), AliveTraineeSettings (TraineeSettingsSaveData[]), TraineesPromotedToAssassinIndexes (U8[]), TraineesLeveledUpSinceLastVisit, TraineesRecruitedSinceLastVisit, Contracts (TraineesGuildContractsSaveData), TrackingCummulative{TraineesRecruited, TraineesLost, ContractsAttempted, ContractsSucceeded, XPGained}.
+- TraineeSettingsSaveData: TraineeUniqueID, NameOasisLineID, DescriptionOasisLineID, Level (U8), Skill, XP, UpgradePoints, Health, IsMale, CurrentContractAssignment (handle), HeadIndex, EyesColorIndex, MaskIndex, ColorIndex (U8), 24 Bool abilities and proficiencies (CounterDodgeAbility ... ThrowSmokeBombAbility), UsePresetUpgrades.
+- TraineesGuildContractsSaveData: ContractAssignmentHistoryIndex, UsedGenericContractToAddIndex, ContractAssignmentsInProgress, StaticContractAssignementUnlocked, ContractsToUnlockVerifyPrerequisites, AvailableGenericContractAssignment, UsedGenericContractAssignment, ContractAssignmentHistory (100 x ContractHistoryParams), ContractHistorySinceLastVisit, NewContractAssignmentsSinceLastVisit.
+- ContractHistoryParams: ContractAssignment (handle), ContractSucceeded, ContractDifficulty, ContractDuration, ContractXPReward, ContractFlorinsReward, ContractLocation (S32), ContractCompletionOrderIndex (U8), AssignedTraineesInfos (ContractHistoryTraineeParams[]: TraineeUniqueID, ThumbnailImage (TextureMapSpec handle), TraineeNameOasisID, Level, Dead).
+
 ## Names found by CRC32 word search (likely)
-Matched by brute force over combinations of up to 3 known words, at fitting positions; not seen in a viewer.
-- TraineeSettingsSaveData: IsMale, ColorIndex, HeadIndex, MaskIndex, Skill, XP, UpgradePoints, TraineeUniqueID, CurrentContractAssignment (handle).
-- ContractHistoryParams: ContractSucceeded, ContractLocation, ContractDifficulty, ContractDuration, ContractXPReward, ContractFlorinsReward.
+Matched by brute force at fitting positions; not seen in a viewer.
 - BuildingSaveData: Building (handle). SceneOutputWrapper: SceneEntity, SceneComponent. MissionConstraintSaveData: CurrentRunFailed.
+- Keys still unnamed: 5f03fd21, 097a6081, c0a01091, 03030303 and the unnamed keys listed in `FIELDS_ACB.md`.
