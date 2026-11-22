@@ -36,5 +36,5 @@ In-game values from the DeathHound100 save (Bank menu: total income 16680 florin
 - WorldEconomySaveData holds 64 WorldEconomyShopSaveData entries. The Bank menu lists 64 shops (17 blacksmith, 15 doctor, 12 tailor, 10 art merchant, 10 bank) [likely: same count].
 - CurrentGoldChestAmount = 66720 = exactly 4 x 16680, the total income per 20 minutes [likely: the amount waiting in the vault].
 - CurrentIncomeDelay is at most 1200 in all six saves (20 minutes in seconds) [guess: seconds counted within the 20 minute income cycle].
-- Per shop `dfaa4e68` and `0900aa54` are 0 in this save, and the in-game Rome Global Economy screen shows earnings 0 / investments 0 for every shop type [guess: per-shop earnings and investment totals; which field is which is unknown]. They are non-zero only in the 100 save.
+- Per shop `dfaa4e68` and `0900aa54` are 0 in this save, and the in-game Rome Global Economy screen shows earnings 0 / investments 0 for every shop type [guess: per-shop earnings and investment totals; which field is which is unknown]. They are non-zero only in the 100 save. The game's online investment system (a mini stock market) was removed when its servers were shut down, so the investment half of the pair is probably unused in the base game.
 - Not stored in the save as far as seen: income per shop or landmark, discounts (15% per shop type), vault totals.
