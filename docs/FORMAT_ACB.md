@@ -35,3 +35,9 @@ container 1 (header properties) | 16 byte gap | container 2 (main property strea
 ## Handle values
 
 The forge index text files (`DataPC_*.index.txt`, one line per object: `0x<16 hex>: Name.Class`) resolve most handle values in the save: World, PlayerPortal, mission group and mission ids, inventory item ids and entity builder ids. Step ids, contract assignment ids, world upgrade ids and shop setting ids were not found in the provided index files.
+
+## Names found by CRC32 word search (likely)
+Matched by brute force over combinations of up to 3 known words, at fitting positions; not seen in a viewer.
+- TraineeSettingsSaveData: IsMale, ColorIndex, HeadIndex, MaskIndex, Skill, XP, UpgradePoints, TraineeUniqueID, CurrentContractAssignment (handle).
+- ContractHistoryParams: ContractSucceeded, ContractLocation, ContractDifficulty, ContractDuration, ContractXPReward, ContractFlorinsReward.
+- BuildingSaveData: Building (handle). SceneOutputWrapper: SceneEntity, SceneComponent. MissionConstraintSaveData: CurrentRunFailed.
