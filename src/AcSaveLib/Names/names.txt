@@ -378,3 +378,4 @@ MaximumItemCount
 PlayerCharacterDataSnapshots
 UplayUnlocked
 IsNotorious
+ADBFirstPuzzleCompletedSpeechPlayed
