@@ -55,4 +55,4 @@ Names match the CRC32 of the keys and are shown by ACViewer.
 
 ## Unnamed keys
 - 00000012 (trailing raw item), 03030303 (BuildingRuleSaveData element key), ead92d83 (WorldEconomySaveData shop array), dfaa4e68 and 0900aa54 (U32 pair in each WorldEconomyShopSaveData), 4f436d86, 55c432c6, 9ed74287, d99bbfde (four U32 fields after the shop array). ACViewer itself shows these as hashes.
-- CRC word search offers 0900aa54 = MoneyEarned and 9ed74287 = PendingIncome [guess]; no viewer shows them.
+- CRC word search offers 9ed74287 = PendingIncome [guess]; it is 0 in every sample save and the game shows pending money 0.
