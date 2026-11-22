@@ -37,6 +37,14 @@ namespace AcSaveLib.Stream
                 if (arrA || arrB)
                 {
                     uint count = BitConverter.ToUInt32(d, arrA ? b + 14 : b + 13);
+                    // Object arrays need at least 12 bytes per element, so a payload of exactly one byte per element is a packed byte array
+                    // (seen: BuildingsRules in Brotherhood, 03 03 03 ...).
+                    if (arrA && count > 0 && len - 18 == count)
+                    {
+                        var bytes = new Node { Key = key, Kind = NodeKind.Array, TypeId = type, Offset = p, Value = count, ElementSize = 1 };
+                        for (int i = 0; i < count; i++) bytes.Packed.Add(d[b + 18 + i]);
+                        list.Add(bytes); p = b + len; continue;
+                    }
                     var node = new Node { Key = key, Kind = NodeKind.Array, TypeId = type, Offset = p, Value = count };
                     int q = arrA ? b + 18 : b + 17, aend = b + len;
                     for (uint i = 0; i < count; i++)

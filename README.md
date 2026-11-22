@@ -13,7 +13,7 @@ Mainline games in release order. Short name, full name, then progress.
 |---|---|---|---|---|---|
 | AC1 | Assassin's Creed | no encryption | no compression | done (byte-exact) | mission states, accomplishments, collectibles; names resolved (3 hashes open), see docs/FIELDS_AC1.md |
 | AC2 | Assassin's Creed II | no encryption | no compression | done (same CRC32-keyed stream as AC4, read-only) | mission history, collectible counters and item IDs, accomplishments, money; see docs/FIELDS_AC2.md |
-| ACB | Assassin's Creed Brotherhood | no encryption | LZO2A (Python reference only) | AC2-style items, top-level fields named (not parsed in C# yet) | see docs/FORMAT_ACB.md |
+| ACB | Assassin's Creed Brotherhood | no encryption | LZO2A | done (AC2-style items, read-only) | missions, accomplishments, stats, trainees and contracts, player progression, economy; see docs/FIELDS_ACB.md |
 | ACR | Assassin's Creed Revelations | options save plain, game saves encrypted (scheme unknown) | LZO2A (same container as ACB) | not started | see docs/FORMAT_ACR.md |
 | AC3 | Assassin's Creed III Remastered | - | - | - | not started |
 | ACL | Assassin's Creed Liberation (original) | - | - | - | not started |

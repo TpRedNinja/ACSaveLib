@@ -1,5 +1,6 @@
 # Adding a game
 
+0. Write the reader in C# from the start (container, parser, models, CLI verb). Do not write a separate Python or script reference reader; the CLI is the test tool.
 1. Collect several saves (different progress points). Hex-dump the header: plaintext? title? length fields?
 2. Encryption: look for a repeating key; try recovering it from predictable plaintext (version, magic, zeros) like XorTailCipher does. Check whether key alignment is from start or end.
 3. Compression: scan the decrypted bytes for a signature; AC4 uses `33 AA FB 57 99 FA 04 10` chunked LZO. If the game differs, add a codec under Compression/.

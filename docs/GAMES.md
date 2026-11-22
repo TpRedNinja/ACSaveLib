@@ -4,7 +4,7 @@
 |---|---|---|---|
 | 1 | AC1 | Assassin's Creed | IN PROGRESS: parse/write byte-exact, mission states, accomplishments, collectibles (see FIELDS_AC1.md) |
 | 2 | AC2 | Assassin's Creed II | IN PROGRESS: parse done on 33 saves (0 unparsed items, read-only); mission history, collectibles, accomplishments, money (see FORMAT_AC2.md, FIELDS_AC2.md) |
-| 3 | ACB | Assassin's Creed Brotherhood | IN PROGRESS: container and LZO2A decode done on 6 saves (Python reference only), top-level fields named (see FORMAT_ACB.md) |
+| 3 | ACB | Assassin's Creed Brotherhood | IN PROGRESS: read-only C# reader (container, LZO2A, property stream, typed models) verified on 6 saves and 1 options file; all but 8 keys named (see FORMAT_ACB.md, FIELDS_ACB.md) |
 | 4 | ACR | Assassin's Creed Revelations | IN PROGRESS: options save decodes with the ACB codec; game saves are encrypted (scheme unknown), see FORMAT_ACR.md |
 | 5 | AC3 | Assassin's Creed III Remastered | not started |
 | 6 | ACL | Assassin's Creed Liberation (original) | not started |

@@ -16,7 +16,7 @@ Names come from CRC32 matches to property keys; ACViewer screenshots of the no-p
 - AccomplishmentManagerData: AccomplishmentEntries (ObjectID, Inactive, Completed, CurrentCount).
 
 ## Open
-- Unnamed keys: 00000012, 03030303, 0900aa54, 4f436d86, 55c432c6, 9ed74287, d99bbfde, dfaa4e68, ead92d83 (see `FORMAT_ACB.md`).
+- Unnamed keys in game saves: 00000012, 0900aa54, 4f436d86, 55c432c6, 9ed74287, d99bbfde, dfaa4e68, ead92d83; in the options file 11 more (see `FORMAT_ACB.md`).
 - Step and ContractAssignment handles.
 
 ## GameStatsSaveData against the in-game Stats menu
@@ -34,7 +34,7 @@ Confirmed on the DeathHound100 save (in-game values match the decoded values; th
 ## Economy (WorldUpgradeSaveData) against the in-game Bank menu
 In-game values from the DeathHound100 save (Bank menu: total income 16680 florins per 20 minutes, 12300 shops + 3608 renovations + 772 landmarks).
 - WorldEconomySaveData holds 64 WorldEconomyShopSaveData entries. The Bank menu lists 64 shops (17 blacksmith, 15 doctor, 12 tailor, 10 art merchant, 10 bank) [likely: same count].
-- CurrentGoldChestAmount = 66720 = exactly 4 x 16680, the total income per 20 minutes [likely: the amount waiting in the vault].
+- CurrentGoldChestAmount holds 66720 in the Snapshot copy of the DeathHound save (the main copy is 0): exactly 4 x 16680, the total income per 20 minutes [likely: the amount waiting in the vault]. Values per save, main / Snapshot: 100 save 0 / 25399, DeathHound 0 / 66720, Free Roam 0 / 0, Personal 80000 / 80000, True100 #0 0 / 0, True100 #1 16680 / 80000. 80000 appears in three copies [guess: the vault cap].
 - CurrentIncomeDelay is at most 1200 in all six saves (20 minutes in seconds) [guess: seconds counted within the 20 minute income cycle].
 - Per shop `dfaa4e68` and `0900aa54` are 0 in this save, and the in-game Rome Global Economy screen shows earnings 0 / investments 0 for every shop type [guess: per-shop earnings and investment totals; which field is which is unknown]. They are non-zero only in the 100 save. The game's online investment system (a mini stock market) was removed when its servers were shut down, so the investment half of the pair is probably unused in the base game.
 - Not stored in the save as far as seen: income per shop or landmark, discounts (15% per shop type), vault totals.

@@ -1,5 +1,5 @@
 # ACB (Assassin's Creed Brotherhood, PC) .SAV format
-Reference reader: `tools/acb_reference.py` (Python). The C# library does not read Brotherhood yet. CONFIRMED on 6 saves and 1 options file (100%, Free Roam, True 100%, personal saves): every block decodes to its stated size.
+Reader: `Games/Acb/AcbSaveFile.cs` (C#, read-only), CLI verb `acb`. CONFIRMED on 6 saves and 1 options file (100%, Free Roam, True 100%, personal saves): every block decodes to its stated size.
 No encryption. Little-endian. Compressed with LZO2A, not LZO1x.
 
 ```
@@ -19,7 +19,7 @@ container 1 (header properties) | 16 byte gap | container 2 (main property strea
 
 ## Container and blocks
 - Block: `01` | u32 compressed size | u32 uncompressed size | u32 checksum (algorithm not identified, ignored) | LZO2A data. A container is the 15 byte signature header followed by its blocks.
-- Codec: LZO2A, a byte-flag LZO variant. CONFIRMED: every block of all test files decodes to exactly its stated uncompressed size and consumes exactly its stated compressed size. `tools/acb_reference.py` holds the decompressor (port of the game's routine, see `FORMAT_ACR.md`).
+- Codec: LZO2A, a byte-flag LZO variant. CONFIRMED: every block of all test files decodes to exactly its stated uncompressed size and consumes exactly its stated compressed size. `Compression/Lzo2a.cs` holds the decompressor (port of the game's routine, see `FORMAT_ACR.md`); `ChunkContainer` picks it from the codec id byte of the container header (0 = LZO1x, 2 = LZO2A).
 - Gap between container 1 and 2 (16 bytes): u32 length of everything after this field | u32 `1` | u32 `0x00CAFE00` | u32 uncompressed size of container 2.
 - Options files (`*_OPTIONS`, about 1 KB) have three containers (283, 1310 and 162 bytes). Their second gap holds the length, `3` and `0x11FACE11`, then the size 1310; the file ends with 5 more bytes after the last block.
 - Container 1 is 283 or 284 bytes. Container 2 has 9 to 18 blocks (263871 to 568393 bytes in the samples).
@@ -49,10 +49,11 @@ Names match the CRC32 of the keys and are shown by ACViewer.
 - PlayerAttributesBuilderData: PlayerEntityBuilder (handle), AgeLevel, ChestArmorLevel, BootLevel, RightArmLevel, ShoulderLevel, LeftArmLevel, RightArmHBLevel, PoisonBladeLevel, MetalFistLevel, KnivesLevel, HealthObjectPouchLevel, SmokeBombPouchLevel, ParachutesPouchLevel, CapeLevel, ColorLevel, NarrativeLevel, AssassinMarkLevel (all U8).
 - WorldNotorietyValue: NotorietyWorld (World handle), NotorietyValue (Float), IsNotorious (Bool).
 - SceneOutputWrapper: SceneEntity (Entity handle), SceneComponent (Scene handle), SceneOutput (SceneOutput handle), DeactiveSceneOnSet (Bool).
-- BuildingSaveData: Building (WorldUpgradeSettings handle), IsNewlyGained (Bool). BuildingsRules holds BuildingRuleSaveData entries (ACViewer shows them NotValid; their element key 03030303 is not a CRC32 of a known name).
+- BuildingSaveData: Building (WorldUpgradeSettings handle), IsNewlyGained (Bool). BuildingsRules is a packed array of one byte per rule (u32 count, then count bytes; every byte is 3 in most saves and 2 in one early save; ACViewer shows it as NotValid; meaning of the values unknown). The bytes `03 03 03 03` that looked like an element key are the first four values.
 - WorldUpgradeSaveData: CurrentGoldChestAmount, CurrentIncomeDelay, PendingIncomeValueForAfs (U32).
 - MissionSaveData: Mission, HighestSynchronization, BriefingDisplayedOnce, BriefingAccepted, MissionStepSaveData (Step handle, IsCheckpoint, Succeeded), MissionConstraintSaveData (ConstraintID, PlayerSelected, CurrentRunFailed, BestRunSucceeded, ConditionData of ConditionID and MetaValue). MissionHistory Identifier is enum MissionHistoryTrackIdentifiers (0 = MissionHistoryTrack_Narrative).
 
 ## Unnamed keys
-- 00000012 (trailing raw item), 03030303 (BuildingRuleSaveData element key), ead92d83 (WorldEconomySaveData shop array), dfaa4e68 and 0900aa54 (U32 pair in each WorldEconomyShopSaveData), 4f436d86, 55c432c6, 9ed74287, d99bbfde (four U32 fields after the shop array). ACViewer itself shows these as hashes.
+- 00000012 (trailing raw item), ead92d83 (WorldEconomySaveData shop array), dfaa4e68 and 0900aa54 (U32 pair in each WorldEconomyShopSaveData), 4f436d86, 55c432c6, 9ed74287, d99bbfde (four U32 fields after the shop array). ACViewer itself shows these as hashes.
 - CRC word search offers 9ed74287 = PendingIncome [guess]; it is 0 in every sample save and the game shows pending money 0.
+- Options file (`100_OPTIONS`): keys without a name are `2ead62ff` (enum u64 in PlayerOptionsSaveData, same value as SoundLanguage and LastConsoleLanguage in the sample), `ed915bd4`, `f20b5679`, `40ef7c8b`, `9c81bb39` (value 63), and in container 3 (root key `0xC9876D66`) `3b546966`, `4dbc7da7`, `5b95f10b`, `2a4e8a90`, `496f8780` (u64 `0x1FFFFFFFFFFFFF`), `6f88b05b`. The names `PlayerOptionsSaveData` and the other options keys are confirmed in ACViewer.

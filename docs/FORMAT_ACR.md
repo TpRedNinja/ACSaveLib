@@ -1,5 +1,5 @@
 # ACR (Assassin's Creed Revelations, PC) .save format
-Reference reader: `tools/acb_reference.py` reads the plain options save. The C# library does not read Revelations yet. Findings below come from 3 saves and from `ACRSP.exe` in IDA (imagebase `0x400000`; `sub_...` are IDA's automatic names, nothing is renamed in the IDB).
+The container and LZO2A codec are shared with Brotherhood (`ChunkContainer`, `Lzo2a`); the plain options save decodes with that codec. The C# library has no Revelations game reader yet. Findings below come from 3 saves and from `ACRSP.exe` in IDA (imagebase `0x400000`; `sub_...` are IDA's automatic names, nothing is renamed in the IDB).
 
 ## Header
 - Same header as the AC2 Steam saves: u32 `0x224` (header length) | u32 `0` | 32 character ASCII id at `0x08` | UTF-16 title from `0x28` | zero padding up to `0x228` (see `FORMAT_AC2.md`).
