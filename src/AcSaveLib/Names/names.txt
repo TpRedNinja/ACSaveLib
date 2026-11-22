@@ -443,3 +443,14 @@ CashFightClub
 MainWorldHorse
 OtherWorldHorse
 ReplayOrVRHorse
+Mounted
+SelectedColourRow
+GainedWorldUpgradeSettings
+BuildingsSaveData
+Buildings
+BuildingsRules
+WorldEconomySaveData
+WorldEconomyShopSettings
+CurrentGoldChestAmount
+GenericContractAssignementSaveData
+WorldEconomyShopSaveData
