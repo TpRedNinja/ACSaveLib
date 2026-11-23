@@ -67,8 +67,8 @@ public static class AcbCli
             }
             case "trainees":
             {
-                // acb <file> trainees [LocalizationPackage_English.xml]: names come from the OasisLineIDs in the save
-                var loc = args.Length > 3 ? LocalizationPackage.Load(args[3]) : null;
+                // acb <file> trainees [LocalizationPackage_English.xml]: names come from the OasisLineIDs in the save; the built-in trainee names are used unless an XML is given
+                var loc = args.Length > 3 ? LocalizationPackage.Load(args[3]) : LocalizationPackage.Builtin;
                 string N(uint id) => loc?.Describe(id) ?? id.ToString();
                 foreach (var t in save.TraineesGuild.AliveTrainees)
                     Console.WriteLine($"#{t.UniqueId} name={N((uint)t.NameOasisLineId)} level={t.Level} xp={t.Xp} health={t.Health} male={t.IsMale} onContract=0x{t.CurrentContractAssignment:X} abilities={t.Abilities.Count(a => a.Value)}/{t.Abilities.Count}");

@@ -6,7 +6,7 @@ src/AcSaveLib/
   Compression/Lzo1x.cs           LZO1x decompressor (port of the reference algorithm)
   Compression/Lzo2a.cs           LZO2A decompressor (Brotherhood)
   Container/ChunkContainer.cs    Ubisoft chunk container (LZO1x or LZO2A by codec id): signature, Read, ReadAll
-  Names/LocalizationPackage.cs  OasisLineID -> text from LocalizationPackage_English.xml (loaded at runtime, not embedded)
+  Names/LocalizationPackage.cs  OasisLineID -> text; Builtin = embedded trainee names (trainee_names.tsv), Load(path) = a full LocalizationPackage_English.xml
   Names/PropertyNames.cs         CRC32 -> name lookup (+ Crc32 helper), names.txt embedded resource
   Names/names.txt                confirmed property names only
   Stream/Node.cs, PropertyReader.cs   generic property-stream tree (game independent)

@@ -667,3 +667,25 @@ HudShowMessages
 HudShowTips
 NewsID
 StereoscopyIntensity
+# Liberation HD (CRC32 dictionary matches of word combinations; not seen in a viewer)
+Price
+ShipName
+RouteSave
+UplayActions
+UsedSave
+Width
+BuyPrice
+DiscoveredAnimals
+Quantity
+HuntingData
+ShipContext
+HolsterLevel
+PriceMultiplier
+HatLevel
+Locked
+Height
+ShipListSave
+ShipSaveData
+ShipTypeSave
+PendingEventsSave
+LastNewsSeen
