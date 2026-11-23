@@ -19,5 +19,7 @@
 
 ## Header and container
 - Decrypted offset 576 starts the first chunk container with the same layout as AC4 (`33 aa fb 57 99 fa 04 10 01 00 00 00 ...`). [confirmed]
-- The AC4 reader (`Games/Ac4`) does not yet read these saves because its known plaintext expects version 35. [confirmed]
-- Decompression and the property stream are not checked yet. [guess]
+- The containers decompress with the AC4 codec (LZO1x) and the property stream parses with the AC4 reader (`Games/Ac4`, CLI `ac4`), which tries version 35 and then 36 when recovering the key. [confirmed]
+- Rogue game saves parse with the AC4 models: narrative and side missions, accomplishments, stats, animus database, map icons, messages, fleet and player progression are filled. [confirmed]
+- The `100% file - 2.save` of the save pack reads 69 of 69 narrative missions completed and 268 of 312 side missions completed. [likely]
+- Unknown keys (no name in `names.txt`): 13 in a profile save, 43 in an early game save, 57 in the 100% save. [confirmed]

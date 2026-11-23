@@ -16,13 +16,17 @@ namespace AcSaveLib.Games.Ac4
     {
         public const int EncryptedStart = 552;
         public const int RootItemsOffset = 26;     // property stream: 14 zero bytes + root header (key u32, size u32, 0x01, size u32) then items
-        private static readonly byte[] KnownPlaintext =
-            { 0x23, 0, 0, 0, 0xAC, 0xDB, 0xFE, 0, 0, 0, 0, 0, 0, 0, 0, 0 };   // version 35, magic 0x00FEDBAC, 8 zero bytes
+        // version, magic 0x00FEDBAC, 8 zero bytes; 35 = Black Flag and Freedom Cry, 36 = Rogue
+        private static byte[] KnownPlaintextFor(byte version) =>
+            new byte[] { version, 0, 0, 0, 0xAC, 0xDB, 0xFE, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        private static readonly byte[] SupportedVersions = { 0x23, 0x24 };
 
         /// <summary>UTF-16 save title from the plaintext header (e.g. "AC4BF[0]-tm_...").</summary>
         public string Title { get; private set; } = "";
         /// <summary>The 16-byte XOR key recovered from this file.</summary>
         public byte[] Key { get; private set; } = Array.Empty<byte>();
+        /// <summary>Save format version (35 Black Flag and Freedom Cry, 36 Rogue).</summary>
+        public byte Version { get; private set; }
         /// <summary>Decrypted but still compressed file bytes.</summary>
         public byte[] Decrypted { get; private set; } = Array.Empty<byte>();
         /// <summary>Uncompressed header properties (container 1: Version, MagicNumber, SaveGameID, TimePlayed, ...).</summary>
@@ -63,10 +67,21 @@ namespace AcSaveLib.Games.Ac4
             if (file.Length < 600) throw new InvalidDataException("File too small to be an AC4 save.");
             var r = new Ac4SaveFile();
             r.Title = System.Text.Encoding.Unicode.GetString(file, 4, 0x200 - 4).Trim().TrimEnd((char)0).Trim();
-            r.Key = XorTailCipher.RecoverKey(file, EncryptedStart, KnownPlaintext, 16);
-            r.Decrypted = XorTailCipher.Apply(file, EncryptedStart, r.Key);
-
-            var containers = ChunkContainer.ReadAll(r.Decrypted, 576);
+            List<byte[]>? containers = null;
+            Exception? failure = null;
+            foreach (var version in SupportedVersions)
+            {
+                try
+                {
+                    r.Key = XorTailCipher.RecoverKey(file, EncryptedStart, KnownPlaintextFor(version), 16);
+                    r.Decrypted = XorTailCipher.Apply(file, EncryptedStart, r.Key);
+                    containers = ChunkContainer.ReadAll(r.Decrypted, 576);
+                    r.Version = version;
+                    break;
+                }
+                catch (Exception e) { failure = e; containers = null; }
+            }
+            if (containers == null) throw new InvalidDataException("Not a readable AC4 / Rogue save: " + failure?.Message);
             if (containers.Count < 2) throw new InvalidDataException("Expected a header container and a main container.");
             r.HeaderStream = containers[0];
             r.Stream = containers[containers.Count - 1];
