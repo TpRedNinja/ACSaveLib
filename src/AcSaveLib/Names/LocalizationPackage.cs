@@ -22,7 +22,7 @@ namespace AcSaveLib.Names
             Encoding enc = bytes.Length >= 2 && bytes[0] == 0xFF && bytes[1] == 0xFE ? Encoding.Unicode
                 : bytes.Length >= 2 && bytes[0] == 0xFE && bytes[1] == 0xFF ? Encoding.BigEndianUnicode : new UTF8Encoding(false);
             var pkg = new LocalizationPackage();
-            using var reader = XmlReader.Create(new StringReader(enc.GetString(bytes)));
+            using var reader = XmlReader.Create(new StringReader(enc.GetString(bytes).TrimStart('\uFEFF')));
             while (reader.Read())
             {
                 if (reader.NodeType != XmlNodeType.Element || reader.Name != "String") continue;
