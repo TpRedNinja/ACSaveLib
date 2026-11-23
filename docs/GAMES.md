@@ -7,7 +7,7 @@
 | 3 | ACB | Assassin's Creed Brotherhood | IN PROGRESS: read-only C# reader (container, LZO2A, property stream, typed models) verified on 6 saves and 1 options file; all but 8 keys named (see FORMAT_ACB.md, FIELDS_ACB.md) |
 | 4 | ACR | Assassin's Creed Revelations | IN PROGRESS: C# reader decrypts and parses game and options saves (`Games/Acr`); about 60-80 keys per save still unnamed, see FORMAT_ACR.md |
 | 5 | AC3 | Assassin's Creed III Remastered | not started |
-| 6 | ACL | Assassin's Creed Liberation (original) | not started |
+| 6 | ACL | Assassin's Creed Liberation (original, HD on PC) | IN PROGRESS: C# reader decodes containers (LZO1x) and parses the property stream of one game save and the OPTIONS file (`Games/Acl`, read-only, no typed models); about 50 keys unnamed; not detected by ACViewer (see FORMAT_ACL.md, FIELDS_ACL.md) |
 | 7 | ACLR | Assassin's Creed Liberation Remastered (saves share the format of AC3 Remastered, to be verified) | not started |
 | 8 | AC4 | Assassin's Creed IV Black Flag | IN PROGRESS: decrypt/decompress/parse done; all known fields have typed models (see FIELDS_AC4.md) |
 | 9 | ACRogue | Assassin's Creed Rogue | not started |
