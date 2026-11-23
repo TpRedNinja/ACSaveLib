@@ -6,7 +6,7 @@ using AcSaveLib.Games.Ac2;
 using AcSaveLib.Names;
 using AcSaveLib.Stream;
 
-/// <summary>CLI verbs for AC2: ac2 &lt;file&gt; summary|tree [depth] [name]|unknown|raw</summary>
+/// <summary>CLI verbs for AC2: ac2 &lt;file&gt; summary|models|missions|tree [depth] [name]|unknown|raw</summary>
 public static class Ac2Cli
 {
     public static int Run(string[] args)
@@ -41,6 +41,17 @@ public static class Ac2Cli
                 Console.WriteLine($"money={save.Money} gainedItems={save.GainedInventoryItems.Count} codex={c.CodexPages} feathers={c.Feathers} statuettes={c.Statuettes} seals={c.AssassinSeals} chests={c.Chests} counters=[{string.Join(",", c.Values)}]");
                 Console.WriteLine($"stats: kills={save.GameStats.Kills} earned={save.GameStats.TotalMoneyEarned} spent={save.GameStats.TotalMoneySpent} height={save.GameStats.HeightClimbed} villaValue={save.Villa.StrongholdValue}");
                 Console.WriteLine($"accomplishments={save.Accomplishments.Count} completed={save.Accomplishments.Count(a => a.Completed)}");
+                var gd = save.Game;
+                var ab = gd.AnimusDatabase;
+                Console.WriteLine($"animus: entries={ab.Entries.Count} found={ab.Entries.Count(e => e.EntryFoundOrderNumber != 0)} glyphs={ab.Glyphs.Count} solved={ab.Glyphs.Count(x => x.IsMiniGameSolved)} codexFound={ab.CodexFound.Count(x => x)}/{ab.CodexFound.Count} lgsSolved={ab.Entries.Count(e => e.IsLgsSolved)}");
+                var ui = gd.UITutorial;
+                Console.WriteLine($"tutorials: hud={ui.HudTutorials.Count} system={ui.SystemTutorials.Count} controls={ui.ControlsTutorials.Count} fight={ui.FightTutorials.Count} tactics={ui.TacticsTutorials.Count} world={ui.WorldTutorials.Count}");
+                Console.WriteLine($"psp: connected={gd.PspState.PspConnectionDone} gold={gd.PspState.PspGoldCoins} silver={gd.PspState.PspSilverCoins} bronze={gd.PspState.PspBronzeCoins} weapons=[{string.Join(",", gd.PspState.PspWeaponUnlocked)}] snapshotConnected={gd.SnapshotPspState.PspConnectionDone}");
+                var prog = gd.Progression;
+                Console.WriteLine($"characters={prog.Characters.Count} snapshots={prog.CharacterSnapshots.Count} snapshotMoney={gd.SnapshotProgression.Money} notorieties={prog.WorldNotorieties.Count} notorious={prog.WorldNotorieties.Count(n => n.IsNotorious)} dataInitialized={prog.DataInitialized}");
+                foreach (var ch in prog.Characters)
+                    Console.WriteLine($"  character 0x{ch.PlayerCharacter:X} life={ch.Life}/{ch.MaxLife} containers={ch.Containers.Count} items={ch.Containers.Sum(x => x.ItemList.Count)} armor={ch.ArmorStates.Count} locked={ch.LockedInventoryItems.Count} outfits={ch.Attributes.Count}");
+                Console.WriteLine($"villa: value={gd.Villa.StrongholdValue} buildings=[{string.Join(",", gd.Villa.BuildingsLevels)}] snapshotIncome={gd.SnapshotVilla.CurrentGoldIncome} delta: gained={gd.SnapshotDelta.GainedInventoryItemsDelta.Count} characterItems={gd.SnapshotDelta.PlayerCharacterItemsDelta.Count}");
                 break;
             }
             case "missions":
