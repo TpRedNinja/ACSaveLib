@@ -1,4 +1,4 @@
-# Liberation HD (ACL) save fields
+# Liberation (ACL / ACLR) save fields
 
 Layout and containers are in `FORMAT_ACL.md`. The reader is `Games/Acl` (read-only; it exposes the decoded containers and their raw property items, there are no typed models yet).
 
