@@ -968,3 +968,7 @@ RemainingTimeSeconds
 StartTime
 RewardType
 TimeUnlocked
+
+# Rogue PlayerProgSaveData supply camps (SupplyCampSaveData is shown in ACViewer, confirmed; Camp is a one word CRC32 match whose 64-bit value fits a camp handle, not seen in a viewer)
+SupplyCampSaveData
+Camp

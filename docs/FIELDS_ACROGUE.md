@@ -14,10 +14,13 @@ Layout, key and containers are in `FORMAT_ACROGUE.md`. The reader is `Games/Acro
 - Missions entries (FleetMissionGameData): OwnerProfileId, MissionId, HelpedByProfileId, TemplateId, DurationSeconds, AssignedBoatIds, Odds, Roll, RemainingTimeSeconds, StartTime, FetchTimeMilliseconds. Rewards entries (FleetRewardGameData): RewardType (enum FleetRewardID, 1 = FleetCollectible_01), Value, TimeUnlocked. [confirmed names]
 - Typed: `FleetData`, `FleetPlayer`, `FleetBoat`, `FleetMission`, `FleetReward`, `FleetRoute`, `BusinessManager`. Icebreaker and Events have no typed model yet.
 
+- `PlayerProgSaveData` holds `SupplyCampSaveData` (between `NavalConvoySaveData` and `KillInfoSaveData`), an `ItemArray` of `Camp` (64-bit handle) and `Discovered` entries; 12 entries in the 100% save. `SupplyCampSaveData` is confirmed in ACViewer, `Camp` is a likely CRC32 word match. [confirmed / likely]
+- `cd986d96` (0 in all 45 mission entries) and `c3a87f61` (resource entries) are not shown by ACViewer; they may be enums. [guess]
+
 ## Profile save
 - Header container, then a global profile container (`PlayerOptionsSaveData`, `AccomplishmentManagerData`) and last `SinglePlayerOptionsSaveData`. See `FORMAT_ACROGUE.md`.
 
 ## Open
-- Unnamed keys: 9 in the 100% game save (`cd986d96` in each fleet mission entry, `c3a87f61` in each resource entry, `9f835b4c` with its `ItemArray` entries and their `61a6ed0e`, `7e1ce9a9`, `bde923e9`, `80738d26`, header `0x510BDEDB` and `0x1C011834`), 8 in other game saves, 20 in profile saves (the profile containers have not been opened in ACViewer). ACViewer shows `0xD44828A8`, `0x56BDD03A`, `0x9AC35A61`, `0x5D9984AF`, `0x2FD9481C`, `0x93E7E001`, `0xDD74D4AC` as `Property_0x<HASH>`, so they count as named (types: U8, U64, Bool, Bool, Bool[5], U32, array of PresentDayTargetEntityState).
+- Unnamed keys: 7 in the 100% game save (`cd986d96` in each fleet mission entry, `c3a87f61` in each resource entry, `7e1ce9a9` (the element object of the supply camp `ItemArray`), `bde923e9` (the element object of the `KillInfoSaveData` array, with OasisWeaponName and KillCount), `80738d26` (a raw 99 byte item in `EventsSaveData`), header `0x510BDEDB` and `0x1C011834`), 6 to 7 in other game saves, 20 in profile saves (the profile containers have not been opened in ACViewer). ACViewer shows `0xD44828A8`, `0x56BDD03A`, `0x9AC35A61`, `0x5D9984AF`, `0x2FD9481C`, `0x93E7E001`, `0xDD74D4AC` as `Property_0x<HASH>`, so they count as named (types: U8, U64, Bool, Bool, Bool[5], U32, array of PresentDayTargetEntityState).
 - Layouts of fields that are empty in the samples (MapFogInfo and others, as in Black Flag).
 - ID meaning tables, TimePlayed unit.
