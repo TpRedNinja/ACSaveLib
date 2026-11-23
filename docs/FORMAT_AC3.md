@@ -3,16 +3,19 @@ Reader: `Games/Ac3/Ac3SaveFile.cs` (C#, read-only), CLI verb `ac3`. CONFIRMED on
 
 The decrypted stream is the Liberation HD one (`FORMAT_ACL.md`): u32 33, u32 `0x00FEDBAC`, 8 zero bytes, u32 length, u32 uncompressed size, then LZO1x chunked containers with a CRC32-keyed property stream. `Ac3SaveFile` decrypts and hands the stream to `AclSaveFile`.
 
-## Three file variants
-| Variant | Files | Layout | Key (index `(i - fileLength) mod 16`) |
-| --- | --- | --- | --- |
-| A, `.save` | 2012 pack: `1.save`, `2.save`, `3.save` | plain 0x204 byte header, stream from `0x208` | `0154a57f32bb4407857877ed29423b2e` |
-| B, `.save` | Sequence 6 pack: `1.save`, `2.save` | plain 0x224 byte header, stream from `0x228` | `0a2abb77fab80caad1af78519d683e59` |
-| C, `.sav` | `Save001.sav` to `Save003.sav` | no header, stream from offset 0 | `48ee7a4e94f30deeb36f2781ec1108d8` |
+## Encryption and header variants
+- Encryption is a repeating 16 byte XOR anchored to the END of the file (the AC4 scheme, `XorTailCipher`). The stream starts with known plaintext (`u32 33`, `ac db fe 00`, 8 zero bytes = one full key period), so `Ac3SaveFile` recovers the key from it; no key is stored in the library.
+- The key differs between the three packs and is the same for every file of a pack (any file type, any date):
 
-- Encryption is a repeating 16 byte XOR anchored to the END of the file (the AC4 scheme, `XorTailCipher`). Each key was recovered from known plaintext (`u32 33`, `ac db fe 00`, 8 zero bytes) and checked on the zero-heavy rest of the file.
-- The same key decrypts every file of a variant. Variant B's two files come from different players (2017 and 2025) and have different header ids, so that key is not per user. [likely: a fixed game key, as in AC4; why the three variants have different keys is unknown]
-- Headers A and B start with u32 header length | u32 0 | data | zero padding | 4 zero bytes (not encrypted) | stream. Header A has the UTF-16 title from `0x08` (`AC3[N]-tm_<yyyy>_<mm>_<dd> <hh>:<mm>:<ss>`, N = save slot). Header B has a 32 character ASCII id at `0x08` (different in every file) and the title from `0x28`. Variant C has no title; the titles are in `saves.ini` next to the files (`Save001=AC3[-1]-tm_...`).
+| Pack | Files | Header | Key (index `(i - fileLength) mod 16`) |
+| --- | --- | --- | --- |
+| 2012 "100%" base game | `1.save`, `2.save`, `3.save` | plain 0x204 bytes, stream from `0x208` | `0154a57f32bb4407857877ed29423b2e` |
+| Sequence 6 | `1.save`, `2.save` (2025 and 2017) | plain 0x224 bytes, stream from `0x228` | `0a2abb77fab80caad1af78519d683e59` |
+| "100% base game and DLC" | `Save001.sav` to `Save003.sav` | none, stream from offset 0 | `48ee7a4e94f30deeb36f2781ec1108d8` |
+
+- AC4 saves show the same pattern (`FORMAT_AC4.md`): a different key per source, the same key within a source over years. So the key looks like a per-account or per-storefront game key, not one constant for the game. [likely]
+- Whether the header length (0x204, 0x224, none) depends on the game build or the storefront is not known.
+- Headers 0x204 and 0x224 start with u32 header length | u32 0 | data | zero padding | 4 zero bytes (not encrypted) | stream. Header 0x204 has the UTF-16 title from `0x08` (`AC3[N]-tm_<yyyy>_<mm>_<dd> <hh>:<mm>:<ss>`, N = save slot). Header 0x224 has a 32 character ASCII id at `0x08` (different in every file) and the title from `0x28`. The headerless files have no title; the titles are in `saves.ini` next to the files (`Save001=AC3[-1]-tm_...`).
 - Save slot N in the title: -1 is the options file (settings, and the list of owned DLC [guess]); 0 is the top save slot. The base game and Tyranny of King Washington each have 3 save slots; how slots 1 to 5 map to them is not worked out (`Save003.sav` is slot 4).
 - AC3 Remastered is reported to key its saves with an account id instead. [guess; no Remastered saves yet]
 
