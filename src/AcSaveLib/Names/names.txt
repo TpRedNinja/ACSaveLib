@@ -651,6 +651,7 @@ TraineeDenMissionPairSaveData
 ContractLocationSaveData
 BuildingRuleSaveData
 ContractAssignmentSaveData
+MultiItemInventoryContainer
 # Revelations (seen in ACViewer: element class and snapshot delta list)
 InventoryItemRechargeableContainerPair
 GainedDenWorldUpgradeSettings
