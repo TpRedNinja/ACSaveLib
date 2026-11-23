@@ -11,6 +11,7 @@ Owner handle: TpRedNinja (do not use a real name anywhere, including credits and
 - Works in normal chats, not agents. Each chat starts cold, so this file and the notes in `docs/` are the memory. Update them whenever something new is found.
 - The owner decides what happens next. Do not pick or start the next task, and do not add things to notes or plans they did not ask for.
 - Give simple, concrete steps (git has been a friction point: say exactly which commands to run).
+- Never hard-code an encryption key for any game. Assume the key that decrypts a save differs for every user (and possibly every storefront) and always recover it at runtime: from known plaintext, or from a user-supplied value such as the legacy username or account id. A key may be fixed in code only when the owner says it is the same across saves of different users, and he has confirmed it on a save from another storefront as well.
 - Builds in Visual Studio 2026; WPF cannot be built in the sandbox. Always write `using System.IO;` explicitly in C#.
 - ACViewer (owner's viewer) opens saves of AC2 through Mirage (verified by the owner; Valhalla, Black Flag Resynced and Shadows are unverified). It does not open AC1 saves. The owner sends screenshots as ground truth; its Dump button crashes.
 
