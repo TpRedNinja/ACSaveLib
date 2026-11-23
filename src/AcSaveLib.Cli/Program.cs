@@ -37,6 +37,13 @@ switch (args[2])
         }
         Console.WriteLine($"CurrentMission=0x{save.CurrentMission:X} World=0x{save.World:X} PlayerPortal=0x{save.PlayerPortal:X}");
         break;
+    case "header":
+    {
+        var h = save.Header;
+        Console.WriteLine($"name={h.SaveGameName} options={h.IsOptions} saveId={h.SaveGameId} version={h.Version} magic={h.MagicNumber} dlcBits={h.DlcPackagesBits} changelist={h.CodeChangelist} timePlayed={h.TimePlayed} globalSynch={h.PlayerGlobalSynch} date={h.SaveGameDate}");
+        foreach (var n in save.HeaderProperties) Console.WriteLine($"  {n.Name} (0x{n.Key:X8}) kind={n.Kind} type=0x{n.TypeId:X} value={n.Value} bytes={n.Bytes.Length}" + (n.Name == "SaveGameName" ? " hex=" + BitConverter.ToString(n.Bytes) : ""));
+        break;
+    }
     case "named":
     {
         // usage: ac4 <file> named <forge-index-folder>

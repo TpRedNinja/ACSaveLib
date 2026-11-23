@@ -40,6 +40,23 @@ namespace AcSaveLib.Stream
         public uint Enum(string name) => (uint)((Get(name)?.Value ?? 0) & 0xFFFFFFFF);
         public string Text(string name) => Get(name)?.Text ?? "";
 
+        /// <summary>
+        /// String property of type 0x1A (u32 byte length, ASCII characters, 0 byte), e.g. the header SaveGameName.
+        /// Items of 8 bytes or fewer are read as plain values (body = length + characters); longer ones come back as Raw nodes
+        /// whose body still holds the item header (key, 6 zero bytes, type 0x001A, 0x0B), so the length starts at offset 13.
+        /// </summary>
+        public string AnsiString(string name)
+        {
+            var n = Get(name);
+            if (n == null) return "";
+            var b = n.Bytes;
+            int off = n.Kind == NodeKind.Raw ? 13 : 0;
+            if (b.Length < off + 4) return "";
+            int len = (int)BitConverter.ToUInt32(b, off);
+            if (len < 0 || off + 4 + len > b.Length) return "";
+            return System.Text.Encoding.ASCII.GetString(b, off + 4, len);
+        }
+
         /// <summary>Child object, or an empty Props if absent.</summary>
         public Props Obj(string name) => new Props(Get(name)?.Children);
 

@@ -29,6 +29,8 @@ namespace AcSaveLib.Games.Ac4
         public byte[] HeaderStream { get; private set; } = Array.Empty<byte>();
         /// <summary>Uncompressed main property stream (last container).</summary>
         public byte[] Stream { get; private set; } = Array.Empty<byte>();
+        /// <summary>Typed header fields (Version, SaveGameName, TimePlayed, ...).</summary>
+        public Ac4Header Header { get; private set; } = new();
         /// <summary>Items of the header stream.</summary>
         public List<Node> HeaderProperties { get; private set; } = new();
         /// <summary>Top-level items of the main stream (NarrativeMissionHistory, SideMissionHistory, ...).</summary>
@@ -70,7 +72,8 @@ namespace AcSaveLib.Games.Ac4
             if (containers.Count < 2) throw new InvalidDataException("Expected a header container and a main container.");
             r.HeaderStream = containers[0];
             r.Stream = containers[containers.Count - 1];
-            r.HeaderProperties = PropertyReader.Parse(r.HeaderStream, 14, r.HeaderStream.Length);
+            r.HeaderProperties = PropertyReader.Parse(r.HeaderStream, RootItemsOffset, r.HeaderStream.Length);
+            r.Header = Ac4Header.From(r.HeaderProperties);
             r.Root = PropertyReader.Parse(r.Stream, RootItemsOffset, r.Stream.Length);
 
             foreach (var n in r.Root)

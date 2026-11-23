@@ -12,7 +12,7 @@ namespace AcSaveLib.Games.Acrogue
         public uint DlcPackagesBits { get; init; }
         public uint CodeChangelist { get; init; }
         public uint SaveGameId { get; init; }
-        /// <summary>Stored as 8 bytes: a 32-bit length, then the first 4 characters ("Test" in the test saves; "Options" in an options save reads "Opti").</summary>
+        /// <summary>Slot name typed by the player ("Test") or "Options" in an options save.</summary>
         public string SaveGameName { get; init; } = "";
         public bool IsOptions { get; init; }
         public uint TimePlayed { get; init; }
@@ -24,21 +24,13 @@ namespace AcSaveLib.Games.Acrogue
         /// <summary>ACViewer shows this key as Property_0x1C011834 (U32): 524288 in the test and 100% saves, 0 in options saves.</summary>
         public uint Property1C011834 { get; init; }
 
-        static string DecodeName(ulong raw)
-        {
-            int length = (int)(raw & 0xFFFFFFFF);
-            var chars = new System.Text.StringBuilder();
-            for (int i = 0; i < 4 && i < length; i++) chars.Append((char)((raw >> (32 + 8 * i)) & 0xFF));
-            return chars.ToString();
-        }
-
         public static RogueHeader From(List<Node> nodes)
         {
             var p = new Props(nodes);
             return new RogueHeader
             {
                 Version = p.U32("Version"), MagicNumber = p.U32("MagicNumber"), DlcPackagesBits = p.U32("DLCPackagesBits"),
-                CodeChangelist = p.U32("CodeChangelist"), SaveGameId = p.U32("SaveGameID"), SaveGameName = DecodeName(p.U64("SaveGameName")), IsOptions = p.Bool("IsOptions"),
+                CodeChangelist = p.U32("CodeChangelist"), SaveGameId = p.U32("SaveGameID"), SaveGameName = p.AnsiString("SaveGameName"), IsOptions = p.Bool("IsOptions"),
                 TimePlayed = p.U32("TimePlayed"), PlayerGlobalSynch = p.U32("PlayerGlobalSynch"),
                 SaveGameDate = p.U32("SaveGameDate"),
                 Property510BDEDB = (uint)(p.GetByKey(0x510BDEDB)?.Value ?? 0), Property1C011834 = (uint)(p.GetByKey(0x1C011834)?.Value ?? 0),
