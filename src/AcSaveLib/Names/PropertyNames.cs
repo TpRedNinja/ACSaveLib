@@ -42,6 +42,13 @@ namespace AcSaveLib.Names
             {
                 line = line.Trim();
                 if (line.Length == 0 || line[0] == '#') continue;
+                // "Property_0x<HASH>" is the name ACViewer shows when the game has no name for a key; the hash is the key itself.
+                if (line.StartsWith("Property_0x", StringComparison.Ordinal) && line.Length == 19
+                    && uint.TryParse(line.AsSpan(11), System.Globalization.NumberStyles.HexNumber, null, out uint viewerKey))
+                {
+                    map[viewerKey] = line;
+                    continue;
+                }
                 map[Crc32(line)] = line;
             }
             return map;

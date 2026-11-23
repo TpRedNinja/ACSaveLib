@@ -786,5 +786,29 @@ DeliverySlipSaveData
 # AC3 Remastered (name shown by ACViewer, fourth batch)
 HuntingContextSaveDataItem
 
+# AC3 Remastered (keys ACViewer shows as Property_0x<HASH>; the viewer has no name for them, so this is their name)
+Property_0x3F207D6D
+Property_0xE077A7E3
+Property_0xB1AC89B6
+Property_0x4C54A5B3
+Property_0xC6EF608C
+Property_0xE1CFAAA2
+Property_0xD8429667
+Property_0xCF398224
+Property_0x10804DF5
+Property_0x07FB59B6
+Property_0x449A84D3
+Property_0x83353401
+Property_0xDDAFFA5B
+Property_0x4B821C37
+Property_0xD8C65114
+Property_0xCA2549E9
+Property_0xE1F4E00B
+Property_0xD3222401
+Property_0x319E33D3
+Property_0x07722ACD
+Property_0x54D92FF4
+Property_0x3FB06AC1
+
 # AC3 Remastered (CRC32 dictionary match of two words next to the viewer-named LeaderboardsSaveData Ranks; not seen in a viewer)
 FriendRanks
