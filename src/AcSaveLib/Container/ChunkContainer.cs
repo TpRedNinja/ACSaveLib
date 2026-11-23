@@ -7,7 +7,8 @@ namespace AcSaveLib.Container
 {
     /// <summary>
     /// Ubisoft compressed-buffer container: signature 33 AA FB 57 99 FA 04 10, 7 header bytes,
-    /// then repeated { 0x01 marker, u32 compressedSize, u32 uncompressedSize, u32 checksum, LZO1x data }.
+    /// then repeated { 0x01 marker, u32 compressedSize, u32 uncompressedSize, u32 checksum, data }.
+    /// The header holds u16 version, u8 codec id (0 = LZO1x in AC4, 2 = LZO2A in Brotherhood) and u32 chunk size.
     /// </summary>
     public static class ChunkContainer
     {
@@ -32,6 +33,7 @@ namespace AcSaveLib.Container
         {
             if (!HasSignature(d, pos)) throw new InvalidDataException($"No container signature at {pos}.");
             int q = pos + HeaderLength;
+            byte codec = d[pos + 10];
             int nextSig = IndexOfSignature(d, pos + 8);
             int limit = nextSig >= 0 ? nextSig : d.Length;
             using var ms = new MemoryStream();
@@ -42,7 +44,13 @@ namespace AcSaveLib.Container
                 if (cs == 0 || us == 0 || (long)q + 13 + cs > limit) break;
                 q++;
                 // d[q+8..q+12] = checksum (algorithm not identified; ignored)
-                var block = Lzo1x.Decompress(d, q + 12, (int)cs, (int)us);
+                byte[] block;
+                if (codec == 2)
+                {
+                    block = Lzo2a.Decompress(d, q + 12, (int)cs, (int)us, out int blockEnd);
+                    if (blockEnd != q + 12 + (int)cs) throw new InvalidDataException("LZO2A block did not consume its stated compressed size.");
+                }
+                else block = Lzo1x.Decompress(d, q + 12, (int)cs, (int)us);
                 ms.Write(block, 0, block.Length);
                 q += 12 + (int)cs;
             }

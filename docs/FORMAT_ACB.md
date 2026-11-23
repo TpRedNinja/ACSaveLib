@@ -1,0 +1,59 @@
+# ACB (Assassin's Creed Brotherhood, PC) .SAV format
+Reader: `Games/Acb/AcbSaveFile.cs` (C#, read-only), CLI verb `acb`. `tools/acb_reference.py` is the earlier Python reader (containers and top-level items only). CONFIRMED on 6 saves and 1 options file (100%, Free Roam, True 100%, personal saves): every block decodes to its stated size.
+No encryption. Little-endian. Compressed with LZO2A, not LZO1x.
+
+```
+u32 22 | u32 0x00FEDBAC | u32 length of the rest of the first buffer | u32 uncompressed size of container 1
+container 1 (header properties) | 16 byte gap | container 2 (main property stream)
+```
+
+| Offset | Size | Meaning |
+| --- | --- | --- |
+| `0x00` | u32 | `0x16` (22) |
+| `0x04` | 4 | `ac db fe 00` (u32 `0x00FEDBAC`, the magic AC2 and AC4 also use) |
+| `0x08` | u32 | byte length of everything after this field up to the end of container 1 (`4 + 8 + 7 + 13 + compressed size` for a one-block container) |
+| `0x0C` | u32 | uncompressed size of container 1 (283 or 284) |
+| `0x10` | 8 | container signature `33 aa fb 57 99 fa 04 10` |
+| `0x18` | 7 | `01 00 02 00 80 00 00`: u16 version 1, u8 codec id 2 (LZO2A), u32 chunk size `0x8000` (LIKELY; AC4 has codec id 0, LZO1X_1) |
+| `0x1F` | | first block |
+
+## Container and blocks
+- Block: `01` | u32 compressed size | u32 uncompressed size | u32 checksum (algorithm not identified, ignored) | LZO2A data. A container is the 15 byte signature header followed by its blocks.
+- Codec: LZO2A, a byte-flag LZO variant. CONFIRMED: every block of all test files decodes to exactly its stated uncompressed size and consumes exactly its stated compressed size. `Compression/Lzo2a.cs` holds the decompressor (port of the game's routine, see `FORMAT_ACR.md`); `ChunkContainer` picks it from the codec id byte of the container header (0 = LZO1x, 2 = LZO2A).
+- Gap between container 1 and 2 (16 bytes): u32 length of everything after this field | u32 `1` | u32 `0x00CAFE00` | u32 uncompressed size of container 2.
+- Options files (`*_OPTIONS`, about 1 KB) have three containers (283, 1310 and 162 bytes). Their second gap holds the length, `3` and `0x11FACE11`, then the size 1310; the file ends with 5 more bytes after the last block.
+- Container 1 is 283 or 284 bytes. Container 2 has 9 to 18 blocks (263871 to 568393 bytes in the samples).
+
+## Property stream
+- A decoded container starts with 10 zero bytes, then the root key (u32), two u32 sizes, and the items from offset 22.
+- Item framing is the AC2 one (`FORMAT_AC2.md`, `FORMAT_PROPERTY_STREAM.md`): `u32 L | key | ext | 00 00 | type u16 | 0b | value`, CRC32 property names.
+- Container 1 root key `0xBDBE3B52` (SaveGame). Header properties in order: Version (`0x16`), MagicNumber, DLCPackagesBits (6), CodeChangelist (`0x055E0F`), SaveGameID, IsOptions, SaveGameName ("Options" in the options file), CurrentWorld, CurrentMission, TimePlayed, PlayerGlobalSynch, SaveGameDate.
+- Container 2 root key `0x94D6F8F1` (the AC4 main stream root key). Top-level items, same order in the 100% and the Free Roam save: ContextID, NarrativeMissionHistory, SideMissionHistory, World, PSPState, SnapshotPSPState, PlayerPortal, AnimusDatabaseData, UITutorialData, PresentEmailsData, AccomplishmentManagerData, GameStatsSaveData, TraineesGuildManagerSaveData, FacebookSaveGameData, PlayerProgSaveData, SnapshotPlayerProgSaveData, SnapshotPlayerProgressionDelta, VillaSaveData, SnapshotVillaSaveData, WorldUpgradeSaveData, SnapshotWorldUpgradeSaveData, `00000012`.
+- Names come from `Names/names.txt`. One top-level key is not in it: `00000012`.
+- Nested items from ContextID to TraineesGuildManagerSaveData decode with the AC2 object layout and match ACViewer screenshots of a no-progress save (names, types, values). Top-level keys `1fc94c94`, `e3fa794f`, `31eb1e17`, `09b1c516` are TraineesGuildManagerSaveData, FacebookSaveGameData, WorldUpgradeSaveData and SnapshotWorldUpgradeSaveData. Names for Facebook, the Trainees contracts and PlayerProgSaveData (characters, inventory containers) are confirmed the same way. Enum values are stored as a u64: low u32 = index, high u32 = CRC32 of the enum value name (for example `InvItem_Money` = `12f6b6f1`, index 1). Names for the horse objects, SnapshotPlayerProgressionDelta, Villa and WorldUpgrade data are confirmed too. Every key in a no-progress save has a name except `00000012` (a trailing raw item) and seven keys inside WorldEconomySaveData (`ead92d83`, `9ed74287`, `d99bbfde`, `55c432c6`, `4f436d86`, `dfaa4e68`, `0900aa54`), which ACViewer also shows only as hashes.
+
+## Handle values
+
+The forge index text files (`DataPC_*.index.txt`, one line per object: `0x<16 hex>: Name.Class`) resolve most handle values in the save: World, PlayerPortal, mission group and mission ids, inventory item ids and entity builder ids. Step ids, contract assignment ids, world upgrade ids and shop setting ids were not found in the provided index files.
+
+## Trainee and contract objects (confirmed in ACViewer, DeathHound100 save)
+Names match the CRC32 of the keys and are shown by ACViewer.
+- TraineesGuildManagerSaveData: TraineeUniqueIDCounter, UsedMaleTraineeNamesOasisIDs (S32[]), UsedFemaleTraineeNamesOasisIDs (S32[]), AliveTraineeSettings (TraineeSettingsSaveData[]), TraineesPromotedToAssassinIndexes (U8[]), TraineesLeveledUpSinceLastVisit, TraineesRecruitedSinceLastVisit, Contracts (TraineesGuildContractsSaveData), TrackingCummulative{TraineesRecruited, TraineesLost, ContractsAttempted, ContractsSucceeded, XPGained}.
+- TraineeSettingsSaveData: TraineeUniqueID, NameOasisLineID, DescriptionOasisLineID, Level (U8), Skill, XP, UpgradePoints, Health, IsMale, CurrentContractAssignment (handle), HeadIndex, EyesColorIndex, MaskIndex, ColorIndex (U8), 24 Bool abilities and proficiencies (CounterDodgeAbility ... ThrowSmokeBombAbility), UsePresetUpgrades.
+- TraineesGuildContractsSaveData: ContractAssignmentHistoryIndex, UsedGenericContractToAddIndex, ContractAssignmentsInProgress, StaticContractAssignementUnlocked, ContractsToUnlockVerifyPrerequisites, AvailableGenericContractAssignment, UsedGenericContractAssignment, ContractAssignmentHistory (100 x ContractHistoryParams), ContractHistorySinceLastVisit, NewContractAssignmentsSinceLastVisit.
+- ContractHistoryParams: ContractAssignment (handle), ContractSucceeded, ContractDifficulty, ContractDuration, ContractXPReward, ContractFlorinsReward, ContractLocation (S32), ContractCompletionOrderIndex (U8), AssignedTraineesInfos (ContractHistoryTraineeParams[]: TraineeUniqueID, ThumbnailImage (TextureMapSpec handle), TraineeNameOasisID, Level, Dead).
+
+## Player progression, notoriety, buildings, constraints (confirmed in ACViewer, DeathHound100 save)
+- PlayerProgSaveData: UncollectedInventoryItemsOnMap (InventoryItemSettings handles), PlayerCharacterData[11], PlayerCharacterDataSnapshots[12], QuestItemsCollectedAmounts (U32[11]), UplayUnlocked, DataInitialized, WorldNotorietyList[19], LeoShopPlayedScenes, OverridePlayerEntityBuilder, UnlockFacebook1/2, CashFacebook, CashFightClub (S32), MainWorldHorse/OtherWorldHorse/ReplayOrVRHorse.
+- PlayerCharacterData: PlayerCharacter (enum PlayerCharacter, value 6 = PlayerCharacter_ACR_EzioUltimate), PlayerInventorySpecification (LogicalInventory), GainedInventoryItems (handles), ArmorStates, Life, MaxLife, BrokenHealth (S32), LockedInventoryItems, QuickSlotItems (enum EquipmentSlot[4]), PlayerAttributesBuilderData[1].
+- PlayerAttributesBuilderData: PlayerEntityBuilder (handle), AgeLevel, ChestArmorLevel, BootLevel, RightArmLevel, ShoulderLevel, LeftArmLevel, RightArmHBLevel, PoisonBladeLevel, MetalFistLevel, KnivesLevel, HealthObjectPouchLevel, SmokeBombPouchLevel, ParachutesPouchLevel, CapeLevel, ColorLevel, NarrativeLevel, AssassinMarkLevel (all U8).
+- WorldNotorietyValue: NotorietyWorld (World handle), NotorietyValue (Float), IsNotorious (Bool).
+- SceneOutputWrapper: SceneEntity (Entity handle), SceneComponent (Scene handle), SceneOutput (SceneOutput handle), DeactiveSceneOnSet (Bool).
+- BuildingSaveData: Building (WorldUpgradeSettings handle), IsNewlyGained (Bool). BuildingsRules is a packed array of one byte per rule (u32 count, then count bytes; every byte is 3 in most saves and 2 in one early save; ACViewer shows it as NotValid; meaning of the values unknown). The bytes `03 03 03 03` that looked like an element key are the first four values.
+- WorldUpgradeSaveData: CurrentGoldChestAmount, CurrentIncomeDelay, PendingIncomeValueForAfs (U32).
+- MissionSaveData: Mission, HighestSynchronization, BriefingDisplayedOnce, BriefingAccepted, MissionStepSaveData (Step handle, IsCheckpoint, Succeeded), MissionConstraintSaveData (ConstraintID, PlayerSelected, CurrentRunFailed, BestRunSucceeded, ConditionData of ConditionID and MetaValue). MissionHistory Identifier is enum MissionHistoryTrackIdentifiers (0 = MissionHistoryTrack_Narrative).
+
+## Unnamed keys
+- 00000012 (trailing raw item), ead92d83 (WorldEconomySaveData shop array), dfaa4e68 and 0900aa54 (U32 pair in each WorldEconomyShopSaveData), 4f436d86, 55c432c6, 9ed74287, d99bbfde (four U32 fields after the shop array). ACViewer itself shows these as hashes.
+- CRC word search offers 9ed74287 = PendingIncome [guess]; it is 0 in every sample save and the game shows pending money 0.
+- Options file (`100_OPTIONS`): keys without a name are `2ead62ff` (enum u64 in PlayerOptionsSaveData, same value as SoundLanguage and LastConsoleLanguage in the sample), `ed915bd4`, `f20b5679`, `40ef7c8b`, `9c81bb39` (value 63), and in container 3 (root key `0xC9876D66`) `3b546966`, `4dbc7da7`, `5b95f10b`, `2a4e8a90`, `496f8780` (u64 `0x1FFFFFFFFFFFFF`), `6f88b05b`. The names `PlayerOptionsSaveData` and the other options keys are confirmed in ACViewer.

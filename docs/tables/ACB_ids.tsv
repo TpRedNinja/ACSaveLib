@@ -1,0 +1,2607 @@
+class	id_hex	id_dec	name
+Mission	00C45A2D	12868141	RHP_Rome_Countryside
+Mission	01563B8A	22428554	SQ02M03B
+Mission	02A00347	44041031	VRT_Nav_EagleVision02_Enemies
+Mission	02A003B6	44041142	VRT_Nav_EagleVision03_HideSpots
+Mission	02A003B7	44041143	VRT_Nav_EagleVision04_HiddenItems
+Mission	036CE9BD	57469373	Harlequin_02
+Mission	036CEA29	57469481	Harlequin_03
+Mission	039AAC29	60468265	Contextual_Tutorial_Throw_Weapon
+Mission	039D8387	60654471	Harlequin_04
+Mission	03AC3ABB	61618875	Harlequin_05
+Mission	03AC3ACC	61618892	Harlequin_achieve_complete
+Mission	04D75A11	81222161	VRT_Com_UnarmedAdv05_Disarm
+Mission	04D75A12	81222162	VRT_Com_UnarmedAdv04_ThrowSand
+Mission	04D75A13	81222163	VRT_Com_UnarmedAdv06_ThrowWeapon
+Mission	04D75A15	81222165	VRT_Com_UnarmedAdv07_Human Shield
+Mission	04D77990	81230224	VRT_Combat_RangedAdv01_Crossbow
+Mission	04D779E9	81230313	VRT_Combat_RangedAdv02_ThrowingKnives
+Mission	04D77BAB	81230763	VRT_Combat_RangedAdv03_Gun
+Mission	0533C675	87279221	VRC_Com_Survival01_Unarmed
+Mission	093ADEC0	154853056	SQ04M99_Outro
+Mission	0AC5F9C0	180746688	SQ07M05
+Mission	0AC5F9C5	180746693	SQ07M06
+Mission	0C0517F8	201660408	VRT_Combat_SpecialWeapons01_SmokeBomb_Def
+Mission	0C051932	201660722	VRT_Combat_SpecialWeapons02_SmokeBomb_Off
+Mission	0C052422	201663522	VRT_Combat_SpecialTactics05_SwissGuard
+Mission	0C052BE3	201665507	VRT_Combat_RangedWeapons01_Pistol
+Mission	0C052D98	201665944	VRT_Combat_RangedWeapons03_ThrowingKnives
+Mission	0C0537E0	201668576	VRT_Combat_RangedWeapons05_CrossBow
+Mission	0C053C20	201669664	VRT_Social_Money01_Pickpocket
+Mission	0C053D6C	201669996	VRT_Social_Money02_Loot
+Mission	0C053DB5	201670069	VRT_Social_Money03_ThrowMoney
+Mission	0C053E50	201670224	VRT_Social_Factions01_Courtesans
+Mission	0C0B8B14	202083092	CMT05
+Mission	0FB2A2C4	263365316	Exo_UnlockAFS
+Mission	0FD1155A	265360730	SQ03M06
+Mission	0FD13C83	265370755	CMB01_Intro
+Mission	1054979A	273979290	VRC_Combat_StealthA_HB_01
+Mission	1054979B	273979291	VRC_Nav_FlagHunt_02
+Mission	105497A2	273979298	VRC_Nav_FlagHunt_03
+Mission	105497A3	273979299	VRC_Combat_StealthA_HB_03
+Mission	1054A85B	273983579	VRC_Combat_StealthA_AllWeapons_01
+Mission	1054A85C	273983580	VRC_Combat_StealthA_AllWeapons_02
+Mission	1054A85D	273983581	VRC_Combat_StealthA_AllWeapons_03
+Mission	1054A8F9	273983737	VRC_Com_Survival03_Untouchable_AllWeapons
+Mission	1054A9D0	273983952	VRC_Com_Survival04_ComboMaster_2min
+Mission	1054A9D1	273983953	VRC_Com_Survival04_ComboMaster_3min
+Mission	1054AAB4	273984180	VRT_Nav_Freerun_Recap
+Mission	10ABC359	279692121	Faction Creed Enable
+Mission	129D14AD	312284333	SQ05M99_Outro
+Mission	12BDF404	314438660	SQ02M99_Outro
+Mission	12BDF425	314438693	SQ06M99_Outro
+Mission	12BE150D	314447117	SQ03M99_Outro
+Mission	13E365DB	333669851	CMB02_Intro
+Mission	13E367A5	333670309	CMB03_Intro
+Mission	13E367A6	333670310	CMB04_Intro
+Mission	13E367A7	333670311	CMB05_Intro
+Mission	140FFBC0	336591808	SQ02BM99_Outro
+Mission	1437D4FF	339203327	Contextual_Tutorial_Kicking
+Mission	1437D500	339203328	Contextual_Tutorial_Blocking
+Mission	1437D501	339203329	Contextual_Tutorial_Fight_Tips
+Mission	18258429	405111849	VRT_Social_Factions02_Thieves
+Mission	18258461	405111905	VRT_Social_Factions03_Mercs
+Mission	1825898A	405113226	VRT_Social_Notoriety01_Posters
+Mission	182589B8	405113272	VRT_Social_Notoriety03_Officials
+Mission	182589F6	405113334	VRT_Social_Notoriety02_Heralds
+Mission	18259B30	405117744	VRT_Social_Distractions01_DeadBodies
+Mission	18259B6A	405117802	VRT_Social_Distractions02_ThrowMoney
+Mission	1825AD23	405122339	VRT_Social_Distractions03_Poison
+Mission	1825AE2A	405122602	VRT_Social_Distractions05_LureToHideSpot
+Mission	1825B323	405123875	VRT_Combat_Assassinate01_Stealth
+Mission	1825B4DA	405124314	VRT_Combat_Assassinate02_HighProfile
+Mission	1825B50C	405124364	VRT_Combat_Assassinate05_Beam
+Mission	1825B55D	405124445	VRT_Combat_Assassinate06_Climb
+Mission	1825B81F	405125151	VRT_Combat_Assassinate07_Step
+Mission	196E051E	426640670	Contextual_Tutorial_Pickup_Weapon
+Mission	19A3E69E	430171806	CMC05
+Mission	1E7F026C	511640172	Harlequin_locking
+Mission	1FCCD4EE	533517550	VRT_Combat_KillStreak_playAll
+Mission	1FCCE44A	533521482	Contextual_Tutorial_Fedayeen_Level Up
+Mission	202C6116	539779350	SQ07M99_Outro
+Mission	2044812A	541360426	DLC_04_Tutorial_Icon
+Mission	2249B11B	575254811	CMA07
+Mission	236C94D0	594318544	VRC_Com_Survival02_Sword
+Mission	256928C1	627648705	BorgiaFlags_Rome_Countryside
+Mission	256928C2	627648706	BorgiaFlags_Rome_Downtown
+Mission	256928C3	627648707	BorgiaFlags_Rome_Vatican
+Mission	256928C4	627648708	BorgiaFlags_LGS302
+Mission	25692939	627648825	BorgiaFlags_LGS303
+Mission	2569293A	627648826	BorgiaFlags_LGS305
+Mission	2569293B	627648827	BorgiaFlags_LGS306
+Mission	2569293C	627648828	BorgiaFlags_LGS307
+Mission	2569293D	627648829	BorgiaFlags_LGS308
+Mission	2569293E	627648830	BorgiaFlags_LGS309
+Mission	262DDF12	640540434	VRT_Combat_SpecialTactics04_Brute
+Mission	262DDF13	640540435	VRT_Combat_SpecialTactics03_Leader
+Mission	262DDF14	640540436	VRT_Combat_SpecialTactics02_Seeker
+Mission	262DDF15	640540437	VRT_Combat_SpecialTactics01_Agile
+Mission	27630A30	660802096	VRT_Nav_NeverResolve
+Mission	27630A42	660802114	VRT_Nav_Race_NeverResolve
+Mission	27630A43	660802115	VRT_Nav_AgileRace_NeverResolve
+Mission	27630A44	660802116	VRT_Nav_SAFH01_NeverResolve
+Mission	27630A45	660802117	VRT_Nav_SAFH02_NeverResolve
+Mission	27630A46	660802118	VRT_Nav_SAFH03_NeverResolve
+Mission	27630A47	660802119	VRT_Nav_Survive_NeverResolve
+Mission	27630A48	660802120	VRT_Nav_Chase_NeverResolve
+Mission	276314F5	660804853	Contextual_Tutorial_Buy_Armor
+Mission	276314F6	660804854	Contextual_Tutorial_Sit_On_Bench
+Mission	276314F7	660804855	Contextual_Tutorial_Faction_Creed_Board
+Mission	276314F8	660804856	Contextual_Tutorial_TackleMessenger
+Mission	276314F9	660804857	Contextual_Tutorial_Fedayeen_Use_Arrow
+Mission	276314FA	660804858	Contextual_Tutorial_Fedayeen_Arrow_Ready
+Mission	28F40CE0	687082720	VRT_Combat_KillStreak02_AttackPriority
+Mission	28F413D7	687084503	VRT_Combat_KillStreak01_Countering
+Mission	28F415D4	687085012	VRT_Combat_KillStreak03_Gun
+Mission	29D8C37E	702071678	Contextual_Tutorial_Fedayeen_Use_BAM_Assasinat
+Mission	2B72E475	728949877	CMM01
+Mission	2B72E476	728949878	CMM02
+Mission	2B72E477	728949879	CMM03
+Mission	2B72E478	728949880	CMM04
+Mission	2B72E479	728949881	CMM05
+Mission	2B72E47A	728949882	CMM06
+Mission	2B72E47B	728949883	CMM07
+Mission	2B72E47C	728949884	CMM08
+Mission	2B72E47D	728949885	CMM09
+Mission	2E05FAA7	772143783	VRT_Unlock_RaidenSkin_0
+Mission	2EA57347	782594887	Feathers_All
+Mission	2EF7A2F4	787981044	SQ02M04Z
+Mission	2EFFE834	788523060	SQ01M99_Outro
+Mission	2F3B6295	792421013	VRT_Social_Stealth01_Crouch
+Mission	2F7C0414	796656660	Contextual_Tutorial_Fedayeen_Mission
+Mission	2F7C0415	796656661	Contextual_Tutorial_Fedayeen_Backup
+Mission	2F7C0416	796656662	Contextual_Tutorial_Fedayeen_Assassinate
+Mission	31A7439F	833045407	P00SQ02_Lucy
+Mission	31A743A0	833045408	P00SQ03_Lucy
+Mission	31A743A1	833045409	P00SQ04_Shaun
+Mission	31A743A2	833045410	P00SQ07_Lucy
+Mission	31A743A5	833045413	P00SQ02_Rebecca
+Mission	31A743A6	833045414	P00SQ02_Shaun
+Mission	31A743AA	833045418	P00SQ01_Statue
+Mission	31A743AB	833045419	P00SQ03_Shaun
+Mission	31A743AC	833045420	P00SQ03_Rebecca
+Mission	31A743AD	833045421	P00SQ04_Rebecca
+Mission	31A743AE	833045422	P00SQ04_Lucy
+Mission	31A743AF	833045423	P00SQ07_Shaun
+Mission	31A743B1	833045425	P00SQ07_Rebecca
+Mission	31A772B7	833057463	P00SQ04_Table
+Mission	33F4FDEC	871693804	Notoriety_Missions_Rome
+Mission	36BDAAF7	918399735	VRT_Nav_Swim02_Swim
+Mission	36BDACA4	918400164	VRT_Nav_Swim03_DiveUnder
+Mission	36BDB6C5	918402757	VRT_Nav_Swim04_Assassinate
+Mission	3CBEC020	1019133984	Contextual_Tutorial_Near Shop Quest
+Mission	3CBEC021	1019133985	Contextual_Tutorial_Interact With Shop Quest
+Mission	3CBEC022	1019133986	Contextual_Tutorial_Near Blacksmith
+Mission	3CBEC023	1019133987	Contextual_Tutorial_Near Tailor
+Mission	3CBEC024	1019133988	Contextual_Tutorial_Near Art Dealer
+Mission	3CBEC025	1019133989	Contextual_Tutorial_Open Fedayeen Mission Giver
+Mission	3CBEC026	1019133990	Contextual_Tutorial_Buy Parachute Pouch
+Mission	3CBEC027	1019133991	Contextual_Tutorial_Buy Crossbow
+Mission	3CBEC028	1019133992	Contextual_Tutorial_Buy Smoke Bomb Pouch
+Mission	3CBEC029	1019133993	Contextual_Tutorial_Marking Landmarks
+Mission	3CBEC130	1019134256	Contextual_Tutorial_Near Lift
+Mission	3CBEC164	1019134308	Contextual_Tutorial_Renovating Rome
+Mission	3D4438D6	1027881174	ContextTuto_Gen_Rome_ADB_Glyph_ShawnReaction
+Mission	44C181A5	1153532325	VRT_Nav_Gondola01_Steering
+Mission	44C183F7	1153532919	VRT_Nav_Swim01_Dive
+Mission	44C1963E	1153537598	VRC_Combat_ShootingRange01_Gun
+Mission	44C19670	1153537648	VRC_Combat_ShootingRange02_Dagger
+Mission	44C19671	1153537649	VRC_Combat_ShootingRange03_Crossbow
+Mission	45968361	1167491937	VRT_Nav_Survive_NeverResolve_1
+Mission	45968373	1167491955	Subject_16_Back_To_Present 
+Mission	45968374	1167491956	Subject_16_Back_To_Rome
+Mission	4596AC48	1167502408	VRC_Com_Survival_Unlock
+Mission	4596AD12	1167502610	VRC__NormalRun
+Mission	46C3C1FF	1187234303	Contextual_Tutorial_Fedayeen_Mission_Complete
+Mission	479FEEB1	1201663665	SQ01M01
+Mission	4809831B	1208582939	Contextual_Tutorial_Throw Money
+Mission	48098365	1208583013	Contextual_Tutorial_Dive
+Mission	480983CC	1208583116	Contextual_Tutorial_Helped By Vigilante
+Mission	483BAF51	1211871057	CMA12
+Mission	4AFB6728	1257989928	Feathers_Antique
+Mission	4C29024C	1277755980	P00_SQX_Animus
+Mission	4C2908B1	1277757617	SQ01MT02
+Mission	4C2908B2	1277757618	SQ01MT03
+Mission	4C2908B4	1277757620	SQ01MT05
+Mission	4C4B96D2	1280022226	CMA10
+Mission	4DB734F9	1303852281	SpecUnlock_WolfmenLetters
+Mission	4FDCB9C2	1339865538	DLC_fake_M01
+Mission	50EBE73D	1357637437	VRC_Com_Survival03_Untouchable
+Mission	542A6290	1412063888	VRC_Com_Survival04_ComboMaster_1min
+Mission	55022153	1426202963	Rome_Pickpocketeer
+Mission	55022154	1426202964	Rome_Pickpocketeer_Reset
+Mission	55022155	1426202965	Rome_Borgia
+Mission	55022156	1426202966	Rome_Borgia_Reset
+Mission	563A44D4	1446659284	NewCheatAFS SQ01
+Mission	563A44EB	1446659307	NewCheatAFS SQ02
+Mission	563A4502	1446659330	NewCheatAFS SQ03
+Mission	563A4503	1446659331	NewCheatAFS SQ04
+Mission	563A4504	1446659332	NewCheatAFS SQ05
+Mission	563A4505	1446659333	NewCheatAFS SQ06
+Mission	563A4506	1446659334	NewCheatAFS SQ07
+Mission	563A4507	1446659335	NewCheatAFS SQ08
+Mission	563A4508	1446659336	NewCheatAFS SQ09
+Mission	579F9584	1470076292	Subject 16
+Mission	57C97C91	1472822417	CMC01
+Mission	599AD53B	1503319355	CMC02
+Mission	599F45DE	1503610334	CMC03
+Mission	599F45DF	1503610335	CMC04
+Mission	5BA9D8B0	1537857712	SQ04M00_FlyBy
+Mission	5BA9E150	1537859920	SQ03M00_Flyby
+Mission	5C67B106	1550299398	SQ05M00_Flyby
+Mission	5E680F62	1583877986	SQ07M00_Flyby
+Mission	5F85865E	1602586206	L01M02
+Mission	5F85865F	1602586207	L02M02
+Mission	5F858660	1602586208	L03M02
+Mission	5F858661	1602586209	L04M02
+Mission	60745A23	1618237987	VRC_Nav_AgileRace01
+Mission	6094F823	1620375587	BT_Downtown_01
+Mission	6094F828	1620375592	BT_Downtown_02
+Mission	6094F829	1620375593	BT_Downtown_03
+Mission	6094F82A	1620375594	BT_Downtown_04
+Mission	6094F82B	1620375595	BT_Countryside_02
+Mission	6094F82C	1620375596	BT_Countryside_03
+Mission	6094F82D	1620375597	BT_Countryside_04
+Mission	6094F82E	1620375598	BT_Antique_01
+Mission	6094F82F	1620375599	BT_Antique_02
+Mission	6094F830	1620375600	BT_Antique_03
+Mission	66694116	1718173974	VRT_Nav_Basic_PlayAll
+Mission	66694209	1718174217	VRT_Nav_Climb_PlayAll
+Mission	6669420A	1718174218	VRT_Nav_Horse_PlayAll
+Mission	6669420B	1718174219	VRT_Nav_Swim_PlayAll
+Mission	6669420C	1718174220	VRT_Nav_Gondola_PlayAll
+Mission	6669420D	1718174221	VRTA_Nav_FreerunA_PlayAll
+Mission	6669420E	1718174222	VRT_Nav_EagleVision_PlayAll
+Mission	6669420F	1718174223	VRT_Nav_Chasing_PlayAll
+Mission	66694210	1718174224	VRT_Com_Unarmed_PlayAll
+Mission	66694211	1718174225	VRT_Combat_RangedWeapons_PlayAll
+Mission	66694212	1718174226	VRT_Combat_Assassinate_PlayAll
+Mission	66694213	1718174227	VRT_Com_UnarmedAdv_PlayAll
+Mission	66694214	1718174228	VRT_Combat_RangedAdv_PlayAll
+Mission	66694215	1718174229	VRT_Combat_SpecialWeapons_PlayAll
+Mission	66694216	1718174230	VRT_Combat_SpecialTactics_PlayAll
+Mission	66694217	1718174231	VRT_Social_Blend_PlayAll
+Mission	66694218	1718174232	VRT_Social_Evasion_PlayAll
+Mission	66694219	1718174233	VRT_Social_Money_PlayAll
+Mission	6669421A	1718174234	VRT_Social_Factions_PlayAll
+Mission	6669421B	1718174235	VRT_Social_Notoriety_PlayAll
+Mission	6669421C	1718174236	VRT_Social_Distractions_PlayAll
+Mission	66694485	1718174853	VRC_Com_Survival_PlayAll
+Mission	6698BAF0	1721285360	SpecUnlock_BrutusArmor
+Mission	66C40D21	1724124449	P01M02
+Mission	66C40D22	1724124450	LGS302_Catacombs
+Mission	66C40D23	1724124451	SQ02M04C
+Mission	66C40D24	1724124452	LGS304_TrajanMarket
+Mission	66C40D25	1724124453	LGS305_Coliseum
+Mission	66C40D26	1724124454	LGS306_CloacaMaxima
+Mission	66C40D27	1724124455	LGS307_Aqueducts
+Mission	66C40D28	1724124456	LGS308_LateranPalace
+Mission	66C40D29	1724124457	LGS309_OldStPeter
+Mission	66C40D2A	1724124458	P02M02B
+Mission	67F3A9A0	1744021920	CMC08
+Mission	6847A10A	1749524746	DLC_04_M99
+Mission	6B12B158	1796387160	CMT03
+Mission	6B54A2B3	1800708787	CMA01
+Mission	6B54A2B4	1800708788	CMA02
+Mission	6B54A2B5	1800708789	CMA03
+Mission	6B54A2B6	1800708790	CMA08
+Mission	6B54A2B7	1800708791	CMA09
+Mission	6B54A2B8	1800708792	CMA11
+Mission	6E8C4AFA	1854687994	CMC09
+Mission	6E8C4AFB	1854687995	CMC10
+Mission	6EBC29C1	1857825217	P00_SQX_VariableSet
+Mission	6F1042E5	1863336677	VRT_Combat_RangedAdv01_Crossbow_Counter
+Mission	6F10456D	1863337325	VRT_Combat_RangedAdv02_ThrowingKnives_Charge
+Mission	6F9BD029	1872482345	Games Com
+Mission	733D6D92	1933405586	CMT07
+Mission	735F1BF0	1935612912	VRC_Nav_FlagHunt_01
+Mission	73AA778F	1940551567	CMS01
+Mission	73AA7790	1940551568	CMS02
+Mission	73AA7791	1940551569	CMS03
+Mission	73AA7792	1940551570	CMS04
+Mission	73AA7793	1940551571	CMS05
+Mission	73AA7794	1940551572	CMS06
+Mission	73AA7795	1940551573	CMS07
+Mission	73AA7796	1940551574	CMS08
+Mission	76750BF3	1987382259	CMT02
+Mission	76D32610	1993549328	CMTB01
+Mission	76D32611	1993549329	CMTB02
+Mission	76D32612	1993549330	CMTB03
+Mission	771D5EC2	1998413506	FCCC 01 Hire Courtesan
+Mission	771D5EC3	1998413507	FCCC 02 Evade Using Stealth
+Mission	771D5EC4	1998413508	FCCC 03 Throw Money to Bypass Guard Post
+Mission	771D5EC5	1998413509	FCCT 06 Pickpocket
+Mission	771D5EC6	1998413510	FCCC 05 Hijack Horses
+Mission	771D5EC7	1998413511	FCCC 06 Hide Dead Bodies
+Mission	771D5EC8	1998413512	FCCC 07 Poison Guards
+Mission	771D5EC9	1998413513	FCCC 08 Kill Guards in Smoke Bomb
+Mission	771D5ECA	1998413514	FCCC 09 Assassinate Guards from Behind
+Mission	771D5ECB	1998413515	FCCC 10 Assassinate Guards From Blend Spots
+Mission	771D5ECC	1998413516	FCCT 01 Hire Thieves
+Mission	771D5ECD	1998413517	FCCT 02 Sprint uninterupted
+Mission	771D5ECE	1998413518	FCCT 03 Jump From Horse to Beam
+Mission	771D5ECF	1998413519	FCCT 04 Perform Leaps of Faith
+Mission	771D5ED0	1998413520	FCCT 05 Perform a Dive
+Mission	771D5ED2	1998413522	FCCT 07 Parachute Glide Distance
+Mission	771D5ED4	1998413524	FCCT 09 Kill Guards with a Ranged Weapon
+Mission	771D5ED5	1998413525	FCCT 10 Air Assassinate Guards from Beams
+Mission	771D5ED6	1998413526	FCCM 01 Hire Mercs
+Mission	771D5ED7	1998413527	FCCM 02 Destroy Kiosks by Throwing People
+Mission	771D5ED8	1998413528	FCCM 03 Kill Brutes
+Mission	771D5ED9	1998413529	FCCM 04 Kill Swiss Guards
+Mission	771D5EDA	1998413530	FCCM 05 Kill Guards while on a horse
+Mission	771D5EDB	1998413531	FCCM 06 Air Assassinate to Horse
+Mission	771D5EDC	1998413532	FCCM 07 Double Assassinate
+Mission	771D5EDD	1998413533	FCCM 08 Disarm Kill Guards With thier own weapons
+Mission	771D5EDE	1998413534	FCCM 09 Kill Guards in under 10 seconds
+Mission	771D5EDF	1998413535	FCCM 10 Perform Kill Streaks
+Mission	771D5EE0	1998413536	FCCA 01 Use BAM Attack
+Mission	771D5EE1	1998413537	FCCA 02 Use BAM Arrows
+Mission	771D5EE2	1998413538	FCCA 03 Use BAM Assassination
+Mission	771D5EE3	1998413539	FCCA 04 Use BAM in a Story Mission
+Mission	771D5EE4	1998413540	FCCA 05 Train Recruits to Assassin Rank
+Mission	77657453	2003137619	CMCB01
+Mission	7765746E	2003137646	CMCB02
+Mission	77657A25	2003139109	CMCB03
+Mission	77657D32	2003139890	CMAB01
+Mission	77657D33	2003139891	CMAB02
+Mission	77657D34	2003139892	CMAB03
+Mission	77C6FA76	2009528950	BT_AllComplete
+Mission	782FF413	2016408595	Dice Game TALK
+Mission	782FF414	2016408596	Dice Game ACTION
+Mission	7C5DECFA	2086530298	P00SQ04B_Lucy
+Mission	7CFEEFEF	2097082351	CMT06
+Mission	7D7E7A53	2105440851	P01M02B
+Mission	7EC7E788	2127030152	CMC07
+Mission	7FF0728B	2146464395	CMC06
+Mission	800A4C1C	2148158492	VRC_Nav_ChaseBreaker
+Mission	800A6233	2148164147	VRC_Combat_StealthA_HB_02
+Mission	80CA4A69	2160740969	Harlequin_01
+Mission	81E34CAC	2179157164	SQ06M00_FlyBy
+Mission	82E5655A	2196071770	VRT_Combat_Assassinate03_LedgePullDown
+Mission	82E5655B	2196071771	VRT_Combat_Assassinate04_LedgeClimbUp
+Mission	855C7D56	2237431126	VRC_Social_StealthRace_01
+Mission	87DE2132	2279481650	Contextual_Tutorial_Full_Sync_Failed
+Mission	87DE2133	2279481651	Contextual_Tutorial_Near_Bank
+Mission	8A730EFE	2322796286	P00_SQX_PlayerTracker
+Mission	8A79EC27	2323246119	E01M01
+Mission	8A79EC38	2323246136	SQ01M02
+Mission	8A79EC3B	2323246139	SQ01M03
+Mission	8A79EC3E	2323246142	SQ01M04
+Mission	8A79EC41	2323246145	SQ01M05
+Mission	8A79EC44	2323246148	P01M01
+Mission	8A79EC4A	2323246154	P01M03
+Mission	8A79EC51	2323246161	SQ02M02
+Mission	8A79EC54	2323246164	SQ02M03A
+Mission	8A79EC57	2323246167	SQ02M04A
+Mission	8A79EC5A	2323246170	SQ02M05
+Mission	8A79EC5D	2323246173	SQ02M06
+Mission	8A79EC65	2323246181	SQ03M01
+Mission	8A79EC68	2323246184	SQ03M02
+Mission	8A79EC6B	2323246187	SQ03M03
+Mission	8A79EC6E	2323246190	SQ03M04
+Mission	8A79EC72	2323246194	SQ04M01
+Mission	8A79EC78	2323246200	SQ04M03
+Mission	8A79EC7B	2323246203	SQ04M04
+Mission	8A79EC7E	2323246206	SQ04M05
+Mission	8A79EC81	2323246209	SQ04M06
+Mission	8A79EC85	2323246213	SQ05M01
+Mission	8A79EC88	2323246216	SQ05M02
+Mission	8A79EC8B	2323246219	SQ05M03
+Mission	8A79EC8E	2323246222	SQ05M04
+Mission	8A79EC92	2323246226	SQ06M01
+Mission	8A79EC95	2323246229	SQ06M02
+Mission	8A79EC98	2323246232	SQ06M03
+Mission	8A79EC9B	2323246235	SQ06M04
+Mission	8A79ECA3	2323246243	SQ07M01
+Mission	8A79ECA6	2323246246	SQ07M02
+Mission	8A79ECA9	2323246249	SQ07M03
+Mission	8A79ECAF	2323246255	SQ07M04
+Mission	8A79ECBA	2323246266	E04M02
+Mission	8C3EBD1F	2352921887	LGS_Unlocked
+Mission	8D9A8ED6	2375716566	Revelations
+Mission	8D9F5164	2376028516	P02M01
+Mission	9121FB97	2434923415	CMAB02_UnlockAFS
+Mission	9121FB98	2434923416	CMAB03_UnlockAFS
+Mission	9121FBD7	2434923479	CMCB01_UnlockAFS
+Mission	9121FBD8	2434923480	CMCB02_UnlockAFS
+Mission	9121FBD9	2434923481	CMCB03_UnlockAFS
+Mission	9121FBDA	2434923482	CMTB01_UnlockAFS
+Mission	9121FBDB	2434923483	CMTB02_UnlockAFS
+Mission	9121FBDC	2434923484	CMTB03_UnlockAFS
+Mission	94246F7D	2485415805	CMT08
+Mission	956E791E	2507045150	Contextual_Tutorial_Fedayeen_Borgia_Reminder
+Mission	956E7975	2507045237	Contextual_Tutorial_Trade Item
+Mission	9604D2DD	2516898525	Contextual_Tutorial_Horse_Break
+Mission	9604D2DE	2516898526	Contextual_Tutorial_Equip_Crossbow
+Mission	9604D300	2516898560	Contextual_Tutorial_Horse_Helper
+Mission	9960AA9E	2573249182	CMB01
+Mission	9960AAA1	2573249185	CMB02
+Mission	9960AAA4	2573249188	CMB03
+Mission	9960AAA7	2573249191	CMB04
+Mission	9960AAAA	2573249194	CMB05
+Mission	9B200E4E	2602569294	VRT_Nav_Basic06_Corner_Swing
+Mission	9B201277	2602570359	VRT_Nav_Basic03_Run
+Mission	9B2012DA	2602570458	VRT_Nav_Basic04_Sprint
+Mission	9B20138E	2602570638	VRT_Nav_Basic05_Free Run
+Mission	9B201829	2602571817	VRT_Nav_Climb01_StartClimbing
+Mission	9B201E79	2602573433	VRT_Com_Unarmed01_Lock Fight
+Mission	9B201E7C	2602573436	VRT_Com_Unarmed02_Punch
+Mission	9B201E7F	2602573439	VRT_Com_Unarmed03_Combo
+Mission	9B201E82	2602573442	VRT_Com_Unarmed04_Block
+Mission	9B201E85	2602573445	VRT_Com_Unarmed06_Grab
+Mission	9B201E88	2602573448	VRT_Com_Unarmed10_Throw
+Mission	9B201E8B	2602573451	VRT_Com_Unarmed07_Grab - Headbutt
+Mission	9B201E8E	2602573454	VRT_Com_Unarmed08_Grab - Punch
+Mission	9B20228E	2602574478	VRT_Com_Unarmed09_Grab - Knee
+Mission	9DAD6ADF	2645387999	P02M02
+Mission	9E2F2836	2653890614	L01M03
+Mission	9E2F2837	2653890615	L02M03
+Mission	9E2F2838	2653890616	L03M03
+Mission	9E2F2839	2653890617	L04M03
+Mission	A022E961	2686642529	Contextual_Tutorial_Horse_Leap
+Mission	A022E962	2686642530	Contextual_Tutorial_Horse_Eject
+Mission	A1E6F9F0	2716269040	P00_SQX_Artifacts
+Mission	A1F8C76B	2717435755	DLC_04_M00
+Mission	A1F8C76C	2717435756	DLC_04_M01
+Mission	A1F8C76D	2717435757	DLC_04_M02
+Mission	A1F8C76E	2717435758	DLC_04_M03
+Mission	A1F8C76F	2717435759	DLC_04_M04
+Mission	A1F8C770	2717435760	DLC_04_M05
+Mission	A1F8C771	2717435761	DLC_04_M06
+Mission	A1F8C772	2717435762	DLC_04_M07
+Mission	A1F8C773	2717435763	DLC_04_M08
+Mission	A22D8722	2720892706	VRT_Com_Unarmed05_Counter
+Mission	A22D8726	2720892710	VRT_Com_UnarmedAdv02_Dodge
+Mission	A22D882A	2720892970	VRT_Social_Evasion01_Hide Spots-Garden
+Mission	A22D882D	2720892973	VRT_Social_Evasion02_Hide Spots-Bench
+Mission	A22D8830	2720892976	VRT_Social_Evasion03_Hide Spots-Hay_Stack
+Mission	A22D8833	2720892979	VRT_Social_Evasion04_Leap of Faith
+Mission	A249D592	2722747794	SQ02M07
+Mission	A2AEBE64	2729360996	Contextual_Tutorial_Fedayeen_LowHealth
+Mission	A2AEBE65	2729360997	Contextual_Tutorial_Fedayeen_Dead
+Mission	A2AEBE66	2729360998	Contextual_Tutorial_Fedayeen_ArrowShower
+Mission	A77C30D1	2809934033	FilterC
+Mission	A77C30D2	2809934034	FilterD
+Mission	A77C30D3	2809934035	FilterE
+Mission	A77C30D4	2809934036	FilterF
+Mission	A77C30D5	2809934037	FilterG
+Mission	A77C30D6	2809934038	FilterH
+Mission	A77C30D7	2809934039	FilterI
+Mission	A8B44515	2830386453	VRC_Combat_Assassinate_01
+Mission	A8C14D88	2831240584	EXO_01_MachineGun
+Mission	A8C14D8B	2831240587	EXO_04_Tank
+Mission	A8C14D8E	2831240590	EXO_03_LeoBomber
+Mission	A8C14D91	2831240593	EXO_02_NavalCannon
+Mission	A8DB16CB	2832930507	SQ02M08
+Mission	A91B3522	2837132578	VRT_Nav_Climb02_Climb
+Mission	A91B3525	2837132581	VRT_Nav_Climb03_StrongClimb
+Mission	A91B352B	2837132587	VRT_Nav_Climb05_CatchBack
+Mission	A91B352E	2837132590	VRT_Nav_Basic07_Pole Swing
+Mission	A939A568	2839127400	SQ03M05
+Mission	A9F698AC	2851510444	Mercenaries Level 1
+Mission	A9F69D84	2851511684	Contextual_Tutorial_Captured_Tower
+Mission	AAFB570F	2868598543	SQ05M05
+Mission	AC6E7082	2892918914	P00_SQX_Desmond_Goes_Outside_First
+Mission	B09DC73A	2963130170	CMT04
+Mission	B14B483A	2974500922	FC_AssassinStarter
+Mission	B14B5AA4	2974505636	VRT_Com_UnarmedAdv01_Taunt
+Mission	B14B5AA7	2974505639	VRT_Com_Unarmed11_Evade
+Mission	B14B5AAA	2974505642	VRT_Com_UnarmedAdv03_Kick
+Mission	B14B5BAA	2974505898	VR_Mission_Intro_FlyByFX
+Mission	B14B6629	2974508585	VRT_Nav_Chasing02_Tackle02
+Mission	B14B662C	2974508588	VRT_Nav_Chasing01_Tackle
+Mission	B1CCF2E6	2982998758	VRC_Social_Distractions_01
+Mission	B2674379	2993111929	RHP_Rome_Downtown
+Mission	B267437A	2993111930	RHP_Rome_Antique
+Mission	B367E3B9	3009930169	Contextual_Tutorial_Kill_Streak
+Mission	B367E509	3009930505	Contextual_Tutorial_Grab_Counter
+Mission	B60EDC32	3054427186	VRT_Nav_Horse01_Mount
+Mission	B60EDC35	3054427189	VRT_Nav_Horse02_Steering
+Mission	B60EDC38	3054427192	VRT_Nav_Horse04_Jumps
+Mission	B60EDC3E	3054427198	VRT_Nav_Horse07_Dismount
+Mission	B6714D3D	3060878653	VRTA_Nav_FreerunA05_EarlyLeap
+Mission	B6714D40	3060878656	VRTA_Nav_FreerunA04_Drop
+Mission	B6714D43	3060878659	VRTA_Nav_FreerunA01_WallEjectPole
+Mission	B6714D46	3060878662	VRTA_Nav_FreerunA02_WallEjectSideGrab
+Mission	B6714D49	3060878665	VRTA_Nav_FreerunA03_Leap
+Mission	B70D6E4F	3071110735	Guild promotions
+Mission	B70D6E7F	3071110783	Guild promotions reset
+Mission	B7A97D84	3081338244	Fight Club TALK
+Mission	B7A97D85	3081338245	Fight Club ACTION
+Mission	B8934BE1	3096660961	VRC_Nav_Chase_01
+Mission	BABEFC4F	3133078607	VRC_Nav_Freerun_Race01
+Mission	BAC9DB5A	3133791066	CMB01_UnlockAFS
+Mission	BAC9DB5B	3133791067	CMB02_UnlockAFS
+Mission	BAC9DBE0	3133791200	CMAB04_Complete
+Mission	BAC9DC07	3133791239	CMCB04_Complete
+Mission	BAC9DC2E	3133791278	CMTB04_Complete
+Mission	BACC1571	3133937009	VRC_Social_GreatEscape_01
+Mission	BACC3D38	3133947192	VRC_Social_DeadBodies_01
+Mission	BAF7C5C0	3136800192	CMA06
+Mission	BAF7C5C3	3136800195	CMA05
+Mission	BAF7C5C9	3136800201	CMA04
+Mission	BB2ADF34	3140149044	SQ03M07
+Mission	BBA921F3	3148423667	Feathers_Downtown
+Mission	BBA92203	3148423683	Feathers_Countryside
+Mission	BBA92213	3148423699	Feathers_TiberIsland
+Mission	BBA922B4	3148423860	TreasureChests_Countryside
+Mission	BBA922B5	3148423861	TreasureChests_Antique
+Mission	BBA922B6	3148423862	TreasureChests_Vatican
+Mission	BD061FC4	3171295172	VRT_Nav_Horse03_High_Profile
+Mission	BD061FC7	3171295175	VRT_Nav_Horse05_Gallop
+Mission	BD061FCA	3171295178	VRT_Nav_Horse06_Jumps02
+Mission	BE25785A	3190126682	VRT_Nav_Chasing03_AirTackle01
+Mission	BE25785B	3190126683	VRT_Nav_Chasing04_AirTackle02
+Mission	BE25785C	3190126684	VRT_Nav_Chasing05_BeamTackle01
+Mission	BE25785D	3190126685	VRT_Nav_Chasing06_BeamTackle02
+Mission	BF6828E2	3211274466	VRT_Social_Blend01_Blend
+Mission	BF6828E8	3211274472	VRT_Social_Blend03_Guards
+Mission	BF6828F1	3211274481	VRT_Social_Blend06_Out
+Mission	C23851B3	3258470835	CMB03_UnlockAFS
+Mission	C23851B5	3258470837	CMB04_UnlockAFS
+Mission	C23851B7	3258470839	CMB05_UnlockAFS
+Mission	C44FD5CA	3293566410	Contextual_Tutorial_Horse_Hijack
+Mission	C44FD607	3293566471	Contextual_Tutorial_Open Fedayeen Mission Reminder
+Mission	C49C36A1	3298571937	E04M01
+Mission	C6E4D58B	3336885643	ContextTuto_Rome_SwimReminder
+Mission	C6E4D5A7	3336885671	ContextTuto_Rome_BoatReminder2
+Mission	C6E4D5C3	3336885699	ContextTuto_Rome_BoatReminder1
+Mission	C6E4D5DF	3336885727	ContextTuto_Gen_Rome_ThievesUseReminder
+Mission	C6E4D5F7	3336885751	ContextTuto_Gen_Rome_TackleReminder
+Mission	C6E4D60E	3336885774	ContextTuto_Gen_Rome_SprintReminder
+Mission	C6E4D625	3336885797	ContextTuto_Gen_Rome_Rooftops
+Mission	C6E4D63E	3336885822	ContextTuto_Gen_Rome_PoleSwing
+Mission	C6E4D655	3336885845	ContextTuto_Gen_Rome_PoisonRefill
+Mission	C6E4D66C	3336885868	ContextTuto_Gen_Rome_OOB
+Mission	C6E4D683	3336885891	ContextTuto_Gen_Rome_Notoriety_Poster
+Mission	C6E4D69A	3336885914	ContextTuto_Gen_Rome_Notoriety_Official
+Mission	C6E4D6B1	3336885937	ContextTuto_Gen_Rome_Notoriety_Herald
+Mission	C6E4D6C8	3336885960	ContextTuto_Gen_Rome_MercenariesUseReminder
+Mission	C6E4D6E0	3336885984	ContextTuto_Gen_Rome_LowLife
+Mission	C6E4D6F7	3336886007	ContextTuto_Gen_Rome_LootReminder
+Mission	C6E4D70E	3336886030	ContextTuto_Gen_Rome_LeapOfFaithReminder
+Mission	C6E4D725	3336886053	ContextTuto_Gen_Rome_HorseSteering
+Mission	C6E4D73C	3336886076	ContextTuto_Gen_Rome_HorseFight
+Mission	C6E4D753	3336886099	ContextTuto_Gen_Rome_HiddenBladePlateReminder
+Mission	C6E4D76D	3336886125	ContextTuto_Gen_Rome_GroupManip_Replacement
+Mission	C6E4D784	3336886148	ContextTuto_Gen_Rome_Feathers
+Mission	C6E4D79B	3336886171	ContextTuto_Gen_Rome_EagleVisionSecret2
+Mission	C6E4D7B2	3336886194	ContextTuto_Gen_Rome_DamagedArmor
+Mission	C6E4D7C9	3336886217	ContextTuto_Gen_Rome_CourtisanUseReminder
+Mission	C6E4D7E1	3336886241	ContextTuto_Gen_Rome_CodexPhilo4th
+Mission	C6E4D7F9	3336886265	ContextTuto_Gen_Rome_CodexPhilo1st
+Mission	C6E4D811	3336886289	ContextTuto_Gen_Rome_CatchbackReminder3
+Mission	C6E4D828	3336886312	ContextTuto_Gen_Rome_CatchbackReminder2
+Mission	C6E4D83F	3336886335	ContextTuto_Gen_Rome_CatchbackReminder1
+Mission	C6E4D856	3336886358	ContextTuto_Gen_Rome_BrokenArmor
+Mission	C6E4D86D	3336886381	ContextTuto_Gen_Rome_BodyCheckReminder
+Mission	C6E4D884	3336886404	ContextTuto_Gen_Rome_BlendWater
+Mission	C6E4D89B	3336886427	ContextTuto_Gen_Rome_AnimusDatabase
+Mission	C6E4D8B2	3336886450	ContextTuto_Gen_Rome_ADB_TemplarIcon
+Mission	C6E4D8C9	3336886473	ContextTuto_Gen_Rome_ADB_LGSIcon
+Mission	C6E4D8E0	3336886496	ContextTuto_Gen_Rome_ADB_GlyphIcon
+Mission	C6E4D8F7	3336886519	ContextTuto_Gen_Rome_ADB_GlyphAvailable
+Mission	C6E4D90E	3336886542	ContextTuto_Gen_Rome_ADB_ActivateGlyph
+Mission	C6E4E52A	3336889642	ContextTuto_Gen_Rome_MercenariesUseReminder
+Mission	C6E4E542	3336889666	ContextTuto_Gen_Rome_CourtisanUseReminder
+Mission	C6E4E55A	3336889690	ContextTuto_Gen_Rome_SmokeBombsBuy
+Mission	C6E4E8E6	3336890598	ContextTuto_Gen_Rome_ReachHighPoint
+Mission	C87BFCB0	3363568816	Contextual_Tutorial_Dodge
+Mission	CA0424AD	3389269165	VRC_Nav_Freerun_Race02
+Mission	CA0424B0	3389269168	VRC_Nav_Freerun_Race03
+Mission	CA0424C3	3389269187	VRC_Nav_Freerun_RaceAll
+Mission	CE12B116	3457331478	Courtesans Level 1
+Mission	CE12B119	3457331481	Courtesans Level 2
+Mission	CE12B11C	3457331484	Courtesans Level 3
+Mission	CE12B11F	3457331487	Thieves Level 1
+Mission	CE12B122	3457331490	Thieves Level 2
+Mission	CE12B125	3457331493	Thieves Level 3
+Mission	CE12B128	3457331496	Assassins Level 1
+Mission	CE12B12B	3457331499	Mercenaries Level 2
+Mission	CE12B12E	3457331502	Mercenaries Level 3
+Mission	CE76EAC1	3463899841	Contextual_Tutorial_Climb_Leap
+Mission	CFFCFB85	3489463173	CMT10
+Mission	D4AAEF32	3567972146	VRC_Nav_Freerun_Race01_Rev
+Mission	D4AAEF33	3567972147	VRC_Nav_Freerun_Race02_Rev
+Mission	D4AAEF34	3567972148	VRC_Nav_Freerun_Race03_Rev
+Mission	D4AAFA16	3567974934	VRC_Nav_Freerun_RaceAll_Rev
+Mission	D6499925	3595147557	VRT_Nav_EagleVision01_Friends
+Mission	D8FAB886	3640309894	BT_Countryside_01
+Mission	DA04B37A	3657741178	VRT_Nav_Freerun06_BeamWallRun
+Mission	DA04B37B	3657741179	VRT_Nav_Freerun07_SideCatchBack
+Mission	DA04B37C	3657741180	VRT_Nav_Freerun08_ExtremeCatchback
+Mission	DA1847C4	3659024324	SQ02BM00_Flyby
+Mission	DB790CBC	3682143420	hideout contextual post CMM08
+Mission	DD9F9BB4	3718224820	BorgiaFlags_Rome_Antique
+Mission	DD9F9BBD	3718224829	TreasureChests_Downtown
+Mission	DE432702	3728942850	CMT09
+Mission	DE4329D3	3728943571	CMT01
+Mission	E10B114F	3775598927	BT_Downtown_Tutorial
+Mission	E1204DAE	3776990638	Leo_ParachuteScene
+Mission	E4E7FD9A	3840408986	SQ02M04B
+Mission	E4E7FD9C	3840408988	SQ02M04D
+Mission	E59560A9	3851772073	VRT_Combat_RangedWeapons02_Pistol02
+Mission	E59560AA	3851772074	VRT_Combat_RangedWeapons04_ThrowingKnives02
+Mission	E59560AB	3851772075	VRT_Combat_RangedWeapons06_CrossBow02
+Mission	E595610C	3851772172	FC_MercStarter
+Mission	E595610D	3851772173	FC_ThiefStarter
+Mission	E595610E	3851772174	FC_CourtesanStarter
+MissionGroup	00C45A2C	12868140	Reach_High_Points
+MissionGroup	04D75A0F	81222159	VRT_Combat_Unarmed_Advanced
+MissionGroup	04D7798F	81230223	VRT_Combat_Ranged_Advanced
+MissionGroup	0533C674	87279220	VRC_Combat_Survival
+MissionGroup	0C0517F7	201660407	VRT_Combat_SpecialWeapons
+MissionGroup	0C052345	201663301	VRT_Combat_SpecialTactics
+MissionGroup	0C052BE2	201665506	VRT_Combat_RangedWeapons
+MissionGroup	0C053C1F	201669663	VRT_Social_Money
+MissionGroup	0C053E40	201670208	VRT_Social_Factions
+MissionGroup	1054977C	273979260	VRC_Com_StealthAssassinateFlagHunt_03
+MissionGroup	10ABC350	279692112	Faction Creed Unlock
+MissionGroup	18258764	405112676	VRT_Social_Notoriety
+MissionGroup	18258C77	405113975	VRT_Social_Distractions
+MissionGroup	18258C78	405113976	VRT_Combat_Assassinate
+MissionGroup	18258C79	405113977	VRT_Social_Stealth
+MissionGroup	18258C7A	405113978	VRT_Nav_Swim
+MissionGroup	18258C7B	405113979	VRT_Nav_Gondola
+MissionGroup	1B3F8283	457147011	Feathers
+MissionGroup	274FA34B	659530571	CMM
+MissionGroup	28F40CDD	687082717	VRT_Combat_KillSteak
+MissionGroup	2E05FAA0	772143776	VRT_Unlock_RaidenSkin
+MissionGroup	31A7439E	833045406	Present_Optional
+MissionGroup	33F4FDEB	871693803	Notoriety_Missions
+MissionGroup	44C19630	1153537584	VRC_Combat_ShootingRange
+MissionGroup	479FEEB0	1201663664	SQ01
+MissionGroup	4DB734F2	1303852274	SPECIAL UNLOCKABLE
+MissionGroup	4FDCBFF9	1339867129	DLC_fake
+MissionGroup	55022152	1426202962	CityEvents
+MissionGroup	579F957D	1470076285	VRT_Subject_16_Test
+MissionGroup	60745A0F	1618237967	VRC_Nav_AgileRace
+MissionGroup	65A3049B	1705182363	VR_CrowdControlGroup01
+MissionGroup	65A304A4	1705182372	VR_CrowdControlGroup02
+MissionGroup	66C40D20	1724124448	LGS_Singapore
+MissionGroup	6F9BD022	1872482338	GamesCom
+MissionGroup	735F1BEF	1935612911	VRC_Com_StealthAssassinateFlagHunt_01
+MissionGroup	73AA7787	1940551559	CMS
+MissionGroup	782FF40D	2016408589	DiceGame
+MissionGroup	7C6E3626	2087597606	Leonardo_Workshops
+MissionGroup	7EC7E787	2127030151	CMC
+MissionGroup	800A6232	2148164146	VRC_Com_StealthAssassinateFlagHunt_02
+MissionGroup	80CA4A6A	2160740970	DLC_Harlequin_Achievement
+MissionGroup	855C7D55	2237431125	VRC_Social_StealthRace
+MissionGroup	8A79EC26	2323246118	E01
+MissionGroup	8A79EC2A	2323246122	P01
+MissionGroup	8A79EC4D	2323246157	SQ02A
+MissionGroup	8A79EC64	2323246180	SQ03
+MissionGroup	8A79EC71	2323246193	SQ04
+MissionGroup	8A79EC84	2323246212	SQ05
+MissionGroup	8A79EC91	2323246225	SQ06
+MissionGroup	8A79ECA2	2323246242	SQ07
+MissionGroup	8A79ECB5	2323246261	E04
+MissionGroup	8B9BBFB3	2342240179	CMT
+MissionGroup	8D9F5163	2376028515	P02
+MissionGroup	9121FB8D	2434923405	Monitor_UnlockAFS
+MissionGroup	9960AA9C	2573249180	CMB
+MissionGroup	9B203775	2602579829	Faction_Creed
+MissionGroup	A1A64CBE	2712030398	SPECIAL UNLOCKABLE Narrative
+MissionGroup	A1F8C760	2717435744	DLC_04
+MissionGroup	A22D8464	2720892004	VRT_Combat_Unarmed
+MissionGroup	A22D8817	2720892951	VRT_Social_Evasion
+MissionGroup	A77C30CA	2809934026	Present_Emails
+MissionGroup	A8B44514	2830386452	VRC_Com_Assassinate
+MissionGroup	A8C14D7F	2831240575	EXO_Quebec
+MissionGroup	A91B252B	2837128491	VRT_Nav_Climb
+MissionGroup	B14B5BA9	2974505897	VR_Mission_Intro
+MissionGroup	B14B6628	2974508584	VRT_Nav_Chasing
+MissionGroup	B1CCF317	2982998807	VRC_Social_Distractions
+MissionGroup	B60EDC31	3054427185	VRT_Nav_Horse
+MissionGroup	B70D6E50	3071110736	GUILD PROMOTIONS
+MissionGroup	B7A97D7D	3081338237	FIGHT CLUB
+MissionGroup	B8934BE0	3096660960	VRC_Nav_Chase
+MissionGroup	BACC15AD	3133937069	VRC_Social_GreatEscape
+MissionGroup	BACC3D37	3133947191	VRC_Social_DeadBodies
+MissionGroup	BAF7C5BF	3136800191	CMA
+MissionGroup	BF6828E1	3211274465	VRT_Social_Blend
+MissionGroup	C6E4DAD1	3336886993	ContextualTutorials_Rome
+MissionGroup	D1C89F35	3519586101	VRT_Nav_Basic
+MissionGroup	D1C89F36	3519586102	VRTA_Nav_FreerunA
+MissionGroup	D1C89F37	3519586103	VRC_Nav_Freerun_Race
+MissionGroup	D6499924	3595147556	VRT_Nav_EagleVision
+MissionGroup	DD9F9BAC	3718224812	BorgiaFlags
+MissionGroup	DD9F9BAD	3718224813	TreasureChests
+MissionGroup	DEDF8B2D	3739192109	Borgia_Towers
+MissionGroup	E4E7FD8F	3840408975	SQ02B
+Accomplishment	0C053C31	201669681	Pickpocket Counter
+Accomplishment	0C053D87	201670023	Loot Counter
+Accomplishment	0FAA7A42	262830658	Mission Heavy Weapon
+Accomplishment	1437D10E	339202318	Fight_Helpers
+Accomplishment	1437D114	339202324	Blocking
+Accomplishment	1437D118	339202328	Kicking
+Accomplishment	1FCCE3A6	533521318	Fedayeen LevelUp
+Accomplishment	21A9EC5A	564784218	Critical State Enter
+Accomplishment	21A9EC5B	564784219	Critical State Exit
+Accomplishment	21A9EC5C	564784220	Critical State Is In
+Accomplishment	21A9EC5D	564784221	Critical State Is Not In
+Accomplishment	276310BE	660803774	Captured Tower
+Accomplishment	276310CD	660803789	Buy Armor Reminder
+Accomplishment	276310D0	660803792	Sit on Bench
+Accomplishment	276310D9	660803801	Faction Creed Board
+Accomplishment	276310DC	660803804	Tackle Messenger
+Accomplishment	276310DF	660803807	Fedayeen Arrow Used
+Accomplishment	276310E0	660803808	Fedayeen Arrow Available
+Accomplishment	276310E5	660803813	Tail Reminder Part 01
+Accomplishment	276310E6	660803814	Tail Reminder Part 02
+Accomplishment	28BBED9D	683404701	44 - Throw Spear Axe Smoke
+Accomplishment	28BBEDA6	683404710	46 - Full Sync with DLC
+Accomplishment	28BBEDAC	683404716	45 - Win Money Dice Game
+Accomplishment	28BBEDAF	683404719	49 - Air To Double Assassinate
+Accomplishment	28BBEDB2	683404722	53 - Use BAM Arrows To Kill Guard
+Accomplishment	28BBEDB5	683404725	51 - Use Lift To Kill NPC
+Accomplishment	28BBEDB8	683404728	52 - Pickpocket Orator After Bribe
+Accomplishment	28BBEEAA	683404970	48 - Complete DLC
+Accomplishment	28BBEEAD	683404973	47 - Beat Up 5 Harlequins
+Accomplishment	28BBEEB4	683404980	50 - Steal Horses
+Accomplishment	28F41282	687084162	Kill Streak Counter
+Accomplishment	2E05FA9D	772143773	Unlock Raiden Skin
+Accomplishment	2F7C047F	796656767	Fedayeen Save First
+Accomplishment	2F7C0480	796656768	Fedayeen Use Fight
+Accomplishment	2F7C0481	796656769	Fedayeen Assassinate Available
+Accomplishment	2F7C0482	796656770	Fedayeen Send on Job
+Accomplishment	3354E30D	861201165	Fedayeen Assassinate
+Accomplishment	3354F332	861205298	Near Shop Quest
+Accomplishment	3354F333	861205299	Interact With Shop Quest
+Accomplishment	3354F334	861205300	Near Blacksmith
+Accomplishment	3354F335	861205301	Near Tailor
+Accomplishment	3354F336	861205302	Near Art Dealer
+Accomplishment	3354F341	861205313	Open Fedayeen Mission Giver
+Accomplishment	3354F344	861205316	Buy Parachute Pouch
+Accomplishment	3354F35D	861205341	Buy Crossbow
+Accomplishment	3354F4FF	861205759	Buy Smoke Bomb Pouch
+Accomplishment	3354F53B	861205819	Marking Landmarks
+Accomplishment	3354FFB8	861208504	Renovating Rome
+Accomplishment	34A84889	883443849	Kill Streak Counter Hard
+Accomplishment	3CBEC103	1019134211	Near Lift
+Accomplishment	3CBEC143	1019134275	Glyph Seen
+Accomplishment	40E53F51	1088765777	Fedayeen Mission Complete
+Accomplishment	4726B970	1193720176	Throw Money
+Accomplishment	4809834D	1208582989	Dive
+Accomplishment	48098379	1208583033	Helped By Vigilante
+Accomplishment	4F6437FB	1331967995	Survival Counter
+Accomplishment	50EBE68D	1357637261	Player Got Hit
+Accomplishment	50F3E11A	1358160154	AnimusTutorialCompleted
+Accomplishment	52C02638	1388324408	Mission Fedayeen Assassinate
+Accomplishment	56170D86	1444351366	Trainee Becomes Assassin
+Accomplishment	57CC31CE	1472999886	CUT_Ammunition
+Accomplishment	57CC31CF	1472999887	AnimusDatabase
+Accomplishment	57CC31D0	1472999888	CUT_ArmorReminder
+Accomplishment	57CC31D3	1472999891	CUT_AssassinateBlend
+Accomplishment	57CC31D4	1472999892	BlendWater
+Accomplishment	57CC31D5	1472999893	BoatReminder1
+Accomplishment	57CC31D6	1472999894	BoatReminder2
+Accomplishment	57CC31D7	1472999895	BodyCheckReminder
+Accomplishment	57CC31D8	1472999896	CatchbackReminder1
+Accomplishment	57CC31E2	1472999906	CatchbackReminder2
+Accomplishment	57CC31E4	1472999908	CodexPhilo1st
+Accomplishment	57CC31E5	1472999909	CodexPhilo4th
+Accomplishment	57CC31E6	1472999910	CourtisanUseReminder
+Accomplishment	57CC31E7	1472999911	IN_STORY_DiveReminder
+Accomplishment	57CC31E8	1472999912	CUT_DropWeaponReminder
+Accomplishment	57CC31E9	1472999913	IN_STORY_GroupManipHireReminder
+Accomplishment	57CC31EA	1472999914	CUT_HiddenBladeGunReminder
+Accomplishment	57CC31EB	1472999915	HiddenBladePlateReminder
+Accomplishment	57CC31EC	1472999916	CUT_HidespotReminder
+Accomplishment	57CC31ED	1472999917	CUT_HorseDismount
+Accomplishment	57CC31EE	1472999918	HorseFight
+Accomplishment	57CC31EF	1472999919	CUT_HorseJumps
+Accomplishment	57CC31F0	1472999920	HorseSteering
+Accomplishment	57CC31F1	1472999921	LeapOfFaithReminder
+Accomplishment	57CC31F2	1472999922	LootReminder
+Accomplishment	57CC31F3	1472999923	MercenariesUseReminder
+Accomplishment	57CC31F4	1472999924	CUT_POICamReminder
+Accomplishment	57CC31F5	1472999925	RHPReminder
+Accomplishment	57CC31F6	1472999926	Rooftops
+Accomplishment	57CC31F7	1472999927	SmokeBombsBuy
+Accomplishment	57CC31F8	1472999928	SprintReminder
+Accomplishment	57CC31F9	1472999929	SwimReminder
+Accomplishment	57CC31FA	1472999930	CUT_SwimUnderReminder
+Accomplishment	57CC31FB	1472999931	TackleReminder
+Accomplishment	57CC31FC	1472999932	CUT_TauntReminder
+Accomplishment	57CC31FD	1472999933	ThievesUseReminder
+Accomplishment	58C83C1D	1489517597	Is in Water AND in Conflict
+Accomplishment	58C83E4B	1489518155	Boat Enter
+Accomplishment	58C83E4C	1489518156	Boat Exit
+Accomplishment	58C83E4D	1489518157	Boat Is In
+Accomplishment	58C83E4E	1489518158	Boat Is Not In
+Accomplishment	58C83E4F	1489518159	Boat Driving Enter
+Accomplishment	58C83E50	1489518160	Boat Driving Exit
+Accomplishment	58C83E51	1489518161	Boat Driving Is In
+Accomplishment	58C83E52	1489518162	Boat Driving Is Not In
+Accomplishment	5BC08530	1539343664	ADB_GlyphIcon
+Accomplishment	5BC08533	1539343667	ADB_LGSIcon
+Accomplishment	5BC08536	1539343670	ADB_TemplarIcon
+Accomplishment	5BC08539	1539343673	ADB_GlyphAvailable
+Accomplishment	5BC0853C	1539343676	ADB_ActivateGlyph
+Accomplishment	5BC08542	1539343682	Feathers
+Accomplishment	5BEB51E8	1542148584	Climbing Enter
+Accomplishment	5BEB51E9	1542148585	Climbing Exit
+Accomplishment	5BEB51EA	1542148586	Climbing Is In
+Accomplishment	5BEB51EB	1542148587	Climbing Is Not In
+Accomplishment	60B1AD87	1622257031	FCCC 06 Hide Dead Bodies
+Accomplishment	60B1AD8A	1622257034	FCCC 07 Poison Guards
+Accomplishment	60B1AD8D	1622257037	FCCC 08 Kill Guards in Smoke Bomb
+Accomplishment	60B1AD90	1622257040	FCCC 09 Assassinate Guards from Behind
+Accomplishment	60B1AD96	1622257046	FCCC 10 Assassinate Guards From Blend Spots
+Accomplishment	60B1AD9D	1622257053	FCCT 01 Use Thieves
+Accomplishment	60B1ADA0	1622257056	FCCT 02 Sprint uninterupted
+Accomplishment	60B1ADA3	1622257059	FCCT 04 Perform Leaps of Faith
+Accomplishment	60B1ADA6	1622257062	FCCT 03 Jump From Horse to Beam
+Accomplishment	60B1ADA9	1622257065	FCCT 05 Perform a Dive
+Accomplishment	60B1ADAF	1622257071	FCCT 07 Parachute Glide Distance
+Accomplishment	60B1ADB5	1622257077	FCCT 09 Kill Guards with a Ranged Weapon
+Accomplishment	60B1ADB8	1622257080	FCCT 10 Air Assassinate Guards from Beams
+Accomplishment	60B1ADBB	1622257083	FCCM 01 Use Mercs
+Accomplishment	60B1ADBE	1622257086	FCCM 02 Destroy Kiosks by Throwing People
+Accomplishment	60B1ADC1	1622257089	FCCM 03 Kill Brutes
+Accomplishment	60B1ADC4	1622257092	FCCM 05 Kill Guards while on a horse
+Accomplishment	60B1ADCA	1622257098	FCCM 04 Kill Swiss Guards
+Accomplishment	60B1ADCD	1622257101	FCCM 06 Air Assassinate to Horse
+Accomplishment	60B1ADD0	1622257104	FCCM 07 Double Assassinate
+Accomplishment	60B1ADD3	1622257107	FCCM 08 Disarm Kill Guards With thier own weapons
+Accomplishment	60B1ADD6	1622257110	FCCM 09 Kill Guards in under 10 seconds
+Accomplishment	60B1ADD9	1622257113	FCCM 10 Perform Kill Streaks
+Accomplishment	60B1ADDF	1622257119	FCCA 01 Use BAM Attack
+Accomplishment	60B1ADE2	1622257122	FCCA 02 Use BAM Arrows
+Accomplishment	60B1ADE5	1622257125	FCCA 03 Use BAM Assassination
+Accomplishment	60B1ADE8	1622257128	FCCA 04 Use BAM in a Story Mission
+Accomplishment	60B1ADEB	1622257131	FCCA 05 Train Recruits to Assassin Rank
+Accomplishment	73690301	1936261889	43 - Rome Global Economy Gold
+Accomplishment	73690303	1936261891	42 - Rome Global Economy Silver
+Accomplishment	73690305	1936261893	41 - Rome Global Economy Bronze
+Accomplishment	82233609	2183345673	Horse Helpers
+Accomplishment	8223360A	2183345674	Horse Eject
+Accomplishment	8223360B	2183345675	Horse Leap
+Accomplishment	82233612	2183345682	NPC on Horse Attack Player
+Accomplishment	87349B2C	2268371756	Near Bank
+Accomplishment	87349B2F	2268371759	Full Sync Failed
+Accomplishment	877BBEEB	2273033963	OOB Warning Enter
+Accomplishment	877BBEEC	2273033964	OOB Warning Exit
+Accomplishment	877BBEED	2273033965	OOB Warning Is In
+Accomplishment	877BBEEE	2273033966	OOB Warning Is Not In
+Accomplishment	877BBEFE	2273033982	OOB Critical Enter
+Accomplishment	877BBEFF	2273033983	OOB Critical Exit
+Accomplishment	877BBF00	2273033984	OOB Critical Is In
+Accomplishment	877BBF01	2273033985	OOB Critical Is Not In
+Accomplishment	877BBF0F	2273033999	DamagedArmor
+Accomplishment	877BBF10	2273034000	BrokenArmor
+Accomplishment	877BBF11	2273034001	LowLife
+Accomplishment	8972FB38	2306014008	Kick Helper
+Accomplishment	8C3EBD80	2352921984	Equip Crossbow
+Accomplishment	91DDD74A	2447234890	NotorietyPoster
+Accomplishment	91DDD74B	2447234891	NotorietyOfficial
+Accomplishment	91DDD74C	2447234892	NotorietyHerald
+Accomplishment	923631C0	2453025216	Kick Tutorial
+Accomplishment	956E7931	2507045169	Trade Item
+Accomplishment	9C40874B	2621474635	Fedayeen Flee
+Accomplishment	9F51355B	2672899419	FCCC 01 Use Courtesan
+Accomplishment	9F513563	2672899427	FCCC 02 Evade Using Stealth
+Accomplishment	9F6C227A	2674664058	FCCC 05 Hijack Horses
+Accomplishment	A2AEBD0B	2729360651	Fedayeen Low Health
+Accomplishment	A2AEBD0C	2729360652	Fedayeen Dead
+Accomplishment	A2AEBD0D	2729360653	Fedayeen Arrow Unlocked
+Accomplishment	A37DB02A	2742923306	Archer Spotted OR Shot
+Accomplishment	A37DB032	2742923314	Archer AND NotInConflict
+Accomplishment	A737B4D4	2805445844	EagleVisionSecret2Reminder
+Accomplishment	A737B4D6	2805445846	EagleVision_Enter
+Accomplishment	A737B4D7	2805445847	EagleVision_Exit
+Accomplishment	A737B4DC	2805445852	EagleVision_IsIn
+Accomplishment	A737B4E3	2805445859	EagleVision_IsNotIn
+Accomplishment	A753CCA2	2807286946	Courtesans Level 1
+Accomplishment	A753CCA3	2807286947	Courtesans Level 2
+Accomplishment	A753CCA4	2807286948	Courtesans Level 3
+Accomplishment	A753CCA5	2807286949	Thieves Level 1
+Accomplishment	A753CCA6	2807286950	Thieves Level 2
+Accomplishment	A753CCA7	2807286951	Thieves Level 3
+Accomplishment	A753CCA8	2807286952	Mercenaries Level 1
+Accomplishment	A753CCA9	2807286953	Mercenaries Level 2
+Accomplishment	A753CCAA	2807286954	Mercenaries Level 3
+Accomplishment	A753CCBD	2807286973	FCCC 03 Throw Money to Bypass Guard Post
+Accomplishment	A753CCBE	2807286974	FCCT 06 Pickpocket
+Accomplishment	A9F69896	2851510422	Assassins Level 1
+Accomplishment	A9F69D57	2851511639	Fedayeen Use Bam Assassinate
+Accomplishment	B09D3CA6	2963094694	GotLowLife
+Accomplishment	B09D3CA9	2963094697	GotDamagedArmor
+Accomplishment	B09D3CAC	2963094700	GotBrokenArmor
+Accomplishment	B09D3CB5	2963094709	IS IN ANY OOB
+Accomplishment	B09D3CBE	2963094718	PoisonRefill
+Accomplishment	B09D3CC0	2963094720	PoisonEmptied
+Accomplishment	B367E4F1	3009930481	Grab Counter
+Accomplishment	B593B832	3046357042	01 - Spain Sequence 1
+Accomplishment	B593B833	3046357043	02 - DNA Sequence 1
+Accomplishment	B593B834	3046357044	03 - Present Sequence 1
+Accomplishment	B593B835	3046357045	12 - Complete the Game
+Accomplishment	B593B836	3046357046	14 - Replay a Memory
+Accomplishment	B593B837	3046357047	25 - Upgrade all buildings in Antique
+Accomplishment	B593B838	3046357048	10 - Complete DNA Sequence 8
+Accomplishment	B593B839	3046357049	30 - Recruit Assassins
+Accomplishment	B593B83A	3046357050	36 - Spring Cleaning
+Accomplishment	B593B83B	3046357051	38 - Jump with the Parachute 
+Accomplishment	B6B14022	3065069602	OOB
+Accomplishment	BACDC7D7	3134048215	Buy Venezia Painting
+Accomplishment	BACDC7D8	3134048216	Buy Firenze Painting
+Accomplishment	BACDC7E3	3134048227	Tint Wetland Ebony
+Accomplishment	BACDC7E4	3134048228	Tint Wetland Ivory
+Accomplishment	BEEE9F27	3203309351	Open Conflict Enter
+Accomplishment	BEEE9F28	3203309352	Open Conflict Exit
+Accomplishment	BEEE9F2D	3203309357	Blend Enter
+Accomplishment	BEEE9F2E	3203309358	Blend Exit
+Accomplishment	BEEE9F2F	3203309359	Horse Mount
+Accomplishment	BEEE9F30	3203309360	Horse Dismount
+Accomplishment	BEEE9F49	3203309385	Blend Is In
+Accomplishment	BEEE9F4A	3203309386	Blend Is Not It
+Accomplishment	BEEE9F4B	3203309387	Horse Is On
+Accomplishment	BEEE9F4C	3203309388	Horse Is Not On
+Accomplishment	BEEE9F4D	3203309389	Open Conflict Is In
+Accomplishment	BEEE9F4E	3203309390	Open Conflict Is Not In
+Accomplishment	BEEEABDE	3203312606	Is on Horse AND in Conflict
+Accomplishment	C0CC77DB	3234625499	Charge Break
+Accomplishment	C35960C1	3277414593	Water Exit
+Accomplishment	C3597DE9	3277422057	Water Enter
+Accomplishment	C7D938D5	3352901845	Water Is In
+Accomplishment	C87BFA15	3363568149	Dodge
+Accomplishment	C8E4CD9E	3370438046	04 - Complete DNA Sequence 2
+Accomplishment	C8E4CD9F	3370438047	05 - Complete DNA Sequence 3
+Accomplishment	C8E4CDA0	3370438048	06 - Complete DNA Sequence 4
+Accomplishment	C8E4CDA1	3370438049	07 - Complete DNA Sequence 5
+Accomplishment	C8E4CDA2	3370438050	08 - Complete DNA Sequence 6
+Accomplishment	C8E4CDA3	3370438051	09 - Complete DNA Sequence 7
+Accomplishment	C8E4CDA4	3370438052	11 - Complete Spain Sequence 4
+Accomplishment	C8E4CDA5	3370438053	13 - Get 100 Memory Synchronisation
+Accomplishment	C8E4CDA6	3370438054	15 - Complete LGS 1
+Accomplishment	C8E4CDA7	3370438055	16 - Complete LGS 2
+Accomplishment	C8E4CDA8	3370438056	17 - Complete LGS 3
+Accomplishment	C8E4CDA9	3370438057	18 - Complete LGS 4
+Accomplishment	C8E4CDAA	3370438058	19 - Complete LGS 5
+Accomplishment	C8E4CDAB	3370438059	20 - Complete LGS 6
+Accomplishment	C8E4CDAC	3370438060	21 - Complete Leo Mission 1
+Accomplishment	C8E4CDAD	3370438061	22 - Complete Leo Mission 2
+Accomplishment	C8E4CDAE	3370438062	23 - Complete Leo Mission 3
+Accomplishment	C8E4CDAF	3370438063	24 - Complete Leo Mission 4
+Accomplishment	C8E4CDB0	3370438064	26 - Kill All the Borgia Leaders
+Accomplishment	C8E4CDB1	3370438065	27 - Complete [10] Faction Creed Challenge
+Accomplishment	C8E4CDB2	3370438066	28 - Solve all of Subject 16 Puzzles
+Accomplishment	C8E4CDB3	3370438067	29 - Get Gold in Every VR Mission Challenge Type
+Accomplishment	C8E4CDB4	3370438068	31 - Have a Trainee reach the Rank of Assassin
+Accomplishment	C8E4CDB5	3370438069	32 - Remove All Borgia Flags in Rome
+Accomplishment	C8E4CDB6	3370438070	33 - Collect All Feathers
+Accomplishment	C8E4CDB7	3370438071	34 - Find an Artifact in the Present
+Accomplishment	C8E4CDB8	3370438072	35 - Perform a [10] combo-kill streak
+Accomplishment	C8E4CDB9	3370438073	37 - Throw Money in a Well
+Accomplishment	C8E4CDBA	3370438074	39 - Win the Highest Bet in the Fight Club
+Accomplishment	C8E4CDBB	3370438075	40 - Access your Email in the Present
+Accomplishment	C962822F	3378676271	Wear Auditore Cape in Firenze
+Accomplishment	C9628230	3378676272	Wear Auditore Cape in Moutains
+Accomplishment	C9628231	3378676273	Wear Auditore Cape in Roma
+Accomplishment	C9628232	3378676274	Wear Auditore Cape in Toscana
+Accomplishment	C9628233	3378676275	Wear Auditore Cape in Venezia
+Accomplishment	C9628234	3378676276	Wear Auditore Cape in Villa
+Accomplishment	C9628235	3378676277	Wear Auditore Cape in Wetlands
+Accomplishment	CE76EAD4	3463899860	Climb Leap
+Accomplishment	D021A204	3491865092	Feathers Firenze Admin
+Accomplishment	D021A205	3491865093	Feathers Firenze Commercial
+Accomplishment	D021A206	3491865094	Feathers Firenze Cultural
+Accomplishment	D021A207	3491865095	Feathers Venezia Commercial
+Accomplishment	D021A208	3491865096	Feathers Venezia Admin
+Accomplishment	D021A209	3491865097	Feathers Venezia Cultural
+Accomplishment	D021A20A	3491865098	Feathers Venezia Military
+Accomplishment	D021A20B	3491865099	Feathers Venezia Industrial
+Accomplishment	D021A20C	3491865100	Feathers Toscana
+Accomplishment	D021A20D	3491865101	Feathers Wetlands
+Accomplishment	D021A20E	3491865102	Feathers Villa
+Accomplishment	D021AC2C	3491867692	AuditoreCrypt
+Accomplishment	D6FD0CC1	3606908097	Water Is Not In
+Accomplishment	DEE7509B	3739701403	CatchBackReminder3
+Accomplishment	DEE7509C	3739701404	GroupManipReplacement
+Accomplishment	DEE750A1	3739701409	Pole Enter
+Accomplishment	DEE750A2	3739701410	Pole Exit
+Accomplishment	DEE750A3	3739701411	Pole Is On
+Accomplishment	DEE750AE	3739701422	Pole Is Not On
+Accomplishment	DEE750B2	3739701426	PoleSwing
+InventoryItemSettings	00A6BA9F	10926751	TreasureChest_249
+InventoryItemSettings	013A57DC	20600796	TreasureChest_LGS312_01
+InventoryItemSettings	013A57E6	20600806	TreasureChest_LGS312_06
+InventoryItemSettings	013A57E7	20600807	TreasureChest_LGS312_05
+InventoryItemSettings	013A57E8	20600808	TreasureChest_LGS312_04
+InventoryItemSettings	013A57E9	20600809	TreasureChest_LGS312_03
+InventoryItemSettings	013A57EA	20600810	TreasureChest_LGS312_02
+InventoryItemSettings	01C614A1	29758625	TreasureChest_LGS302_06
+InventoryItemSettings	01C614A7	29758631	TreasureChest_LGS302_07
+InventoryItemSettings	01C614AD	29758637	TreasureChest_LGS302_08
+InventoryItemSettings	01C614B3	29758643	TreasureChest_LGS302_09
+InventoryItemSettings	01C614B9	29758649	TreasureChest_LGS302_10
+InventoryItemSettings	01C614BF	29758655	TreasureChest_LGS302_11
+InventoryItemSettings	01C614C5	29758661	TreasureChest_LGS302_12
+InventoryItemSettings	01C614CB	29758667	TreasureChest_LGS302_13
+InventoryItemSettings	01C614D1	29758673	TreasureChest_LGS302_14
+InventoryItemSettings	01C614D7	29758679	TreasureChest_LGS302_15
+InventoryItemSettings	01C614DD	29758685	TreasureChest_LGS302_16
+InventoryItemSettings	01C614E3	29758691	TreasureChest_LGS302_17
+InventoryItemSettings	01C614E9	29758697	TreasureChest_LGS302_18
+InventoryItemSettings	01C614EF	29758703	TreasureChest_LGS302_19
+InventoryItemSettings	01C614F5	29758709	TreasureChest_LGS302_20
+InventoryItemSettings	01C614FB	29758715	TreasureChest_LGS302_21
+InventoryItemSettings	01C61501	29758721	TreasureChest_LGS303_03
+InventoryItemSettings	01C61507	29758727	TreasureChest_LGS303_04
+InventoryItemSettings	01C6150D	29758733	TreasureChest_LGS303_05
+InventoryItemSettings	01C61513	29758739	TreasureChest_LGS303_06
+InventoryItemSettings	01C61519	29758745	TreasureChest_LGS303_07
+InventoryItemSettings	01C6151F	29758751	TreasureChest_LGS303_08
+InventoryItemSettings	01C61525	29758757	TreasureChest_LGS303_09
+InventoryItemSettings	01C6152B	29758763	TreasureChest_LGS304_05
+InventoryItemSettings	01C61531	29758769	TreasureChest_LGS304_06
+InventoryItemSettings	01C61537	29758775	TreasureChest_LGS304_07
+InventoryItemSettings	01C6153D	29758781	TreasureChest_LGS304_08
+InventoryItemSettings	01C61543	29758787	TreasureChest_LGS305_04
+InventoryItemSettings	01C61549	29758793	TreasureChest_LGS305_05
+InventoryItemSettings	01C6154F	29758799	TreasureChest_LGS305_06
+InventoryItemSettings	01C61555	29758805	TreasureChest_LGS305_07
+InventoryItemSettings	01C6155B	29758811	TreasureChest_LGS305_08
+InventoryItemSettings	01C61561	29758817	TreasureChest_LGS305_09
+InventoryItemSettings	01C61567	29758823	TreasureChest_LGS305_10
+InventoryItemSettings	01C6156D	29758829	TreasureChest_LGS306_02
+InventoryItemSettings	01C61573	29758835	TreasureChest_LGS306_03
+InventoryItemSettings	01C61579	29758841	TreasureChest_LGS306_04
+InventoryItemSettings	01C6157F	29758847	TreasureChest_LGS306_05
+InventoryItemSettings	01C61585	29758853	TreasureChest_LGS306_06
+InventoryItemSettings	01C6158B	29758859	TreasureChest_LGS306_07
+InventoryItemSettings	01C61591	29758865	TreasureChest_LGS306_08
+InventoryItemSettings	01C61597	29758871	TreasureChest_LGS307_04
+InventoryItemSettings	01C6159D	29758877	TreasureChest_LGS307_05
+InventoryItemSettings	01C615A3	29758883	TreasureChest_LGS307_06
+InventoryItemSettings	01C615A9	29758889	TreasureChest_LGS307_07
+InventoryItemSettings	01C615AF	29758895	TreasureChest_LGS308_04
+InventoryItemSettings	01C615B5	29758901	TreasureChest_LGS308_05
+InventoryItemSettings	01C615BB	29758907	TreasureChest_LGS308_06
+InventoryItemSettings	01C615C1	29758913	TreasureChest_LGS308_07
+InventoryItemSettings	01C615C7	29758919	TreasureChest_LGS308_08
+InventoryItemSettings	01C615CD	29758925	TreasureChest_LGS308_09
+InventoryItemSettings	01C615D3	29758931	TreasureChest_LGS309_04
+InventoryItemSettings	01C615D9	29758937	TreasureChest_LGS309_05
+InventoryItemSettings	01C615DF	29758943	TreasureChest_LGS309_06
+InventoryItemSettings	01C615E5	29758949	TreasureChest_LGS309_07
+InventoryItemSettings	01C615EB	29758955	TreasureChest_LGS309_08
+InventoryItemSettings	01C615F1	29758961	TreasureChest_LGS309_09
+InventoryItemSettings	037D4692	58541714	Borgia_Flag_002
+InventoryItemSettings	037D4697	58541719	Borgia_Flag_003
+InventoryItemSettings	037D469C	58541724	Borgia_Flag_001
+InventoryItemSettings	037D46A1	58541729	Borgia_Flag_019
+InventoryItemSettings	064F118E	105845134	HeavyWeaponHolster
+InventoryItemSettings	08A663E0	145122272	TreasureChest_01
+InventoryItemSettings	08A66410	145122320	TreasureChest_02
+InventoryItemSettings	08A66422	145122338	TreasureMap_02
+InventoryItemSettings	08A66423	145122339	TreasureMap_01
+InventoryItemSettings	08A664B2	145122482	TreasureKey01
+InventoryItemSettings	0B884E1A	193482266	LeoShopFake_CanPoisonDarts
+InventoryItemSettings	0B884E20	193482272	LeoShopFake_CanDoubleAssassinate
+InventoryItemSettings	0B884E26	193482278	LeoShopFake_CanClimbLeap
+InventoryItemSettings	0BCD04A6	197985446	W_Fists_FLESH_Fist
+InventoryItemSettings	0F072376	252126070	Cape_Neutral_UNUSEDINACR
+InventoryItemSettings	0F07237B	252126075	Cape_Venezia
+InventoryItemSettings	0F07237C	252126076	Cape_Firenze
+InventoryItemSettings	0F07237D	252126077	Cape_Borgia
+InventoryItemSettings	0F07237E	252126078	Cape_Carnival
+InventoryItemSettings	0F07238F	252126095	Cape_Auditore
+InventoryItemSettings	144A31C0	340406720	Gun_Bullets
+InventoryItemSettings	144A31C5	340406725	Poison
+InventoryItemSettings	157EF114	360640788	TreasureChest_LGS311_01
+InventoryItemSettings	157EF11A	360640794	TreasureChest_LGS311_02
+InventoryItemSettings	157EF120	360640800	TreasureChest_LGS311_03
+InventoryItemSettings	157EF126	360640806	TreasureChest_LGS311_04
+InventoryItemSettings	157EF12C	360640812	TreasureChest_LGS311_05
+InventoryItemSettings	157EF132	360640818	TreasureChest_LGS311_06
+InventoryItemSettings	1640595F	373315935	CrowdLifeProp_AlwaysUnlocked_Umbrella
+InventoryItemSettings	16405965	373315941	 CrowdLifeProp_AlwaysUnlocked_Lantern
+InventoryItemSettings	1640596B	373315947	 CrowdLifeProp_AlwaysUnlocked_bread
+InventoryItemSettings	16405971	373315953	 CrowdLifeProp_AlwaysUnlocked_Cane
+InventoryItemSettings	16405977	373315959	 CrowdLifeProp_AlwaysUnlocked_Bottle
+InventoryItemSettings	16405989	373315977	 CrowdLifeProp_AlwaysUnlocked_Book
+InventoryItemSettings	1640598F	373315983	 CrowdLifeProp_AlwaysUnlocked_Appel
+InventoryItemSettings	16405995	373315989	CrowdLifeProp_AlwaysUnlocked_Fan
+InventoryItemSettings	17FAC343	402309955	BorgiaTreasureMap_Vatican
+InventoryItemSettings	191DC2D1	421380817	Borgia_Flag_071
+InventoryItemSettings	191DC2D6	421380822	Borgia_Flag_068
+InventoryItemSettings	191DC2DB	421380827	Borgia_Flag_065
+InventoryItemSettings	191DC2E0	421380832	Borgia_Flag_070
+InventoryItemSettings	191DC2E5	421380837	Borgia_Flag_059
+InventoryItemSettings	191DC2EA	421380842	Borgia_Flag_060
+InventoryItemSettings	191DC2EF	421380847	Borgia_Flag_069
+InventoryItemSettings	191DC2F4	421380852	Borgia_Flag_079
+InventoryItemSettings	191DC2F9	421380857	Borgia_Flag_074
+InventoryItemSettings	191DC2FE	421380862	Borgia_Flag_073
+InventoryItemSettings	191DC303	421380867	Borgia_Flag_077
+InventoryItemSettings	191DC308	421380872	Borgia_Flag_025
+InventoryItemSettings	191DC30D	421380877	Borgia_Flag_078
+InventoryItemSettings	191DC312	421380882	Borgia_Flag_LGS302_001
+InventoryItemSettings	191DC317	421380887	Borgia_Flag_080
+InventoryItemSettings	191DC31C	421380892	Borgia_Flag_081
+InventoryItemSettings	191DC321	421380897	Borgia_Flag_LGS303_001
+InventoryItemSettings	191DC326	421380902	Borgia_Flag_075
+InventoryItemSettings	191DC32B	421380907	Borgia_Flag_LGS302_002
+InventoryItemSettings	191DC330	421380912	Borgia_Flag_LGS303_000
+InventoryItemSettings	191DC335	421380917	Borgia_Flag_066
+InventoryItemSettings	191DC33A	421380922	Borgia_Flag_036
+InventoryItemSettings	191DC33F	421380927	Borgia_Flag_039
+InventoryItemSettings	191DC344	421380932	Borgia_Flag_038
+InventoryItemSettings	191DC349	421380937	Borgia_Flag_037
+InventoryItemSettings	191DC34E	421380942	Borgia_Flag_048
+InventoryItemSettings	191DC353	421380947	Borgia_Flag_047
+InventoryItemSettings	191DC358	421380952	Borgia_Flag_042
+InventoryItemSettings	191DC35D	421380957	Borgia_Flag_041
+InventoryItemSettings	191DC362	421380962	Borgia_Flag_028
+InventoryItemSettings	191DC367	421380967	Borgia_Flag_029
+InventoryItemSettings	191DC36C	421380972	Borgia_Flag_034
+InventoryItemSettings	191DC371	421380977	Borgia_Flag_031
+InventoryItemSettings	191DC376	421380982	Borgia_Flag_040
+InventoryItemSettings	191DC37B	421380987	Borgia_Flag_011
+InventoryItemSettings	191DC380	421380992	Borgia_Flag_030
+InventoryItemSettings	191DC385	421380997	Borgia_Flag_035
+InventoryItemSettings	191DC38A	421381002	Borgia_Flag_LGS308_002
+InventoryItemSettings	191DC38F	421381007	Borgia_Flag_LGS306_001
+InventoryItemSettings	191DC394	421381012	Borgia_Flag_LGS305_000
+InventoryItemSettings	191DC399	421381017	Borgia_Flag_LGS306_000
+InventoryItemSettings	191DC39E	421381022	Borgia_Flag_LGS303_002
+InventoryItemSettings	191DC3A3	421381027	Borgia_Flag_067
+InventoryItemSettings	191DC3A8	421381032	Borgia_Flag_LGS306_002
+InventoryItemSettings	191DC3AD	421381037	Borgia_Flag_LGS305_002
+InventoryItemSettings	191DC3B2	421381042	Borgia_Flag_020
+InventoryItemSettings	191DC3B7	421381047	Borgia_Flag_017
+InventoryItemSettings	191DC3BC	421381052	Borgia_Flag_018
+InventoryItemSettings	191DC3C1	421381057	Borgia_Flag_021
+InventoryItemSettings	191DC3C6	421381062	Borgia_Flag_LGS308_001
+InventoryItemSettings	191DC3CB	421381067	Borgia_Flag_LGS305_001
+InventoryItemSettings	191DC3D0	421381072	Borgia_Flag_LGS309_000
+InventoryItemSettings	191DC3D5	421381077	Borgia_Flag_LGS308_000
+InventoryItemSettings	191DC3DA	421381082	Borgia_Flag_045
+InventoryItemSettings	191DC3DF	421381087	Borgia_Flag_LGS309_001
+InventoryItemSettings	191DC3E4	421381092	Borgia_Flag_062
+InventoryItemSettings	191DC3E9	421381097	Borgia_Flag_072
+InventoryItemSettings	191DC3EE	421381102	Borgia_Flag_063
+InventoryItemSettings	191DC3F3	421381107	Borgia_Flag_058
+InventoryItemSettings	191DC3F8	421381112	Borgia_Flag_061
+InventoryItemSettings	191DC3FD	421381117	Borgia_Flag_064
+InventoryItemSettings	191DC402	421381122	Borgia_Flag_LGS302_000
+InventoryItemSettings	191DC407	421381127	Borgia_Flag_076
+InventoryItemSettings	191DC40C	421381132	Borgia_Flag_008
+InventoryItemSettings	191DC411	421381137	Borgia_Flag_023
+InventoryItemSettings	191DC416	421381142	Borgia_Flag_000
+InventoryItemSettings	191DC41B	421381147	Borgia_Flag_005
+InventoryItemSettings	191DC420	421381152	Borgia_Flag_007
+InventoryItemSettings	191DC425	421381157	Borgia_Flag_014
+InventoryItemSettings	191DC42A	421381162	Borgia_Flag_015
+InventoryItemSettings	191DC42F	421381167	Borgia_Flag_009
+InventoryItemSettings	191DC434	421381172	Borgia_Flag_013
+InventoryItemSettings	191DC439	421381177	Borgia_Flag_026
+InventoryItemSettings	191DC43E	421381182	Borgia_Flag_027
+InventoryItemSettings	191DC443	421381187	Borgia_Flag_016
+InventoryItemSettings	191DC448	421381192	Borgia_Flag_012
+InventoryItemSettings	191DC44D	421381197	Borgia_Flag_024
+InventoryItemSettings	191DC452	421381202	Borgia_Flag_004
+InventoryItemSettings	191DC457	421381207	Borgia_Flag_022
+InventoryItemSettings	191DC45C	421381212	Borgia_Flag_054
+InventoryItemSettings	191DC461	421381217	Borgia_Flag_051
+InventoryItemSettings	191DC466	421381222	Borgia_Flag_056
+InventoryItemSettings	191DC46B	421381227	Borgia_Flag_057
+InventoryItemSettings	191DC470	421381232	Borgia_Flag_032
+InventoryItemSettings	191DC475	421381237	Borgia_Flag_033
+InventoryItemSettings	191DC47A	421381242	Borgia_Flag_052
+InventoryItemSettings	191DC47F	421381247	Borgia_Flag_053
+InventoryItemSettings	191DC484	421381252	Borgia_Flag_046
+InventoryItemSettings	191DC489	421381257	Borgia_Flag_043
+InventoryItemSettings	191DC48E	421381262	Borgia_Flag_010
+InventoryItemSettings	191DC493	421381267	Borgia_Flag_049
+InventoryItemSettings	191DC498	421381272	Borgia_Flag_050
+InventoryItemSettings	191DC49D	421381277	Borgia_Flag_055
+InventoryItemSettings	191DC4A2	421381282	Borgia_Flag_044
+InventoryItemSettings	191DC4A7	421381287	Borgia_Flag_006
+InventoryItemSettings	191DC4AC	421381292	Borgia_Flag_LGS309_002
+InventoryItemSettings	1A053B92	436550546	TreasureChest_Boat_000
+InventoryItemSettings	1A053B93	436550547	TreasureChest_Boat_001
+InventoryItemSettings	1A053B94	436550548	TreasureChest_Boat_002
+InventoryItemSettings	1A053B95	436550549	TreasureChest_Boat_003
+InventoryItemSettings	1A053B96	436550550	TreasureChest_Boat_004
+InventoryItemSettings	1A053B97	436550551	TreasureChest_Boat_005
+InventoryItemSettings	1A053B98	436550552	TreasureChest_Boat_006
+InventoryItemSettings	1A053B99	436550553	TreasureChest_Boat_007
+InventoryItemSettings	1A053B9A	436550554	TreasureChest_Boat_008
+InventoryItemSettings	1A053B9B	436550555	TreasureChest_Boat_009
+InventoryItemSettings	1A053B9C	436550556	TreasureChest_Boat_010
+InventoryItemSettings	1A053B9D	436550557	TreasureChest_Boat_011
+InventoryItemSettings	1A053B9E	436550558	TreasureChest_Boat_012
+InventoryItemSettings	1A053B9F	436550559	TreasureChest_Boat_013
+InventoryItemSettings	1A053BA0	436550560	TreasureChest_Boat_014
+InventoryItemSettings	1A053BA1	436550561	TreasureChest_Boat_015
+InventoryItemSettings	1A053BA2	436550562	TreasureChest_Boat_016
+InventoryItemSettings	1A053BA3	436550563	TreasureChest_Boat_017
+InventoryItemSettings	1A053BA4	436550564	TreasureChest_Boat_018
+InventoryItemSettings	1A053BA5	436550565	TreasureChest_Boat_019
+InventoryItemSettings	1A053BA6	436550566	TreasureChest_Boat_020
+InventoryItemSettings	1A053BA7	436550567	TreasureChest_Boat_021
+InventoryItemSettings	1A053BA8	436550568	TreasureChest_Boat_022
+InventoryItemSettings	1A053BA9	436550569	TreasureChest_Boat_023
+InventoryItemSettings	1A053BAA	436550570	TreasureChest_Boat_024
+InventoryItemSettings	1A053BAB	436550571	TreasureChest_Boat_025
+InventoryItemSettings	1A053BAC	436550572	TreasureChest_Boat_026
+InventoryItemSettings	1A053BAD	436550573	TreasureChest_Boat_027
+InventoryItemSettings	1A053BAE	436550574	TreasureChest_Boat_028
+InventoryItemSettings	1A053BAF	436550575	TreasureChest_Boat_029
+InventoryItemSettings	1A053BB0	436550576	TreasureChest_Boat_030
+InventoryItemSettings	1A053BB1	436550577	TreasureChest_Boat_031
+InventoryItemSettings	1A053BB2	436550578	TreasureChest_Boat_032
+InventoryItemSettings	1A053BB3	436550579	TreasureChest_Boat_033
+InventoryItemSettings	1A053BB4	436550580	TreasureChest_Boat_034
+InventoryItemSettings	1A053BB5	436550581	TreasureChest_Boat_035
+InventoryItemSettings	1A053BB6	436550582	TreasureChest_Boat_036
+InventoryItemSettings	1A053BB7	436550583	TreasureChest_Boat_037
+InventoryItemSettings	1A053BB8	436550584	TreasureChest_Boat_038
+InventoryItemSettings	1A053BB9	436550585	TreasureChest_Boat_039
+InventoryItemSettings	1A053BBA	436550586	TreasureChest_Boat_040
+InventoryItemSettings	1A053BBB	436550587	TreasureChest_Boat_041
+InventoryItemSettings	1A053BBC	436550588	TreasureChest_Boat_042
+InventoryItemSettings	1A053BBD	436550589	TreasureChest_Boat_043
+InventoryItemSettings	1A053BBE	436550590	TreasureChest_Boat_044
+InventoryItemSettings	1A053BBF	436550591	TreasureChest_Boat_045
+InventoryItemSettings	1A053BC0	436550592	TreasureChest_Boat_046
+InventoryItemSettings	1A053BC1	436550593	TreasureChest_Boat_047
+InventoryItemSettings	1A053BC2	436550594	TreasureChest_Boat_048
+InventoryItemSettings	1A053BC3	436550595	TreasureChest_Boat_049
+InventoryItemSettings	1A053BC4	436550596	TreasureChest_Boat_050
+InventoryItemSettings	1A053BC5	436550597	TreasureChest_Boat_051
+InventoryItemSettings	1A053BC6	436550598	TreasureChest_Boat_052
+InventoryItemSettings	1A053BC7	436550599	TreasureChest_Boat_053
+InventoryItemSettings	1A053BC8	436550600	TreasureChest_Boat_054
+InventoryItemSettings	1A053BC9	436550601	TreasureChest_Boat_055
+InventoryItemSettings	1A053BCA	436550602	TreasureChest_Boat_056
+InventoryItemSettings	1A053BCB	436550603	TreasureChest_Boat_057
+InventoryItemSettings	1A053BCC	436550604	TreasureChest_Boat_058
+InventoryItemSettings	1A053BCD	436550605	TreasureChest_Boat_059
+InventoryItemSettings	1A053BCE	436550606	TreasureChest_Boat_060
+InventoryItemSettings	1A053BCF	436550607	TreasureChest_Boat_061
+InventoryItemSettings	1A053BD0	436550608	TreasureChest_Boat_062
+InventoryItemSettings	1A053BD1	436550609	TreasureChest_Boat_063
+InventoryItemSettings	1A053BD2	436550610	TreasureChest_Boat_064
+InventoryItemSettings	1A053BD3	436550611	TreasureChest_Boat_065
+InventoryItemSettings	1A053BD4	436550612	TreasureChest_Boat_066
+InventoryItemSettings	1A053BD5	436550613	TreasureChest_Boat_067
+InventoryItemSettings	1A053BD6	436550614	TreasureChest_Boat_068
+InventoryItemSettings	1A053BD7	436550615	TreasureChest_Boat_069
+InventoryItemSettings	1A053BD8	436550616	TreasureChest_Boat_070
+InventoryItemSettings	1A053BD9	436550617	TreasureChest_Boat_071
+InventoryItemSettings	1A053BDA	436550618	TreasureChest_Boat_072
+InventoryItemSettings	1A053BDB	436550619	TreasureChest_Boat_073
+InventoryItemSettings	1A053BDC	436550620	TreasureChest_Boat_074
+InventoryItemSettings	1A053BDD	436550621	TreasureChest_Boat_075
+InventoryItemSettings	1A053BDE	436550622	TreasureChest_Boat_076
+InventoryItemSettings	1A053BDF	436550623	TreasureChest_Boat_077
+InventoryItemSettings	1A053BE0	436550624	TreasureChest_Boat_078
+InventoryItemSettings	1A053BE1	436550625	TreasureChest_Boat_079
+InventoryItemSettings	1A053BE2	436550626	TreasureChest_Boat_080
+InventoryItemSettings	1A053BE3	436550627	TreasureChest_Boat_081
+InventoryItemSettings	1A053BE4	436550628	TreasureChest_Boat_082
+InventoryItemSettings	1A053BE5	436550629	TreasureChest_Boat_083
+InventoryItemSettings	1A053BE6	436550630	TreasureChest_Boat_084
+InventoryItemSettings	1A053BE7	436550631	TreasureChest_Boat_085
+InventoryItemSettings	1A053BE8	436550632	TreasureChest_Boat_086
+InventoryItemSettings	1A053BE9	436550633	TreasureChest_Boat_087
+InventoryItemSettings	1A053BEA	436550634	TreasureChest_Boat_088
+InventoryItemSettings	1A053BEB	436550635	TreasureChest_Boat_089
+InventoryItemSettings	1A053BEC	436550636	TreasureChest_Boat_090
+InventoryItemSettings	1A053BED	436550637	TreasureChest_Boat_091
+InventoryItemSettings	1A053BEE	436550638	TreasureChest_Boat_092
+InventoryItemSettings	1A053BEF	436550639	TreasureChest_Boat_093
+InventoryItemSettings	1A053BF0	436550640	TreasureChest_Boat_094
+InventoryItemSettings	1A053BF1	436550641	TreasureChest_Boat_095
+InventoryItemSettings	1A053BF2	436550642	TreasureChest_Boat_096
+InventoryItemSettings	1A053BF3	436550643	TreasureChest_Boat_097
+InventoryItemSettings	1A053BF4	436550644	TreasureChest_Boat_098
+InventoryItemSettings	1A053BF5	436550645	TreasureChest_Boat_099
+InventoryItemSettings	1BE2AFD6	467840982	Can_Range_SpecialAttack
+InventoryItemSettings	1BE2AFD7	467840983	Can_Long_SpecialAttack
+InventoryItemSettings	1BE2AFD8	467840984	Can_2Handed_SpecialAttack
+InventoryItemSettings	1F573BB3	525810611	Color_Assassin_White
+InventoryItemSettings	26740B8D	645139341	PS3__WS_Maria_Long_Sword
+InventoryItemSettings	26740B8E	645139342	PS3__WM_Frederick_the_Red_Warhammer
+InventoryItemSettings	26740B8F	645139343	PS3__WM_Twin_Swords
+InventoryItemSettings	26740B90	645139344	PS3__WL_Bouchart_Bastard_Sword
+InventoryItemSettings	26740B91	645139345	PS3__WTD_Witch_Throwing_Knives
+InventoryItemSettings	26740BA6	645139366	WM_Sword_E
+InventoryItemSettings	26740BAB	645139371	WM_Saber
+InventoryItemSettings	26740BD7	645139415	W_Fists_IRON_Fist
+InventoryItemSettings	26740BD8	645139416	PS3__Bulls_Mace
+InventoryItemSettings	2E0957F7	772364279	BootsU2
+InventoryItemSettings	2E0957F8	772364280	BootsU3
+InventoryItemSettings	2E095802	772364290	ChestU4
+InventoryItemSettings	2E095807	772364295	ChestU3
+InventoryItemSettings	2E09580C	772364300	ChestU2
+InventoryItemSettings	2E095811	772364305	ChestU1
+InventoryItemSettings	2E095817	772364311	ShoulderU2
+InventoryItemSettings	2E09581C	772364316	ShoulderU1
+InventoryItemSettings	2E095821	772364321	ShoulderU3
+InventoryItemSettings	2E095826	772364326	ShoulderU4
+InventoryItemSettings	2E09582D	772364333	GlovesU1
+InventoryItemSettings	2E095832	772364338	GlovesU2
+InventoryItemSettings	2E095837	772364343	GlovesU3
+InventoryItemSettings	2E09583C	772364348	GlovesU4
+InventoryItemSettings	2E095855	772364373	GlovesU5
+InventoryItemSettings	2E09585A	772364378	BootsU5
+InventoryItemSettings	2E09585F	772364383	ChestU5
+InventoryItemSettings	2E095864	772364388	ShoulderU5
+InventoryItemSettings	31A44FFB	832851963	WS_Crossbow_Guard
+InventoryItemSettings	3DDF4104	1038041348	Crossbow_Darts
+InventoryItemSettings	3DDF4209	1038041609	Parachute
+InventoryItemSettings	3E5D99E9	1046321641	FightTutorial_Disarm
+InventoryItemSettings	3E5D99EA	1046321642	FightTutorial_ThrowingKnives
+InventoryItemSettings	3E5D99EB	1046321643	FightTutorial_Dodge
+InventoryItemSettings	3E5D99EC	1046321644	FightTutorial_SmokeBomb
+InventoryItemSettings	3E5D9B50	1046322000	Feather_Unlock_Description
+InventoryItemSettings	3FF8DD5D	1073274205	UltimateArmorEnabler
+InventoryItemSettings	440BFD4D	1141636429	TreasureChest_000
+InventoryItemSettings	440BFD55	1141636437	TreasureChest_001
+InventoryItemSettings	440BFD5B	1141636443	TreasureChest_002
+InventoryItemSettings	440BFD61	1141636449	TreasureChest_003
+InventoryItemSettings	440BFD67	1141636455	TreasureChest_004
+InventoryItemSettings	440BFD6D	1141636461	TreasureChest_005
+InventoryItemSettings	440BFD73	1141636467	TreasureChest_006
+InventoryItemSettings	440BFD79	1141636473	TreasureChest_007
+InventoryItemSettings	440BFD7F	1141636479	TreasureChest_008
+InventoryItemSettings	440BFD85	1141636485	TreasureChest_009
+InventoryItemSettings	440BFD8B	1141636491	TreasureChest_010
+InventoryItemSettings	440BFD91	1141636497	TreasureChest_011
+InventoryItemSettings	440BFD97	1141636503	TreasureChest_012
+InventoryItemSettings	440BFD9D	1141636509	TreasureChest_013
+InventoryItemSettings	440BFDA3	1141636515	TreasureChest_014
+InventoryItemSettings	440BFDA9	1141636521	TreasureChest_015
+InventoryItemSettings	440BFDAF	1141636527	TreasureChest_016
+InventoryItemSettings	440BFDB5	1141636533	TreasureChest_017
+InventoryItemSettings	440BFDBB	1141636539	TreasureChest_018
+InventoryItemSettings	440BFDC1	1141636545	TreasureChest_019
+InventoryItemSettings	440BFDC7	1141636551	TreasureChest_020
+InventoryItemSettings	440BFDCD	1141636557	TreasureChest_021
+InventoryItemSettings	440BFDD3	1141636563	TreasureChest_022
+InventoryItemSettings	440BFDD9	1141636569	TreasureChest_023
+InventoryItemSettings	440BFDDF	1141636575	TreasureChest_024
+InventoryItemSettings	440BFDE5	1141636581	TreasureChest_025
+InventoryItemSettings	440BFDEB	1141636587	TreasureChest_026
+InventoryItemSettings	440BFDF1	1141636593	TreasureChest_027
+InventoryItemSettings	440BFDF7	1141636599	TreasureChest_028
+InventoryItemSettings	440BFDFD	1141636605	TreasureChest_029
+InventoryItemSettings	440BFE03	1141636611	TreasureChest_030
+InventoryItemSettings	440BFE09	1141636617	TreasureChest_031
+InventoryItemSettings	440BFE0F	1141636623	TreasureChest_032
+InventoryItemSettings	440BFE15	1141636629	TreasureChest_033
+InventoryItemSettings	440BFE1B	1141636635	TreasureChest_034
+InventoryItemSettings	440BFE21	1141636641	TreasureChest_035
+InventoryItemSettings	440BFE27	1141636647	TreasureChest_036
+InventoryItemSettings	440BFE2D	1141636653	TreasureChest_037
+InventoryItemSettings	440BFE33	1141636659	TreasureChest_038
+InventoryItemSettings	440BFE39	1141636665	TreasureChest_039
+InventoryItemSettings	440BFE3F	1141636671	TreasureChest_040
+InventoryItemSettings	440BFE45	1141636677	TreasureChest_041
+InventoryItemSettings	440BFE4B	1141636683	TreasureChest_042
+InventoryItemSettings	440BFE51	1141636689	TreasureChest_043
+InventoryItemSettings	440BFE57	1141636695	TreasureChest_044
+InventoryItemSettings	440BFE5D	1141636701	TreasureChest_045
+InventoryItemSettings	440BFE63	1141636707	TreasureChest_046
+InventoryItemSettings	440BFE69	1141636713	TreasureChest_047
+InventoryItemSettings	440BFE6F	1141636719	TreasureChest_048
+InventoryItemSettings	440BFE75	1141636725	TreasureChest_049
+InventoryItemSettings	440BFE7B	1141636731	TreasureChest_050
+InventoryItemSettings	440BFE81	1141636737	TreasureChest_051
+InventoryItemSettings	440BFE87	1141636743	TreasureChest_052
+InventoryItemSettings	440BFE8D	1141636749	TreasureChest_053
+InventoryItemSettings	440BFE93	1141636755	TreasureChest_054
+InventoryItemSettings	440BFE99	1141636761	TreasureChest_055
+InventoryItemSettings	440BFE9F	1141636767	TreasureChest_056
+InventoryItemSettings	440BFEA5	1141636773	TreasureChest_057
+InventoryItemSettings	440BFEAB	1141636779	TreasureChest_058
+InventoryItemSettings	440BFEB1	1141636785	TreasureChest_059
+InventoryItemSettings	440BFEB7	1141636791	TreasureChest_060
+InventoryItemSettings	440BFEBD	1141636797	TreasureChest_061
+InventoryItemSettings	440BFEC3	1141636803	TreasureChest_062
+InventoryItemSettings	440BFEC9	1141636809	TreasureChest_063
+InventoryItemSettings	440BFECF	1141636815	TreasureChest_064
+InventoryItemSettings	440BFED5	1141636821	TreasureChest_065
+InventoryItemSettings	440BFEDB	1141636827	TreasureChest_066
+InventoryItemSettings	440BFEE1	1141636833	TreasureChest_067
+InventoryItemSettings	440BFEE7	1141636839	TreasureChest_068
+InventoryItemSettings	440BFEED	1141636845	TreasureChest_069
+InventoryItemSettings	440BFEF3	1141636851	TreasureChest_070
+InventoryItemSettings	440BFEF9	1141636857	TreasureChest_071
+InventoryItemSettings	440BFEFF	1141636863	TreasureChest_072
+InventoryItemSettings	440BFF05	1141636869	TreasureChest_073
+InventoryItemSettings	440BFF0B	1141636875	TreasureChest_074
+InventoryItemSettings	440BFF11	1141636881	TreasureChest_075
+InventoryItemSettings	440BFF17	1141636887	TreasureChest_076
+InventoryItemSettings	440BFF1D	1141636893	TreasureChest_077
+InventoryItemSettings	440BFF23	1141636899	TreasureChest_078
+InventoryItemSettings	440BFF29	1141636905	TreasureChest_079
+InventoryItemSettings	440BFF2F	1141636911	TreasureChest_080
+InventoryItemSettings	440BFF35	1141636917	TreasureChest_081
+InventoryItemSettings	440BFF3B	1141636923	TreasureChest_082
+InventoryItemSettings	440BFF41	1141636929	TreasureChest_083
+InventoryItemSettings	440BFF47	1141636935	TreasureChest_084
+InventoryItemSettings	440BFF4D	1141636941	TreasureChest_085
+InventoryItemSettings	440BFF53	1141636947	TreasureChest_086
+InventoryItemSettings	440BFF59	1141636953	TreasureChest_087
+InventoryItemSettings	440BFF5F	1141636959	TreasureChest_088
+InventoryItemSettings	440BFF65	1141636965	TreasureChest_089
+InventoryItemSettings	440BFF6B	1141636971	TreasureChest_090
+InventoryItemSettings	440BFF71	1141636977	TreasureChest_091
+InventoryItemSettings	440BFF77	1141636983	TreasureChest_092
+InventoryItemSettings	440BFF7D	1141636989	TreasureChest_093
+InventoryItemSettings	440BFF83	1141636995	TreasureChest_094
+InventoryItemSettings	440BFF89	1141637001	TreasureChest_095
+InventoryItemSettings	440BFF8F	1141637007	TreasureChest_096
+InventoryItemSettings	440BFF95	1141637013	TreasureChest_097
+InventoryItemSettings	440BFF9B	1141637019	TreasureChest_098
+InventoryItemSettings	440BFFA1	1141637025	TreasureChest_099
+InventoryItemSettings	45A8C6A8	1168688808	EXOTIC_G_Replica_01
+InventoryItemSettings	45A8C6AD	1168688813	EXOTIC_G_Replica_02
+InventoryItemSettings	45A8C6AE	1168688814	EXOTIC_G_Replica_03
+InventoryItemSettings	45A8C75F	1168688991	VAULT_Assassins_SEAL_01
+InventoryItemSettings	45A8C760	1168688992	VAULT_Assassins_SEAL_02
+InventoryItemSettings	45A8C761	1168688993	VAULT_Assassins_SEAL_03
+InventoryItemSettings	45A8C762	1168688994	VAULT_Assassins_SEAL_04
+InventoryItemSettings	45A8C763	1168688995	VAULT_Assassins_SEAL_05
+InventoryItemSettings	45A8C764	1168688996	VAULT_Assassins_SEAL_06
+InventoryItemSettings	45B9E678	1169811064	Codex_Page_01
+InventoryItemSettings	45B9E679	1169811065	Codex_Page_02
+InventoryItemSettings	45B9E67A	1169811066	Codex_Page_03
+InventoryItemSettings	4658D3C2	1180226498	Codex_Page_04
+InventoryItemSettings	4658D3C3	1180226499	Codex_Page_05
+InventoryItemSettings	4658D3C4	1180226500	Codex_Page_06
+InventoryItemSettings	4658D3C5	1180226501	Codex_Page_07
+InventoryItemSettings	4658D3C6	1180226502	Codex_Page_08
+InventoryItemSettings	4658D3DB	1180226523	Codex_Page_09
+InventoryItemSettings	4658D3DC	1180226524	Codex_Page_10
+InventoryItemSettings	4658D3DD	1180226525	Codex_Page_11
+InventoryItemSettings	4658D3DE	1180226526	Codex_Page_12
+InventoryItemSettings	4658D3DF	1180226527	Codex_Page_13
+InventoryItemSettings	4658D3E0	1180226528	Codex_Page_14
+InventoryItemSettings	4658D3E1	1180226529	Codex_Page_15
+InventoryItemSettings	4658D3E2	1180226530	Codex_Page_16
+InventoryItemSettings	4658D3E3	1180226531	Codex_Page_17
+InventoryItemSettings	4658D3E4	1180226532	Codex_Page_18
+InventoryItemSettings	4658D3E5	1180226533	Codex_Page_19
+InventoryItemSettings	4658D3E6	1180226534	Codex_Page_20
+InventoryItemSettings	4658D3E7	1180226535	Codex_Page_21
+InventoryItemSettings	4658D3E8	1180226536	Codex_Page_22
+InventoryItemSettings	4658D3E9	1180226537	Codex_Page_23
+InventoryItemSettings	4658D3EA	1180226538	Codex_Page_24
+InventoryItemSettings	4658D3EB	1180226539	Codex_Page_25
+InventoryItemSettings	4658D3EC	1180226540	Codex_Page_26
+InventoryItemSettings	4658D3ED	1180226541	Codex_Page_27
+InventoryItemSettings	4658D3EE	1180226542	Codex_Page_28
+InventoryItemSettings	4658D3EF	1180226543	Codex_Page_29
+InventoryItemSettings	4658D3F0	1180226544	Codex_Page_30
+InventoryItemSettings	4787A810	1200072720	Painting_ACR_1_Angel_DownTown
+InventoryItemSettings	4787A84D	1200072781	Painting_ACR_15_Madonna Solly_Antique
+InventoryItemSettings	4787A852	1200072786	Painting_ACR_021_Young Man with an Apple
+InventoryItemSettings	4787A857	1200072791	Painting_ACR_020_Christ Blessing
+InventoryItemSettings	4787A85C	1200072796	Painting_ACR_19_Portrait of Pietro Bembo
+InventoryItemSettings	4787A86B	1200072811	Painting_ACR_022_Self-portrait
+InventoryItemSettings	4787A88E	1200072846	Painting_ACR_14_Angel_Antique
+InventoryItemSettings	4787A893	1200072851	Painting_ACR_13_Vision of a Knight_Antique
+InventoryItemSettings	4787A898	1200072856	Painting_ACR_11_Resurrection of Christ_DownTown
+InventoryItemSettings	4787A89D	1200072861	Painting_ACR_10_St Michael_DownTown
+InventoryItemSettings	4787A8A2	1200072866	Painting_ACR_12_Mond Crucifixion_DownTown
+InventoryItemSettings	4787A8A7	1200072871	Painting_ACR_18_St Sebastian
+InventoryItemSettings	4787A8AC	1200072876	Painting_ACR_17_The Marriage of the Virgin
+InventoryItemSettings	4787A8B1	1200072881	Painting_ACR_16_St George_Antique
+InventoryItemSettings	4787A8BB	1200072891	Painting_ACR_2_Madonna del Cardellino
+InventoryItemSettings	48F9DA69	1224333929	TreasureChest_LGS302_01
+InventoryItemSettings	48F9DA6F	1224333935	TreasureChest_LGS302_02
+InventoryItemSettings	48F9DA70	1224333936	TreasureChest_LGS302_03
+InventoryItemSettings	48F9DA71	1224333937	TreasureChest_LGS302_04
+InventoryItemSettings	48F9DA72	1224333938	TreasureChest_LGS302_05
+InventoryItemSettings	48F9DA73	1224333939	TreasureChest_LGS303_01
+InventoryItemSettings	48F9DA92	1224333970	TreasureChest_LGS303_02
+InventoryItemSettings	48F9DA98	1224333976	TreasureChest_LGS304_01
+InventoryItemSettings	48F9DA9E	1224333982	TreasureChest_LGS304_02
+InventoryItemSettings	48F9DAA4	1224333988	TreasureChest_LGS304_03
+InventoryItemSettings	48F9DAAA	1224333994	TreasureChest_LGS304_04
+InventoryItemSettings	48F9DAB0	1224334000	TreasureChest_LGS305_01
+InventoryItemSettings	48F9DAB6	1224334006	TreasureChest_LGS305_02
+InventoryItemSettings	48F9DABC	1224334012	TreasureChest_LGS305_03
+InventoryItemSettings	48F9DAC2	1224334018	TreasureChest_LGS306_01
+InventoryItemSettings	48F9DAC8	1224334024	TreasureChest_LGS307_01
+InventoryItemSettings	48F9DACE	1224334030	TreasureChest_LGS307_02
+InventoryItemSettings	48F9DAD4	1224334036	TreasureChest_LGS307_03
+InventoryItemSettings	48F9DADA	1224334042	TreasureChest_LGS308_01
+InventoryItemSettings	48F9DAE0	1224334048	TreasureChest_LGS308_02
+InventoryItemSettings	48F9DAE6	1224334054	TreasureChest_LGS308_03
+InventoryItemSettings	48F9DAEC	1224334060	TreasureChest_LGS309_01
+InventoryItemSettings	48F9DAF2	1224334066	TreasureChest_LGS309_02
+InventoryItemSettings	48F9DAF8	1224334072	TreasureChest_LGS309_03
+InventoryItemSettings	48F9DB04	1224334084	TreasureMap_LGS303
+InventoryItemSettings	48F9DB0A	1224334090	TreasureMap_LGS304
+InventoryItemSettings	48F9DB10	1224334096	TreasureMap_LGS305
+InventoryItemSettings	48F9DB16	1224334102	TreasureMap_LGS306
+InventoryItemSettings	48F9DB1C	1224334108	TreasureMap_LGS307
+InventoryItemSettings	48F9DB22	1224334114	TreasureMap_LGS308
+InventoryItemSettings	48F9DB28	1224334120	TreasureMap_LGS309
+InventoryItemSettings	499E2ED1	1235103441	GunUpgrade_Uplay
+InventoryItemSettings	49CC51E5	1238127077	Cape_Colors_Venetian_Azure
+InventoryItemSettings	49CC51E6	1238127078	Cape_Color_Gilded_Onyx
+InventoryItemSettings	49CC51E7	1238127079	Cape_Colors_Tuscan_Ember
+InventoryItemSettings	49CC51E8	1238127080	Cape_Colors_Wetlands_Ebony
+InventoryItemSettings	49CC51E9	1238127081	Cape_Colors_Roman_Stone
+InventoryItemSettings	49CC51EA	1238127082	Cape_Colors_Roman_Olive
+InventoryItemSettings	49CC5212	1238127122	ParachutePouchU2
+InventoryItemSettings	49CC5218	1238127128	ParachutePouchU3
+InventoryItemSettings	49CC521E	1238127134	ParachutePouchU1
+InventoryItemSettings	49CC52B7	1238127287	DaggerBelt5
+InventoryItemSettings	49CC52B8	1238127288	DaggerBelt6
+InventoryItemSettings	49CC52B9	1238127289	CrossbowDartPouchU1
+InventoryItemSettings	49CC52BA	1238127290	CrossbowDartPouchU2
+InventoryItemSettings	49CC52BB	1238127291	CrossbowDartPouchU3
+InventoryItemSettings	49CC5352	1238127442	LeoShopItemPlaceholder_001
+InventoryItemSettings	49CC5353	1238127443	LeoShopItemPlaceholder_002
+InventoryItemSettings	49CC5354	1238127444	LeoShopItemPlaceholder_003
+InventoryItemSettings	4AFB7C31	1257995313	Feather_000
+InventoryItemSettings	4AFB7C32	1257995314	Feather_001
+InventoryItemSettings	4AFB7C33	1257995315	Feather_002
+InventoryItemSettings	4AFB7C34	1257995316	Feather_003
+InventoryItemSettings	4AFB7C35	1257995317	Feather_004
+InventoryItemSettings	4AFB7C36	1257995318	Feather_005
+InventoryItemSettings	4AFB7C37	1257995319	Feather_006
+InventoryItemSettings	4AFB7C38	1257995320	Feather_007
+InventoryItemSettings	4AFB7C39	1257995321	Feather_008
+InventoryItemSettings	4AFB7C3A	1257995322	Feather_009
+InventoryItemSettings	4CEE872C	1290700588	HealthContainer_AddsOneContainerToMaxLife_009
+InventoryItemSettings	4CEE8764	1290700644	HealthContainer_AddsOneContainerToMaxLife_008
+InventoryItemSettings	4CEE876A	1290700650	HealthContainer_AddsOneContainerToMaxLife_007
+InventoryItemSettings	4CEE8770	1290700656	HealthContainer_AddsOneContainerToMaxLife_012
+InventoryItemSettings	4CEE8776	1290700662	HealthContainer_AddsOneContainerToMaxLife_011
+InventoryItemSettings	4CEE877C	1290700668	HealthContainer_AddsOneContainerToMaxLife_010
+InventoryItemSettings	4CEE8782	1290700674	HealthContainer_AddsOneContainerToMaxLife_003
+InventoryItemSettings	4CEE8788	1290700680	HealthContainer_AddsOneContainerToMaxLife_002
+InventoryItemSettings	4CEE878E	1290700686	HealthContainer_AddsOneContainerToMaxLife_001
+InventoryItemSettings	4CEE8794	1290700692	HealthContainer_AddsOneContainerToMaxLife_006
+InventoryItemSettings	4CEE879A	1290700698	HealthContainer_AddsOneContainerToMaxLife_005
+InventoryItemSettings	4CEE87A0	1290700704	HealthContainer_AddsOneContainerToMaxLife_004
+InventoryItemSettings	4CEE87A6	1290700710	HealthContainer_AddsOneContainerToMaxLife_013
+InventoryItemSettings	4CEE87AC	1290700716	HealthContainer_AddsOneContainerToMaxLife_023_EzioRome
+InventoryItemSettings	4CEE87B2	1290700722	HealthContainer_AddsOneContainerToMaxLife_022_EzioRome
+InventoryItemSettings	4CEE87B8	1290700728	HealthContainer_AddsOneContainerToMaxLife_021_EzioRome
+InventoryItemSettings	4CEE87C4	1290700740	HealthContainer_AddsOneContainerToMaxLife_025_EzioRome
+InventoryItemSettings	4CEE87CA	1290700746	HealthContainer_AddsOneContainerToMaxLife_024_EzioRome
+InventoryItemSettings	4CEE87D0	1290700752	HealthContainer_AddsOneContainerToMaxLife_020
+InventoryItemSettings	4CEE87D6	1290700758	HealthContainer_AddsOneContainerToMaxLife_016
+InventoryItemSettings	4CEE87DC	1290700764	HealthContainer_AddsOneContainerToMaxLife_015
+InventoryItemSettings	4CEE87E2	1290700770	HealthContainer_AddsOneContainerToMaxLife_014
+InventoryItemSettings	4CEE87E8	1290700776	HealthContainer_AddsOneContainerToMaxLife_019
+InventoryItemSettings	4CEE87EE	1290700782	HealthContainer_AddsOneContainerToMaxLife_018
+InventoryItemSettings	4CEE87F4	1290700788	HealthContainer_AddsOneContainerToMaxLife_017
+InventoryItemSettings	55308B8A	1429244810	Color_Venetian_Wine
+InventoryItemSettings	55308BA1	1429244833	Color_Venetian_Azure
+InventoryItemSettings	55308BA6	1429244838	Color_Tuscan_Ember
+InventoryItemSettings	55308BAB	1429244843	Color_Florentine_Crimson
+InventoryItemSettings	55308BB0	1429244848	Color_Tuscan_Emerald
+InventoryItemSettings	55308BB5	1429244853	Color_Roman_Olive
+InventoryItemSettings	55308BBA	1429244858	Color_Roman_Gilded_Onyx
+InventoryItemSettings	55308BBF	1429244863	Color_Wetlands_Auburn
+InventoryItemSettings	55308BC4	1429244868	Color_Florentine_Scarlet
+InventoryItemSettings	55308BCE	1429244878	Color_Wetlands_Ebony
+InventoryItemSettings	55308BD3	1429244883	Colors_Wetlands_Ivory
+InventoryItemSettings	55308BDD	1429244893	Color_Roman_Stone
+InventoryItemSettings	55308BE2	1429244898	Color_Tuscan_Copper
+InventoryItemSettings	55308BE7	1429244903	Color_Tuscan_Ochre
+InventoryItemSettings	55308E7C	1429245564	MoenyPouchU2
+InventoryItemSettings	55308E7D	1429245565	MoenyPouchU4
+InventoryItemSettings	55308E7E	1429245566	MoenyPouchU3
+InventoryItemSettings	55308E7F	1429245567	DaggerBelt1
+InventoryItemSettings	55308E80	1429245568	DaggerBelt2
+InventoryItemSettings	55308E81	1429245569	DaggerBelt3
+InventoryItemSettings	55308E82	1429245570	DaggerBelt4_ForUplay
+InventoryItemSettings	55308E83	1429245571	HealthObjectPouch1
+InventoryItemSettings	55308EA5	1429245605	HealthObjectPouch2
+InventoryItemSettings	55308EA6	1429245606	HealthObjectPouch3
+InventoryItemSettings	55308EA7	1429245607	SmokeBombSack1
+InventoryItemSettings	55308EA8	1429245608	SmokeBombSack2
+InventoryItemSettings	55308EA9	1429245609	SmokeBombSack3
+InventoryItemSettings	61D961DE	1641636318	PoisonSack3
+InventoryItemSettings	61D961DF	1641636319	PoisonSack2
+InventoryItemSettings	6621BE50	1713487440	PoisonBladeEnabler
+InventoryItemSettings	6621BE58	1713487448	GunEnabler
+InventoryItemSettings	6B9876A5	1805153957	LGS_Romulus_Scroll_302
+InventoryItemSettings	6B9876A6	1805153958	LGS_Romulus_Scroll_303
+InventoryItemSettings	6B9876A7	1805153959	LGS_Romulus_Scroll_305
+InventoryItemSettings	6B9876A8	1805153960	LGS_Romulus_Scroll_306
+InventoryItemSettings	6B9876A9	1805153961	LGS_Romulus_Scroll_308
+InventoryItemSettings	6B9876AA	1805153962	LGS_Romulus_Scroll_309
+InventoryItemSettings	71641344	1902383940	TreasureChest_344
+InventoryItemSettings	71641345	1902383941	TreasureChest_345
+InventoryItemSettings	71641346	1902383942	TreasureChest_346
+InventoryItemSettings	71641347	1902383943	TreasureChest_347
+InventoryItemSettings	71641348	1902383944	TreasureChest_348
+InventoryItemSettings	71641349	1902383945	TreasureChest_349
+InventoryItemSettings	74E413D8	1961104344	Vilain_Painting_013
+InventoryItemSettings	74E413DD	1961104349	Vilain_Painting_014
+InventoryItemSettings	7500C065	1962983525	TradeObj_ACR_Nutmeg
+InventoryItemSettings	7500C06B	1962983531	TradeObj_ACR_Ambergris
+InventoryItemSettings	7500C071	1962983537	TradeObj_ACR_Claddagh Ring
+InventoryItemSettings	7500C077	1962983543	TradeObj_ACR_Sapphire
+InventoryItemSettings	7500C07D	1962983549	TradeObj_ACR_Copper Ore
+InventoryItemSettings	7500C083	1962983555	TradeObj_ACR_Shrunken Head
+InventoryItemSettings	7500C089	1962983561	TradeObj_ACR_Velvet
+InventoryItemSettings	7500C095	1962983573	TradeObj_ACR_Piper Nigrum
+InventoryItemSettings	7500C09B	1962983579	TradeObj_ACR_Papaver Silvaticum
+InventoryItemSettings	7500C0A1	1962983585	TradeObj_ACR_Venetian Poison Ring
+InventoryItemSettings	7500C0A7	1962983591	TradeObj_ACR_Jasper - Red
+InventoryItemSettings	7500C0AD	1962983597	TradeObj_ACR_Coffee Beans
+InventoryItemSettings	7500C0B3	1962983603	TradeObj_ACR_Vlad the Impaler Coins
+InventoryItemSettings	7500C0B9	1962983609	TradeObj_ACR_Terracotta Pot
+InventoryItemSettings	7500C0BF	1962983615	TradeObj_ACR_Elephant ivory
+InventoryItemSettings	7500C0C5	1962983621	TradeObj_ACR_Saffron
+InventoryItemSettings	7500C0CB	1962983627	TradeObj_ACR_Pomander
+InventoryItemSettings	7500C0D1	1962983633	TradeObj_ACR_Cardinal's Purple Dye
+InventoryItemSettings	7500C0D7	1962983639	TradeObj_ACR_Jeweled Hairnet
+InventoryItemSettings	7500C0EF	1962983663	TradeObj_ACR_Silk
+InventoryItemSettings	7500C0F5	1962983669	TradeObj_ACR_Alum
+InventoryItemSettings	7500C0FB	1962983675	TradeObj_ACR_Wool
+InventoryItemSettings	7500C101	1962983681	TradeObj_ACR_Indian Diamond
+InventoryItemSettings	7500C107	1962983687	TradeObj_ACR_Jasper - Green
+InventoryItemSettings	7500C10D	1962983693	TradeObj_ACR_Potatoes
+InventoryItemSettings	7500C113	1962983699	TradeObj_ACR_Silver Ore
+InventoryItemSettings	7500C119	1962983705	TradeObj_ACR_Rabbits Foot
+InventoryItemSettings	7500C11F	1962983711	TradeObj_ACR_Gold Ingot
+InventoryItemSettings	7500C125	1962983717	TradeObj_ACR_Aconite
+InventoryItemSettings	7500C12B	1962983723	TradeObj_ACR_Tartar emetic
+InventoryItemSettings	7500C131	1962983729	TradeObj_ACR_Totem
+InventoryItemSettings	7500C137	1962983735	TradeObj_ACR_Mercury
+InventoryItemSettings	7500C13D	1962983741	TradeObj_ACR_Buddhist Prayer Beads
+InventoryItemSettings	7500C143	1962983747	TradeObj_ACR_Jar of Leeches
+InventoryItemSettings	7500C149	1962983753	TradeObj_ACR_Incense
+InventoryItemSettings	7500C25D	1962984029	WM_Sword_R
+InventoryItemSettings	7500C263	1962984035	WM_Sword_N
+InventoryItemSettings	7500C269	1962984041	WM_ShalimSword
+InventoryItemSettings	7500C26F	1962984047	WM_Sword_Q
+InventoryItemSettings	7500C275	1962984053	WM_Sword_P
+InventoryItemSettings	7500C27B	1962984059	WM_Sword_O
+InventoryItemSettings	7500C281	1962984065	WS_SmallWeapon_I
+InventoryItemSettings	7500C287	1962984071	WS_SmallWeapon_J
+InventoryItemSettings	7500C28D	1962984077	WH_HeavyWeapon_C
+InventoryItemSettings	7500C293	1962984083	WH_HeavyWeapon_B
+InventoryItemSettings	7500C299	1962984089	WH_HeavyWeapon_A
+InventoryItemSettings	771FC807	1998571527	TreasureMap_ALL
+InventoryItemSettings	771FC808	1998571528	FeatherMap_ALL
+InventoryItemSettings	77AB5B4C	2007718732	CanClimbLeap
+InventoryItemSettings	77AB5B52	2007718738	CanPoisonDarts
+InventoryItemSettings	784EC401	2018427905	WS_Cinquedea_A
+InventoryItemSettings	784EC406	2018427910	WS_Stilleto
+InventoryItemSettings	784EC40B	2018427915	WS_Coutelas_B
+InventoryItemSettings	784EC410	2018427920	WS_Cinquedea_B
+InventoryItemSettings	784EC415	2018427925	WS_Coutelas_A
+InventoryItemSettings	784EC41A	2018427930	WM_Falchion_A
+InventoryItemSettings	784EC41F	2018427935	WS_Dagger
+InventoryItemSettings	784EC424	2018427940	WS_Knife
+InventoryItemSettings	784ECD7D	2018430333	WM_Sword_B
+InventoryItemSettings	784ECD82	2018430338	WM_Sword_A
+InventoryItemSettings	784ECD87	2018430343	WM_Sledgehammer
+InventoryItemSettings	784ECD8C	2018430348	WM_Warhammer_A
+InventoryItemSettings	784ECD91	2018430353	WM_Sword_D
+InventoryItemSettings	784ECD96	2018430358	WM_Sword_C
+InventoryItemSettings	784ECD9B	2018430363	WM_Mace_A
+InventoryItemSettings	784ECDA0	2018430368	WM_Falchion_B
+InventoryItemSettings	784ECDA5	2018430373	WM_Scimitar
+InventoryItemSettings	784ECDAA	2018430378	WM_Mace_B
+InventoryItemSettings	784ECDAF	2018430383	WM_Warhammer_B
+InventoryItemSettings	784ECDB4	2018430388	WH_DoubleEdge_Axe
+InventoryItemSettings	784ECDB9	2018430393	WH_TwoHanded_Sword
+InventoryItemSettings	784ECDBE	2018430398	WH_Two_Handed_Axe
+InventoryItemSettings	784ECE53	2018430547	WL_SpearSpike_A
+InventoryItemSettings	784ECE54	2018430548	WL_SpearSpike_B
+InventoryItemSettings	7DA45B52	2107923282	ShopQuest_Blacksmith1
+InventoryItemSettings	7DA45B53	2107923283	ShopQuest_Blacksmith2
+InventoryItemSettings	7DA45B54	2107923284	ShopQuest_Blacksmith3
+InventoryItemSettings	7DA45B55	2107923285	ShopQuest_ArtDealer1
+InventoryItemSettings	7DA45B56	2107923286	ShopQuest_Tailor1
+InventoryItemSettings	7DA45B57	2107923287	ShopQuest_Doctor1
+InventoryItemSettings	7F3D48A7	2134722727	CanDoubleAssassinate
+InventoryItemSettings	7F3D48CD	2134722765	HeavyWeapon_AlwaysUnlocked
+InventoryItemSettings	7F3D48E3	2134722787	SmallWeapon_AlwaysUnlocked
+InventoryItemSettings	7F3D7AF0	2134735600	WSp_BRUTUS_Dagger
+InventoryItemSettings	912FF6CE	2435839694	MoneyPlayerQuestItem
+InventoryItemSettings	94E00EE6	2497711846	Vilain_Painting_01
+InventoryItemSettings	94E00EEB	2497711851	Vilain_Painting_02
+InventoryItemSettings	94E00EEC	2497711852	Vilain_Painting_03
+InventoryItemSettings	94E00EED	2497711853	Vilain_Painting_04
+InventoryItemSettings	94E00EEE	2497711854	Vilain_Painting_05
+InventoryItemSettings	94E00EEF	2497711855	Vilain_Painting_06
+InventoryItemSettings	94E00EF0	2497711856	Vilain_Painting_07
+InventoryItemSettings	94E00EF1	2497711857	Vilain_Painting_08
+InventoryItemSettings	94E00EF2	2497711858	Vilain_Painting_09
+InventoryItemSettings	94E00EF3	2497711859	Vilain_Painting_10
+InventoryItemSettings	94E00EF4	2497711860	Vilain_Painting_11
+InventoryItemSettings	94E2517D	2497859965	WS_Crossbow_Ezio
+InventoryItemSettings	96787445	2524476485	Cheat_TradeObjectContainer_U2
+InventoryItemSettings	994241C9	2571256265	TreasureChest_LGS09_Map01
+InventoryItemSettings	994241F6	2571256310	TreasureChest_LGS09_Map02
+InventoryItemSettings	994241F7	2571256311	TreasureChest_LGS01_Map01
+InventoryItemSettings	994241F8	2571256312	TreasureChest_LGS01_Map02
+InventoryItemSettings	994241F9	2571256313	TreasureChest_LGS02_Map01
+InventoryItemSettings	994241FA	2571256314	TreasureChest_LGS02_Map02
+InventoryItemSettings	994241FB	2571256315	TreasureChest_LGS02_Map03
+InventoryItemSettings	994241FC	2571256316	TreasureChest_LGS03_Map01
+InventoryItemSettings	994241FD	2571256317	TreasureChest_LGS03_Map02
+InventoryItemSettings	994241FE	2571256318	TreasureChest_LGS04_Map01
+InventoryItemSettings	994241FF	2571256319	TreasureChest_LGS04_Map02
+InventoryItemSettings	99424200	2571256320	TreasureChest_LGS05_Map01
+InventoryItemSettings	99424201	2571256321	TreasureChest_LGS05_Map02
+InventoryItemSettings	99424202	2571256322	TreasureChest_LGS06_Map01
+InventoryItemSettings	99424203	2571256323	TreasureChest_LGS06_Map02
+InventoryItemSettings	99424204	2571256324	TreasureChest_LGS07_Map01
+InventoryItemSettings	99424205	2571256325	TreasureChest_LGS07_Map02
+InventoryItemSettings	99424206	2571256326	TreasureChest_LGS08_Map01
+InventoryItemSettings	99424207	2571256327	TreasureChest_LGS08_Map02
+InventoryItemSettings	99424208	2571256328	TreasureChest_LGS10_Map01
+InventoryItemSettings	99424209	2571256329	TreasureChest_LGS10_Map02
+InventoryItemSettings	9B06CDDB	2600914395	WM-MediumSword-Maxxed-Test
+InventoryItemSettings	9B06CDF7	2600914423	WM-MediumSword-Lowest-Test
+InventoryItemSettings	9B06CE2A	2600914474	WS-SmallWeapon-Maxxed-Test
+InventoryItemSettings	9B06CE2F	2600914479	WS-SmallWeapon-Lowest-Test
+InventoryItemSettings	9B06CE62	2600914530	WH-HeavyWeapon-Lowest-Test
+InventoryItemSettings	9B06CE67	2600914535	WH-HeavyWeapon-Maxxed-Test
+InventoryItemSettings	9B06CE92	2600914578	WL-LongWeapon-Lowest-Test
+InventoryItemSettings	9B06CE97	2600914583	WL-LongWeapon-Maxxed-Test
+InventoryItemSettings	9CFF0B19	2633960217	ACR_TreasureMap_Downtown_001
+InventoryItemSettings	9CFF0B1A	2633960218	ACR_TreasureMap_Downtown_002
+InventoryItemSettings	9CFF0B1B	2633960219	ACR_TreasureMap_Downtown_003
+InventoryItemSettings	9CFF0B1C	2633960220	ACR_TreasureMap_Countryside_001
+InventoryItemSettings	9CFF0B1D	2633960221	ACR_TreasureMap_Countryside_002
+InventoryItemSettings	9CFF0B1E	2633960222	ACR_TreasureMap_Countryside_003
+InventoryItemSettings	9CFF0B1F	2633960223	ACR_TreasureMap_Antique_001
+InventoryItemSettings	9CFF0B20	2633960224	ACR_TreasureMap_Antique_002
+InventoryItemSettings	9CFF0B21	2633960225	ACR_TreasureMap_Antique_003
+InventoryItemSettings	9CFF0B22	2633960226	ACR_TreasureMap_Vatican_001
+InventoryItemSettings	9CFF0B23	2633960227	ACR_TreasureMap_Vatican_002
+InventoryItemSettings	9CFF0B24	2633960228	ACR_TreasureMap_Vatican_003
+InventoryItemSettings	9D443A1F	2638494239	Poison_Fast
+InventoryItemSettings	9D443A25	2638494245	CanFastPoison
+InventoryItemSettings	9D443A2D	2638494253	TraineeWeaponItem_WS_Cinquedea_A
+InventoryItemSettings	9D443A2E	2638494254	TraineeWeaponItem_WS_Coutelas_A
+InventoryItemSettings	9D443A2F	2638494255	TraineeWeaponItem_WS_Knife
+InventoryItemSettings	9D443A31	2638494257	TraineeWeaponItem_WM_Sword_A
+InventoryItemSettings	9D443A32	2638494258	TraineeWeaponItem_WM_Sword_B
+InventoryItemSettings	9D443A33	2638494259	TraineeWeaponItem_WM_Falchion_A
+InventoryItemSettings	9D443A34	2638494260	TraineeWeaponItem_WM_Mace_A
+InventoryItemSettings	9D443A35	2638494261	TraineeWeaponItem_WM_Saber
+InventoryItemSettings	9D443A37	2638494263	TraineeWeaponItem_WH_TwoHanded_Sword
+InventoryItemSettings	9D443A38	2638494264	TraineeWeaponItem_WH_Two_Handed_Axe
+InventoryItemSettings	9D443A39	2638494265	TraineeWeaponItem_WH_DoubleEdge_Axe
+InventoryItemSettings	9D443A3A	2638494266	TraineeWeaponItem_WM_Sword_E
+InventoryItemSettings	9F836382	2676188034	HiddenBladeEnabler_SetByMission
+InventoryItemSettings	9F836387	2676188039	GloveU0_AKABlade2AndPlate
+InventoryItemSettings	A08054E0	2692764896	TreasureChest_03
+InventoryItemSettings	A08054E1	2692764897	TreasureMap_03
+InventoryItemSettings	A1E6FAB5	2716269237	Artifact_MedicisCape
+InventoryItemSettings	A1E6FAB6	2716269238	Artifact_EziosBelt
+InventoryItemSettings	A1E6FAB7	2716269239	Artifact_MariosSword
+InventoryItemSettings	A1E6FAB8	2716269240	Artifact_ClaudiasBook
+InventoryItemSettings	A1E6FAB9	2716269241	Artifact_FeatherChest
+InventoryItemSettings	A23BFF28	2721840936	TreasureChest_LGS01_01
+InventoryItemSettings	A23BFFF8	2721841144	TreasureChest_LGS01_02
+InventoryItemSettings	A23BFFF9	2721841145	TreasureChest_LGS01_03
+InventoryItemSettings	A23BFFFA	2721841146	TreasureChest_LGS01_04
+InventoryItemSettings	A23BFFFB	2721841147	TreasureChest_LGS01_05
+InventoryItemSettings	A3C97277	2747888247	ACR_TreasureMap_UnlockAllCodex
+InventoryItemSettings	A5BA39B2	2780445106	MediumWeapon_AlwaysUnlocked
+InventoryItemSettings	A9906BB1	2844814257	MQI-SQ07_M06_Loot-1
+InventoryItemSettings	A9906BB2	2844814258	MQI-SQ07_M06_Loot-2
+InventoryItemSettings	A9906BB3	2844814259	MQI-SQ07_M06_Loot-3
+InventoryItemSettings	AC75B358	2893394776	TreasureChest_04
+InventoryItemSettings	AC75B359	2893394777	TreasureChest_05
+InventoryItemSettings	AC75B35A	2893394778	TreasureChest_06
+InventoryItemSettings	AC75B35B	2893394779	TreasureChest_07
+InventoryItemSettings	AC75B35C	2893394780	TreasureChest_08
+InventoryItemSettings	AC75B35D	2893394781	TreasureChest_09
+InventoryItemSettings	AC75B35E	2893394782	TreasureChest_10
+InventoryItemSettings	AC75B35F	2893394783	TreasureChest_11
+InventoryItemSettings	AC75B360	2893394784	TreasureChest_12
+InventoryItemSettings	AC75B361	2893394785	TreasureChest_13
+InventoryItemSettings	AC75B362	2893394786	TreasureChest_14
+InventoryItemSettings	AC75B363	2893394787	TreasureChest_15
+InventoryItemSettings	AC75B364	2893394788	TreasureChest_16
+InventoryItemSettings	AC75B365	2893394789	TreasureChest_17
+InventoryItemSettings	AC75B366	2893394790	TreasureChest_18
+InventoryItemSettings	AC75B367	2893394791	TreasureChest_19
+InventoryItemSettings	AC75B368	2893394792	TreasureChest_20
+InventoryItemSettings	AC75B369	2893394793	TreasureChest_21
+InventoryItemSettings	AC75B36A	2893394794	TreasureChest_22
+InventoryItemSettings	AC75B36B	2893394795	TreasureChest_23
+InventoryItemSettings	AC75B36C	2893394796	TreasureChest_24
+InventoryItemSettings	AC75B36D	2893394797	TreasureChest_25
+InventoryItemSettings	AC75B36E	2893394798	TreasureChest_26
+InventoryItemSettings	AC75B36F	2893394799	TreasureChest_27
+InventoryItemSettings	AC75B370	2893394800	TreasureChest_28
+InventoryItemSettings	AC75B371	2893394801	TreasureChest_29
+InventoryItemSettings	AC75B372	2893394802	TreasureChest_30
+InventoryItemSettings	AC75B373	2893394803	TreasureChest_31
+InventoryItemSettings	AC75B374	2893394804	TreasureChest_32
+InventoryItemSettings	AC75B375	2893394805	TreasureChest_33
+InventoryItemSettings	AC75B376	2893394806	TreasureChest_34
+InventoryItemSettings	AC75B377	2893394807	TreasureChest_35
+InventoryItemSettings	AC75B378	2893394808	TreasureChest_36
+InventoryItemSettings	AC75B379	2893394809	TreasureChest_37
+InventoryItemSettings	AC75B37A	2893394810	TreasureChest_38
+InventoryItemSettings	AC75B37B	2893394811	TreasureChest_39
+InventoryItemSettings	AC75B37C	2893394812	TreasureChest_40
+InventoryItemSettings	AC75B37D	2893394813	TreasureChest_41
+InventoryItemSettings	AC75B37E	2893394814	TreasureChest_42
+InventoryItemSettings	AC75B37F	2893394815	TreasureChest_43
+InventoryItemSettings	AC75B380	2893394816	TreasureChest_44
+InventoryItemSettings	AC75B381	2893394817	TreasureChest_45
+InventoryItemSettings	AC75B382	2893394818	TreasureChest_46
+InventoryItemSettings	AC75B383	2893394819	TreasureChest_47
+InventoryItemSettings	AC75B384	2893394820	TreasureChest_48
+InventoryItemSettings	AC75B385	2893394821	TreasureChest_49
+InventoryItemSettings	AC75B386	2893394822	TreasureChest_50
+InventoryItemSettings	AC75B387	2893394823	TreasureChest_51
+InventoryItemSettings	AC75B388	2893394824	TreasureChest_52
+InventoryItemSettings	AC75B389	2893394825	TreasureChest_53
+InventoryItemSettings	AC75B38A	2893394826	TreasureChest_54
+InventoryItemSettings	AC75B38B	2893394827	TreasureChest_55
+InventoryItemSettings	AC75B38C	2893394828	TreasureChest_56
+InventoryItemSettings	AC75B38D	2893394829	TreasureChest_57
+InventoryItemSettings	AC75B38E	2893394830	TreasureChest_58
+InventoryItemSettings	AC75B38F	2893394831	TreasureChest_59
+InventoryItemSettings	AC75B390	2893394832	TreasureChest_60
+InventoryItemSettings	AC75B391	2893394833	TreasureChest_61
+InventoryItemSettings	AC75B392	2893394834	TreasureChest_62
+InventoryItemSettings	AC75B393	2893394835	TreasureChest_63
+InventoryItemSettings	AC75B394	2893394836	TreasureChest_64
+InventoryItemSettings	AC75B395	2893394837	TreasureChest_65
+InventoryItemSettings	AC75B396	2893394838	TreasureChest_66
+InventoryItemSettings	AC75B397	2893394839	TreasureChest_67
+InventoryItemSettings	AC75B398	2893394840	TreasureChest_68
+InventoryItemSettings	AC75B399	2893394841	TreasureChest_69
+InventoryItemSettings	AC75B39A	2893394842	TreasureChest_70
+InventoryItemSettings	AC75B39B	2893394843	TreasureChest_71
+InventoryItemSettings	AC75B39C	2893394844	TreasureChest_72
+InventoryItemSettings	AC75B39D	2893394845	TreasureChest_73
+InventoryItemSettings	AC75B39E	2893394846	TreasureChest_74
+InventoryItemSettings	AC75B39F	2893394847	TreasureChest_75
+InventoryItemSettings	AC75B3A0	2893394848	TreasureChest_76
+InventoryItemSettings	AC75B3A1	2893394849	TreasureChest_77
+InventoryItemSettings	AC75B3A2	2893394850	TreasureChest_78
+InventoryItemSettings	AC75B3A3	2893394851	TreasureChest_79
+InventoryItemSettings	AC75B3A4	2893394852	TreasureChest_80
+InventoryItemSettings	AC75B3A5	2893394853	TreasureChest_81
+InventoryItemSettings	AC75B3A6	2893394854	TreasureChest_82
+InventoryItemSettings	AC75B3A7	2893394855	TreasureChest_83
+InventoryItemSettings	AC75B3A8	2893394856	TreasureChest_84
+InventoryItemSettings	AC75B3A9	2893394857	TreasureChest_85
+InventoryItemSettings	AC75B3AA	2893394858	TreasureChest_86
+InventoryItemSettings	AC75B3AB	2893394859	TreasureChest_87
+InventoryItemSettings	AC75B3AC	2893394860	TreasureChest_88
+InventoryItemSettings	AC75B3AD	2893394861	TreasureChest_89
+InventoryItemSettings	AC75B3AE	2893394862	TreasureChest_90
+InventoryItemSettings	AC75B3AF	2893394863	TreasureChest_91
+InventoryItemSettings	AC75B3B0	2893394864	TreasureChest_92
+InventoryItemSettings	AC75B3B1	2893394865	TreasureChest_93
+InventoryItemSettings	AC75B3B2	2893394866	TreasureChest_94
+InventoryItemSettings	AC75B3B3	2893394867	TreasureChest_95
+InventoryItemSettings	AC75B3B4	2893394868	TreasureChest_96
+InventoryItemSettings	AC75B3B5	2893394869	TreasureChest_97
+InventoryItemSettings	AC75B3B6	2893394870	TreasureChest_98
+InventoryItemSettings	AC75B3B7	2893394871	TreasureChest_99
+InventoryItemSettings	AC75B3B8	2893394872	TreasureChest_100
+InventoryItemSettings	AC75B3B9	2893394873	TreasureChest_101
+InventoryItemSettings	AC75B3BA	2893394874	TreasureChest_102
+InventoryItemSettings	AC75B3BB	2893394875	TreasureChest_103
+InventoryItemSettings	AC75B3BC	2893394876	TreasureChest_104
+InventoryItemSettings	AC75B3BD	2893394877	TreasureChest_105
+InventoryItemSettings	AC75B3BE	2893394878	TreasureChest_106
+InventoryItemSettings	AC75B3BF	2893394879	TreasureChest_107
+InventoryItemSettings	AC75B3C0	2893394880	TreasureChest_108
+InventoryItemSettings	AC75B3C1	2893394881	TreasureChest_109
+InventoryItemSettings	AC75B3C2	2893394882	TreasureChest_110
+InventoryItemSettings	AC75B3C3	2893394883	TreasureChest_111
+InventoryItemSettings	AC75B3C4	2893394884	TreasureChest_112
+InventoryItemSettings	AC75B3C5	2893394885	TreasureChest_113
+InventoryItemSettings	AC75B3C6	2893394886	TreasureChest_114
+InventoryItemSettings	AC75B3C7	2893394887	TreasureChest_115
+InventoryItemSettings	AC75B3C8	2893394888	TreasureChest_116
+InventoryItemSettings	AC75B3C9	2893394889	TreasureChest_117
+InventoryItemSettings	AC75B3CA	2893394890	TreasureChest_118
+InventoryItemSettings	AC75B3CB	2893394891	TreasureChest_119
+InventoryItemSettings	AC75B3CC	2893394892	TreasureChest_120
+InventoryItemSettings	AC75B3CD	2893394893	TreasureChest_121
+InventoryItemSettings	AC75B3CE	2893394894	TreasureChest_122
+InventoryItemSettings	AC75B3CF	2893394895	TreasureChest_123
+InventoryItemSettings	AC75B3D0	2893394896	TreasureChest_124
+InventoryItemSettings	AC75B3D1	2893394897	TreasureChest_125
+InventoryItemSettings	AC75B3D2	2893394898	TreasureChest_126
+InventoryItemSettings	AC75B3D3	2893394899	TreasureChest_127
+InventoryItemSettings	AC75B3D4	2893394900	TreasureChest_128
+InventoryItemSettings	AC75B3D5	2893394901	TreasureChest_129
+InventoryItemSettings	AC75B3D6	2893394902	TreasureChest_130
+InventoryItemSettings	AC75B3D7	2893394903	TreasureChest_131
+InventoryItemSettings	AC75B3D8	2893394904	TreasureChest_132
+InventoryItemSettings	AC75B3D9	2893394905	TreasureChest_133
+InventoryItemSettings	AC75B3DA	2893394906	TreasureChest_134
+InventoryItemSettings	AC75B3DB	2893394907	TreasureChest_135
+InventoryItemSettings	AC75B3DC	2893394908	TreasureChest_136
+InventoryItemSettings	AC75B3DD	2893394909	TreasureChest_137
+InventoryItemSettings	AC75B3DE	2893394910	TreasureChest_138
+InventoryItemSettings	AC75B3DF	2893394911	TreasureChest_139
+InventoryItemSettings	AC75B3E0	2893394912	TreasureChest_140
+InventoryItemSettings	AC75B3E1	2893394913	TreasureChest_141
+InventoryItemSettings	AC75B3E2	2893394914	TreasureChest_142
+InventoryItemSettings	AC75B3E3	2893394915	TreasureChest_143
+InventoryItemSettings	AC75B3E4	2893394916	TreasureChest_144
+InventoryItemSettings	AC75B3E5	2893394917	TreasureChest_145
+InventoryItemSettings	AC75B3E6	2893394918	TreasureChest_146
+InventoryItemSettings	AC75B3E7	2893394919	TreasureChest_147
+InventoryItemSettings	AC75B3E8	2893394920	TreasureChest_148
+InventoryItemSettings	AC75B3E9	2893394921	TreasureChest_149
+InventoryItemSettings	AC75B3EA	2893394922	TreasureChest_150
+InventoryItemSettings	AC75B3EB	2893394923	TreasureChest_151
+InventoryItemSettings	AC75B3EC	2893394924	TreasureChest_152
+InventoryItemSettings	AC75B3ED	2893394925	TreasureChest_153
+InventoryItemSettings	AC75B3EE	2893394926	TreasureChest_154
+InventoryItemSettings	AC75B3EF	2893394927	TreasureChest_155
+InventoryItemSettings	AC75B3F0	2893394928	TreasureChest_156
+InventoryItemSettings	AC75B3F1	2893394929	TreasureChest_157
+InventoryItemSettings	AC75B3F2	2893394930	TreasureChest_158
+InventoryItemSettings	AC75B3F3	2893394931	TreasureChest_159
+InventoryItemSettings	AC75B3F4	2893394932	TreasureChest_160
+InventoryItemSettings	AC75B3F5	2893394933	TreasureChest_161
+InventoryItemSettings	AC75B3F6	2893394934	TreasureChest_162
+InventoryItemSettings	AC75B3F7	2893394935	TreasureChest_163
+InventoryItemSettings	AC75B3F8	2893394936	TreasureChest_164
+InventoryItemSettings	AC75B3F9	2893394937	TreasureChest_165
+InventoryItemSettings	AC75B3FA	2893394938	TreasureChest_166
+InventoryItemSettings	AC75B3FB	2893394939	TreasureChest_167
+InventoryItemSettings	AC75B3FC	2893394940	TreasureChest_168
+InventoryItemSettings	AC75B3FD	2893394941	TreasureChest_169
+InventoryItemSettings	AC75B3FE	2893394942	TreasureChest_170
+InventoryItemSettings	AC75B3FF	2893394943	TreasureChest_171
+InventoryItemSettings	AC75B400	2893394944	TreasureChest_172
+InventoryItemSettings	AC75B401	2893394945	TreasureChest_173
+InventoryItemSettings	AC75B402	2893394946	TreasureChest_174
+InventoryItemSettings	AC75B403	2893394947	TreasureChest_175
+InventoryItemSettings	AC75B404	2893394948	TreasureChest_176
+InventoryItemSettings	AC75B405	2893394949	TreasureChest_177
+InventoryItemSettings	AC75B406	2893394950	TreasureChest_178
+InventoryItemSettings	AC75B407	2893394951	TreasureChest_179
+InventoryItemSettings	AC75B408	2893394952	TreasureChest_180
+InventoryItemSettings	AC75B409	2893394953	TreasureChest_181
+InventoryItemSettings	AC75B40A	2893394954	TreasureChest_182
+InventoryItemSettings	AC75B40B	2893394955	TreasureChest_183
+InventoryItemSettings	AC75B40C	2893394956	TreasureChest_184
+InventoryItemSettings	AC75B40D	2893394957	TreasureChest_185
+InventoryItemSettings	AC75B40E	2893394958	TreasureChest_186
+InventoryItemSettings	AC75B40F	2893394959	TreasureChest_187
+InventoryItemSettings	AC75B410	2893394960	TreasureChest_188
+InventoryItemSettings	AC75B411	2893394961	TreasureChest_189
+InventoryItemSettings	AC75B412	2893394962	TreasureChest_190
+InventoryItemSettings	AC75B413	2893394963	TreasureChest_191
+InventoryItemSettings	AC75B414	2893394964	TreasureChest_192
+InventoryItemSettings	AC75B415	2893394965	TreasureChest_193
+InventoryItemSettings	AC75B416	2893394966	TreasureChest_194
+InventoryItemSettings	AC75B417	2893394967	TreasureChest_195
+InventoryItemSettings	AC75B418	2893394968	TreasureChest_196
+InventoryItemSettings	AC75B419	2893394969	TreasureChest_197
+InventoryItemSettings	AC75B41A	2893394970	TreasureChest_198
+InventoryItemSettings	AC75B41B	2893394971	TreasureChest_199
+InventoryItemSettings	AC75B41C	2893394972	TreasureChest_200
+InventoryItemSettings	AC75B41D	2893394973	TreasureChest_201
+InventoryItemSettings	AC75B41E	2893394974	TreasureChest_202
+InventoryItemSettings	AC75B41F	2893394975	TreasureChest_203
+InventoryItemSettings	AC75B420	2893394976	TreasureChest_204
+InventoryItemSettings	AC75B421	2893394977	TreasureChest_205
+InventoryItemSettings	AC75B422	2893394978	TreasureChest_206
+InventoryItemSettings	AC75B423	2893394979	TreasureChest_207
+InventoryItemSettings	AC75B424	2893394980	TreasureChest_208
+InventoryItemSettings	AC75B425	2893394981	TreasureChest_209
+InventoryItemSettings	AC75B426	2893394982	TreasureChest_210
+InventoryItemSettings	AC75B427	2893394983	TreasureChest_211
+InventoryItemSettings	AC75B428	2893394984	TreasureChest_212
+InventoryItemSettings	AC75B429	2893394985	TreasureChest_213
+InventoryItemSettings	AC75B42A	2893394986	TreasureChest_214
+InventoryItemSettings	AC75B42B	2893394987	TreasureChest_215
+InventoryItemSettings	AC75B42C	2893394988	TreasureChest_216
+InventoryItemSettings	AC75B42D	2893394989	TreasureChest_217
+InventoryItemSettings	AC75B42E	2893394990	TreasureChest_218
+InventoryItemSettings	AC75B42F	2893394991	TreasureChest_219
+InventoryItemSettings	AC75B430	2893394992	TreasureChest_220
+InventoryItemSettings	AC75B431	2893394993	TreasureChest_221
+InventoryItemSettings	AC75B432	2893394994	TreasureChest_222
+InventoryItemSettings	AC75B433	2893394995	TreasureChest_223
+InventoryItemSettings	AC75B434	2893394996	TreasureChest_224
+InventoryItemSettings	AC75B435	2893394997	TreasureChest_225
+InventoryItemSettings	AC75B436	2893394998	TreasureChest_226
+InventoryItemSettings	AC75B437	2893394999	TreasureChest_227
+InventoryItemSettings	AC75B438	2893395000	TreasureChest_228
+InventoryItemSettings	AC75B439	2893395001	TreasureChest_229
+InventoryItemSettings	AC75B43A	2893395002	TreasureChest_230
+InventoryItemSettings	AC75B43B	2893395003	TreasureChest_231
+InventoryItemSettings	AC75B43C	2893395004	TreasureChest_232
+InventoryItemSettings	AC75B43D	2893395005	TreasureChest_233
+InventoryItemSettings	AC75B43E	2893395006	TreasureChest_234
+InventoryItemSettings	AC75B43F	2893395007	TreasureChest_235
+InventoryItemSettings	AC75B440	2893395008	TreasureChest_236
+InventoryItemSettings	AC75B441	2893395009	TreasureChest_237
+InventoryItemSettings	AC75B442	2893395010	TreasureChest_238
+InventoryItemSettings	AC75B443	2893395011	TreasureChest_239
+InventoryItemSettings	AC75B444	2893395012	TreasureChest_240
+InventoryItemSettings	AC75B445	2893395013	TreasureChest_241
+InventoryItemSettings	AC75B446	2893395014	TreasureChest_242
+InventoryItemSettings	AC75B447	2893395015	TreasureChest_243
+InventoryItemSettings	AC75B448	2893395016	TreasureChest_244
+InventoryItemSettings	AC75B449	2893395017	TreasureChest_245
+InventoryItemSettings	AC75B44A	2893395018	TreasureChest_246
+InventoryItemSettings	AC75B44B	2893395019	TreasureChest_247
+InventoryItemSettings	AC75B44C	2893395020	TreasureChest_248
+InventoryItemSettings	AC75B44E	2893395022	TreasureChest_250
+InventoryItemSettings	AC75B44F	2893395023	TreasureChest_251
+InventoryItemSettings	AC75B450	2893395024	TreasureChest_252
+InventoryItemSettings	AC75B451	2893395025	TreasureChest_253
+InventoryItemSettings	AC75B452	2893395026	TreasureChest_254
+InventoryItemSettings	AC75B453	2893395027	TreasureChest_255
+InventoryItemSettings	AC75B454	2893395028	TreasureChest_256
+InventoryItemSettings	AC75B455	2893395029	TreasureChest_257
+InventoryItemSettings	AC75B456	2893395030	TreasureChest_258
+InventoryItemSettings	AC75B457	2893395031	TreasureChest_259
+InventoryItemSettings	AC75B458	2893395032	TreasureChest_260
+InventoryItemSettings	AC75B459	2893395033	TreasureChest_261
+InventoryItemSettings	AC75B45A	2893395034	TreasureChest_262
+InventoryItemSettings	AC75B45B	2893395035	TreasureChest_263
+InventoryItemSettings	AC75B45C	2893395036	TreasureChest_264
+InventoryItemSettings	AC75B45D	2893395037	TreasureChest_265
+InventoryItemSettings	AC75B45E	2893395038	TreasureChest_266
+InventoryItemSettings	AC75B45F	2893395039	TreasureChest_267
+InventoryItemSettings	AC75B460	2893395040	TreasureChest_268
+InventoryItemSettings	AC75B461	2893395041	TreasureChest_269
+InventoryItemSettings	AC75B462	2893395042	TreasureChest_270
+InventoryItemSettings	AC75B463	2893395043	TreasureChest_271
+InventoryItemSettings	AC75B464	2893395044	TreasureChest_272
+InventoryItemSettings	AC75B465	2893395045	TreasureChest_273
+InventoryItemSettings	AC75B466	2893395046	TreasureChest_274
+InventoryItemSettings	AC75B467	2893395047	TreasureChest_275
+InventoryItemSettings	AC75B468	2893395048	TreasureChest_276
+InventoryItemSettings	AC75B469	2893395049	TreasureChest_277
+InventoryItemSettings	AC75B46A	2893395050	TreasureChest_278
+InventoryItemSettings	AC75B46B	2893395051	TreasureChest_279
+InventoryItemSettings	AC75B46C	2893395052	TreasureChest_280
+InventoryItemSettings	AC75B46D	2893395053	TreasureChest_281
+InventoryItemSettings	AC75B46E	2893395054	TreasureChest_282
+InventoryItemSettings	AC75B46F	2893395055	TreasureChest_283
+InventoryItemSettings	AC75B470	2893395056	TreasureChest_284
+InventoryItemSettings	AC75B471	2893395057	TreasureChest_285
+InventoryItemSettings	AC75B472	2893395058	TreasureChest_286
+InventoryItemSettings	AC75B473	2893395059	TreasureChest_287
+InventoryItemSettings	AC75B474	2893395060	TreasureChest_288
+InventoryItemSettings	AC75B475	2893395061	TreasureChest_289
+InventoryItemSettings	AC75B476	2893395062	TreasureChest_290
+InventoryItemSettings	AC75B477	2893395063	TreasureChest_291
+InventoryItemSettings	AC75B478	2893395064	TreasureChest_292
+InventoryItemSettings	AC75B479	2893395065	TreasureChest_293
+InventoryItemSettings	AC75B47A	2893395066	TreasureChest_294
+InventoryItemSettings	AC75B47B	2893395067	TreasureChest_295
+InventoryItemSettings	AC75B47C	2893395068	TreasureChest_296
+InventoryItemSettings	AC75B47D	2893395069	TreasureChest_297
+InventoryItemSettings	AC75B47E	2893395070	TreasureChest_298
+InventoryItemSettings	AC75B47F	2893395071	TreasureChest_299
+InventoryItemSettings	AC75B480	2893395072	TreasureChest_300
+InventoryItemSettings	AC75B481	2893395073	TreasureChest_301
+InventoryItemSettings	AC75B482	2893395074	TreasureChest_302
+InventoryItemSettings	AC75B483	2893395075	TreasureChest_303
+InventoryItemSettings	AC75B484	2893395076	TreasureChest_304
+InventoryItemSettings	AC75B485	2893395077	TreasureChest_305
+InventoryItemSettings	AC75B486	2893395078	TreasureChest_306
+InventoryItemSettings	AC75B487	2893395079	TreasureChest_307
+InventoryItemSettings	AC75B488	2893395080	TreasureChest_308
+InventoryItemSettings	AC75B489	2893395081	TreasureChest_309
+InventoryItemSettings	AC75B48A	2893395082	TreasureChest_310
+InventoryItemSettings	AC75B48B	2893395083	TreasureChest_311
+InventoryItemSettings	AC75B48C	2893395084	TreasureChest_312
+InventoryItemSettings	AC75B48D	2893395085	TreasureChest_313
+InventoryItemSettings	AC75B48E	2893395086	TreasureChest_314
+InventoryItemSettings	AC75B48F	2893395087	TreasureChest_315
+InventoryItemSettings	AC75B490	2893395088	TreasureChest_316
+InventoryItemSettings	AC75B491	2893395089	TreasureChest_317
+InventoryItemSettings	AC75B492	2893395090	TreasureChest_318
+InventoryItemSettings	AC75B493	2893395091	TreasureChest_319
+InventoryItemSettings	AC75B494	2893395092	TreasureChest_320
+InventoryItemSettings	AC75B495	2893395093	TreasureChest_321
+InventoryItemSettings	AC75B496	2893395094	TreasureChest_322
+InventoryItemSettings	AC75B497	2893395095	TreasureChest_323
+InventoryItemSettings	AC75B498	2893395096	TreasureChest_324
+InventoryItemSettings	AC75B499	2893395097	TreasureChest_325
+InventoryItemSettings	AC75B49A	2893395098	TreasureChest_326
+InventoryItemSettings	AC75B49B	2893395099	TreasureChest_327
+InventoryItemSettings	AC75B49C	2893395100	TreasureChest_328
+InventoryItemSettings	AC75B49D	2893395101	TreasureChest_329
+InventoryItemSettings	AC75B49E	2893395102	TreasureChest_330
+InventoryItemSettings	AC75B49F	2893395103	TreasureChest_331
+InventoryItemSettings	AC75B4A0	2893395104	TreasureChest_332
+InventoryItemSettings	AC75B4A1	2893395105	TreasureChest_333
+InventoryItemSettings	AC75B4A2	2893395106	TreasureChest_334
+InventoryItemSettings	AC75B4A3	2893395107	TreasureChest_335
+InventoryItemSettings	AC75B4A4	2893395108	TreasureChest_336
+InventoryItemSettings	AC75B4A5	2893395109	TreasureChest_337
+InventoryItemSettings	AC75B4A6	2893395110	TreasureChest_338
+InventoryItemSettings	AC75B4A7	2893395111	TreasureChest_339
+InventoryItemSettings	AC75B4A8	2893395112	TreasureChest_340
+InventoryItemSettings	AC75B4A9	2893395113	TreasureChest_341
+InventoryItemSettings	AC75B4AA	2893395114	TreasureChest_342
+InventoryItemSettings	AC75B4AB	2893395115	TreasureChest_343
+InventoryItemSettings	AC75BA16	2893396502	TreasureMap_04
+InventoryItemSettings	AC75BA17	2893396503	TreasureMap_05
+InventoryItemSettings	AC75BA18	2893396504	TreasureMap_06
+InventoryItemSettings	AC75BA19	2893396505	TreasureMap_07
+InventoryItemSettings	AC75BA1A	2893396506	TreasureMap_08
+InventoryItemSettings	AC75BA1B	2893396507	TreasureMap_09
+InventoryItemSettings	AC75BA1C	2893396508	TreasureMap_10
+InventoryItemSettings	AC75BA1D	2893396509	TreasureMap_11
+InventoryItemSettings	AC75BA1E	2893396510	TreasureMap_12
+InventoryItemSettings	AC75BA1F	2893396511	TreasureMap_13
+InventoryItemSettings	AC75BA20	2893396512	TreasureMap_14
+InventoryItemSettings	AC75BA21	2893396513	TreasureMap_15
+InventoryItemSettings	AC75BA22	2893396514	TreasureMap_16
+InventoryItemSettings	AC75BA23	2893396515	TreasureMap_17
+InventoryItemSettings	AC75BA24	2893396516	TreasureMap_18
+InventoryItemSettings	AC75BA25	2893396517	TreasureMap_19
+InventoryItemSettings	AC75BA26	2893396518	TreasureMap_20
+InventoryItemSettings	AC75BA27	2893396519	TreasureMap_21
+InventoryItemSettings	AC75BA28	2893396520	TreasureMap_22
+InventoryItemSettings	AC75BA29	2893396521	TreasureMap_23
+InventoryItemSettings	AC75BA2A	2893396522	TreasureMap_24
+InventoryItemSettings	AC75BA2B	2893396523	TreasureMap_25
+InventoryItemSettings	AC75BA2C	2893396524	TreasureMap_26
+InventoryItemSettings	AC75BA2D	2893396525	TreasureMap_27
+InventoryItemSettings	AC75BA2E	2893396526	TreasureMap_28
+InventoryItemSettings	AC75BA2F	2893396527	TreasureMap_29
+InventoryItemSettings	AC75BA30	2893396528	TreasureMap_30
+InventoryItemSettings	AC75BA31	2893396529	TreasureMap_31
+InventoryItemSettings	AC75BA32	2893396530	TreasureMap_32
+InventoryItemSettings	AC75BA33	2893396531	TreasureMap_33
+InventoryItemSettings	AC75BA34	2893396532	TreasureMap_34
+InventoryItemSettings	AC75BA35	2893396533	TreasureMap_35
+InventoryItemSettings	AC75BA36	2893396534	TreasureMap_36
+InventoryItemSettings	AC75BA37	2893396535	TreasureMap_37
+InventoryItemSettings	AC75BA38	2893396536	TreasureMap_38
+InventoryItemSettings	AC75BA39	2893396537	TreasureMap_39
+InventoryItemSettings	AC75BA3A	2893396538	TreasureMap_40
+InventoryItemSettings	AC75BA3B	2893396539	TreasureMap_41
+InventoryItemSettings	AC75BA3C	2893396540	TreasureMap_42
+InventoryItemSettings	AC75BA3D	2893396541	TreasureMap_43
+InventoryItemSettings	AC75BA3E	2893396542	TreasureMap_44
+InventoryItemSettings	AC75BA3F	2893396543	TreasureMap_45
+InventoryItemSettings	AC75BA40	2893396544	TreasureMap_46
+InventoryItemSettings	AC75BA41	2893396545	TreasureMap_47
+InventoryItemSettings	AC75BA42	2893396546	TreasureMap_48
+InventoryItemSettings	AC75BA43	2893396547	TreasureMap_49
+InventoryItemSettings	AC75BA44	2893396548	TreasureMap_50
+InventoryItemSettings	AC75BA45	2893396549	TreasureMap_51
+InventoryItemSettings	AC75BA46	2893396550	TreasureMap_52
+InventoryItemSettings	AC75BA47	2893396551	TreasureMap_53
+InventoryItemSettings	AC75BA48	2893396552	TreasureMap_54
+InventoryItemSettings	AC75BA49	2893396553	TreasureMap_55
+InventoryItemSettings	AC75BA4A	2893396554	TreasureMap_056
+InventoryItemSettings	AC75BA4B	2893396555	TreasureMap_057
+InventoryItemSettings	AC75BA4C	2893396556	TreasureMap_058
+InventoryItemSettings	AC75BA4D	2893396557	TreasureMap_059
+InventoryItemSettings	AC75BA4E	2893396558	TreasureMap_060
+InventoryItemSettings	AC75BA4F	2893396559	TreasureMap_061
+InventoryItemSettings	AC75BA50	2893396560	TreasureMap_062
+InventoryItemSettings	AC75BA51	2893396561	TreasureMap_063
+InventoryItemSettings	AC75BA52	2893396562	TreasureMap_064
+InventoryItemSettings	AC75BA53	2893396563	TreasureMap_065
+InventoryItemSettings	AC75BA54	2893396564	TreasureMap_066
+InventoryItemSettings	AC75BA55	2893396565	TreasureMap_067
+InventoryItemSettings	AC75BA56	2893396566	TreasureMap_068
+InventoryItemSettings	AC75BA57	2893396567	TreasureMap_069
+InventoryItemSettings	AC75BA58	2893396568	TreasureMap_070
+InventoryItemSettings	AC75BA59	2893396569	TreasureMap_071
+InventoryItemSettings	AC75BA5A	2893396570	TreasureMap_072
+InventoryItemSettings	AC75BA5B	2893396571	TreasureMap_073
+InventoryItemSettings	AC75BA5C	2893396572	TreasureMap_074
+InventoryItemSettings	AC75BA5D	2893396573	TreasureMap_075
+InventoryItemSettings	AC75BA5E	2893396574	TreasureMap_076
+InventoryItemSettings	AC75BA5F	2893396575	TreasureMap_077
+InventoryItemSettings	AC75BA60	2893396576	TreasureMap_078
+InventoryItemSettings	AC75BA61	2893396577	TreasureMap_079
+InventoryItemSettings	AC75BA62	2893396578	TreasureMap_080
+InventoryItemSettings	AC75BA63	2893396579	TreasureMap_081
+InventoryItemSettings	AC75BA64	2893396580	TreasureMap_082
+InventoryItemSettings	AC75BA65	2893396581	TreasureMap_083
+InventoryItemSettings	AC75BA66	2893396582	TreasureMap_084
+InventoryItemSettings	AC75BA67	2893396583	TreasureMap_085
+InventoryItemSettings	AC75BA68	2893396584	TreasureMap_086
+InventoryItemSettings	AFD4F6F3	2949969651	ThrowingDagger
+InventoryItemSettings	AFD4F6F8	2949969656	SmokeBomb
+InventoryItemSettings	AFD4F6FD	2949969661	QuestItem
+InventoryItemSettings	B2186F0C	2987945740	BootsU1
+InventoryItemSettings	B2186F1D	2987945757	BootsU4
+InventoryItemSettings	B3DA8066	3017441382	TreasureChest_LGS02_01
+InventoryItemSettings	B3DA8067	3017441383	TreasureChest_LGS02_02
+InventoryItemSettings	B3DA8068	3017441384	TreasureChest_LGS02_03
+InventoryItemSettings	B3DA8069	3017441385	TreasureChest_LGS02_04
+InventoryItemSettings	B3DA806A	3017441386	TreasureChest_LGS02_05
+InventoryItemSettings	B3DA806B	3017441387	TreasureChest_LGS02_06
+InventoryItemSettings	B3DA806C	3017441388	TreasureChest_LGS02_07
+InventoryItemSettings	B3DA88CC	3017443532	TreasureChest_LGS03_01
+InventoryItemSettings	B3DA88CD	3017443533	TreasureChest_LGS03_02
+InventoryItemSettings	B3DA88CE	3017443534	TreasureChest_LGS03_03
+InventoryItemSettings	B3DA88CF	3017443535	TreasureChest_LGS03_04
+InventoryItemSettings	B3DA88D0	3017443536	TreasureChest_LGS03_05
+InventoryItemSettings	B3DA88D1	3017443537	TreasureChest_LGS03_06
+InventoryItemSettings	B3DA90E4	3017445604	TreasureChest_LGS04_01
+InventoryItemSettings	B3DA90E5	3017445605	TreasureChest_LGS04_02
+InventoryItemSettings	B3DA90E6	3017445606	TreasureChest_LGS04_03
+InventoryItemSettings	B3DA90E7	3017445607	TreasureChest_LGS04_04
+InventoryItemSettings	B3DA90E8	3017445608	TreasureChest_LGS04_05
+InventoryItemSettings	B3DA90FF	3017445631	TreasureChest_LGS05_01
+InventoryItemSettings	B3DA9100	3017445632	TreasureChest_LGS05_02
+InventoryItemSettings	B3DA9101	3017445633	TreasureChest_LGS05_03
+InventoryItemSettings	B3DA9102	3017445634	TreasureChest_LGS05_04
+InventoryItemSettings	B3DA9103	3017445635	TreasureChest_LGS05_05
+InventoryItemSettings	B3DA9104	3017445636	TreasureChest_LGS05_06
+InventoryItemSettings	B3DA94D9	3017446617	TreasureChest_LGS06_01
+InventoryItemSettings	B3DA94DA	3017446618	TreasureChest_LGS06_02
+InventoryItemSettings	B3DA94DB	3017446619	TreasureChest_LGS06_03
+InventoryItemSettings	B3DA94DC	3017446620	TreasureChest_LGS06_04
+InventoryItemSettings	B3DA94DD	3017446621	TreasureChest_LGS06_05
+InventoryItemSettings	B3DA94DE	3017446622	TreasureChest_LGS06_06
+InventoryItemSettings	B3DA9696	3017447062	TreasureChest_LGS07_01
+InventoryItemSettings	B3DA9697	3017447063	TreasureChest_LGS07_02
+InventoryItemSettings	B3DA9698	3017447064	TreasureChest_LGS07_03
+InventoryItemSettings	B3DA9699	3017447065	TreasureChest_LGS07_04
+InventoryItemSettings	B3DA969A	3017447066	TreasureChest_LGS07_05
+InventoryItemSettings	B3DA969B	3017447067	TreasureChest_LGS07_06
+InventoryItemSettings	B3DA9951	3017447761	TreasureChest_LGS08_01
+InventoryItemSettings	B3DA9952	3017447762	TreasureChest_LGS08_02
+InventoryItemSettings	B3DA9953	3017447763	TreasureChest_LGS08_03
+InventoryItemSettings	B3DA9954	3017447764	TreasureChest_LGS08_04
+InventoryItemSettings	B3DA9955	3017447765	TreasureChest_LGS08_05
+InventoryItemSettings	B3DA9956	3017447766	TreasureChest_LGS08_06
+InventoryItemSettings	B3DA9A24	3017447972	TreasureChest_LGS09_01
+InventoryItemSettings	B3DA9A25	3017447973	TreasureChest_LGS09_02
+InventoryItemSettings	B3DA9A26	3017447974	TreasureChest_LGS09_03
+InventoryItemSettings	B3DA9A27	3017447975	TreasureChest_LGS09_04
+InventoryItemSettings	B3DA9A28	3017447976	TreasureChest_LGS09_05
+InventoryItemSettings	B3DA9A29	3017447977	TreasureChest_LGS09_06
+InventoryItemSettings	B3DA9CC3	3017448643	TreasureChest_LGS10_01
+InventoryItemSettings	B3DA9CC4	3017448644	TreasureChest_LGS10_02
+InventoryItemSettings	B3DA9CC5	3017448645	TreasureChest_LGS10_03
+InventoryItemSettings	B3DA9CC6	3017448646	TreasureChest_LGS10_04
+InventoryItemSettings	B3DA9CC7	3017448647	TreasureChest_LGS10_05
+InventoryItemSettings	B3DA9CC8	3017448648	TreasureChest_LGS10_06
+InventoryItemSettings	B5399E4F	3040452175	TreasureChest_00
+InventoryItemSettings	B56553E8	3043316712	Colors_Verizon
+InventoryItemSettings	B565543C	3043316796	Cape_Colors_AssassinWhite
+InventoryItemSettings	B5655441	3043316801	Cape_Colors_Tuscan_Copper
+InventoryItemSettings	B5655446	3043316806	Cape_Colors_Florentine_Scarlet
+InventoryItemSettings	B565544B	3043316811	Cape_Colors_Venetian_Wine
+InventoryItemSettings	B5655450	3043316816	Cape_Colors_Tuscan_Emerald
+InventoryItemSettings	B5655455	3043316821	Cape_Color_Tuscan_Ochre
+InventoryItemSettings	B565545A	3043316826	Cape_Colors_Wetlands_Ivory
+InventoryItemSettings	B565545F	3043316831	Cape_Color_Florentine_Crimson
+InventoryItemSettings	B5655464	3043316836	Cape_Colors_Wetlands_Auburn
+InventoryItemSettings	B98787A0	3112667040	WM_Sword_BROOM_ForBart
+InventoryItemSettings	BC10F7E2	3155228642	DummyCMC10Item
+InventoryItemSettings	BF4D4478	3209512056	UI_GreyOutWeaponWheel_HiddenBlade
+InventoryItemSettings	C26AC12D	3261776173	Exotic_trophy_wing
+InventoryItemSettings	C26AC12E	3261776174	Exotic_trophy_tank
+InventoryItemSettings	C26AC12F	3261776175	Exotic_trophy_boat
+InventoryItemSettings	C26AC130	3261776176	Exotic_trophy_gun
+InventoryItemSettings	C285BC6B	3263544427	Vilain_Painting_ACR_Cesare
+InventoryItemSettings	C285BC7D	3263544445	Vilain_Painting_ACR_Juan
+InventoryItemSettings	C285BC84	3263544452	Vilain_Painting_ACR_Lucrezia
+InventoryItemSettings	C285BC8B	3263544459	Vilain_Painting_ACR_Micheleto
+InventoryItemSettings	C285BC92	3263544466	Vilain_Painting_ACR_Octavien
+InventoryItemSettings	C285BC99	3263544473	Vilain_Painting_ACR_Rodrigo
+InventoryItemSettings	C3C76292	3284624018	Bandage
+InventoryItemSettings	C5FE0EC9	3321761481	FightTutorial_GunSpecialAttack
+InventoryItemSettings	D76DE361	3614303073	WM_Prop_ButcherKnife
+InventoryItemSettings	D76DE362	3614303074	WM_Prop_FishingRod
+InventoryItemSettings	D76DE363	3614303075	WM_Prop_Hayfork
+InventoryItemSettings	D76DE364	3614303076	WM_Prop_Hoe
+InventoryItemSettings	D76DE365	3614303077	WM_Prop_Longhammer
+InventoryItemSettings	D76DE366	3614303078	WM_Prop_RichCane
+InventoryItemSettings	D76DE367	3614303079	WM_Prop_PickAxe
+InventoryItemSettings	D76DE368	3614303080	WM_Prop_Rake
+InventoryItemSettings	D76DE369	3614303081	WM_Prop_Shovel
+InventoryItemSettings	D7FE3BB9	3623762873	Crest_FactionAssassins
+InventoryItemSettings	D7FE3BBA	3623762874	Crest_FactionMercenaries
+InventoryItemSettings	D7FE3BBB	3623762875	Crest_FactionCourtesans
+InventoryItemSettings	D7FE3BBC	3623762876	Crest_FactionThieves
+InventoryItemSettings	DCA6EC22	3701926946	Borgia_Flag_082
+InventoryItemSettings	DD9F9BF8	3718224888	TreasureChest_111
+InventoryItemSettings	DD9F9BFE	3718224894	TreasureChest_106
+InventoryItemSettings	DD9F9C04	3718224900	TreasureChest_109
+InventoryItemSettings	DD9F9C0A	3718224906	TreasureChest_121
+InventoryItemSettings	DD9F9C10	3718224912	TreasureChest_118
+InventoryItemSettings	DD9F9C16	3718224918	TreasureChest_136
+InventoryItemSettings	DD9F9C1C	3718224924	TreasureChest_113
+InventoryItemSettings	DD9F9C22	3718224930	TreasureChest_117
+InventoryItemSettings	DD9F9C28	3718224936	TreasureChest_100
+InventoryItemSettings	DD9F9C2E	3718224942	TreasureChest_101
+InventoryItemSettings	DD9F9C34	3718224948	TreasureChest_128
+InventoryItemSettings	DD9F9C3A	3718224954	TreasureChest_103
+InventoryItemSettings	DD9F9C40	3718224960	TreasureChest_112
+InventoryItemSettings	DD9F9C46	3718224966	TreasureChest_108
+InventoryItemSettings	DD9F9C4C	3718224972	TreasureChest_105
+InventoryItemSettings	DD9F9C52	3718224978	TreasureChest_110
+InventoryItemSettings	DD9F9C58	3718224984	TreasureChest_102
+InventoryItemSettings	DD9F9C5E	3718224990	TreasureChest_116
+InventoryItemSettings	DD9F9C64	3718224996	TreasureChest_139
+InventoryItemSettings	DD9F9C6A	3718225002	TreasureChest_137
+InventoryItemSettings	DD9F9C70	3718225008	TreasureChest_134
+InventoryItemSettings	DD9F9C76	3718225014	TreasureChest_129
+InventoryItemSettings	DD9F9C7C	3718225020	TreasureChest_126
+InventoryItemSettings	DD9F9C82	3718225026	TreasureChest_131
+InventoryItemSettings	DD9F9C88	3718225032	TreasureChest_138
+InventoryItemSettings	DD9F9C8E	3718225038	TreasureChest_107
+InventoryItemSettings	DD9F9C94	3718225044	TreasureChest_130
+InventoryItemSettings	DD9F9C9A	3718225050	TreasureChest_141
+InventoryItemSettings	DD9F9CA0	3718225056	TreasureChest_135
+InventoryItemSettings	DD9F9CA6	3718225062	TreasureChest_132
+InventoryItemSettings	DD9F9CAC	3718225068	TreasureChest_123
+InventoryItemSettings	DD9F9CB2	3718225074	TreasureChest_114
+InventoryItemSettings	DD9F9CB8	3718225080	TreasureChest_120
+InventoryItemSettings	DD9F9CBE	3718225086	TreasureChest_124
+InventoryItemSettings	DD9F9CC4	3718225092	TreasureChest_119
+InventoryItemSettings	DD9F9CCA	3718225098	TreasureChest_115
+InventoryItemSettings	DD9F9CD0	3718225104	TreasureChest_133
+InventoryItemSettings	DD9F9CD6	3718225110	TreasureChest_127
+InventoryItemSettings	DD9F9CDC	3718225116	TreasureChest_125
+InventoryItemSettings	DD9F9CE2	3718225122	TreasureChest_122
+InventoryItemSettings	DD9F9CE8	3718225128	TreasureChest_140
+InventoryItemSettings	DD9F9CEE	3718225134	TreasureChest_104
+InventoryItemSettings	DD9F9CF4	3718225140	TreasureChest_143
+InventoryItemSettings	DD9F9CFA	3718225146	TreasureChest_142
+InventoryItemSettings	E0828D10	3766652176	Statue_Codex_01
+InventoryItemSettings	E0828D11	3766652177	Statue_Codex_02
+InventoryItemSettings	E0828D12	3766652178	Statue_Codex_03
+InventoryItemSettings	E0828D13	3766652179	Statue_Codex_04
+InventoryItemSettings	E0828D14	3766652180	Statue_Codex_05
+InventoryItemSettings	E0828D15	3766652181	Statue_Codex_06
+InventoryItemSettings	E0828D16	3766652182	Statue_Codex_07
+InventoryItemSettings	E0828D17	3766652183	Statue_Codex_08
+InventoryItemSettings	E5364F7A	3845541754	BorgiaTreasureMap_Downtown
+InventoryItemSettings	E5364F80	3845541760	BorgiaTreasureMap_Countryside
+InventoryItemSettings	E5364F86	3845541766	BorgiaTreasureMap_Antique
+InventoryItemSettings	E7004397	3875554199	FightTutorial_Brutes
+InventoryItemSettings	E7004398	3875554200	FightTutorial_Seekers
+InventoryItemSettings	E8E4D5D7	3907311063	EXO_04_Chest02
+InventoryItemSettings	E8E4D5DD	3907311069	EXO_04_Chest01
+InventoryItemSettings	E8E4DB4E	3907312462	EXO_03_Chest03
+InventoryItemSettings	E8E4DB54	3907312468	EXO_03_Chest02
+InventoryItemSettings	E8E4DB5A	3907312474	EXO_03_Chest01
+InventoryItemSettings	E8E4DB60	3907312480	EXO_02_Chest02
+InventoryItemSettings	E8E4DB66	3907312486	EXO_02_Chest01
+InventoryItemSettings	E8E4DB6C	3907312492	EXO_01_Chest01
+InventoryItemSettings	E8E4DB6D	3907312493	EXO_01_Chest02
+EntityBuilder	0242DAB3	37935795	CR_Vn_Gondolier_Cuir
+EntityBuilder	0B32C975	187877749	CR_U_CastelGuard01
+EntityBuilder	0B7A0F60	192548704	CR_S_Poor_f_A
+EntityBuilder	0B7A1E50	192552528	CR_S_Poor_m_A
+EntityBuilder	0B7A3A65	192559717	CR_Vn_Rich_f_A
+EntityBuilder	0F65946F	258315375	zCE_Seeker
+EntityBuilder	0F65A457	258319447	zCE_Brute
+EntityBuilder	0F65AC43	258321475	zCE_Agile
+EntityBuilder	10998BC0	278498240	_Ezio_FightClub
+EntityBuilder	1153DC6A	290708586	CR_S_Poor
+EntityBuilder	1153DF68	290709352	CR_Vn_Mid
+EntityBuilder	11E72FF1	300363761	CR_G_Harasser_FemalePoor
+EntityBuilder	12508482	307266690	CR_U_MP02_Harlequin
+EntityBuilder	195CD0F8	425513208	CR_S_Poor_f_C
+EntityBuilder	195CD996	425515414	CR_S_Poor_F_B
+EntityBuilder	195CDF7A	425516922	CR_S_Poor_m_C
+EntityBuilder	195CE53D	425518397	CR_S_Poor_M_B
+EntityBuilder	195CEF71	425521009	zCE_Soldier_RankB_Elite
+EntityBuilder	195CF19D	425521565	zCE_Soldier_RankA_Militian
+EntityBuilder	1AE723EC	451355628	CR_U_Minerva
+EntityBuilder	1B0CC054	453820500	zCC_Courtisan_f_A
+EntityBuilder	1C95F1E1	479588833	CU_Altair_Uplay_OverrideBuilder
+EntityBuilder	1F25417D	522535293	CR_U_Leonardo_BeatUp
+EntityBuilder	1FB24209	531776009	CR_U_Massimo
+EntityBuilder	1FB244A8	531776680	CR_U_Lucrezia_DLC
+EntityBuilder	2444C0BF	608485567	CR_E_Hermeticists
+EntityBuilder	2444C0F3	608485619	CR_U_Patrizio
+EntityBuilder	2444CFC2	608489410	CR_U_Duccio
+EntityBuilder	2444D247	608490055	CR_U_Servante01
+EntityBuilder	2444D291	608490129	CR_U_Messenger01
+EntityBuilder	2444D2B4	608490164	CR_U_Hermeticists01
+EntityBuilder	2444D2B9	608490169	CR_U_Hermeticists02
+EntityBuilder	284BC8B7	676055223	CR_Vn_Rich_m_A
+EntityBuilder	284BFA84	676067972	CR_C_Toy_MiddleClass_Cm_A
+EntityBuilder	2CD443C9	752108489	_Ezio_VrRoom
+EntityBuilder	2EEDA470	787326064	CR_G_FedayinTrainee_Male
+EntityBuilder	2EEDA762	787326818	CR_G_Vigilantes
+EntityBuilder	31B849C3	834161091	CR_Vn_Rich
+EntityBuilder	32526061	844259425	CR_C_Mid
+EntityBuilder	345983BE	878281662	CR_C_ToyMiddleClass_Cf_A
+EntityBuilder	3459A103	878289155	CR_Vn_StreetPerformer
+EntityBuilder	373075A1	925922721	CR_E_Borgia_Leader
+EntityBuilder	38786A88	947415688	zCT_Thief_m_A_BouleRouge
+EntityBuilder	39ED6BAD	971860909	CR_G_Messenger
+EntityBuilder	39ED6E51	971861585	CR_G_Harasser
+EntityBuilder	3D0EC461	1024377953	CR_F_Mid_f_A
+EntityBuilder	3D0EC66B	1024378475	CR_F_Mid_F_B
+EntityBuilder	3F855F28	1065705256	CR_F_Rich_f_A
+EntityBuilder	451CF91E	1159526686	CR_F_Mid
+EntityBuilder	49EBA026	1240178726	CR_G_FedayinTraine_Female
+EntityBuilder	49EBBE75	1240186485	CR_Horse_Armor
+EntityBuilder	4C6D9062	1282248802	_Ezio_ACR_ChristinaMissions_AC2Visual_CMB02
+EntityBuilder	4DC4E78E	1304749966	zCZ_Horses
+EntityBuilder	4F948035	1335132213	_Ezio_Ultimate_NoHood
+EntityBuilder	4F94AD75	1335143797	CR_E_Gunman
+EntityBuilder	4F94B1E8	1335144936	CR_E_SwissGuard
+EntityBuilder	50BD434B	1354580811	CR_F_Merchants_m_A
+EntityBuilder	50BD4553	1354581331	CR_F_Merchants_M_B
+EntityBuilder	50BD4DEC	1354583532	CR_Vn_Mid_M_B
+EntityBuilder	50BD5C5B	1354587227	CR_C_Farmer_f_A
+EntityBuilder	50BD5DF4	1354587636	CR_C_Farmer_F_B
+EntityBuilder	50BD674D	1354590029	CR_C_Farmer_m_A
+EntityBuilder	50BD692C	1354590508	CR_C_Farmer_M_B
+EntityBuilder	50DEED53	1356787027	CR_U_Leonardo
+EntityBuilder	530C0AFF	1393298175	CR_F_Merchants
+EntityBuilder	530C1C46	1393302598	CR_U_Vieri_de_Pazzi 
+EntityBuilder	530C1EFB	1393303291	CR_U_Frederico_Auditore
+EntityBuilder	530C1FA2	1393303458	CR_U_Giovanni_Auditore
+EntityBuilder	530C1FE4	1393303524	CR_U_Petruccio_Auditore
+EntityBuilder	580C8742	1477216066	CR_C_Farmer
+EntityBuilder	5FAAAA55	1605020245	_Ezio_Borgia_Leader
+EntityBuilder	6196730B	1637249803	CR_U_Copernic
+EntityBuilder	6196789C	1637251228	CR_Ar_Pagans_Male
+EntityBuilder	619678A5	1637251237	CR_Ar_Pagans_Female
+EntityBuilder	61967AE7	1637251815	 _Ezio_Bandage
+EntityBuilder	61967BAD	1637252013	CR_Horse_Rouncey
+EntityBuilder	643735D5	1681339861	CR_F_Rich_m_A
+EntityBuilder	64373864	1681340516	_Ezio_Florentin
+EntityBuilder	6751F3A2	1733424034	_Ezio_Rome_NPC
+EntityBuilder	685A0473	1750729843	CR_F_Mid_m_A
+EntityBuilder	6B57AE08	1800908296	CR_U_Manfredo
+EntityBuilder	6E7BC25F	1853604447	_Ezio_RaidenSuit_ALL_VR_Missions
+EntityBuilder	758FF837	1972369463	CR_G_Herald
+EntityBuilder	7BBE6222	2076074530	CR_F_Rich
+EntityBuilder	7D16BD0E	2098642190	CR_Vn_Mid_m_A
+EntityBuilder	7D75CA3B	2104871483	CR_U_Juno
+EntityBuilder	7D75CF06	2104872710	CR_U_Machiavelli_AC2
+EntityBuilder	7D75EA9B	2104879771	_Ezio_Ultimate_2_HelmschmiedDrachenArmor_EXCpreorder
+EntityBuilder	8916DED9	2299977433	CR_G_Mercenary_asGuards
+EntityBuilder	8916DEF5	2299977461	CR_U_Subject16
+EntityBuilder	8916E342	2299978562	CR_U_TheMaster
+EntityBuilder	8916F8E1	2299984097	CR_U_Legionnaire_Longyus
+EntityBuilder	8916F8FE	2299984126	CR_U_Marie_Madelene
+EntityBuilder	8916FAD7	2299984599	CR_U_PrimusJudeus
+EntityBuilder	8916FAF0	2299984624	CR_U_SecondusJudeus
+EntityBuilder	8916FB05	2299984645	CR_U_TertiusJudeus
+EntityBuilder	8916FB1A	2299984666	CR_U_QuatrusJudeus
+EntityBuilder	8916FB30	2299984688	CR_U_Cayphas
+EntityBuilder	8916FB60	2299984736	CR_U_Joseph
+EntityBuilder	8916FB78	2299984760	CR_U_Nicodemus
+EntityBuilder	8916FB99	2299984793	CR_U_Pilate
+EntityBuilder	8916FBB8	2299984824	CR_U_Posseidon
+EntityBuilder	8916FDA4	2299985316	CR_U_CrossDude_A
+EntityBuilder	895B855E	2304476510	CR_G_Ufficiali
+EntityBuilder	895B863F	2304476735	CR_G_Pickpocketeer
+EntityBuilder	895B88A6	2304477350	CR_F_Officer_m
+EntityBuilder	895B9037	2304479287	CR_F_Cardinal_m
+EntityBuilder	8D040233	2365850163	CR_U_Lucy
+EntityBuilder	8D040A2B	2365852203	CR_U_Claudia_Auditore
+EntityBuilder	8D041185	2365854085	CR_Vt_Cardinal
+EntityBuilder	924B4CF3	2454408435	CR_G_Thief_m_A_FollowMission
+EntityBuilder	927544FF	2457158911	CR_Vn_Labautta
+EntityBuilder	9285E913	2458249491	CR_U_Fabio_Orsini
+EntityBuilder	9285F31D	2458252061	CR_U_Jesus_Civillian
+EntityBuilder	9285FFB0	2458255280	CR_U_Senator_Francesco
+EntityBuilder	94828AEB	2491583211	zV_Builder_Wm_A
+EntityBuilder	95AAF424	2511008804	CR_R_Monk_m_A_Light
+EntityBuilder	965DBC31	2522725425	CR_E_EXO_Architects
+EntityBuilder	98970B21	2560035617	zCF_Pilgrims
+EntityBuilder	98973659	2560046681	CR_U_Pazzi_Team
+EntityBuilder	9BF5E341	2616582977	CR_Vn_Mid_f_A
+EntityBuilder	A08E21CE	2693669326	zCV_Rich_m_A_Carnaval
+EntityBuilder	A08E24D9	2693670105	CV_Rich_f_A_Carnaval
+EntityBuilder	A0DF9163	2699006307	zCC_Courtisan_f_A_Carnaval
+EntityBuilder	A0DF9816	2699008022	zCC_Courtisan_f_A_Masked
+EntityBuilder	A1539B63	2706611043	CR_EXO_Horse
+EntityBuilder	A3B52D7A	2746559866	_Ezio_Ultimate_1_BrutusArmor_All_LGS
+EntityBuilder	A6D5AF00	2799021824	CR_Horse
+EntityBuilder	A6D5B0B9	2799022265	CR_U_ZioMario
+EntityBuilder	A957A47C	2841093244	CR_G_FakeFedayin_
+EntityBuilder	A957ABEB	2841095147	CR_G_Bandit_m_A
+EntityBuilder	AAEB40CD	2867544269	CR_U_CrossDude_B
+EntityBuilder	AAEB47C0	2867546048	CR_U_FakeCristina
+EntityBuilder	AAEB61ED	2867552749	CR_U_Claudia_Auditore_Assassin
+EntityBuilder	AB71C4F7	2876359927	_Ezio_Rome_Spain-E01-E02-E03
+EntityBuilder	AB71FF37	2876374839	_Ezio_ACR_ChristinaMissions_AC2Visual_CMB03
+EntityBuilder	ADBC4033	2914795571	_Ezio_ACR_ChristinaMissions_AC2Visual_CMB04
+EntityBuilder	AF26F9AC	2938567084	zCV_Sailor_m_A
+EntityBuilder	B77E0AB2	3078490802	CR_U_Cesare_Borgia
+EntityBuilder	B894D30B	3096761099	CR_U_Rodrigo_Pope
+EntityBuilder	B894D705	3096762117	CR_U_Caterina_Sforza
+EntityBuilder	B894E6EF	3096766191	CR_U_Maria_Auditore
+EntityBuilder	B987BAE7	3112680167	_Ezio_Ultimate_NoHood_NPC
+EntityBuilder	BB60ADE9	3143675369	CR_F_Rich_f_A_NoAI
+EntityBuilder	BB60ADF1	3143675377	CR_F_Rich_m_A_NoAI
+EntityBuilder	BB60AEE7	3143675623	CR_F_Rich_NoAI
+EntityBuilder	BCFC5886	3170654342	zCF_Monk_m_A
+EntityBuilder	C49881FC	3298329084	CR_U_Legionnaire_Ezio
+EntityBuilder	C4988231	3298329137	CR_U_Legionnaire_Michelotto
+EntityBuilder	C498AB38	3298339640	CR_U_Cesare_Borgia_ArmorStrip
+EntityBuilder	C498B165	3298341221	CR_U_Claudio
+EntityBuilder	C498B3E0	3298341856	CR_U_Kid_MissionGiver
+EntityBuilder	C498BE6A	3298344554	CR_G_Bankers
+EntityBuilder	C5BD716E	3317526894	CR_R_Cardinal_Light
+EntityBuilder	C6E7C63A	3337078330	CR_U_Cristina
+EntityBuilder	C6E7DC1E	3337083934	_Ezio_Civil
+EntityBuilder	C6E7DD7E	3337084286	_Ezio_Nude
+EntityBuilder	C6E7E25A	3337085530	CR_U_Caterina_Jail
+EntityBuilder	C6E7FB3B	3337091899	CR_E_Crossbowman
+EntityBuilder	C9C9A25E	3385434718	CR_E_EXO_Crossbowman
+EntityBuilder	C9DC8B22	3386673954	CR_E_Soldier_RankA_Militian_AC2Version
+EntityBuilder	C9DC8B33	3386673971	CR_E_Soldier_RankB_Elite_AC2Version
+EntityBuilder	C9DC8B64	3386674020	CR_E_Soldier_Horseman
+EntityBuilder	C9DC8C90	3386674320	CR_U_Lucrezia
+EntityBuilder	C9DC8DD2	3386674642	CR_U_Desmond
+EntityBuilder	C9DC8E01	3386674689	CR_U_Rebecca
+EntityBuilder	C9DC8E68	3386674792	CR_U_Shaun_Hastings
+EntityBuilder	C9DC8EDC	3386674908	CR_U_Gilberto_LaVolpe
+EntityBuilder	C9DC8FDA	3386675162	CR_U_Machiavelli_Rome
+EntityBuilder	C9DC9093	3386675347	CR_U_Bartolomeo
+EntityBuilder	C9DC9192	3386675602	CR_U_JuanBorgia
+EntityBuilder	C9DC91D1	3386675665	CR_U_Michelotto
+EntityBuilder	C9DC927C	3386675836	CR_U_Octavien
+EntityBuilder	C9DC930B	3386675979	CR_U_Jesus
+EntityBuilder	C9DC9663	3386676835	CR_E_Seeker_AC2Visual
+EntityBuilder	C9DC98DC	3386677468	CR_E_Brute_AC2version
+EntityBuilder	C9DC9AD9	3386677977	CR_E_Agile_AC2Version
+EntityBuilder	C9DC9B96	3386678166	CR_U_MP25_Smuggler
+EntityBuilder	C9DC9BA5	3386678181	CR_U_MP20_Captain
+EntityBuilder	C9DC9BB4	3386678196	CR_U_MP17_Executioner
+EntityBuilder	C9DC9BC3	3386678211	CR_U_MP24_Blacksmith
+EntityBuilder	C9DC9BD2	3386678226	CR_U_MP23_Footpad
+EntityBuilder	C9DC9BE1	3386678241	CR_U_MP07_Priest
+EntityBuilder	C9DC9BF0	3386678256	CR_U_MP05_Doctor
+EntityBuilder	C9DC9BFF	3386678271	CR_U_MP18_Engineer
+EntityBuilder	C9DC9C0E	3386678286	CR_U_MP08_Noble
+EntityBuilder	CF2FB9FB	3476011515	_Ezio_AC2
+EntityBuilder	D2CF266F	3536791151	CR_U_Desmond_Uplay_OverrideBuilder
+EntityBuilder	D2CF26EB	3536791275	_Ezio_Ultimate_NoHood_UPLAY_OverrideBuilder
+EntityBuilder	D2CF275F	3536791391	CU_EzioFlorentin_Uplay_OverrideBuilder
+EntityBuilder	D4890346	3565749062	CR_E_Brute
+EntityBuilder	D48918C4	3565754564	CR_E_Agile
+EntityBuilder	D48918CD	3565754573	CR_E_Militia
+EntityBuilder	D48918D4	3565754580	CR_E_Leader
+EntityBuilder	D48918F4	3565754612	CR_E_Seeker
+EntityBuilder	DDAC564B	3719059019	CR_U_Legionnaire
+EntityBuilder	DDAC60AC	3719061676	CR_U_JuanBorgia_Nude
+EntityBuilder	DE27066C	3727099500	_Ezio_Civil_NPC
+EntityBuilder	DE8A6074	3733610612	CR_U_Senator_Edigo
+EntityBuilder	DED1050D	3738240269	CR_G_Doctor_A
+EntityBuilder	DED1055C	3738240348	CR_G_Thief_m_A
+EntityBuilder	DED105B5	3738240437	CR_G_Mercenary_A
+EntityBuilder	DED106C2	3738240706	CR_G_Courtisan_f_A
+EntityBuilder	DED107AF	3738240943	CR_G_Architects
+EntityBuilder	DED1080D	3738241037	CR_R_Monk_m_A
+EntityBuilder	DED1081A	3738241050	CR_G_Wolfmen
+EntityBuilder	E0A51E0D	3768917517	_Ezio_Rome
+EntityBuilder	E24EEBE8	3796823016	CR_G_Mercenary_A_MercVisual_GuardAI
+EntityBuilder	E58AAF2B	3851071275	CR_F_Mid_NoFat
+EntityBuilder	E58AAF31	3851071281	CR_S_Poor_NoFat
+EntityBuilder	E7009B64	3875576676	CR_U_Courtisan_f_A_Giuletta
+EntityBuilder	E7C48F54	3888418644	CR_U_Pantasilea_Orsini
+EntityBuilder	E9A6503C	3919990844	CR_U_Salai
+EntityBuilder	EA3A5DE4	3929693668	_Ezio_Ultimate_NoHood_ForCMB05
+World	03DC4A14	64768532	LGS309_OldStPeter
+World	06DD055D	115148125	LGS307_Aqueducts
+World	0B3EEECE	188673742	LGS305_Coliseum
+World	1333E0F7	322167031	TitleScreen
+World	32E21E58	853679704	WhiteRoom
+World	3BACF54E	1001190734	ACR_Villa_Past
+World	50F3DAA5	1358158501	ACR_AnimusTutorial
+World	66F14C5B	1727089755	ACR_Venezia
+World	6F56AAF6	1867950838	ACR_Firenze
+World	8DAC4763	2376877923	ACR_Spain
+World	93148067	2467594343	ACR_Villa_Present
+World	967BF325	2524705573	EXO_01_MachineGun
+World	9726D9E2	2535905762	ACR_VR_Room
+World	9BCBCDBF	2613824959	LGS312_Catacombs
+World	9FFC415E	2684109150	LGS310_Coliseum2012
+World	A10FCE9F	2702167711	LGS301_Auditore_Crypt
+World	A58636F2	2777036530	LGS311_Belriguardo
+World	A99E5463	2845725795	LGS302_Catacombs
+World	AE195C93	2920897683	EXO_04_Tank
+World	AE196591	2920899985	EXO_03_LeoBomber
+World	AE196EAB	2920902315	EXO_02_NavalCannon
+World	CBEA56D8	3421132504	LGS306_CloacaMaxima
+World	E204BB9B	3791960987	ACR_Rome
+World	E4C05C07	3837811719	LGS304_TrajanMarket
+World	E7C23921	3888265505	LGS308_LateranPalace
+World	E7DA92CC	3889861324	LGS303_Baths_Of_Trajan
