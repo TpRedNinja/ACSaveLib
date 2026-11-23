@@ -955,6 +955,7 @@ Property_0x5D9984AF
 Property_0x2FD9481C
 Property_0x93E7E001
 Property_0xDD74D4AC
+Property_0xBDE923E9
 
 # Rogue fleet missions and rewards (shown in ACViewer, confirmed)
 OwnerProfileId
@@ -972,3 +973,7 @@ TimeUnlocked
 # Rogue PlayerProgSaveData supply camps (SupplyCampSaveData is shown in ACViewer, confirmed; Camp is a one word CRC32 match whose 64-bit value fits a camp handle, not seen in a viewer)
 SupplyCampSaveData
 Camp
+
+# Rogue game save (shown in ACViewer, confirmed: the class of each supply camp entry and the PoppedEvents string in EventsSaveData)
+SupplyCampSaveDataItem
+PoppedEvents
