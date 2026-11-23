@@ -21,8 +21,8 @@ Same property stream as `FIELDS_AC3.md`; the Remastered saves contain every unna
 ## Header (container 0)
 - `C0/Property_0x319E33D3` is the wide string the save slot list shows as the save's name (`"100%"` in the 100% save, `"Test..."` in `4.save`); `C0/SaveGameName` is 0 in every save. In `ACIII.exe` the `SaveGame` class registers it at object offset +80 and `SaveGameName` at +56, and the slot UI shows the +80 string when it is not empty. [likely]
 - `ACIII.exe` registers `C0/TimePlayed` at +64, `PlayerGlobalSynch` at +68 and `SaveGameDate` at +72 of the `SaveGame` class, and the slot UI shows those three values. [likely]
-- `C0/DLCPackagesBits` = 678 in `100% AC3`, `2`, `1 mission done`, `4` and the profile save; 4 in `3.save`, which also has only 3 narrative groups. [confirmed value, meaning unknown]
-- `3.save` is a Tyranny of King Washington save (the owner's reading: its `NarrativeMissionHistory` holds the DLC group). [likely]
+- `C0/DLCPackagesBits` = 678 in every save checked, including `3.save`. [confirmed value, meaning unknown]
+- `3.save` is a Tyranny of King Washington save (the owner's reading: its `NarrativeMissionHistory` holds a fourth group, `Group` 14226381405 with missions 26011386201 and 17743176200, that the other saves lack). [likely]
 
 ## Unnamed keys
 - `ac3r <file> unknown` lists them: 0 to 1 in game saves, 12 in the slot -1 profile save (the 12 fields under `C2/3e2c66d9` and `C2/5586b7fe`).
