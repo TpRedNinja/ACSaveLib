@@ -2,10 +2,6 @@
 
 Same property stream as `FIELDS_AC3.md`; the Remastered saves contain every unnamed key of the original saves plus extra ones.
 
-## Header (container 0)
-- `C0/319e33d3` is a string holding the save label (`"100%"` in the 100% save), 0 otherwise. [likely]
-- `C0/DLCPackagesBits` = 678 in the 100% save. [confirmed value, meaning unknown]
-
 ## Names
 - ACViewer shows these names for keys that were unnamed hashes; each name's CRC32 equals the hash. [confirmed]
   - Profile save: `OnlineProfileSaveData` (`e1dee2e4`), `UplayULCRewards` (`5909456b`), `UplayWelcomeDone` (`1f2cb876`), `UplayWelcomeBackDone` (`14c1a643`), `OnlineCoreProfileSaveData` (`926723b3`), `EventSaveData` (`7107fa9a`), `EventSessions` (`2177fc62`), `LeaderboardsSaveData` (`4f44d65e`), `Statistics` (`ad8e88f2`), `Ranks` (`0a278f10`), `DisplaySubtitlesBackground` (`bef5e00a`), `UPlayNeverShowAgain` (`19e095df`).
@@ -23,8 +19,10 @@ Same property stream as `FIELDS_AC3.md`; the Remastered saves contain every unna
 - Types ACViewer shows for some of them: `3f207d6d` Bool, `e077a7e3` an enum of type 0x6D7F8969 (value 2: 0x706646B4), `b1ac89b6` U32, `4c54a5b3` and `c6ef608c` Language enums, `e1cfaaa2`, `d8429667`, `cf398224`, `10804df5`, `07fb59b6`, `449a84d3`, `83353401` Bool, `ddaffa5b` and `4b821c37` U32, `d8c65114` a U32 array of 29 values (256000 to 780800), `ca2549e9` Float 800, `e1f4e00b` Float 120, `d3222401` Bool; the header `319e33d3` is an LString. [confirmed]
 
 ## Header (container 0)
-- `C0/319e33d3` is an LString holding the save label (`"100%"` in the 100% save), empty in the profile save. [likely]
-- `C0/DLCPackagesBits` = 678 in the 100% save and in the profile save shown by ACViewer. [confirmed value, meaning unknown]
+- `C0/Property_0x319E33D3` is the wide string the save slot list shows as the save's name (`"100%"` in the 100% save, `"Test..."` in `4.save`); `C0/SaveGameName` is 0 in every save. In `ACIII.exe` the `SaveGame` class registers it at object offset +80 and `SaveGameName` at +56, and the slot UI shows the +80 string when it is not empty. [likely]
+- `ACIII.exe` registers `C0/TimePlayed` at +64, `PlayerGlobalSynch` at +68 and `SaveGameDate` at +72 of the `SaveGame` class, and the slot UI shows those three values. [likely]
+- `C0/DLCPackagesBits` = 678 in `100% AC3`, `2`, `1 mission done`, `4` and the profile save; 4 in `3.save`, which also has only 3 narrative groups. [confirmed value, meaning unknown]
+- `3.save` is a Tyranny of King Washington save (the owner's reading: its `NarrativeMissionHistory` holds the DLC group). [likely]
 
 ## Unnamed keys
 - `ac3r <file> unknown` lists them: 0 to 1 in game saves, 12 in the slot -1 profile save (the 12 fields under `C2/3e2c66d9` and `C2/5586b7fe`).
