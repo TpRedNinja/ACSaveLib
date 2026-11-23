@@ -43,4 +43,4 @@ container 0 (header) | 16 byte gap | container 1 | [gap | container 2 | gap | co
 ## Names
 - Names come from `Names/names.txt`. Most keys already resolved through the Brotherhood and Revelations names.
 - Names for the ship, shop and fog-map keys are CRC32 matches of word combinations, each at a matching spot, not seen in a viewer [likely]: `ShipListSave`, `ShipSaveData`, `ShipTypeSave`, `ShipName`, `ShipContext`, `UsedSave`, `RouteSave`, `PendingEventsSave`, `Price`, `BuyPrice`, `PriceMultiplier`, `Quantity`, `Locked`, `HolsterLevel`, `HatLevel`, `Width`, `Height`, `HuntingData`, `DiscoveredAnimals`, `UplayActions`, `LastNewsSeen`.
-- Open: about 50 unnamed keys in the game save and 73 in OPTIONS (`acl <file> unknown`).
+- Open: 48 unnamed keys in the game save and 73 in OPTIONS (`acl <file> unknown`).

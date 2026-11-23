@@ -689,3 +689,21 @@ ShipSaveData
 ShipTypeSave
 PendingEventsSave
 LastNewsSeen
+
+# AC3 original (CRC32 dictionary matches of word combinations; not seen in a viewer)
+AnimalID
+BlueprintsDateNumber
+ConvoyType
+CurrentHealth
+CurrentPlayerPortal
+IsLocked
+LocationIndex
+New
+NewItemsUnlocked
+NewSkillsUnlocked
+PlayedCollectiblesGlyph
+RankIndex
+RegionID
+SkillPoints
+Status
+Type

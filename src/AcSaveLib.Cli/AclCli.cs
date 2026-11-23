@@ -11,7 +11,12 @@ public static class AclCli
 {
     public static int Run(string[] args)
     {
-        var save = AclSaveFile.Load(args[1]);
+        return RunSave(AclSaveFile.Load(args[1]), args);
+    }
+
+    /// <summary>Runs a verb on an already parsed file (also used by the AC3 verb, whose saves share this layout).</summary>
+    public static int RunSave(AclSaveFile save, string[] args)
+    {
         switch (args[2])
         {
             case "summary":

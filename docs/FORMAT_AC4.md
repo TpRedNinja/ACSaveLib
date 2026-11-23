@@ -7,6 +7,7 @@ CONFIRMED against ACViewer values on wr.save and Sequence 3/4/5/7 saves unless m
 2. From byte 552 the body is XORed with a repeating 16-byte key aligned to the END of the file:
    key index = (i - fileLength) mod 16. Recover the key from known plaintext at 552..567:
    `23 00 00 00 | ac db fe 00 | 00 x8` (version 35, magic 0x00FEDBAC).
+   The key differs between sources and is the same for every file of one source [confirmed on 22 saves]: `286bc6e76300fdcce230cf9c16c09ccc` for all 8 files of the Sequences 3-4-5-7 pack (a download, saves made 2020 to 2022), `d47e42f8ec980980e904b2008fd98c1d` for 5 saves from 2023 to 2024, `6517526d1d99a1e700388757a6aae6c7` for the saves used with the library (some converted to it). A game key per account or storefront is likely, not one constant for the game. [likely]
 3. Decrypted body is chunked LZO1x. Container: signature `33 AA FB 57 99 FA 04 10` | u32 1 | `80 00 00` |
    repeated { `01` | u32 compSize | u32 uncompSize | u32 checksum (algorithm unknown, ignored) | LZO data }.
    - Container 1 at offset 576: one 246-byte block = header properties (Version, MagicNumber, SaveGameID, TimePlayed, ...).

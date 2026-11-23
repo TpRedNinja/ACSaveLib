@@ -6,6 +6,7 @@ Reverse-engineer every AC save format, knowing ALL fields, then expose them thro
 you continue it and extend it to other games.
 
 ## Rules from the owner
+- Never hard-code an encryption key for any game. Assume the key that decrypts a save differs for every user (and possibly every storefront) and always recover it at runtime: from known plaintext, or from a user-supplied value such as the legacy username or account id. A key may be fixed in code only when the owner says it is the same across saves of different users, and he has confirmed it on a save from another storefront as well.
 - Guess-and-verify is fine: treat a guess as right until something contradicts it, then re-evaluate. But label it GUESS in notes until verified.
 - Brute force until exhausted. Use every save you have, not just one.
 - Do NOT use the "current mission" approach (inferring progress from runtime memory) - this library reads the save file.
