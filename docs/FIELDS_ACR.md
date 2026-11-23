@@ -11,7 +11,7 @@ Layout, encryption and containers are in `FORMAT_ACR.md`. The reader is `Games/A
 - Not seen in a viewer yet: no Revelations field is confirmed against the game.
 
 ## Open
-- About 60-80 unnamed keys per save (`acr <file> unknown`).
+- Unnamed keys (`acr <file> unknown`): 0 in the two game saves, 48 in the options save.
 - Meaning of containers 2 and 3 in game saves (roots `0x409E7FAE`, `0x3EBD922B`).
 - Options save containers 3-5 (roots `0xC9876D66`, `0xB4B55039`, `0xDBEB7469`) are unnamed.
 - Typed models for Revelations-only structures (bombs, crafting, Den defence, Penrose, dice game).
