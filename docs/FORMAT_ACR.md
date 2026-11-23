@@ -27,9 +27,10 @@ The container and LZO2A codec are shared with Brotherhood (`ChunkContainer`, `Lz
 - The ACST save tool (https://github.com/linuslin0/ACST, readme only) lists Revelations with ID type "Account (legacy) username", entered in lowercase. The key `amsirrahrats` is 12 lowercase letters, so it is likely that username (or its reverse, `starharrisma`) [likely]. ACViewer opening the saves with it would confirm.
 
 ## Names
-- 20 names are exact CRC32 matches of strings in `ACRSP.exe`; further names come from CRC32 matches of up to two words built from exe-derived words (`Names/names.txt`, section "Revelations").
-- Three-word matches are mostly chance (about 300 expected for 193 keys), so only those that form a series or fit the structure are used: `Char01Unlocked` to `Char04Unlocked` [likely], `CurrentDLCMask`, `AlreadyEarnedRewards`, `TotalMoneyLost` [guess].
-- Not confirmed in a viewer.
+- ACViewer opens the saves with the key `amsirrahrats` and shows property names. Names read from its screenshots of the options save and the main game container, then matched to the stored CRC32 keys, are confirmed: `Char01Unlocked` to `Char04Unlocked`, `Tutorials`, `SaveGameDetails`, `SaveGameSubtitle`, `ExtraSaveData1`, `ExtraSaveData2`, `CityEventSaveData`, `BombCraftingSaveData`, `DiceGameSaveGameData`, `PenroseSaveGameData`, the `Stereoscopy*` options, `AddC01Unlocked` to `AddC06Unlocked`, `MultiBonus01Unlocked` to `MultiBonus03Unlocked`, `MultiEmblemsUnlocked`, `SingleBonus01Unlocked`, `BonusEntityBuilderSkinsUnlocked`, `MedicineUpgradeUnlocked`, `BrotherhoodWeaponsUnlocked`, `SpecialMissionUnlocked`, `MultiplayerPackUnlocked`.
+- 20 names are exact CRC32 matches of strings in `ACRSP.exe`; more came from two-word matches of exe-derived words (`Names/names.txt`, "Revelations" section). Those not seen in ACViewer are [likely].
+- Three-word CRC matches are mostly chance (about 300 expected for 193 keys); `CurrentDLCMask`, `AlreadyEarnedRewards`, `TotalMoneyLost` are [guess].
+- The ACViewer options screenshot shows `InvertCannonHorizontalOnlyCa...` and `InvertCannonVerticalOnlyCame...` (cut off); the full names are not yet matched.
 
 ## Game code (`ACRSP.exe`)
 | VA | What |
