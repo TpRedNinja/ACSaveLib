@@ -734,5 +734,42 @@ BAMManagerSaveData
 DisplaySubtitlesBackground
 UPlayNeverShowAgain
 
+# AC3 Remastered (names shown by ACViewer, second batch)
+DummyPacking
+ConvoyTravelInfoSaveData
+ConvoyTravelDataSaveDataList
+ConvoyTravelState
+RemainingSecondsBeforeConvoyComplete
+TravelTimerRemainingTime
+DisasterDelay
+WillDisasterOccur
+DeliverySlipsSaveData
+MerchantID
+AccountingBookItemSlotSaveData
+UIItemCategory
+ArtisanDataSaveData
+UsageCounter
+UsageCoolDownTimerRemainingTime
+HarvesterDataSaveData
+ProductionTimerRemainingTime
+StockpileInventoryOldItems
+PlayerInventoryOldItems
+BAMAssignmentSaveData
+RemainingTime
+AssignmentStatus
+Assignment
+KnownInvalidRecipe
+Snares
+SavedFogData
+NumUnfoggedPixels
+PlayerProfileSaveData
+HeroStatsSaveData
+CommunityHeroStatsSaveData
+OnlineCoreGameSaveData
+ItemLockSaveData
+ItemLockSaveDataEntries
+StatsMenuComparePrincipalID
+Season
+
 # AC3 Remastered (CRC32 dictionary match of two words next to the viewer-named LeaderboardsSaveData Ranks; not seen in a viewer)
 FriendRanks
