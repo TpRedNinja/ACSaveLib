@@ -21,8 +21,8 @@ Owner handle: TpRedNinja (do not use a real name anywhere, including credits and
 - Do not "fix" the game's own spellings (property, class or mission names).
 
 ## Layout
-- `src/AcSaveLib/` library: `Crypto`, `Compression`, `Container`, `Names`, `Stream` (AC4 property stream), `Games/Ac4`, `Games/Ac1`, `Games/Ac2`, `Games/Acb`
-- `src/AcSaveLib.Cli/` CLI: `ac4 <file> summary|missions|tree|models|unknown|named`, `ac1 <file> summary|roundtrip|models|object|unknown`, `ac2 <file> summary|models|missions|tree|raw|unknown`, `acb <file> summary|models|missions|accomplishments|trainees|tree|flat|unknown|named`, `crc <name>`
+- `src/AcSaveLib/` library: `Crypto`, `Compression`, `Container`, `Names`, `Stream` (AC4 property stream), `Games/Ac4`, `Games/Ac1`, `Games/Ac2`, `Games/Acb`, `Games/Acr`
+- `src/AcSaveLib.Cli/` CLI: `ac4 <file> summary|missions|tree|models|unknown|named`, `ac1 <file> summary|roundtrip|models|object|unknown`, `ac2 <file> summary|models|missions|tree|raw|unknown`, `acb <file> summary|models|missions|accomplishments|trainees|tree|flat|unknown|named`, `acr <file> summary|models|tree|flat|unknown`, `crc <name>`
 - `docs/`: `AGENT_GUIDE.md` (rules and how names were found), `ARCHITECTURE.md`, `BUILDING.md`, `ADDING_A_GAME.md`, `GAMES.md` (game list and status), `FORMAT_*.md`, `FIELDS_*.md`
 - `tools/`: reference scripts (`ac4save_reference.py`, `acb_reference.py`, `ac1_sav_full.py`, `brute.c`)
 
@@ -52,5 +52,5 @@ A Python script is allowed for a first pass at decryption, decompression or the 
 - AC1: byte-exact parse/write, mission states, accomplishments (44 achievements), collectibles with flag IDs, names resolved except 3 hashes. Open: Templars-killed index list, meaning of `IsCompleted` vs mission state, configs 0/2/3/4/5 titles. See `docs/FIELDS_AC1.md`.
 - AC2: plain file, same CRC32-keyed property stream as AC4 (read-only). Mission history, collectible counters and gained item IDs, accomplishments, money. Stats, villa, animus and PSP names are confirmed in ACViewer. Options/profile names confirmed. Open: ID meaning tables, TimePlayed unit, header id, meaning of sync 0 entries. See `docs/FIELDS_AC2.md`.
 - ACB Brotherhood: no encryption, LZO2A chunked containers (same layout as AC4), AC2-style property stream. C# reader `Games/Acb` (read-only) with typed models for every field; output identical to the earlier Python dump on 6 saves and 1 options file. All keys named by `names.txt` except 8 in game saves (and 11 in the options file); ID tables in `docs/tables/`; trainee names resolve through `Names/LocalizationPackage` (the owner's LocalizationPackage_English.xml, loaded at runtime, not in the repo). Open: meaning of the 8 unnamed keys, Step and ContractAssignment handles. See `docs/FORMAT_ACB.md`, `docs/FIELDS_ACB.md`.
-- ACR Revelations: options save is plain (same container as ACB); game saves are encrypted with an unidentified scheme. See `docs/FORMAT_ACR.md`.
+- ACR Revelations: C# reader `Games/Acr` (read-only). Game saves are XORed from 0x228 with the repeating 12 byte key `amsirrahrats` aligned to the end of the file; the options save is plain. Container layout is Brotherhood's; the game data reuses the Brotherhood models plus many unnamed keys. See `docs/FORMAT_ACR.md`.
 - Other games: not started (see `docs/GAMES.md`; mainline only, list can grow).

@@ -1,5 +1,5 @@
 # ACR (Assassin's Creed Revelations, PC) .save format
-The container and LZO2A codec are shared with Brotherhood (`ChunkContainer`, `Lzo2a`); the plain options save decodes with that codec. The C# library has no Revelations game reader yet. Findings below come from 3 saves and from `ACRSP.exe` in IDA (imagebase `0x400000`; `sub_...` are IDA's automatic names, nothing is renamed in the IDB).
+The container and LZO2A codec are shared with Brotherhood (`ChunkContainer`, `Lzo2a`); the plain options save decodes with that codec. Reader: `Games/Acr/AcrSaveFile.cs` (C#, read-only), CLI verb `acr`; it reuses the Brotherhood models (`AcbGameData`). Findings below come from 3 saves and from `ACRSP.exe` in IDA (imagebase `0x400000`; `sub_...` are IDA's automatic names, nothing is renamed in the IDB).
 
 ## Header
 - Same header as the AC2 Steam saves: u32 `0x224` (header length) | u32 `0` | 32 character ASCII id at `0x08` | UTF-16 title from `0x28` | zero padding up to `0x228` (see `FORMAT_AC2.md`).
@@ -11,9 +11,17 @@ The container and LZO2A codec are shared with Brotherhood (`ChunkContainer`, `Lz
 - The first block starts with the same bytes as Brotherhood's options save (`06 00 e1 00 52 3b be bd ...`) but is shorter (161 bytes compressed instead of 165).
 
 ## Encrypted saves
-- The two larger saves (game saves, slots 0 and 1) are enciphered from `0x228`.
-- The AC4 scheme (repeating 16 byte key aligned to the end of the file, recovered from the known plaintext at `+0` and `+16`) does not fit: the key bytes recovered from `+0` (`61 6d 73 69 72 72 61 68` in one save) differ from those recovered from `+16` (`72 72 61 68 72 61 74 73`).
-- GUESS: the key is not a plain repeating 16 byte key. Not solved.
+- The two game saves (slots 0 and 1) are enciphered from `0x228` to the end of the file with a repeating 12 byte XOR key, the ASCII text `amsirrahrats`. The key is aligned to the end of the file: byte `i` uses `Key[(i - fileLength + 1) mod 12]`, so the last byte of the file uses `Key[0]`. CONFIRMED: after this every block of both game saves decodes with LZO2A and consumes exactly its stated size. The options save (`1.save`) is not enciphered.
+- How the key was found: the plaintext at `0x228` is `16 00 00 00 ac db fe 00` and the container signature follows 16 bytes later, so the key stream is known at offsets 0..7, 16..23 and 24..30. The two saves have different file lengths and give the same key text at different rotations, which fixes the period (12) and the end alignment.
+- The key text was not found as a plain string in `ACRSP.exe` (searched `amsirrahrats` and its reverse). The decrypt call is below the save loader (`sub_463B50` reads from a storage object through a vtable), not located in IDA.
+- The AC4 scheme (16 byte key) does not apply.
+
+## Containers
+- Game saves hold 4 containers: the header container (root `0xBDBE3B52`, SaveGame, 283 to 292 bytes) and three game data containers with roots `0x94D6F8F1`, `0x409E7FAE` and `0x3EBD922B`. All three have the same 29 top-level items as each other. Container 1 (`0x94D6F8F1`) is the main game; in the saves seen, container 2 holds a second world with 5 missions in one save and is a 7136 byte default in the other, and container 3 is always the 7136 byte default [meaning of containers 2 and 3 not known].
+- Between containers there is the 16 byte gap of Brotherhood (u32 length, u32 `1`, u32 `0x00CAFE00`, u32 size).
+- The options save has five containers (283, 1689, 162, 9268, 68 bytes) with roots `0xBDBE3B52`, `0x305AE1A8` (AssassinGlobalProfileData), `0xC9876D66`, `0xB4B55039` and `0xDBEB7469`.
+- Container 1 has the Brotherhood items (missions, stats, trainees, progression, villa, world upgrade) with the same names, plus unnamed keys. Header TimePlayed equals GameStatsSaveData TimePlayed (50395 in the long save).
+- Key `27831dd4` (top level of the main game container) is a UTF-16 text, the save slot description: `SYNCHRONIZATION (%): 65.21`, `TIME PLAYED: 13:59:55`, `DISTANCE COVERED (m): 116238` on separate lines [likely: save slot text; values match the stats].
 
 ## Game code (`ACRSP.exe`)
 | VA | What |

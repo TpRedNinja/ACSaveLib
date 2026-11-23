@@ -84,34 +84,14 @@ namespace AcSaveLib.Games.Acb
             var g = new Props(Root);
             var opt = g.Get("PlayerOptionsSaveData");
             if (opt != null) Options = AcbOptions.From(opt);
-            HasGameData = g.Get("NarrativeMissionHistory") != null;
+            var d = AcbGameData.From(Root);
+            HasGameData = d.HasGameData;
             if (!HasGameData) return;
-            Narrative = AcbMissionHistory.From(g.Obj("NarrativeMissionHistory"));
-            Side = AcbMissionHistory.From(g.Obj("SideMissionHistory"));
-            World = g.U64("World");
-            PlayerPortal = g.U64("PlayerPortal");
-            Psp = AcbPspState.From(g.Obj("PSPState"));
-            PspSnapshot = AcbPspState.From(g.Obj("SnapshotPSPState"));
-            foreach (var e in g.Obj("AnimusDatabaseData").Elements("ADBEntries"))
-                AnimusEntries.Add(new AcbAnimusEntry
-                {
-                    EntryFoundOrderNumber = e.U32("EntryFoundOrderNumber"), GlyphFoundOrderNumber = e.U32("GlyphFoundOrderNumber"),
-                    AfsDisplayedCount = e.U32("AFSDisplayedCount"), IsLgsSolved = e.Bool("IsLGSSolved"),
-                });
-            UiTutorial = AcbUiTutorial.From(g.Obj("UITutorialData"));
-            Emails = AcbEmails.From(g.Obj("PresentEmailsData"));
-            foreach (var e in g.Obj("AccomplishmentManagerData").Elements("AccomplishmentEntries"))
-                Accomplishments.Add(new AcbAccomplishment { ObjectId = e.U32("ObjectID"), Inactive = e.Bool("Inactive"), Completed = e.Bool("Completed"), CurrentCount = e.U32("CurrentCount") });
-            GameStats = AcbGameStats.From(g.Obj("GameStatsSaveData"));
-            TraineesGuild = AcbTraineesGuild.From(g.Obj("TraineesGuildManagerSaveData"));
-            Facebook = AcbFacebookData.From(g.Obj("FacebookSaveGameData"));
-            Progression = AcbPlayerProgression.From(g.Obj("PlayerProgSaveData"));
-            ProgressionSnapshot = AcbPlayerProgression.From(g.Obj("SnapshotPlayerProgSaveData"));
-            ProgressionDelta = AcbProgressionDelta.From(g.Obj("SnapshotPlayerProgressionDelta"));
-            Villa = AcbVilla.From(g.Obj("VillaSaveData"));
-            VillaSnapshot = AcbVilla.From(g.Obj("SnapshotVillaSaveData"));
-            WorldUpgrade = AcbWorldUpgrade.From(g.Obj("WorldUpgradeSaveData"));
-            WorldUpgradeSnapshot = AcbWorldUpgrade.From(g.Obj("SnapshotWorldUpgradeSaveData"));
+            Narrative = d.Narrative; Side = d.Side; World = d.World; PlayerPortal = d.PlayerPortal;
+            Psp = d.Psp; PspSnapshot = d.PspSnapshot; AnimusEntries = d.AnimusEntries; UiTutorial = d.UiTutorial; Emails = d.Emails;
+            Accomplishments = d.Accomplishments; GameStats = d.GameStats; TraineesGuild = d.TraineesGuild; Facebook = d.Facebook;
+            Progression = d.Progression; ProgressionSnapshot = d.ProgressionSnapshot; ProgressionDelta = d.ProgressionDelta;
+            Villa = d.Villa; VillaSnapshot = d.VillaSnapshot; WorldUpgrade = d.WorldUpgrade; WorldUpgradeSnapshot = d.WorldUpgradeSnapshot;
         }
     }
 }
