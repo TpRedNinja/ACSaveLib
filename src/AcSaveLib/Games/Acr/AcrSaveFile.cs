@@ -31,9 +31,9 @@ namespace AcSaveLib.Games.Acr
         /// <summary>Offset where the container stream (and the cipher) starts.</summary>
         public const int StreamStart = 0x228;
         public const uint FileMagic = 0x00FEDBAC;
-        /// <summary>Longest cipher period the key recovery tries (the key is the owner's legacy username, so its length varies).</summary>
-        public const int MaxRecoveredPeriod = 12;
-        /// <summary>Known plaintext at the start of the stream: u32 22, magic 0x00FEDBAC, and (at +16) the container signature.</summary>
+        /// <summary>Longest cipher period the key recovery tries (the key is the player's legacy username, 3 to 15 characters, so its length varies; no input is needed to find it).</summary>
+        public const int MaxRecoveredPeriod = 16;
+        /// <summary>Known plaintext at the start of the stream: u32 22, magic 0x00FEDBAC, and (at +16) the container signature, the codec bytes `01 00 02 00 80 00 00` and the first block marker `01`: 24 bytes, which fix every key column for periods up to 16.</summary>
         private static readonly (int Offset, byte Value)[] KnownPlain = BuildKnownPlain();
 
         public uint HeaderLength { get; private set; }
@@ -137,6 +137,8 @@ namespace AcSaveLib.Games.Acr
             for (int i = 0; i < head.Length; i++) l.Add((i, head[i]));
             byte[] sig = { 0x33, 0xAA, 0xFB, 0x57, 0x99, 0xFA, 0x04, 0x10 };
             for (int i = 0; i < sig.Length; i++) l.Add((16 + i, sig[i]));
+            byte[] codec = { 0x01, 0x00, 0x02, 0x00, 0x80, 0x00, 0x00, 0x01 };
+            for (int i = 0; i < codec.Length; i++) l.Add((24 + i, codec[i]));
             return l.ToArray();
         }
 
@@ -160,7 +162,7 @@ namespace AcSaveLib.Games.Acr
                 }
                 catch (Exception) { /* wrong period */ }
             }
-            throw new InvalidDataException("Could not recover the key; pass the owner's legacy username.");
+            throw new InvalidDataException("Could not recover the key from the known plaintext: not a Revelations save, or a layout this reader does not know.");
         }
 
         private static List<Node> ParseContainer(byte[] c)
