@@ -658,3 +658,12 @@ GainedDenWorldUpgradeSettings
 # Revelations (CRC32 matches of strings in ACRSP.exe; not seen in a viewer)
 InvertCannonHorizontalOnlyCameraControls
 InvertCannonVerticalOnlyCameraControls
+# Revelations (CRC32 dictionary matches of word combinations; not seen in a viewer)
+AbilityProfileData
+ActiveAbilityID
+NameCustomized
+HudShowLogs
+HudShowMessages
+HudShowTips
+NewsID
+StereoscopyIntensity
