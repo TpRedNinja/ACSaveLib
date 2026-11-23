@@ -783,5 +783,8 @@ HasRecentlyBeenUnlocked
 ConvoyTravelDataSaveData
 DeliverySlipSaveData
 
+# AC3 Remastered (name shown by ACViewer, fourth batch)
+HuntingContextSaveDataItem
+
 # AC3 Remastered (CRC32 dictionary match of two words next to the viewer-named LeaderboardsSaveData Ranks; not seen in a viewer)
 FriendRanks
