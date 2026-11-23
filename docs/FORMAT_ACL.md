@@ -1,4 +1,6 @@
-# ACL (Assassin's Creed Liberation HD, PC) save format
+# ACL / ACLR (Assassin's Creed Liberation, PC) save format
+
+- The saves this was decoded from are Liberation Remastered saves. Original Liberation HD saves were not available, and are assumed to use the same format. [likely]
 Reader: `Games/Acl/AclSaveFile.cs` (C#, read-only; containers and raw property items only, no typed models), CLI verb `acl`. CONFIRMED on the two files in the game's `SAVES` folder: every block decodes to its stated size and every item parses (one new-game save, `ASSASSINSCREEDLIBERATIONSAVEGAME0.SAV`, and `OPTIONS`). ACViewer does not detect these files, so nothing here is checked against a viewer.
 
 No encryption. Little-endian. Compressed with LZO1x (codec id 0, the AC4 codec), not LZO2A. The container and file framing look like Brotherhood's (`FORMAT_ACB.md`).
