@@ -15,7 +15,7 @@ namespace AcSaveLib.Games.Ac2
     /// <summary>GameStatsSaveData. Names confirmed in ACViewer; units are not confirmed.</summary>
     public sealed class Ac2GameStats
     {
-        public uint TimePlayed { get; init; }
+        public uint StatsTimePlayed { get; init; }
         public uint TotalTimeBlended { get; init; }
         public uint DeathOccurrences { get; init; }
         public uint Kills { get; init; }
@@ -40,7 +40,7 @@ namespace AcSaveLib.Games.Ac2
 
         public static Ac2GameStats From(Props p) => new Ac2GameStats
         {
-            TimePlayed = p.U32("TimePlayed"), TotalTimeBlended = p.U32("TotalTimeBlended"), DeathOccurrences = p.U32("DeathOccurrences"),
+            StatsTimePlayed = p.U32("TimePlayed"), TotalTimeBlended = p.U32("TotalTimeBlended"), DeathOccurrences = p.U32("DeathOccurrences"),
             Kills = p.U32("Kills"), HiddenBladeAssassinations = p.U32("HiddenBladeAssassinations"), AirAssassinations = p.U32("AirAssassinations"),
             DoubleAirAssassinations = p.U32("DoubleAirAssassinations"), Disarms = p.U32("Disarms"), TotalMoneyEarned = p.U32("TotalMoneyEarned"),
             TotalMoneySpent = p.U32("TotalMoneySpent"), NotoriousOccurrences = p.U32("NotoriousOccurrences"), BorgiaCourrierKills = p.U32("BorgiaCourrierKills"),
