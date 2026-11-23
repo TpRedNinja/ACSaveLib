@@ -655,3 +655,6 @@ MultiItemInventoryContainer
 # Revelations (seen in ACViewer: element class and snapshot delta list)
 InventoryItemRechargeableContainerPair
 GainedDenWorldUpgradeSettings
+# Revelations (CRC32 matches of strings in ACRSP.exe; not seen in a viewer)
+InvertCannonHorizontalOnlyCameraControls
+InvertCannonVerticalOnlyCameraControls
