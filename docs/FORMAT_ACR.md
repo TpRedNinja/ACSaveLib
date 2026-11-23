@@ -38,7 +38,8 @@ The container and LZO2A codec are shared with Brotherhood (`ChunkContainer`, `Lz
 - Also confirmed from ACViewer: `DiceGameSaveGameData` (`GameHasBeenPlayedBefore`, `TotalMoneyWon`, `TotalMoneyLost`) and `PenroseSaveGameData` (`MissionsCompletedInPenroseSingle`, a U64 bit set; 38463 in the long save).
 - Also confirmed from ACViewer: `BombCasingSettings`, `BombExplosiveSettings`, `BombEffectSettings` (in `Bomb`), `AssassinSelectedEquipment` and `Count` (in `BombContainer`), `Containers` (in an `InventoryContainerList` entry), `NeedToBeBurned` (in `BuildingsRules`), `CurrentRunSucceeded` (in `MissionConstraintSaveData`).
 - Array elements are wrapped in an object whose key is the element class name. CRC32 matches of exact names, each at a matching spot, not seen in a viewer [likely]: `NationalitySaveData`, `TraineeDenMissionPairSaveData`, `ContractLocationSaveData`, `BuildingRuleSaveData`, `ContractAssignmentSaveData`.
-- Unnamed in the long game save: `34c96559` (wrapper object inside each `InventoryContainerList` entry, holds `Containers`), `3bb4b58b` (element wrapper inside `Containers`), `0f304d50` (empty packed array in `SnapshotPlayerProgressionDelta`).
+- Also confirmed from ACViewer: `InventoryItemRechargeableContainerPair` (class of each `Containers` element, with `Item` and `Container`), `GainedDenWorldUpgradeSettings` (the empty handle list in `SnapshotPlayerProgressionDelta`).
+- Unnamed in the long game save: `34c96559` (wrapper object inside each `InventoryContainerList` entry, holds `Containers`; the entry's class name is not shown in the viewer).
 - The ACViewer options screenshot shows `InvertCannonHorizontalOnlyCa...` and `InvertCannonVerticalOnlyCame...` (cut off); the full names are not yet matched.
 
 ## Game code (`ACRSP.exe`)
