@@ -3,7 +3,7 @@
 | # | Short | Game | Status | Unnamed keys |
 |---|---|---|---|---|
 | 1 | AC1 | Assassin's Creed | DONE: parse/write byte-exact, mission states, accomplishments, collectibles (see FIELDS_AC1.md) | 3 hashes |
-| 2 | AC2 | Assassin's Creed II | DONE: parse done on 33 saves (0 unparsed items, read-only); mission history, collectibles, accomplishments, money (see FORMAT_AC2.md, FIELDS_AC2.md) | not counted |
+| 2 | AC2 | Assassin's Creed II | DONE: parse done on 33 saves (0 unparsed items, read-only); mission history, collectibles, accomplishments, money (see FORMAT_AC2.md, FIELDS_AC2.md) | 0 (in the 7 saves checked) |
 | 3 | ACB | Assassin's Creed Brotherhood | DONE: read-only C# reader (container, LZO2A, property stream, typed models) verified on 6 saves and 1 options file (see FORMAT_ACB.md, FIELDS_ACB.md) | 8 (game saves), 5 (options) |
 | 4 | ACR | Assassin's Creed Revelations | DONE: C# reader decrypts and parses game and options saves (`Games/Acr`), see FORMAT_ACR.md | 0 (game saves), 48 (options) |
 | 5 | AC3 | Assassin's Creed III (original, PC) | DONE: C# reader decrypts (16 byte XOR) and parses eight internet saves with the Liberation stream (`Games/Ac3`, read-only), see FORMAT_AC3.md | 37 to 51 |
