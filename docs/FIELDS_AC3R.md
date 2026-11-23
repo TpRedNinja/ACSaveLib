@@ -18,6 +18,8 @@ Same property stream as `FIELDS_AC3.md`; the Remastered saves contain every unna
 - ACViewer shows the other keys as `Property_0x<hash>`, so it has no name for them either. [confirmed]
 - ACViewer shows `3fb06ac1` (in `MissionStepSaveData[n]`, after `Succeeded`) as a U32; it is 0 in every save. [confirmed]
 - Keys ACViewer shows as `Property_0x<HASH>` are named exactly that in `names.txt` (the viewer has no name for them either): `3f207d6d`, `e077a7e3`, `b1ac89b6`, `4c54a5b3`, `c6ef608c`, `e1cfaaa2`, `d8429667`, `cf398224`, `10804df5`, `07fb59b6`, `449a84d3`, `83353401`, `ddaffa5b`, `4b821c37`, `d8c65114`, `ca2549e9`, `e1f4e00b`, `d3222401`, `319e33d3`, `07722acd`, `54d92ff4`, `3fb06ac1`. [confirmed]
+- CRC32 equals a string in `ACIII.exe` (not seen in a viewer): `SinglePlayerOptionsSaveData` (`3e2c66d9`, `C2` of the profile save), `AnimusDataCachingSaveData` (`5586b7fe`, `C2` of the profile save), `RatonDLCEpisodeSaveData` (`b4d5f6fc`, class of the entries of `C2/5251e5ea` in `1 mission done`). [likely]
+- `EpisodeID` (`fcf44de9`, U32, field of `RatonDLCEpisodeSaveData`) is a one word CRC32 match. [likely]
 - Types ACViewer shows for some of them: `3f207d6d` Bool, `e077a7e3` an enum of type 0x6D7F8969 (value 2: 0x706646B4), `b1ac89b6` U32, `4c54a5b3` and `c6ef608c` Language enums, `e1cfaaa2`, `d8429667`, `cf398224`, `10804df5`, `07fb59b6`, `449a84d3`, `83353401` Bool, `ddaffa5b` and `4b821c37` U32, `d8c65114` a U32 array of 29 values (256000 to 780800), `ca2549e9` Float 800, `e1f4e00b` Float 120, `d3222401` Bool; the header `319e33d3` is an LString. [confirmed]
 
 ## Header (container 0)
@@ -25,5 +27,5 @@ Same property stream as `FIELDS_AC3.md`; the Remastered saves contain every unna
 - `C0/DLCPackagesBits` = 678 in the 100% save and in the profile save shown by ACViewer. [confirmed value, meaning unknown]
 
 ## Unnamed keys
-- `ac3r <file> unknown` lists them: 0 to 3 in game saves, 14 in the slot -1 profile save (all under `C2`: the objects `3e2c66d9` and `5586b7fe` and their 12 fields).
+- `ac3r <file> unknown` lists them: 0 to 1 in game saves, 12 in the slot -1 profile save (the 12 fields under `C2/3e2c66d9` and `C2/5586b7fe`).
 - Every key still unnamed in the original saves is also present in the Remastered saves.

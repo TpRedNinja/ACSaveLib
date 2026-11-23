@@ -843,5 +843,11 @@ MPHuntingMemento05Unlocked
 MPHuntingMemento06Unlocked
 MPHuntingMemento07Unlocked
 
+# AC3 Remastered (CRC32 match to a string in ACIII.exe, EpisodeID a one word CRC32 match; not seen in a viewer)
+SinglePlayerOptionsSaveData
+AnimusDataCachingSaveData
+RatonDLCEpisodeSaveData
+EpisodeID
+
 # AC3 Remastered (CRC32 dictionary match of two words next to the viewer-named LeaderboardsSaveData Ranks; not seen in a viewer)
 FriendRanks
