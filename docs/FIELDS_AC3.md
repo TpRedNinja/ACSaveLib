@@ -9,7 +9,7 @@ Layout, keys and containers are in `FORMAT_AC3.md`. The reader is `Games/Ac3` (r
 - The Snapshot* items repeat their counterpart. [guess: a copy taken at the last checkpoint]
 
 ## Open
-- Unnamed keys: 51 in `1.save` to `3.save` and `Save002.sav`, 37 in `Save003.sav`.
+- Unnamed keys: 37 in `Save003.sav`, 44 to 51 in the other files.
 - Typed models, ID tables for missions, worlds and accomplishments (no forge index files for AC3 were provided).
 - Meaning of PlayerGlobalSynch 100 together with the 100% claim of the packs, of TimePlayed's unit, of the gap values and markers, and of the third container of `Save003.sav`.
 - Which DLC episodes each `.sav` contains (DLCPackagesBits 686 in both).

@@ -8,7 +8,7 @@ public static class Ac3Cli
     public static int Run(string[] args)
     {
         var save = Ac3SaveFile.Load(args[1]);
-        if (args[2] == "summary") Console.WriteLine($"title=\"{save.Title}\"");
+        if (args[2] == "summary") Console.WriteLine($"header=0x{save.HeaderLength:X} title=\"{save.Title}\" id={save.HeaderId}");
         return AclCli.RunSave(save.Stream, args);
     }
 }
