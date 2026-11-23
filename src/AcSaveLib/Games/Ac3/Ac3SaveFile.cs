@@ -7,7 +7,7 @@ using AcSaveLib.Games.Acl;
 namespace AcSaveLib.Games.Ac3
 {
     /// <summary>
-    /// Assassin's Creed III (original, PC) saves. Layout is documented in docs/FORMAT_AC3.md.
+    /// Assassin's Creed III (original, PC) and Assassin's Creed III Remastered saves (same layout; the Remastered title starts with "AC3RM["). Layout is documented in docs/FORMAT_AC3.md.
     /// The file holds a Liberation-style stream (u32 33, u32 0x00FEDBAC, ... LZO1x containers) XORed with a 16 byte key anchored to the end of the file.
     /// The key differs between sources (accounts or storefronts), so it is recovered from the known plaintext at the start of the stream.
     /// Header 0x204: u32 0x204, u32 0, UTF-16 title from 0x08, stream from 0x208.
@@ -22,6 +22,8 @@ namespace AcSaveLib.Games.Ac3
         /// <summary>Header length of the file (0x204 or 0x224), 0 for the headerless variant.</summary>
         public int HeaderLength { get; private set; }
         public string Title { get; private set; } = "";
+        /// <summary>True when the title marks an AC3 Remastered save ("AC3RM[slot]-tm_...").</summary>
+        public bool IsRemastered => Title.StartsWith("AC3RM[", StringComparison.Ordinal);
         /// <summary>The 32 character id of header 0x224, empty otherwise.</summary>
         public string HeaderId { get; private set; } = "";
         /// <summary>The 16 byte XOR key, index = (i - fileLength) mod 16.</summary>

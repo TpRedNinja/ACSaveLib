@@ -16,6 +16,6 @@ Top-level items, in order: ContextID, NarrativeMissionHistory, SideMissionHistor
 - Containers 2 and 3 have the roots `0xC9876D66` and `0xB4B55039` with unnamed keys only. Container 2 holds a raw item `d1c146c0` of 29 bytes inside `5586b7fe`.
 
 ## Open
-- Unnamed keys: 50 in the game save, 73 in OPTIONS.
+- Unnamed keys: 38 in the game save, 61 in OPTIONS.
 - Typed models, ID tables for World and mission handles (no forge index files for Liberation were provided).
 - Whether the second ship object is a snapshot.
