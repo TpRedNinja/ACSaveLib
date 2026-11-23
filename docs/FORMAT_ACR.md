@@ -24,12 +24,14 @@ The container and LZO2A codec are shared with Brotherhood (`ChunkContainer`, `Lz
 - Key `27831dd4` (top level of the main game container) is a UTF-16 text, the save slot description: `SYNCHRONIZATION (%): 65.21`, `TIME PLAYED: 13:59:55`, `DISTANCE COVERED (m): 116238` on separate lines [likely: save slot text; values match the stats].
 
 ## Key origin
-- The ACST save tool (https://github.com/linuslin0/ACST, readme only) lists Revelations with ID type "Account (legacy) username", entered in lowercase. The key `amsirrahrats` is 12 lowercase letters, so it is likely that username (or its reverse, `starharrisma`) [likely]. ACViewer opening the saves with it would confirm.
+- ACViewer decrypts the saves with the legacy username `starharrisma` (confirmed). The ACST save tool (https://github.com/linuslin0/ACST, readme only) lists Revelations with ID type "Account (legacy) username", entered in lowercase.
+- The key in the code (`amsirrahrats`) is that username reversed, because it is applied aligned to the end of the file.
 
 ## Names
 - ACViewer opens the saves with the key `amsirrahrats` and shows property names. Names read from its screenshots of the options save and the main game container, then matched to the stored CRC32 keys, are confirmed: `Char01Unlocked` to `Char04Unlocked`, `Tutorials`, `SaveGameDetails`, `SaveGameSubtitle`, `ExtraSaveData1`, `ExtraSaveData2`, `CityEventSaveData`, `BombCraftingSaveData`, `DiceGameSaveGameData`, `PenroseSaveGameData`, the `Stereoscopy*` options, `AddC01Unlocked` to `AddC06Unlocked`, `MultiBonus01Unlocked` to `MultiBonus03Unlocked`, `MultiEmblemsUnlocked`, `SingleBonus01Unlocked`, `BonusEntityBuilderSkinsUnlocked`, `MedicineUpgradeUnlocked`, `BrotherhoodWeaponsUnlocked`, `SpecialMissionUnlocked`, `MultiplayerPackUnlocked`.
 - 20 names are exact CRC32 matches of strings in `ACRSP.exe`; more came from two-word matches of exe-derived words (`Names/names.txt`, "Revelations" section). Those not seen in ACViewer are [likely].
 - Three-word CRC matches are mostly chance (about 300 expected for 193 keys); `CurrentDLCMask`, `AlreadyEarnedRewards`, `TotalMoneyLost` are [guess].
+- Also confirmed from ACViewer: `Weights` (CityEventSaveData, 27 values), the BombCraftingSaveData counters (`CasingCraftedCounter`, `EffectCraftedCounter`, `EffectUsedCounter`, `CraftedAllCasingsCounter`, `CraftedAllEffectsCounter`, `UsedAllEffectsCounter`, `UsedBombCounter`, `GuardVictimCounter`, `GuardTrappedCounter`, `TrackingCummulativeBombsCrafted`), `DenDefenseGameCounter`, `DenDefenseScenarioIndex`, `DenDefenseCurrentLoadout`, `BombContainers`, `DenDefenceChance`.
 - The ACViewer options screenshot shows `InvertCannonHorizontalOnlyCa...` and `InvertCannonVerticalOnlyCame...` (cut off); the full names are not yet matched.
 
 ## Game code (`ACRSP.exe`)

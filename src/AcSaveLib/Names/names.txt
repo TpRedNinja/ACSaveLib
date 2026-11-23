@@ -580,3 +580,20 @@ AddC06Unlocked
 MultiBonus01Unlocked
 MultiBonus02Unlocked
 MultiBonus03Unlocked
+# Revelations, confirmed in ACViewer (main game container screenshots)
+Weights
+TrackingCummulativeBombsCrafted
+CasingCraftedCounter
+EffectCraftedCounter
+EffectUsedCounter
+CraftedAllCasingsCounter
+CraftedAllEffectsCounter
+UsedAllEffectsCounter
+UsedBombCounter
+GuardVictimCounter
+GuardTrappedCounter
+DenDefenseGameCounter
+DenDefenseScenarioIndex
+DenDefenseCurrentLoadout
+BombContainers
+DenDefenceChance
