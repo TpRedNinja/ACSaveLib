@@ -36,7 +36,7 @@ container 0 (header) | 16 byte gap | container 1 | [gap | container 2 | gap | co
 
 ## Property stream
 - A decoded container starts with 14 zero bytes, then the root key (u32), two u32 sizes, and the items from offset 26. Brotherhood has 10 zero bytes and the items from offset 22.
-- Item framing is the AC2 one (`FORMAT_AC2.md`, `FORMAT_PROPERTY_STREAM.md`): `u32 L | key | ext | 00 00 | type u16 | 0b | value`, CRC32 property names. `PropertyReader` parses every container of both files without leftovers except one raw item (see `FIELDS_ACL.md`).
+- Item framing is the AC2 one (`FORMAT_AC2.md`, `FORMAT_PROPERTY_STREAM.md`): `u32 L | key | ext | 00 00 | type u16 | 0b | value`, CRC32 property names. `PropertyReader` parses every container of both files without leftovers; each file has one raw item (see `FIELDS_ACL.md`).
 - Root keys: container 0 `0xBDBE3B52` (SaveGame); game save container 1 `0x94D6F8F1` (the main stream root of AC4 and Brotherhood). OPTIONS containers 1 to 3: `0x305AE1A8`, `0xC9876D66`, `0xB4B55039` (the last two are the roots Brotherhood and Revelations options files also have).
 - Header properties in order: Version (33), MagicNumber (`0x00FEDBAC`), DLCPackagesBits, CodeChangelist (3638899), SaveGameID, IsOptions, SaveGameName ("Aveline" in the game save, "Options" in OPTIONS), TimePlayed, PlayerGlobalSynch, SaveGameDate (Unix seconds), `d413aa09` (627070 in the game save, 0 in OPTIONS). There is no CurrentWorld or CurrentMission in the header.
 
