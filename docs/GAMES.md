@@ -7,7 +7,7 @@
 | 3 | ACB | Assassin's Creed Brotherhood | DONE: read-only C# reader (container, LZO2A, property stream, typed models) verified on 6 saves and 1 options file (see FORMAT_ACB.md, FIELDS_ACB.md) | 8 (game saves), 5 (options) |
 | 4 | ACR | Assassin's Creed Revelations | DONE: C# reader decrypts and parses game and options saves (`Games/Acr`), see FORMAT_ACR.md | 0 (game saves), 48 (options) |
 | 5 | AC3 | Assassin's Creed III (original, PC) | DONE: C# reader decrypts (16 byte XOR) and parses eight internet saves with the Liberation stream (`Games/Ac3`, read-only), see FORMAT_AC3.md | 26 to 48 |
-| 6 | AC3R | Assassin's Creed III Remastered | DONE: the AC3 reader decrypts and parses six saves (same layout, 0x224 header, 16 byte XOR), `ac3r` CLI alias, see FORMAT_AC3R.md | 7 to 15 (game), 64 (profile) |
+| 6 | AC3R | Assassin's Creed III Remastered | DONE: the AC3 reader decrypts and parses six saves (same layout, 0x224 header, 16 byte XOR), `ac3r` CLI alias, see FORMAT_AC3R.md | 2 to 5 (game), 64 (profile) |
 | 7 | ACL | Assassin's Creed Liberation (original, HD on PC) | DONE: C# reader decodes containers (LZO1x) and parses the property stream of one game save and the OPTIONS file (`Games/Acl`, read-only, no typed models); not detected by ACViewer (see FORMAT_ACL.md, FIELDS_ACL.md) | 38 (game save), 61 (OPTIONS) |
 | 8 | ACLR | Assassin's Creed Liberation Remastered (saves share the format of AC3R, to be verified) | not started | - |
 | 9 | AC4 | Assassin's Creed IV Black Flag | DONE: decrypt/decompress/parse done; all known fields have typed models (see FIELDS_AC4.md) | 0 (in the 3 saves checked) |

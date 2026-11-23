@@ -771,5 +771,17 @@ ItemLockSaveDataEntries
 StatsMenuComparePrincipalID
 Season
 
+# AC3 Remastered (names shown by ACViewer, third batch)
+StockpileProgressionCharacterData
+TraineeProgressionCharacterData
+TraineeAttributesBuilderData
+TraineeType
+CovertEscortLevel
+RemainingUnavailableTime
+HasRecentlyLeveledUp
+HasRecentlyBeenUnlocked
+ConvoyTravelDataSaveData
+DeliverySlipSaveData
+
 # AC3 Remastered (CRC32 dictionary match of two words next to the viewer-named LeaderboardsSaveData Ranks; not seen in a viewer)
 FriendRanks
