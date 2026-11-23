@@ -15,9 +15,10 @@ Mainline games in release order. Short name, full name, then progress.
 | AC2 | Assassin's Creed II | no encryption | no compression | done (same CRC32-keyed stream as AC4, read-only) | mission history, collectible counters and item IDs, accomplishments, money; see docs/FIELDS_AC2.md |
 | ACB | Assassin's Creed Brotherhood | no encryption | LZO2A | done (AC2-style items, read-only) | missions, accomplishments, stats, trainees and contracts, player progression, economy; see docs/FIELDS_ACB.md |
 | ACR | Assassin's Creed Revelations | options save plain, game saves XOR with a per-user repeating key | LZO2A (same container as ACB) | read-only reader (`acr` CLI) | see docs/FORMAT_ACR.md |
-| AC3 | Assassin's Creed III Remastered | - | - | - | not started |
+| AC3 | Assassin's Creed III (original, PC) | XOR, 16 byte key anchored to the file end | LZO1x (Liberation stream) | read-only reader (`ac3` CLI), raw items only | six internet saves decoded; 37 to 51 keys unnamed; see docs/FORMAT_AC3.md |
+| AC3R | Assassin's Creed III Remastered | - | - | - | not started |
 | ACL | Assassin's Creed Liberation (original, HD on PC) | no encryption | LZO1x | read-only reader (`acl` CLI), raw items only | one game save and OPTIONS decoded; about 50 keys unnamed; see docs/FORMAT_ACL.md |
-| ACLR | Assassin's Creed Liberation Remastered (its saves share the format of AC3 Remastered, to be verified) | - | - | - | not started |
+| ACLR | Assassin's Creed Liberation Remastered (its saves share the format of AC3R, to be verified) | - | - | - | not started |
 | AC4 | Assassin's Creed IV Black Flag | done | done | done | missions (Narrative + Side) and typed models for all known fields, see docs/FIELDS_AC4.md |
 | ACRogue | Assassin's Creed Rogue | - | - | - | not started |
 | ACU | Assassin's Creed Unity | - | - | - | not started |
