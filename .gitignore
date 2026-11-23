@@ -4,3 +4,4 @@ obj/
 *.save
 samples/
 tools/brute
+__pycache__/
