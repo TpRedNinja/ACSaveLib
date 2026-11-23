@@ -637,3 +637,17 @@ AssignedTrainees
 GameHasBeenPlayedBefore
 TotalMoneyWon
 MissionsCompletedInPenroseSingle
+# Revelations (seen in ACViewer: bomb, inventory container, building and mission constraint fields)
+BombCasingSettings
+BombExplosiveSettings
+BombEffectSettings
+AssassinSelectedEquipment
+Containers
+NeedToBeBurned
+CurrentRunSucceeded
+# Revelations (CRC32 matches of the class name of array elements; not seen in a viewer)
+NationalitySaveData
+TraineeDenMissionPairSaveData
+ContractLocationSaveData
+BuildingRuleSaveData
+ContractAssignmentSaveData
