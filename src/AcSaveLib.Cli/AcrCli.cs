@@ -6,12 +6,14 @@ using AcSaveLib.Games.Acr;
 using AcSaveLib.Names;
 using AcSaveLib.Stream;
 
-/// <summary>CLI verbs for Revelations: acr &lt;file&gt; summary|models|tree [depth] [name]|flat|unknown</summary>
+/// <summary>CLI verbs for Revelations: acr &lt;file&gt; summary|models|tree [depth] [name]|flat|unknown [--user legacy_name]</summary>
 public static class AcrCli
 {
     public static int Run(string[] args)
     {
-        var save = AcrSaveFile.Load(args[1]);
+        // optional: --user <legacy username> (otherwise the key is recovered from the file)
+        int u = Array.IndexOf(args, "--user");
+        var save = AcrSaveFile.Load(args[1], u >= 0 && u + 1 < args.Length ? args[u + 1] : null);
         var h = save.Header;
         switch (args[2])
         {

@@ -31,8 +31,10 @@ namespace AcSaveLib.Games.Acr
         /// <summary>Offset where the container stream (and the cipher) starts.</summary>
         public const int StreamStart = 0x228;
         public const uint FileMagic = 0x00FEDBAC;
-        /// <summary>XOR key of the game saves (12 ASCII bytes).</summary>
-        public static readonly byte[] Key = Encoding.ASCII.GetBytes("amsirrahrats");
+        /// <summary>Longest cipher period the key recovery tries (the key is the owner's legacy username, so its length varies).</summary>
+        public const int MaxRecoveredPeriod = 12;
+        /// <summary>Known plaintext at the start of the stream: u32 22, magic 0x00FEDBAC, and (at +16) the container signature.</summary>
+        private static readonly (int Offset, byte Value)[] KnownPlain = BuildKnownPlain();
 
         public uint HeaderLength { get; private set; }
         /// <summary>32 character ASCII id at 0x08 (meaning not known).</summary>
@@ -52,16 +54,35 @@ namespace AcSaveLib.Games.Acr
         public AcrStream? MainGame => Streams.FirstOrDefault(s => s.Game.HasGameData);
         public AcbOptions? Options => Streams.Select(s => s.Options).FirstOrDefault(o => o != null);
 
-        public static AcrSaveFile Load(string path) => Parse(File.ReadAllBytes(path));
+        /// <summary>The key that decrypted this save (stream-phase form, see <see cref="Decrypt"/>), or null for a plain save.</summary>
+        public byte[]? KeyUsed { get; private set; }
 
-        public static AcrSaveFile Parse(byte[] file)
+        public static AcrSaveFile Load(string path, string? legacyUsername = null) => Parse(File.ReadAllBytes(path), legacyUsername);
+
+        /// <summary>
+        /// Parses a save. For an encrypted save the key is the legacy username when given (as ACViewer and ACST take it),
+        /// otherwise it is recovered from the known plaintext at the start of the stream.
+        /// </summary>
+        public static AcrSaveFile Parse(byte[] file, string? legacyUsername = null)
         {
             if (file.Length < StreamStart + 16) throw new InvalidDataException("File too small to be a Revelations save.");
             var r = new AcrSaveFile { HeaderLength = BitConverter.ToUInt32(file, 0) };
             r.HeaderId = Encoding.ASCII.GetString(file, 8, 32);
             r.Title = ReadTitle(file);
             r.WasEncrypted = BitConverter.ToUInt32(file, StreamStart + 4) != FileMagic;
-            r.Data = r.WasEncrypted ? Decrypt(file) : file;
+            if (r.WasEncrypted)
+            {
+                if (legacyUsername != null)
+                {
+                    r.KeyUsed = KeyFromLegacyUsername(legacyUsername, file.Length);
+                    r.Data = Decrypt(file, r.KeyUsed);
+                }
+                else
+                {
+                    (r.Data, r.KeyUsed) = RecoverAndDecrypt(file);
+                }
+            }
+            else r.Data = file;
             if (BitConverter.ToUInt32(r.Data, StreamStart + 4) != FileMagic)
                 throw new InvalidDataException("Stream magic 0x00FEDBAC not found after decrypting.");
             r.Containers = ChunkContainer.ReadAll(r.Data, StreamStart);
@@ -83,18 +104,63 @@ namespace AcSaveLib.Games.Acr
         }
 
         /// <summary>
-        /// Returns a copy with the stream (from 0x228 to the end of the file) decrypted: byte i is XORed with Key[(i - fileLength + 1) mod 12],
-        /// so the last byte of the file uses Key[0]. CONFIRMED: every block of both game saves decodes after this.
+        /// Returns a copy with the stream (from 0x228 to the end of the file) XORed with a repeating key in stream-phase form:
+        /// byte i uses key[(i - 0x228) mod key.Length]. CONFIRMED on both game saves.
         /// </summary>
-        public static byte[] Decrypt(byte[] file)
+        public static byte[] Decrypt(byte[] file, byte[] key)
         {
             var o = (byte[])file.Clone();
-            for (int i = StreamStart; i < o.Length; i++)
-            {
-                int k = ((i - o.Length + 1) % Key.Length + Key.Length) % Key.Length;
-                o[i] ^= Key[k];
-            }
+            for (int i = StreamStart; i < o.Length; i++) o[i] ^= key[(i - StreamStart) % key.Length];
             return o;
+        }
+
+        /// <summary>
+        /// Stream-phase key for a legacy username. The game applies the reversed username aligned to the end of the file
+        /// (last byte of the file uses the first byte of the reversed name); the owner's name "starharrisma" is the 12 byte key "amsirrahrats".
+        /// CONFIRMED for a 12 character name only; how names of other lengths are handled is not verified.
+        /// </summary>
+        public static byte[] KeyFromLegacyUsername(string username, int fileLength)
+        {
+            var rev = Encoding.ASCII.GetBytes(username.ToLowerInvariant().ToCharArray().Reverse().ToArray());
+            int p = rev.Length;
+            if (p == 0) throw new ArgumentException("Empty username.");
+            var key = new byte[p];
+            for (int j = 0; j < p; j++)
+                key[j] = rev[(((j + StreamStart - fileLength + 1) % p) + p) % p];
+            return key;
+        }
+
+        private static (int, byte)[] BuildKnownPlain()
+        {
+            var l = new List<(int, byte)>();
+            byte[] head = { 0x16, 0, 0, 0, 0xAC, 0xDB, 0xFE, 0x00 };
+            for (int i = 0; i < head.Length; i++) l.Add((i, head[i]));
+            byte[] sig = { 0x33, 0xAA, 0xFB, 0x57, 0x99, 0xFA, 0x04, 0x10 };
+            for (int i = 0; i < sig.Length; i++) l.Add((16 + i, sig[i]));
+            return l.ToArray();
+        }
+
+        /// <summary>Recovers a repeating key of period 1..<see cref="MaxRecoveredPeriod"/> from the known plaintext and keeps the first one that decrypts a valid container stream.</summary>
+        private static (byte[] Data, byte[] Key) RecoverAndDecrypt(byte[] file)
+        {
+            for (int p = 1; p <= MaxRecoveredPeriod; p++)
+            {
+                var key = new byte[p]; var set = new bool[p]; bool ok = true;
+                foreach (var (off, val) in KnownPlain)
+                {
+                    byte k = (byte)(file[StreamStart + off] ^ val); int j = off % p;
+                    if (set[j] && key[j] != k) { ok = false; break; }
+                    key[j] = k; set[j] = true;
+                }
+                if (!ok || set.Any(x => !x)) continue;
+                var data = Decrypt(file, key);
+                try
+                {
+                    if (ChunkContainer.ReadAll(data, StreamStart).Count >= 2) return (data, key);
+                }
+                catch (Exception) { /* wrong period */ }
+            }
+            throw new InvalidDataException("Could not recover the key; pass the owner's legacy username.");
         }
 
         private static List<Node> ParseContainer(byte[] c)
