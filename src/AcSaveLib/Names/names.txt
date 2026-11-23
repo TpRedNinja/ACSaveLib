@@ -810,5 +810,38 @@ Property_0x07722ACD
 Property_0x54D92FF4
 Property_0x3FB06AC1
 
+# AC3 Remastered (profile save PlayerOptionsSaveData, names shown by ACViewer, fifth batch)
+Weapon02Unlocked
+Weapon03Unlocked
+Weapon04Unlocked
+Weapon05Unlocked
+Upgrade01Unlocked
+Upgrade02Unlocked
+Mission01Unlocked
+Mission02Unlocked
+Mission03Unlocked
+MPPack01Unlocked
+MPPack02Unlocked
+UplayReward01Unlocked
+UplayReward02Unlocked
+UplayReward03Unlocked
+UplayReward04Unlocked
+MPRelic01Unlocked
+MPOutfit01Unlocked
+MPCharacterMemento01Unlocked
+MPCharacterMemento02Unlocked
+MPCharacterMemento03Unlocked
+MPCharacterMemento04Unlocked
+MPCharacterMemento05Unlocked
+MPCharacterMemento06Unlocked
+MPCharacterMemento07Unlocked
+MPHuntingMemento01Unlocked
+MPHuntingMemento02Unlocked
+MPHuntingMemento03Unlocked
+MPHuntingMemento04Unlocked
+MPHuntingMemento05Unlocked
+MPHuntingMemento06Unlocked
+MPHuntingMemento07Unlocked
+
 # AC3 Remastered (CRC32 dictionary match of two words next to the viewer-named LeaderboardsSaveData Ranks; not seen in a viewer)
 FriendRanks

@@ -13,6 +13,7 @@ Same property stream as `FIELDS_AC3.md`; the Remastered saves contain every unna
   - Game save, second batch: `DummyPacking`, `ConvoyTravelInfoSaveData`, `ConvoyTravelDataSaveDataList`, `ConvoyTravelState`, `RemainingSecondsBeforeConvoyComplete`, `TravelTimerRemainingTime`, `DisasterDelay`, `WillDisasterOccur`, `DeliverySlipsSaveData`, `MerchantID`, `AccountingBookItemSlotSaveData`, `UIItemCategory`, `ArtisanDataSaveData`, `UsageCounter`, `UsageCoolDownTimerRemainingTime`, `HarvesterDataSaveData`, `ProductionTimerRemainingTime`, `StockpileInventoryOldItems`, `PlayerInventoryOldItems`, `BAMAssignmentSaveData`, `RemainingTime`, `AssignmentStatus`, `Assignment`, `KnownInvalidRecipe`, `Snares`, `SavedFogData`, `NumUnfoggedPixels`, `PlayerProfileSaveData`, `HeroStatsSaveData`, `CommunityHeroStatsSaveData`, `OnlineCoreGameSaveData`, `ItemLockSaveData`, `ItemLockSaveDataEntries`, `StatsMenuComparePrincipalID`, `Season`.
   - Game save, third batch (class names and fields of `ProgressionCharacterData[0]` to `[7]` Stockpile, `[22]` to `[27]` Trainee): `StockpileProgressionCharacterData`, `TraineeProgressionCharacterData`, `TraineeAttributesBuilderData`, `TraineeType`, `CovertEscortLevel`, `RemainingUnavailableTime`, `HasRecentlyLeveledUp`, `HasRecentlyBeenUnlocked`, `ConvoyTravelDataSaveData`, `DeliverySlipSaveData`.
   - Game save, fourth batch: `HuntingContextSaveDataItem` (class of `HuntingData/DiscoveredAnimals[n]`, fields `RegionID` and `AnimalID`, both U64).
+  - Profile save `PlayerOptionsSaveData`, fifth batch: `Weapon02Unlocked` to `Weapon05Unlocked`, `Upgrade01Unlocked`, `Upgrade02Unlocked`, `Mission01Unlocked` to `Mission03Unlocked`, `MPPack01Unlocked`, `MPPack02Unlocked`, `UplayReward01Unlocked` to `UplayReward04Unlocked`, `MPRelic01Unlocked`, `MPOutfit01Unlocked`, `MPCharacterMemento01Unlocked` to `MPCharacterMemento07Unlocked`, `MPHuntingMemento01Unlocked` to `MPHuntingMemento07Unlocked`.
 - `4be4ac3c` = `FriendRanks`, the third array in `LeaderboardsSaveData` next to `Statistics` and `Ranks` (element type `LeaderboardRankSaveDataItem`). [likely, 2-word CRC32 match]
 - ACViewer shows the other keys as `Property_0x<hash>`, so it has no name for them either. [confirmed]
 - ACViewer shows `3fb06ac1` (in `MissionStepSaveData[n]`, after `Succeeded`) as a U32; it is 0 in every save. [confirmed]
@@ -24,5 +25,5 @@ Same property stream as `FIELDS_AC3.md`; the Remastered saves contain every unna
 - `C0/DLCPackagesBits` = 678 in the 100% save and in the profile save shown by ACViewer. [confirmed value, meaning unknown]
 
 ## Unnamed keys
-- `ac3r <file> unknown` lists them: 0 to 3 in game saves, 45 in the slot -1 profile save (mostly `C1/PlayerOptionsSaveData` entries).
+- `ac3r <file> unknown` lists them: 0 to 3 in game saves, 14 in the slot -1 profile save (all under `C2`: the objects `3e2c66d9` and `5586b7fe` and their 12 fields).
 - Every key still unnamed in the original saves is also present in the Remastered saves.
