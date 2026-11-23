@@ -4,9 +4,9 @@ Models in `src/AcSaveLib/Games/Ac2/`: `Ac2SaveFile.cs`, `Ac2Models.cs` (header, 
 ## Header properties
 - Version 17, MagicNumber 0x00FEDBAC, DLCPackagesBits (6 in all samples), CodeChangelist (236390 in all samples).
 - IsValid, IsOptions (1 for options-only saves, SaveGameName "Options"; 0 for game saves, SaveGameName "Desmond"), LoadOrSaveOptionsFailed and IsCorrupt: names and values CONFIRMED in ACViewer. IsCorrupt is 0 in all samples; a converter can read it to reject a damaged save.
-- PlayerGlobalSynch: 100 in the 100% save, 54 in the sequence 7 Benvenuto save. LIKELY the sync percentage. Not compared with the in-game value.
+- PlayerGlobalSynch: the sync percentage as an integer (owner); 100 in the 100% save, 54 in the sequence 7 Benvenuto save.
 - SaveGameDate: Unix seconds (CONFIRMED plausible: 2017-08-17 for the 100% save).
-- TimePlayed: unit not confirmed (ACViewer shows 5629 for a sequence 2 save).
+- TimePlayed: seconds (owner). ACViewer shows 5629 for a sequence 2 save.
 
 ## Mission history (NarrativeMissionHistory, SideMissionHistory)
 - `GroupSaveData[]` of { Group (hash), MissionSaveData[] of { Mission (hash), HighestSynchronization, BriefingDisplayedOnce, BriefingAccepted, MissionStepSaveData[] { Step, IsCheckpoint, Succeeded }, MissionConstraintSaveData[] } }.
@@ -20,7 +20,8 @@ Models in `src/AcSaveLib/Games/Ac2/`: `Ac2SaveFile.cs`, `Ac2Models.cs` (header, 
 - `SnapshotPlayerProgSaveData` holds a second copy (one item fewer in the 100% save).
 
 ## Other
-- Money: LIKELY `CurrentItemCount` of the first inventory container of the first PlayerCharacterData (category hash 0x12F6B6F1, the AC4 InvItem_Money hash); 953500 in the 100% save. Not compared with the in-game value.
+- Money: `CurrentItemCount` of the first inventory container of the first PlayerCharacterData (category InvItem_Money, 0x12F6B6F1); 953500 in the 100% save. [confirmed by the owner]
+- Inventory container `Category` is an enum stored as a u64: low u32 = index, high u32 = CRC32 of the value name. Matched by CRC32 (likely, not seen in a viewer): 1 InvItem_Money, 2 InvItem_Weapon, 3 InvItem_Armor, 5 InvItem_SmokeBomb, 6 InvItem_Upgrades, 8 InvItem_Knives, 9 InvItem_QuestItem, 11 InvItem_Poison, 13 InvItem_Cape, 15 InvItem_HiddenBlade, 18 InvItem_Ability. Unnamed: index 4 (0xF21D53B5), 7 (0xB4A9FEFA), 10 (0xB7C134C5), 12 (0xAFC60ED1), 14 (0xA4EEF6FD), 17 (0x16E5AB2B).
 - AccomplishmentManagerData.AccomplishmentEntries: 81 entries { ObjectID, Inactive, Completed, CurrentCount }; 48 completed in the 100% save. Not mapped to achievements.
 - GameStatsSaveData: 22 u32 counters, all named, names CONFIRMED in ACViewer (TimePlayed, TotalTimeBlended, DeathOccurrences, Kills, HiddenBladeAssassinations, AirAssassinations, DoubleAirAssassinations, Disarms, TotalMoneyEarned, TotalMoneySpent, NotoriousOccurrences, BorgiaCourrierKills, CourtesansHired, MercenariesHired, ThievesHired, OverallDistanceCovered, HeightClimbed, DistanceOnGround, DistanceSwam, DistanceHorse, DistanceGondolas, DistanceFlown) plus WeaponUsedSavedInfo[]. Units are not confirmed. Model: `Ac2GameStats`.
 - VillaSaveData: StrongholdValue, CurrentGoldIncome, CurrentIncomeDelay, PendingIncomeValueForAfs, PendingStrValueForAfs, BuildingsLevels (u8 x 11), CodexPagesDecodedStatus (bool x 30), CodexPagesCurrentRotation (s16 x 30). Names CONFIRMED in ACViewer; `SnapshotVillaSaveData` is a second copy. Model: `Ac2Villa`.

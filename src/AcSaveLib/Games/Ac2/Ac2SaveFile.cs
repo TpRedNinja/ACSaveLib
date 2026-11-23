@@ -54,7 +54,7 @@ namespace AcSaveLib.Games.Ac2
         public uint Version => Header.Version;
         public uint DlcPackagesBits => Header.DlcPackagesBits;
         public uint CodeChangelist => Header.CodeChangelist;
-        /// <summary>Raw TimePlayed value of the save header (unit not confirmed).</summary>
+        /// <summary>Seconds played, from the save header (owner).</summary>
         public uint TimePlayed => Header.TimePlayed;
         /// <summary>PlayerGlobalSynch from the header (0x64 = 100 in the 100% save sample).</summary>
         public uint PlayerGlobalSynch => Header.PlayerGlobalSynch;

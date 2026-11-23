@@ -18,7 +18,7 @@ namespace AcSaveLib.Games.Ac2
         public bool IsCorrupt { get; init; }
         /// <summary>"Desmond" in game saves, "Options" in options saves (stored as a 32-bit length followed by the characters).</summary>
         public string SaveGameName { get; init; } = "";
-        /// <summary>Raw TimePlayed (unit not confirmed).</summary>
+        /// <summary>Seconds played (owner).</summary>
         public uint TimePlayed { get; init; }
         public uint PlayerGlobalSynch { get; init; }
         /// <summary>Unix time in seconds as stored.</summary>
