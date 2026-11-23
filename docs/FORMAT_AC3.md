@@ -48,4 +48,4 @@ Top-level items, in order: ContextID, NarrativeMissionHistory, SideMissionHistor
 ## Names
 - Most keys resolve through earlier games' names (`Names/names.txt`).
 - CRC32 dictionary matches of words and word pairs, each at a matching spot, not seen in a viewer [likely]: AnimalID, BlueprintsDateNumber, ConvoyType, CurrentHealth, CurrentPlayerPortal, IsLocked, LocationIndex, New, NewItemsUnlocked, NewSkillsUnlocked, PlayedCollectiblesGlyph, RankIndex, RegionID, SkillPoints, Status, Type. The ProgressionCharacterData fields (CurrentHealth, SkillPoints, RankIndex, Status, Type, NewItemsUnlocked, NewSkillsUnlocked) sit in the character progression array; IsLocked, LocationIndex and New sit in an array of `8363de15/65d04c04` entries.
-- Open: 37 unnamed keys in `Save003.sav`, 51 in the other game saves (`ac3 <file> unknown`).
+- Open: 26 unnamed keys in `Save003.sav`, 33 to 48 in the other files (`ac3 <file> unknown`).
