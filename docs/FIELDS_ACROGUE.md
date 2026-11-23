@@ -23,6 +23,6 @@ Layout, key and containers are in `FORMAT_ACROGUE.md`. The reader is `Games/Acro
 - Header container, then a global profile container (`PlayerOptionsSaveData`, `AccomplishmentManagerData`) and last `SinglePlayerOptionsSaveData`. See `FORMAT_ACROGUE.md`.
 
 ## Open
-- Unnamed keys: 4 in the 100% game save (`cd986d96` in each fleet mission entry, `c3a87f61` in each resource entry, header `0x510BDEDB` and `0x1C011834`), 6 to 7 in other game saves, 20 in profile saves (the profile containers have not been opened in ACViewer). ACViewer shows `0xD44828A8`, `0x56BDD03A`, `0x9AC35A61`, `0x5D9984AF`, `0x2FD9481C`, `0x93E7E001`, `0xDD74D4AC`, `0xBDE923E9` as `Property_0x<HASH>`, so they count as named (types: U8, U64, Bool, Bool, Bool[5], U32, array of PresentDayTargetEntityState).
+- Unnamed keys: 2 in the 100% game save (`cd986d96` in each fleet mission entry, `c3a87f61` in each resource entry), 1 in the two test saves (`c3a87f61`), 18 in the options save (the profile containers have not been opened in ACViewer). ACViewer shows `0xD44828A8`, `0x56BDD03A`, `0x9AC35A61`, `0x5D9984AF`, `0x2FD9481C`, `0x93E7E001`, `0xDD74D4AC`, `0xBDE923E9`, `0x510BDEDB`, `0x1C011834` as `Property_0x<HASH>`, so they count as named (types: U8, U64, Bool, Bool, Bool[5], U32, array of PresentDayTargetEntityState).
 - Layouts of fields that are empty in the samples (MapFogInfo and others, as in Black Flag).
 - ID meaning tables, TimePlayed unit.

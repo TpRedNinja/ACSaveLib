@@ -956,6 +956,8 @@ Property_0x2FD9481C
 Property_0x93E7E001
 Property_0xDD74D4AC
 Property_0xBDE923E9
+Property_0x510BDEDB
+Property_0x1C011834
 
 # Rogue fleet missions and rewards (shown in ACViewer, confirmed)
 OwnerProfileId

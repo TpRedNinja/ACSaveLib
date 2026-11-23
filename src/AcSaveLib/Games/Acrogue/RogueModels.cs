@@ -19,6 +19,10 @@ namespace AcSaveLib.Games.Acrogue
         public uint PlayerGlobalSynch { get; init; }
         /// <summary>Unix time in seconds as stored.</summary>
         public uint SaveGameDate { get; init; }
+        /// <summary>ACViewer shows this key as Property_0x510BDEDB (U32): 1 in game saves, 0 in profile and options saves.</summary>
+        public uint Property510BDEDB { get; init; }
+        /// <summary>ACViewer shows this key as Property_0x1C011834 (U32): 524288 in the test and 100% saves, 0 in options saves.</summary>
+        public uint Property1C011834 { get; init; }
 
         static string DecodeName(ulong raw)
         {
@@ -37,6 +41,7 @@ namespace AcSaveLib.Games.Acrogue
                 CodeChangelist = p.U32("CodeChangelist"), SaveGameId = p.U32("SaveGameID"), SaveGameName = DecodeName(p.U64("SaveGameName")), IsOptions = p.Bool("IsOptions"),
                 TimePlayed = p.U32("TimePlayed"), PlayerGlobalSynch = p.U32("PlayerGlobalSynch"),
                 SaveGameDate = p.U32("SaveGameDate"),
+                Property510BDEDB = (uint)(p.GetByKey(0x510BDEDB)?.Value ?? 0), Property1C011834 = (uint)(p.GetByKey(0x1C011834)?.Value ?? 0),
             };
         }
     }
