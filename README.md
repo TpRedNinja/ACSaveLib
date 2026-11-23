@@ -19,7 +19,7 @@ Mainline games in release order. Short name, full name, then progress.
 | ACL / ACLR | Assassin's Creed Liberation (saves decoded from the Remastered; the original is assumed to use the same format) | no encryption | LZO1x | read-only reader (`acl` CLI), raw items only | one game save and OPTIONS decoded; 38 keys unnamed in the game save, 61 in OPTIONS; see docs/FORMAT_ACL.md |
 | AC4 | Assassin's Creed IV Black Flag | XOR with a 16 byte key anchored to the file end (a game key that differs between accounts or storefronts, recovered from known plaintext) | LZO1x chunked containers | CRC32-keyed property stream with typed models | missions (Narrative + Side) and typed models for all known fields, see docs/FIELDS_AC4.md |
 | ACFC | Assassin's Creed Freedom Cry (standalone, PC) | XOR with a 16 byte key anchored to the file end (same as AC4, recovered from known plaintext) | LZO1x chunked containers | read by the AC4 reader unchanged (`ac4` CLI) | game save 0 keys unnamed, profile save 11; see docs/FORMAT_ACFC.md |
-| ACRogue | Assassin's Creed Rogue | - | - | - | not started |
+| ACRogue | Assassin's Creed Rogue | XOR with a 16 byte key anchored to the file end (the MD5 of the first Uplay CD key, which is the MD5 of an empty string in all 8 saves tested) | LZO1x chunked containers (same layout as AC4, to be checked) | - | in progress, see docs/FORMAT_ACROGUE.md |
 | ACU | Assassin's Creed Unity | - | - | - | not started |
 | ACS | Assassin's Creed Syndicate | - | - | - | not started |
 | ACO | Assassin's Creed Origins | - | - | - | not started |

@@ -10,7 +10,7 @@
 | 6 | ACL / ACLR | Assassin's Creed Liberation (saves decoded from the Remastered; the original is assumed to use the same format) | DONE: C# reader decodes containers (LZO1x) and parses the property stream of one game save and the OPTIONS file (`Games/Acl`, read-only, no typed models); not detected by ACViewer (see FORMAT_ACL.md, FIELDS_ACL.md) | 38 (game save), 61 (OPTIONS) |
 | 7 | AC4 | Assassin's Creed IV Black Flag | DONE: decrypt/decompress/parse done; all known fields have typed models (see FIELDS_AC4.md) | 0 (in the 3 saves checked) |
 | 8 | ACFC | Assassin's Creed Freedom Cry (standalone, PC) | DONE: read by the AC4 reader unchanged, see FORMAT_ACFC.md | 0 (game), 11 (profile) |
-| 9 | ACRogue | Assassin's Creed Rogue | not started | - |
+| 9 | ACRogue | Assassin's Creed Rogue | in progress: encryption solved (see FORMAT_ACROGUE.md) | - |
 | 10 | ACU | Assassin's Creed Unity | not started | - |
 | 11 | ACS | Assassin's Creed Syndicate | not started | - |
 | 12 | ACO | Assassin's Creed Origins | not started | - |
