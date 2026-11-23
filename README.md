@@ -20,6 +20,7 @@ Mainline games in release order. Short name, full name, then progress.
 | ACL | Assassin's Creed Liberation (original, HD on PC) | no encryption | LZO1x | read-only reader (`acl` CLI), raw items only | one game save and OPTIONS decoded; 38 keys unnamed in the game save, 61 in OPTIONS; see docs/FORMAT_ACL.md |
 | ACLR | Assassin's Creed Liberation Remastered (its saves share the format of AC3R, to be verified) | - | - | - | not started |
 | AC4 | Assassin's Creed IV Black Flag | XOR with a 16 byte key anchored to the file end (a game key that differs between accounts or storefronts, recovered from known plaintext) | LZO1x chunked containers | CRC32-keyed property stream with typed models | missions (Narrative + Side) and typed models for all known fields, see docs/FIELDS_AC4.md |
+| ACFC | Assassin's Creed Freedom Cry (standalone, PC) | - | - | - | in progress |
 | ACRogue | Assassin's Creed Rogue | - | - | - | not started |
 | ACU | Assassin's Creed Unity | - | - | - | not started |
 | ACS | Assassin's Creed Syndicate | - | - | - | not started |

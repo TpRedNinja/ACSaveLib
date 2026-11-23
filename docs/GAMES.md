@@ -11,12 +11,13 @@
 | 7 | ACL | Assassin's Creed Liberation (original, HD on PC) | DONE: C# reader decodes containers (LZO1x) and parses the property stream of one game save and the OPTIONS file (`Games/Acl`, read-only, no typed models); not detected by ACViewer (see FORMAT_ACL.md, FIELDS_ACL.md) | 38 (game save), 61 (OPTIONS) |
 | 8 | ACLR | Assassin's Creed Liberation Remastered (saves share the format of AC3R, to be verified) | not started | - |
 | 9 | AC4 | Assassin's Creed IV Black Flag | DONE: decrypt/decompress/parse done; all known fields have typed models (see FIELDS_AC4.md) | 0 (in the 3 saves checked) |
-| 10 | ACRogue | Assassin's Creed Rogue | not started | - |
-| 11 | ACU | Assassin's Creed Unity | not started | - |
-| 12 | ACS | Assassin's Creed Syndicate | not started | - |
-| 13 | ACO | Assassin's Creed Origins | not started | - |
-| 14 | ACOdy | Assassin's Creed Odyssey | not started | - |
-| 15 | ACV | Assassin's Creed Valhalla | not started | - |
-| 16 | ACM | Assassin's Creed Mirage | not started | - |
-| 17 | ACShadows | Assassin's Creed Shadows | not started | - |
-| 18 | ACBFR | Assassin's Creed Black Flag Resynced | not started | - |
+| 10 | ACFC | Assassin's Creed Freedom Cry (standalone, PC) | in progress | - |
+| 11 | ACRogue | Assassin's Creed Rogue | not started | - |
+| 12 | ACU | Assassin's Creed Unity | not started | - |
+| 13 | ACS | Assassin's Creed Syndicate | not started | - |
+| 14 | ACO | Assassin's Creed Origins | not started | - |
+| 15 | ACOdy | Assassin's Creed Odyssey | not started | - |
+| 16 | ACV | Assassin's Creed Valhalla | not started | - |
+| 17 | ACM | Assassin's Creed Mirage | not started | - |
+| 18 | ACShadows | Assassin's Creed Shadows | not started | - |
+| 19 | ACBFR | Assassin's Creed Black Flag Resynced | not started | - |
