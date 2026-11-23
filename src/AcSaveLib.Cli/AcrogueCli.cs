@@ -35,7 +35,7 @@ public static class AcrogueCli
                 Console.WriteLine($"Accomplishments={g.Accomplishments.Entries.Count} completed={g.Accomplishments.Entries.Count(e => e.Completed)} Stats={g.GameStats.StatEntries.Count}");
                 Console.WriteLine($"Animus unlocked={g.AnimusDatabase.UnlockedEntries.Count} MapIcon worlds={g.MapIcons.SavedIcons.Count} Messages={g.Messaging.Messages.Count} Rewards={g.PresentRewards.RewardItems.Count} Fleet captured boats={g.Fleet.CapturedBoats.Count}");
                 var fp = g.Fleet.Player;
-                Console.WriteLine($"Fleet player: boats={fp.Boats.Count} slots={fp.UnlockedBoatSlots} routes={fp.Routes.Count} missions={fp.MissionCount} resources=[{string.Join(",", fp.Resources)}] business bank={g.Business.MoneyInBank}");
+                Console.WriteLine($"Fleet player: boats={fp.Boats.Count} slots={fp.UnlockedBoatSlots} routes={fp.Routes.Count} missions={fp.Missions.Count} rewards={fp.Rewards.Count} resources=[{string.Join(",", fp.Resources)}] business bank={g.Business.MoneyInBank}");
                 break;
             }
             case "header":

@@ -955,3 +955,16 @@ Property_0x5D9984AF
 Property_0x2FD9481C
 Property_0x93E7E001
 Property_0xDD74D4AC
+
+# Rogue fleet missions and rewards (shown in ACViewer, confirmed)
+OwnerProfileId
+MissionId
+HelpedByProfileId
+DurationSeconds
+AssignedBoatIds
+Odds
+Roll
+RemainingTimeSeconds
+StartTime
+RewardType
+TimeUnlocked

@@ -22,7 +22,7 @@
 - The containers decompress with the AC4 codec (LZO1x). Reader: `Games/Acrogue/AcrogueSaveFile.cs` (C#, read-only, recovers the key for version 36 from known plaintext), CLI verb `acrogue` (`summary|models|header|tree|flat|unknown`). [confirmed]
 - Rogue has its own models (`RogueModels.cs`, `RogueFieldModels.cs`, `RogueMissionModels.cs`, `RoguePlayerProgressionModels.cs`); the same names as Black Flag are used. Rogue game saves fill: narrative and side missions, accomplishments, stats, animus database, map icons, messages, fleet and player progression are filled. [confirmed]
 - The `100% file - 2.save` of the save pack reads 69 of 69 narrative missions completed and 268 of 312 side missions completed. [likely]
-- Unknown keys (no name in `names.txt`): 8 in a profile save, 20 in game saves. [confirmed]
+- Unknown keys (no name in `names.txt`): 20 in profile saves, 8 to 9 in game saves. [confirmed]
 
 ## Profile saves
 - Profile and options saves (`1.save`, `2.save`) have three containers: the header, a global profile container (`ContextID`, `PlayerOptionsSaveData`, `AccomplishmentManagerData`) and a last container (`ContextID`, `SinglePlayerOptionsSaveData`). [confirmed]

@@ -219,6 +219,31 @@ namespace AcSaveLib.Games.Acrogue
         public ulong FetchTimeMilliseconds { get; init; }
     }
 
+    public sealed class FleetMission
+    {
+        public string OwnerProfileId { get; init; } = "";
+        public uint MissionId { get; init; }
+        public string HelpedByProfileId { get; init; } = "";
+        public uint TemplateId { get; init; }
+        public uint DurationSeconds { get; init; }
+        public List<uint> AssignedBoatIds { get; init; } = new();
+        public uint Odds { get; init; }
+        public uint Roll { get; init; }
+        public int RemainingTimeSeconds { get; init; }
+        /// <summary>Unix time in seconds, by its magnitude.</summary>
+        public uint StartTime { get; init; }
+        public ulong FetchTimeMilliseconds { get; init; }
+    }
+
+    public sealed class FleetReward
+    {
+        /// <summary>Enum FleetRewardID as stored (low 32 bits); ACViewer shows 1 as FleetCollectible_01.</summary>
+        public uint RewardType { get; init; }
+        public uint Value { get; init; }
+        /// <summary>Unix time in seconds, by its magnitude.</summary>
+        public uint TimeUnlocked { get; init; }
+    }
+
     public sealed class FleetRoute
     {
         public uint RouteId { get; init; }
@@ -239,8 +264,8 @@ namespace AcSaveLib.Games.Acrogue
         /// <summary>Value of each FleetResourceGameData entry, in file order.</summary>
         public List<uint> Resources { get; init; } = new();
         public List<FleetRoute> Routes { get; init; } = new();
-        public int MissionCount { get; init; }
-        public int RewardCount { get; init; }
+        public List<FleetMission> Missions { get; init; } = new();
+        public List<FleetReward> Rewards { get; init; } = new();
         public uint BoatAutoGenId { get; init; }
         public uint MissionAutoGenId { get; init; }
         public static FleetPlayer From(Props p)
@@ -248,11 +273,18 @@ namespace AcSaveLib.Games.Acrogue
             var d = new FleetPlayer
             {
                 ProfileId = p.Text("ProfileId"), Status = p.U32("Status"), UnlockedBoatSlots = p.U32("UnlockedBoatSlots"),
-                MissionCount = p.ElementCount("Missions"), RewardCount = p.ElementCount("Rewards"),
                 BoatAutoGenId = p.U32("BoatAutoGenID"), MissionAutoGenId = p.U32("MissionAutoGenID"),
             };
             foreach (var e in p.Elements("Boats"))
                 d.Boats.Add(new FleetBoat { BoatId = e.U32("BoatId"), BoatName = e.S32("BoatName"), TemplateId = e.U32("TemplateId"), Health = e.U32("Health"), Status = e.U32("Status"), UnavailableTimeSeconds = e.U32("UnavailableTimeSeconds"), FetchTimeMilliseconds = e.U64("FetchTimeMilliseconds") });
+            foreach (var e in p.Elements("Missions"))
+                d.Missions.Add(new FleetMission
+                {
+                    OwnerProfileId = e.Text("OwnerProfileId"), MissionId = e.U32("MissionId"), HelpedByProfileId = e.Text("HelpedByProfileId"), TemplateId = e.U32("TemplateId"),
+                    DurationSeconds = e.U32("DurationSeconds"), AssignedBoatIds = e.PackedU32("AssignedBoatIds"), Odds = e.U32("Odds"), Roll = e.U32("Roll"),
+                    RemainingTimeSeconds = e.S32("RemainingTimeSeconds"), StartTime = e.U32("StartTime"), FetchTimeMilliseconds = e.U64("FetchTimeMilliseconds"),
+                });
+            foreach (var e in p.Elements("Rewards")) d.Rewards.Add(new FleetReward { RewardType = e.Enum("RewardType"), Value = e.U32("Value"), TimeUnlocked = e.U32("TimeUnlocked") });
             foreach (var e in p.Elements("Resources")) d.Resources.Add(e.U32("Value"));
             foreach (var e in p.Elements("Routes"))
                 d.Routes.Add(new FleetRoute { RouteId = e.U32("RouteId"), DifficultyModifier = e.U32("DifficultyModifier"), Status = e.U32("Status"), LastUpdateTimeSeconds = e.U32("LastUpdateTimeSeconds"), LastUpdateTime = e.U32("LastUpdateTime") });
