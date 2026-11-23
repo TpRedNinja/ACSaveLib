@@ -853,3 +853,13 @@ NavalAROverlay
 
 # AC3 Remastered (CRC32 dictionary match of two words next to the viewer-named LeaderboardsSaveData Ranks; not seen in a viewer)
 FriendRanks
+
+# Freedom Cry profile (ProductViewingInfo, DiscoverySharingItemData and OnlineGameplaySaveData are CRC32 matches to strings in ACFC.exe; Id, IsFound, IsCompleted, Items and GlobalEventID are one word or two word CRC32 matches whose values fit; not seen in a viewer)
+ProductViewingInfo
+DiscoverySharingItemData
+OnlineGameplaySaveData
+Id
+IsFound
+IsCompleted
+Items
+GlobalEventID
