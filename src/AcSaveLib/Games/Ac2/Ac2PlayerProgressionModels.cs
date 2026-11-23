@@ -92,9 +92,9 @@ namespace AcSaveLib.Games.Ac2
         public ulong PlayerCharacter { get; init; }
         public List<Ac2InventoryContainer> Containers { get; init; } = new();
         public List<Ac2ArmorState> ArmorStates { get; init; } = new();
-        public uint Life { get; init; }
-        public uint MaxLife { get; init; }
-        public uint BrokenHealth { get; init; }
+        public int Life { get; init; }
+        public int MaxLife { get; init; }
+        public int BrokenHealth { get; init; }
         public List<ulong> LockedInventoryItems { get; init; } = new();
         public List<Ac2AttributesBuilder> Attributes { get; init; } = new();
 
@@ -105,7 +105,7 @@ namespace AcSaveLib.Games.Ac2
         {
             var d = new Ac2PlayerCharacterData
             {
-                PlayerCharacter = p.U64("PlayerCharacter"), Life = p.U32("Life"), MaxLife = p.U32("MaxLife"), BrokenHealth = p.U32("BrokenHealth"),
+                PlayerCharacter = p.U64("PlayerCharacter"), Life = p.S32("Life"), MaxLife = p.S32("MaxLife"), BrokenHealth = p.S32("BrokenHealth"),
                 LockedInventoryItems = p.Packed("LockedInventoryItems"),
             };
             var spec = p.Get("PlayerInventorySpecification");
