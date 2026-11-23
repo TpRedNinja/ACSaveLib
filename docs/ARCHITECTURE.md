@@ -14,7 +14,7 @@ src/AcSaveLib/
   Games/Ac4/MissionModels.cs     typed Mission/Group/History classes
   Games/Acb/AcbSaveFile.cs       Brotherhood pipeline (no encryption): containers, property streams, typed models in Acb*Models.cs
 src/AcSaveLib.Cli/Program.cs     inspection CLI
-tools/                           Python reference implementation and brute-forcer
+tools/                           Python reference scripts and brute-forcer
 ```
 Layers: Crypto -> Container/Compression -> Stream (generic) -> Games/<Game> (typed models). Everything below
 Games/ should be reusable by other titles; game-specific constants (offsets, key plaintext) live in Games/<Game>.

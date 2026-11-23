@@ -1,5 +1,5 @@
 # ACB (Assassin's Creed Brotherhood, PC) .SAV format
-Reader: `Games/Acb/AcbSaveFile.cs` (C#, read-only), CLI verb `acb`. CONFIRMED on 6 saves and 1 options file (100%, Free Roam, True 100%, personal saves): every block decodes to its stated size.
+Reader: `Games/Acb/AcbSaveFile.cs` (C#, read-only), CLI verb `acb`. `tools/acb_reference.py` is the earlier Python reader (containers and top-level items only). CONFIRMED on 6 saves and 1 options file (100%, Free Roam, True 100%, personal saves): every block decodes to its stated size.
 No encryption. Little-endian. Compressed with LZO2A, not LZO1x.
 
 ```

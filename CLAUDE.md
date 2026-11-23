@@ -24,7 +24,7 @@ Owner handle: TpRedNinja (do not use a real name anywhere, including credits and
 - `src/AcSaveLib/` library: `Crypto`, `Compression`, `Container`, `Names`, `Stream` (AC4 property stream), `Games/Ac4`, `Games/Ac1`, `Games/Ac2`, `Games/Acb`
 - `src/AcSaveLib.Cli/` CLI: `ac4 <file> summary|missions|tree|models|unknown|named`, `ac1 <file> summary|roundtrip|models|object|unknown`, `ac2 <file> summary|models|missions|tree|raw|unknown`, `acb <file> summary|models|missions|accomplishments|trainees|tree|flat|unknown|named`, `crc <name>`
 - `docs/`: `AGENT_GUIDE.md` (rules and how names were found), `ARCHITECTURE.md`, `BUILDING.md`, `ADDING_A_GAME.md`, `GAMES.md` (game list and status), `FORMAT_*.md`, `FIELDS_*.md`
-- `tools/`: reference scripts (`ac4save_reference.py`, `ac1_sav_full.py`, `brute.c`)
+- `tools/`: reference scripts (`ac4save_reference.py`, `acb_reference.py`, `ac1_sav_full.py`, `brute.c`)
 
 ## Build and check
 The sandbox may have no dotnet: `apt-get update && apt-get install -y dotnet-sdk-8.0`.
@@ -39,7 +39,7 @@ dotnet src/AcSaveLib.Cli/bin/Debug/net8.0/AcSaveLib.Cli.dll acb <save> models
 Saves (`*.save`, `*.sav`) and `samples/` are gitignored. Never edit a user save in place; work on copies.
 
 ## Workflow for a new game (e.g. AC2)
-Write every new game reader in C# from the start. Do not write Python or other reference scripts for it (throwaway analysis in /tmp is fine, nothing of it goes in the repo).
+A Python script is allowed for a first pass at decryption, decompression or the container layout when it helps. Once it handles every provided save, write the C# implementation (the C# reader is the deliverable and must match the script's output). Do not leave the game at the script stage.
 1. Ask the owner for several saves from different progress points, plus their notes file for the game (e.g. `AC2_notes.md`) and any hash/name files.
 2. Check the header, then encryption (repeating key, recover it from known plaintext), then compression (signature scan), then the object/property layout. AC1 was plain big-endian; AC4 was XOR + chunked LZO + CRC32-keyed properties. A new game may match either family or neither.
 3. Make the parser round-trip byte-exact if the game's saves can be written back (it proves the layout is complete).
