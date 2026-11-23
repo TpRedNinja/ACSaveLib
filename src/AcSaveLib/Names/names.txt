@@ -707,3 +707,6 @@ RegionID
 SkillPoints
 Status
 Type
+
+# AC3 Remastered (CRC32 dictionary match of two words; not seen in a viewer)
+EventSaveData
