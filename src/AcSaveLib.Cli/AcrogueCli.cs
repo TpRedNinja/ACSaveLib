@@ -33,7 +33,9 @@ public static class AcrogueCli
                 Console.WriteLine($"CurrentMission=0x{g.CurrentMission:X} World=0x{g.World:X} PlayerPortal=0x{g.PlayerPortal:X} ContextId={g.ContextId}");
                 Console.WriteLine($"Characters={pp.Characters.Count} snapshots={pp.CharacterSnapshots.Count} money={pl?.Money} life={pl?.Life}/{pl?.MaxLife} shipLife={pl?.ShipLife}");
                 Console.WriteLine($"Accomplishments={g.Accomplishments.Entries.Count} completed={g.Accomplishments.Entries.Count(e => e.Completed)} Stats={g.GameStats.StatEntries.Count}");
-                Console.WriteLine($"Animus unlocked={g.AnimusDatabase.UnlockedEntries.Count} MapIcon worlds={g.MapIcons.SavedIcons.Count} Messages={g.Messaging.Messages.Count} Rewards={g.PresentRewards.RewardItems.Count} Fleet boats={g.Fleet.CapturedBoats.Count}");
+                Console.WriteLine($"Animus unlocked={g.AnimusDatabase.UnlockedEntries.Count} MapIcon worlds={g.MapIcons.SavedIcons.Count} Messages={g.Messaging.Messages.Count} Rewards={g.PresentRewards.RewardItems.Count} Fleet captured boats={g.Fleet.CapturedBoats.Count}");
+                var fp = g.Fleet.Player;
+                Console.WriteLine($"Fleet player: boats={fp.Boats.Count} slots={fp.UnlockedBoatSlots} routes={fp.Routes.Count} missions={fp.MissionCount} resources=[{string.Join(",", fp.Resources)}] business bank={g.Business.MoneyInBank}");
                 break;
             }
             case "header":

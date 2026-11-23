@@ -207,14 +207,76 @@ namespace AcSaveLib.Games.Acrogue
         public int OasisLineId { get; init; }
     }
 
+    public sealed class FleetBoat
+    {
+        public uint BoatId { get; init; }
+        /// <summary>Localization id of the boat name.</summary>
+        public int BoatName { get; init; }
+        public uint TemplateId { get; init; }
+        public uint Health { get; init; }
+        public uint Status { get; init; }
+        public uint UnavailableTimeSeconds { get; init; }
+        public ulong FetchTimeMilliseconds { get; init; }
+    }
+
+    public sealed class FleetRoute
+    {
+        public uint RouteId { get; init; }
+        public uint DifficultyModifier { get; init; }
+        public uint Status { get; init; }
+        public uint LastUpdateTimeSeconds { get; init; }
+        /// <summary>Unix time in seconds, by its magnitude.</summary>
+        public uint LastUpdateTime { get; init; }
+    }
+
+    /// <summary>FleetPlayerGameData: the player's fleet (Rogue only).</summary>
+    public sealed class FleetPlayer
+    {
+        public string ProfileId { get; init; } = "";
+        public uint Status { get; init; }
+        public uint UnlockedBoatSlots { get; init; }
+        public List<FleetBoat> Boats { get; init; } = new();
+        /// <summary>Value of each FleetResourceGameData entry, in file order.</summary>
+        public List<uint> Resources { get; init; } = new();
+        public List<FleetRoute> Routes { get; init; } = new();
+        public int MissionCount { get; init; }
+        public int RewardCount { get; init; }
+        public uint BoatAutoGenId { get; init; }
+        public uint MissionAutoGenId { get; init; }
+        public static FleetPlayer From(Props p)
+        {
+            var d = new FleetPlayer
+            {
+                ProfileId = p.Text("ProfileId"), Status = p.U32("Status"), UnlockedBoatSlots = p.U32("UnlockedBoatSlots"),
+                MissionCount = p.ElementCount("Missions"), RewardCount = p.ElementCount("Rewards"),
+                BoatAutoGenId = p.U32("BoatAutoGenID"), MissionAutoGenId = p.U32("MissionAutoGenID"),
+            };
+            foreach (var e in p.Elements("Boats"))
+                d.Boats.Add(new FleetBoat { BoatId = e.U32("BoatId"), BoatName = e.S32("BoatName"), TemplateId = e.U32("TemplateId"), Health = e.U32("Health"), Status = e.U32("Status"), UnavailableTimeSeconds = e.U32("UnavailableTimeSeconds"), FetchTimeMilliseconds = e.U64("FetchTimeMilliseconds") });
+            foreach (var e in p.Elements("Resources")) d.Resources.Add(e.U32("Value"));
+            foreach (var e in p.Elements("Routes"))
+                d.Routes.Add(new FleetRoute { RouteId = e.U32("RouteId"), DifficultyModifier = e.U32("DifficultyModifier"), Status = e.U32("Status"), LastUpdateTimeSeconds = e.U32("LastUpdateTimeSeconds"), LastUpdateTime = e.U32("LastUpdateTime") });
+            return d;
+        }
+    }
+
+    public sealed class BusinessManager
+    {
+        public int PurchasedBusinessLevelCount { get; init; }
+        public uint MoneyInBank { get; init; }
+        public uint TimePassedSinceLastReward { get; init; }
+        public static BusinessManager From(Props p) => new() { PurchasedBusinessLevelCount = p.Packed("PurchasedBusinessLevels").Count, MoneyInBank = p.U32("MoneyInBank"), TimePassedSinceLastReward = p.U32("TimePassedSinceLastReward") };
+    }
+
     public sealed class FleetData
     {
         public uint CaptureBoatCount { get; init; }
         public uint CaptureBoatNextSlot { get; init; }
         public List<FleetCapturedBoat> CapturedBoats { get; init; } = new();
+        public FleetPlayer Player { get; init; } = new();
         public static FleetData From(Props p)
         {
-            var d = new FleetData { CaptureBoatCount = p.U32("CaptureBoatCount"), CaptureBoatNextSlot = p.U32("CaptureBoatNextSlot") };
+            var d = new FleetData { CaptureBoatCount = p.U32("CaptureBoatCount"), CaptureBoatNextSlot = p.U32("CaptureBoatNextSlot"), Player = FleetPlayer.From(p.Obj("FleetPlayerGameData")) };
             foreach (var e in p.Elements("CapturedBoats"))
                 d.CapturedBoats.Add(new FleetCapturedBoat { Archetype = e.Enum("Archetype"), Level = e.Enum("Level"), OasisLineId = e.S32("OasisLineId") });
             return d;

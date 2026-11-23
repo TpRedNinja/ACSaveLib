@@ -56,6 +56,7 @@ namespace AcSaveLib.Games.Acrogue
         public PlayerProgression SnapshotPlayerProgression { get; private set; } = new();
         public SnapshotDelta SnapshotDelta { get; private set; } = new();
         public FleetData Fleet { get; private set; } = new();
+        public BusinessManager Business { get; private set; } = new();
 
         public static RogueGameData From(List<Node> root)
         {
@@ -84,6 +85,7 @@ namespace AcSaveLib.Games.Acrogue
                     case "SnapshotPlayerProgSaveData": r.SnapshotPlayerProgression = PlayerProgression.From(new Props(n.Children)); break;
                     case "SnapshotPlayerProgressionDelta": r.SnapshotDelta = SnapshotDelta.From(new Props(n.Children)); break;
                     case "FleetSaveGameData": r.Fleet = FleetData.From(new Props(n.Children)); break;
+                    case "BusinessManagerData": r.Business = BusinessManager.From(new Props(n.Children)); break;
                 }
             }
             return r;
