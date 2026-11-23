@@ -23,6 +23,11 @@ The container and LZO2A codec are shared with Brotherhood (`ChunkContainer`, `Lz
 - Container 1 has the Brotherhood items (missions, stats, trainees, progression, villa, world upgrade) with the same names, plus unnamed keys. Header TimePlayed equals GameStatsSaveData TimePlayed (50395 in the long save).
 - Key `27831dd4` (top level of the main game container) is a UTF-16 text, the save slot description: `SYNCHRONIZATION (%): 65.21`, `TIME PLAYED: 13:59:55`, `DISTANCE COVERED (m): 116238` on separate lines [likely: save slot text; values match the stats].
 
+## Names
+- 20 names are exact CRC32 matches of strings in `ACRSP.exe`; further names come from CRC32 matches of up to two words built from exe-derived words (`Names/names.txt`, section "Revelations").
+- Three-word matches are mostly chance (about 300 expected for 193 keys), so only those that form a series or fit the structure are used: `Char01Unlocked` to `Char04Unlocked` [likely], `CurrentDLCMask`, `AlreadyEarnedRewards`, `TotalMoneyLost` [guess].
+- Not confirmed in a viewer.
+
 ## Game code (`ACRSP.exe`)
 | VA | What |
 | --- | --- |
