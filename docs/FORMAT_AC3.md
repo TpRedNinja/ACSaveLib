@@ -1,7 +1,7 @@
 # AC3 (Assassin's Creed III, original PC) save format
 Reader: `Games/Ac3/Ac3SaveFile.cs` (C#, read-only), CLI verb `ac3`. CONFIRMED on eight files from the internet (not the owner's own saves): three `.save` files of a "100%" base-game pack (2012), three `.sav` files of a "100% base game and DLC" pack (`ACIII and TOKW 100 Save File`, 2026) and two `.save` files of a "Sequence 6" pack (2017 and 2025, another player). Every container decodes and every property item parses with no leftover bytes. ACViewer was not used, so nothing is checked against a viewer.
 
-The decrypted stream is the Liberation HD one (`FORMAT_ACL.md`): u32 33, u32 `0x00FEDBAC`, 8 zero bytes, u32 length, u32 uncompressed size, then LZO1x chunked containers with a CRC32-keyed property stream. `Ac3SaveFile` decrypts and hands the stream to `AclSaveFile`.
+The decrypted stream is the Liberation HD one (`FORMAT_ACL.md`): u32 33, u32 `0x00FEDBAC`, 8 zero bytes, u32 length, u32 uncompressed size, then LZO1x chunked containers with a CRC32-keyed property stream. `Ac3SaveFile` decrypts and decodes the containers itself (own typed models in `Games/Ac3`).
 
 ## Encryption and header variants
 - Encryption is a repeating 16 byte XOR anchored to the END of the file (the AC4 scheme, `XorTailCipher`). The stream starts with known plaintext (`u32 33`, `ac db fe 00`, 8 zero bytes = one full key period), so `Ac3SaveFile` recovers the key from it; no key is stored in the library.
