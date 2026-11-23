@@ -1,6 +1,6 @@
 # Liberation (ACL / ACLR) save fields
 
-Layout and containers are in `FORMAT_ACL.md`. The reader is `Games/Acl` (read-only; it exposes the decoded containers and their raw property items, there are no typed models yet).
+Layout and containers are in `FORMAT_ACL.md`. The reader is `Games/Acl` (read-only; decoded containers, raw property items and typed models: `AclModels.cs` header and options, `AclGameData.cs`, `AclFieldModels.cs`, `AclMissionModels.cs`, `AclPlayerProgressionModels.cs`). CLI `acl <file> models`. The models follow the Black Flag layout (GroupSaveData, ProgressionCharacterData), which is the layout the Liberation save uses; fields without a model stay in the node tree.
 
 ## Game save, container 1 (root `0x94D6F8F1`)
 Top-level items, in order: ContextID, NarrativeMissionHistory, SideMissionHistory, CurrentMission, World, PSPState, SnapshotPSPState, PlayerPortal, AnimusDatabaseData, HuntingData [likely], MapFogData, MessagingDatabaseData, UITutorialData, PresentEmailsData, AccomplishmentManagerData, GameStatsSaveData, `56957182`, PlayerProgSaveData, SnapshotPlayerProgSaveData, SnapshotPlayerProgressionDelta, WorldUpgradeSaveData, SnapshotWorldUpgradeSaveData, `0eb2b23c`, `2557d813`, `9fd6d8a6`.
@@ -17,5 +17,5 @@ Top-level items, in order: ContextID, NarrativeMissionHistory, SideMissionHistor
 
 ## Open
 - Unnamed keys: 38 in the game save, 61 in OPTIONS.
-- Typed models, ID tables for World and mission handles (no forge index files for Liberation were provided).
+- Typed models for the ship, shop, hunting and PSP objects, ID tables for World and mission handles (no forge index files for Liberation were provided).
 - Whether the second ship object is a snapshot.

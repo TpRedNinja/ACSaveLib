@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using AcSaveLib.Container;
-using AcSaveLib.Games.Acb;
 using AcSaveLib.Stream;
 
 namespace AcSaveLib.Games.Acr
@@ -15,15 +14,15 @@ namespace AcSaveLib.Games.Acr
         public uint RootKey { get; init; }
         public int Length { get; init; }
         public List<Node> Items { get; init; } = new();
-        /// <summary>Typed models of the named fields. <see cref="AcbGameData.HasGameData"/> is false for streams without game data.</summary>
-        public AcbGameData Game { get; init; } = new();
+        /// <summary>Typed models of the named fields. <see cref="AcrGameData.HasGameData"/> is false for streams without game data.</summary>
+        public AcrGameData Game { get; init; } = new();
         /// <summary>PlayerOptionsSaveData (options saves), else null.</summary>
-        public AcbOptions? Options { get; init; }
+        public AcrOptions? Options { get; init; }
     }
 
     /// <summary>
     /// Assassin's Creed Revelations (.save, PC). Layout is documented in docs/FORMAT_ACR.md.
-    /// AC2-style header (0x228 bytes, plain), then the Brotherhood container stream. Game saves are enciphered from 0x228 with a
+    /// AC2-style header (0x228 bytes, plain), then the chunked container stream (same layout as Brotherhood). Game saves are enciphered from 0x228 with a
     /// repeating 12 byte XOR key aligned to the end of the file; the options save is plain. Read-only.
     /// </summary>
     public sealed class AcrSaveFile
@@ -46,13 +45,13 @@ namespace AcSaveLib.Games.Acr
         public byte[] Data { get; private set; } = Array.Empty<byte>();
         public List<byte[]> Containers { get; private set; } = new();
         public List<Node> HeaderProperties { get; private set; } = new();
-        public AcbHeader Header { get; private set; } = new();
+        public AcrHeader Header { get; private set; } = new();
         /// <summary>Containers after the header container, in file order.</summary>
         public List<AcrStream> Streams { get; private set; } = new();
 
         /// <summary>The first stream with game data (the main game), or null.</summary>
         public AcrStream? MainGame => Streams.FirstOrDefault(s => s.Game.HasGameData);
-        public AcbOptions? Options => Streams.Select(s => s.Options).FirstOrDefault(o => o != null);
+        public AcrOptions? Options => Streams.Select(s => s.Options).FirstOrDefault(o => o != null);
 
         /// <summary>The key that decrypted this save (stream-phase form, see <see cref="Decrypt"/>), or null for a plain save.</summary>
         public byte[]? KeyUsed { get; private set; }
@@ -88,7 +87,7 @@ namespace AcSaveLib.Games.Acr
             r.Containers = ChunkContainer.ReadAll(r.Data, StreamStart);
             if (r.Containers.Count < 2) throw new InvalidDataException("Expected at least two containers.");
             r.HeaderProperties = ParseContainer(r.Containers[0]);
-            r.Header = AcbHeader.From(r.HeaderProperties);
+            r.Header = AcrHeader.From(r.HeaderProperties);
             for (int i = 1; i < r.Containers.Count; i++)
             {
                 var c = r.Containers[i];
@@ -97,7 +96,7 @@ namespace AcSaveLib.Games.Acr
                 r.Streams.Add(new AcrStream
                 {
                     RootKey = BitConverter.ToUInt32(c, 10), Length = c.Length, Items = items,
-                    Game = AcbGameData.From(items), Options = opt != null ? AcbOptions.From(opt) : null,
+                    Game = AcrGameData.From(items), Options = opt != null ? AcrOptions.From(opt) : null,
                 });
             }
             return r;

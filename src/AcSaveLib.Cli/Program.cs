@@ -19,6 +19,7 @@ if (args.Length >= 3 && args[0] == "ac2") return Ac2Cli.Run(args);
 if (args.Length >= 3 && args[0] == "acb") return AcbCli.Run(args);
 if (args.Length >= 3 && args[0] == "acl") return AclCli.Run(args);
 if (args.Length >= 3 && (args[0] == "ac3" || args[0] == "ac3r")) return Ac3Cli.Run(args);
+if (args.Length >= 3 && args[0] == "acrogue") return AcrogueCli.Run(args);
 if (args.Length >= 3 && args[0] == "acr") return AcrCli.Run(args);
 if (args.Length < 3 || args[0] != "ac4") { Console.WriteLine("usage: AcSaveLib.Cli ac4 <file.save> summary|missions|tree [depth] [name]|unknown"); return 1; }
 
@@ -71,11 +72,6 @@ switch (args[2])
             foreach (var g in h.Groups)
                 foreach (var m in g.Missions)
                     Console.WriteLine($"{label} group 0x{g.Id:X} mission 0x{m.Id:X} sync={m.HighestSynchronization} time={m.TimePlayed} steps={m.Steps.Count} constraints=[{string.Join(",", m.Constraints.Select(c => (int)c.State))}]");
-        break;
-    case "header":
-        Console.WriteLine($"header stream {save.HeaderStream.Length} bytes, {save.HeaderProperties.Count} items");
-        foreach (var h in AcSaveLib.Stream.PropertyReader.Parse(save.HeaderStream, Ac4SaveFile.RootItemsOffset, save.HeaderStream.Length))
-            Console.WriteLine($"{h.Key:x8} {h.Name} = {(h.Text ?? h.Value.ToString())}");
         break;
     case "tree":
         int depth = args.Length > 3 ? int.Parse(args[3]) : 2;

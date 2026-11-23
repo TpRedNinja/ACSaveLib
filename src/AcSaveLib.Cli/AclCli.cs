@@ -6,7 +6,7 @@ using AcSaveLib.Games.Acl;
 using AcSaveLib.Names;
 using AcSaveLib.Stream;
 
-/// <summary>CLI verbs for Liberation: acl &lt;file&gt; summary|flat|unknown|raw &lt;container index&gt; [bytes]</summary>
+/// <summary>CLI verbs for Liberation: acl &lt;file&gt; summary|models|flat|unknown|raw &lt;container index&gt; [bytes]</summary>
 public static class AclCli
 {
     public static int Run(string[] args)
@@ -14,13 +14,30 @@ public static class AclCli
         return RunSave(AclSaveFile.Load(args[1]), args);
     }
 
-    /// <summary>Runs a verb on an already parsed file (also used by the AC3 verb, whose saves share this layout).</summary>
     public static int RunSave(AclSaveFile save, string[] args)
     {
         switch (args[2])
         {
             case "summary":
-                Console.WriteLine($"file={save.Data.Length} bytes containers={save.Containers.Count} [{string.Join(", ", save.Containers.Select(c => c.Length))}]");
+                Console.WriteLine($"name={save.Header.SaveGameName} options={save.Header.IsOptions} timePlayed={save.Header.TimePlayed}s\nfile={save.Data.Length} bytes containers={save.Containers.Count} [{string.Join(", ", save.Containers.Select(c => c.Length))}]");
+                break;
+            case "models":
+                for (int i = 0; i < save.Streams.Count; i++)
+                {
+                    var st = save.Streams[i]; var g = st.Game;
+                    Console.WriteLine($"-- stream {i + 1} root=0x{st.RootKey:X8}");
+                    if (st.Options != null) Console.WriteLine($"options: subtitles={st.Options.DisplaySubtitles} brightness={st.Options.Brightness}");
+                    if (!g.HasGameData) continue;
+                    foreach (var (label, hist) in new[] { ("Narrative", g.Narrative), ("Side", g.Side) })
+                    {
+                        var ms = hist.AllMissions.ToList();
+                        Console.WriteLine($"{label}: {hist.Groups.Count} groups, {ms.Count} missions, {ms.Count(m => m.Completed)} at 100% sync");
+                    }
+                    var pp = g.PlayerProgression; var pl = pp.Player;
+                    Console.WriteLine($"CurrentMission=0x{g.CurrentMission:X} World=0x{g.World:X} PlayerPortal=0x{g.PlayerPortal:X}");
+                    Console.WriteLine($"characters={pp.Characters.Count} snapshots={pp.CharacterSnapshots.Count} money={pl?.Money} life={pl?.Life}/{pl?.MaxLife}");
+                    Console.WriteLine($"accomplishments={g.Accomplishments.Entries.Count} completed={g.Accomplishments.Entries.Count(e => e.Completed)} stats={g.GameStats.StatEntries.Count} animus unlocked={g.AnimusDatabase.UnlockedEntries.Count} messages={g.Messaging.Messages.Count}");
+                }
                 break;
             case "raw":
             {
@@ -78,7 +95,7 @@ public static class AclCli
                 break;
             }
             default:
-                Console.WriteLine("usage: AcSaveLib.Cli acl <file> summary|flat|unknown|raw <container> [bytes]");
+                Console.WriteLine("usage: AcSaveLib.Cli acl <file> summary|models|flat|unknown|raw <container> [bytes]");
                 return 1;
         }
         return 0;

@@ -2,8 +2,8 @@
 
 Layout, encryption and containers are in `FORMAT_ACR.md`. The reader is `Games/Acr` (read-only).
 
-## Shared with Brotherhood
-- The main game container (root `0x94D6F8F1`) is read with the Brotherhood models (`AcbGameData`): mission histories, PSP state, Animus entries, tutorials, emails, accomplishments, game stats, trainees guild, progression, villa, world upgrade. Names come from `Names/names.txt`.
+## Named fields
+- The main game container (root `0x94D6F8F1`) is read with Revelations' own models (`Games/Acr/AcrGameData.cs`, `AcrModels.cs`, `AcrGuildModels.cs`, `AcrProgressModels.cs`; same layout and names as Brotherhood): mission histories, PSP state, Animus entries, tutorials, emails, accomplishments, game stats, trainees guild, progression, villa, world upgrade. Names come from `Names/names.txt`.
 - Header: TimePlayed and global synchronization are in the header container; header TimePlayed equals GameStatsSaveData TimePlayed.
 
 ## Names

@@ -19,14 +19,14 @@
 
 ## Header and container
 - Decrypted offset 576 starts the first chunk container with the same layout as AC4 (`33 aa fb 57 99 fa 04 10 01 00 00 00 ...`). [confirmed]
-- The containers decompress with the AC4 codec (LZO1x) and the property stream parses with the AC4 reader (`Games/Ac4`, CLI `ac4`), which tries version 35 and then 36 when recovering the key. [confirmed]
-- Rogue game saves parse with the AC4 models: narrative and side missions, accomplishments, stats, animus database, map icons, messages, fleet and player progression are filled. [confirmed]
+- The containers decompress with the AC4 codec (LZO1x). Reader: `Games/Acrogue/AcrogueSaveFile.cs` (C#, read-only, recovers the key for version 36 from known plaintext), CLI verb `acrogue` (`summary|models|header|tree|flat|unknown`). [confirmed]
+- Rogue has its own models (`RogueModels.cs`, `RogueFieldModels.cs`, `RogueMissionModels.cs`, `RoguePlayerProgressionModels.cs`); the same names as Black Flag are used. Rogue game saves fill: narrative and side missions, accomplishments, stats, animus database, map icons, messages, fleet and player progression are filled. [confirmed]
 - The `100% file - 2.save` of the save pack reads 69 of 69 narrative missions completed and 268 of 312 side missions completed. [likely]
 - Unknown keys (no name in `names.txt`): 13 in a profile save, 43 in an early game save, 57 in the 100% save. [confirmed]
 
 ## Profile saves
 - Profile and options saves (`1.save`, `2.save`) have three containers: the header, a global profile container (`ContextID`, `PlayerOptionsSaveData`, `AccomplishmentManagerData`) and a last container (`ContextID`, `SinglePlayerOptionsSaveData`). [confirmed]
-- The AC4 reader takes the last container as the main stream, so for profile saves it shows `SinglePlayerOptionsSaveData` and not the global profile container. [confirmed]
+- The Rogue reader takes the last container as the main stream (`Stream`), so for profile saves it shows `SinglePlayerOptionsSaveData`; the global profile container is `ProfileRoot`. [confirmed]
 - ACViewer shows the global profile container with the names listed in `names.txt` under the Rogue profile section; it does not show the last container. [confirmed]
 
 ## Header
