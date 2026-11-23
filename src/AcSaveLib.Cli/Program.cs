@@ -72,6 +72,11 @@ switch (args[2])
                 foreach (var m in g.Missions)
                     Console.WriteLine($"{label} group 0x{g.Id:X} mission 0x{m.Id:X} sync={m.HighestSynchronization} time={m.TimePlayed} steps={m.Steps.Count} constraints=[{string.Join(",", m.Constraints.Select(c => (int)c.State))}]");
         break;
+    case "header":
+        Console.WriteLine($"header stream {save.HeaderStream.Length} bytes, {save.HeaderProperties.Count} items");
+        foreach (var h in AcSaveLib.Stream.PropertyReader.Parse(save.HeaderStream, Ac4SaveFile.RootItemsOffset, save.HeaderStream.Length))
+            Console.WriteLine($"{h.Key:x8} {h.Name} = {(h.Text ?? h.Value.ToString())}");
+        break;
     case "tree":
         int depth = args.Length > 3 ? int.Parse(args[3]) : 2;
         string? filter = args.Length > 4 ? args[4] : null;

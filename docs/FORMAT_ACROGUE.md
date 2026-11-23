@@ -23,3 +23,14 @@
 - Rogue game saves parse with the AC4 models: narrative and side missions, accomplishments, stats, animus database, map icons, messages, fleet and player progression are filled. [confirmed]
 - The `100% file - 2.save` of the save pack reads 69 of 69 narrative missions completed and 268 of 312 side missions completed. [likely]
 - Unknown keys (no name in `names.txt`): 13 in a profile save, 43 in an early game save, 57 in the 100% save. [confirmed]
+
+## Profile saves
+- Profile and options saves (`1.save`, `2.save`) have three containers: the header, a global profile container (`ContextID`, `PlayerOptionsSaveData`, `AccomplishmentManagerData`) and a last container (`ContextID`, `SinglePlayerOptionsSaveData`). [confirmed]
+- The AC4 reader takes the last container as the main stream, so for profile saves it shows `SinglePlayerOptionsSaveData` and not the global profile container. [confirmed]
+- ACViewer shows the global profile container with the names listed in `names.txt` under the Rogue profile section; it does not show the last container. [confirmed]
+
+## Header
+- The header properties start at offset 26 of the header container (the main stream's offset), after the root header. [confirmed]
+- `0x510BDEDB` (header, U32) is 1 in all 5 game saves tested (including the 100% save) and 0 in the 3 profile and options saves; Black Flag and Freedom Cry headers do not have it. [confirmed]
+- The meaning of `0x510BDEDB` is not known. [guess]
+- `0x1C011834` is in the header (1048575 in the 100% save, 524288 in an early game save per ACViewer, 0 in options saves) and `0xB4D48994` is also in the header (0 in the 100% save); neither has a name. [confirmed]
