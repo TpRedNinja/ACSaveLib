@@ -19,6 +19,11 @@ Same property stream as `FIELDS_AC3.md`; the Remastered saves contain every unna
 - `EpisodeSaveDataList` (`5251e5ea`, the array of `RatonDLCEpisodeSaveData` entries in `C2`) is a three word CRC32 match whose words are the entry class's own name plus `List`; the same pattern gives `EpisodeDataList` = `62efe6af`, the array of `RatonDLCEpisodeData` entries in `RatonDLCAddon` (ACViewer shows it as `Property_0x62EFE6AF`). [likely]
 - `EpisodeID` values (ACViewer, `RatonDLCAddon` objects): 1 = `DLC-EpisodeA-Despair` in world `AC3_DLC_Frontier`, 2 = `DLC-EpisodeB-NewHope` in `AC3_DLC_Boston`, 3 = `DLC-EpisodeC-Resolution` in `AC3_DLC_NewYork`. [confirmed]
 - `3.save` has one `EpisodeSaveDataList` entry: `EpisodeID` 1, `CurrentMission` 17743176200 (the `Mission` ACViewer shows as `CurrentMission` in that save), `CurrentWorld` 25521185095, `CurrentPlayerPortal` 26088573510. [confirmed value, meaning of the world and portal ids unknown]
+- `C2/SinglePlayerOptionsSaveData` is filled from the game's live settings by `sub_14161CA00` in `ACIII.exe`; the member offsets are +16 `5b95f10b`, +17 `2a4e8a90`, +18 `e2fd32bc`, +19 `FlyingMachineControls`, +20 `InvertCannonHorizontalOnlyCameraControls`, +21 `InvertCannonVerticalOnlyCameraControls`, +22 `NavalAROverlay`, +8 `82768a63` (8 bytes), +23 `832dff4e`. [confirmed in memory for the cannon invert at +20 (changing it in game changed that byte)]
+- `NavalAROverlay` (`2cce68dc`) is the Naval AR Overlay option of the HUD - Boat menu (the game reads it in the same code that builds that menu); its name is a three word CRC32 match. [likely]
+- `82768a63` holds the bitmask of hidden HUD elements (a set bit hides the element; 0 shows all): bit 0 controls, bit 4 weapons, bit 8 recruits, bit 10 notoriety, bit 12 mini-map, bit 13 health, bit 18 SSI, bit 2 naval controls, bit 6 naval weapons, bit 15 naval health, bit 19 naval sails. [likely, from the code that builds the HUD menus; 0 in the profile save with every HUD option on]
+- `832dff4e` is the HUD Updates option (0 shows the updates). [likely, from the same menu code]
+- `5b95f10b`, `2a4e8a90` and `e2fd32bc` are one-byte flags the game sets once during play, not menu options (`e2fd32bc` is set when the Vita connection succeeds); their names are unknown. [likely]
 - Types ACViewer shows for some of them: `3f207d6d` Bool, `e077a7e3` an enum of type 0x6D7F8969 (value 2: 0x706646B4), `b1ac89b6` U32, `4c54a5b3` and `c6ef608c` Language enums, `e1cfaaa2`, `d8429667`, `cf398224`, `10804df5`, `07fb59b6`, `449a84d3`, `83353401` Bool, `ddaffa5b` and `4b821c37` U32, `d8c65114` a U32 array of 29 values (256000 to 780800), `ca2549e9` Float 800, `e1f4e00b` Float 120, `d3222401` Bool; the header `319e33d3` is an LString. [confirmed]
 
 ## Header (container 0)
@@ -28,5 +33,5 @@ Same property stream as `FIELDS_AC3.md`; the Remastered saves contain every unna
 - `3.save` is a Tyranny of King Washington save (the owner's reading: its `NarrativeMissionHistory` holds a fourth group, `Group` 14226381405 with missions 26011386201 and 17743176200, that the other saves lack). [likely]
 
 ## Unnamed keys
-- `ac3r <file> unknown` lists them: 0 in game saves, 12 in the slot -1 profile save (the 12 fields under `C2/3e2c66d9` and `C2/5586b7fe`).
+- `ac3r <file> unknown` lists them: 0 in game saves, 11 in the slot -1 profile save (5 fields under `C2/3e2c66d9` and 6 under `C2/5586b7fe`).
 - Every key still unnamed in the original saves is also present in the Remastered saves.
