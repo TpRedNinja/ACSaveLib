@@ -31,6 +31,7 @@
 
 ## Header
 - The header properties start at offset 26 of the header container (the main stream's offset), after the root header. [confirmed]
+- `SaveGameName` (header) is stored as 8 bytes: a 32-bit length, then the first 4 characters ("Test" in the test saves, "Opti" with length 7 for "Options" in an options save). [confirmed]
 - `0x510BDEDB` (header, U32) is 1 in all 5 game saves tested (including the 100% save) and 0 in the 3 profile and options saves; Black Flag and Freedom Cry headers do not have it. [confirmed]
 - The meaning of `0x510BDEDB` is not known. [guess]
 - `0x1C011834` is in the header (1048575 in the 100% save, 524288 in an early game save per ACViewer, 0 in options saves) and `0xB4D48994` is also in the header (0 in the 100% save); neither has a name. [confirmed]

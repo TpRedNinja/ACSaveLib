@@ -12,11 +12,21 @@ namespace AcSaveLib.Games.Acrogue
         public uint DlcPackagesBits { get; init; }
         public uint CodeChangelist { get; init; }
         public uint SaveGameId { get; init; }
+        /// <summary>Stored as 8 bytes: a 32-bit length, then the first 4 characters ("Test" in the test saves; "Options" in an options save reads "Opti").</summary>
+        public string SaveGameName { get; init; } = "";
         public bool IsOptions { get; init; }
         public uint TimePlayed { get; init; }
         public uint PlayerGlobalSynch { get; init; }
         /// <summary>Unix time in seconds as stored.</summary>
         public uint SaveGameDate { get; init; }
+
+        static string DecodeName(ulong raw)
+        {
+            int length = (int)(raw & 0xFFFFFFFF);
+            var chars = new System.Text.StringBuilder();
+            for (int i = 0; i < 4 && i < length; i++) chars.Append((char)((raw >> (32 + 8 * i)) & 0xFF));
+            return chars.ToString();
+        }
 
         public static RogueHeader From(List<Node> nodes)
         {
@@ -24,7 +34,7 @@ namespace AcSaveLib.Games.Acrogue
             return new RogueHeader
             {
                 Version = p.U32("Version"), MagicNumber = p.U32("MagicNumber"), DlcPackagesBits = p.U32("DLCPackagesBits"),
-                CodeChangelist = p.U32("CodeChangelist"), SaveGameId = p.U32("SaveGameID"), IsOptions = p.Bool("IsOptions"),
+                CodeChangelist = p.U32("CodeChangelist"), SaveGameId = p.U32("SaveGameID"), SaveGameName = DecodeName(p.U64("SaveGameName")), IsOptions = p.Bool("IsOptions"),
                 TimePlayed = p.U32("TimePlayed"), PlayerGlobalSynch = p.U32("PlayerGlobalSynch"),
                 SaveGameDate = p.U32("SaveGameDate"),
             };

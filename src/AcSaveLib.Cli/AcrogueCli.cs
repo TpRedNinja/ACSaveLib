@@ -22,7 +22,7 @@ public static class AcrogueCli
             case "models":
             {
                 var g = save.Game; var h = save.Header;
-                Console.WriteLine($"header: options={h.IsOptions} saveId={h.SaveGameId} timePlayed={h.TimePlayed} globalSynch={h.PlayerGlobalSynch} date={DateTimeOffset.FromUnixTimeSeconds(h.SaveGameDate):u}");
+                Console.WriteLine($"header: name={h.SaveGameName} options={h.IsOptions} saveId={h.SaveGameId} timePlayed={h.TimePlayed} globalSynch={h.PlayerGlobalSynch} date={DateTimeOffset.FromUnixTimeSeconds(h.SaveGameDate):u}");
                 if (!g.HasGameData) { Console.WriteLine("no game data (profile save)"); break; }
                 foreach (var (label, hist) in new[] { ("Narrative", g.Narrative), ("Side", g.Side) })
                 {
