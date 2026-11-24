@@ -23,6 +23,29 @@ namespace AcSaveLib.Crypto
             return key;
         }
 
+        /// <summary>
+        /// Recovers the key from several known plaintext pieces (each at its own file offset) when no single run covers a full key period.
+        /// Every key position must be covered and pieces that overlap a position must agree.
+        /// </summary>
+        public static byte[] RecoverKey(byte[] file, (int Offset, byte[] Plaintext)[] pieces, int keyLength)
+        {
+            var key = new byte[keyLength];
+            var known = new bool[keyLength];
+            foreach (var (offset, plain) in pieces)
+            {
+                if (offset + plain.Length > file.Length) throw new ArgumentException("File too short.");
+                for (int j = 0; j < plain.Length; j++)
+                {
+                    int idx = Mod(offset + j - file.Length, keyLength);
+                    byte k = (byte)(file[offset + j] ^ plain[j]);
+                    if (known[idx] && key[idx] != k) throw new ArgumentException("Known plaintext pieces disagree.");
+                    key[idx] = k; known[idx] = true;
+                }
+            }
+            for (int i = 0; i < keyLength; i++) if (!known[i]) throw new ArgumentException("Known plaintext does not cover the whole key.");
+            return key;
+        }
+
         /// <summary>Returns a decrypted copy; bytes before <paramref name="start"/> are copied unchanged.</summary>
         public static byte[] Apply(byte[] file, int start, byte[] key)
         {
