@@ -11,8 +11,10 @@ Reader: `Games/Acu/AcuSaveFile.cs` (read-only: key recovery, decryption, decompr
 - From offset 552 to the end the data is XORed with a 16 byte key: byte `i` uses `key[(i - fileLength) mod 16]`. This is the Black Flag cipher (`XorTailCipher`). [confirmed]
 - The key is the same in all five saves. The reader recovers it from known plaintext and never fixes it in code. [confirmed]
 - Known plaintext: u32 version `42` and the magic `0x00FEDBAC` at 552, then the container signature `33 aa fb 57 99 fa 04 10` and `01 00 00 00` at 572. The two pieces together cover all 16 key positions. [confirmed]
-- The key is not the MD5 of the Ubisoft account id (the folder name in the savegames path) or of the 32 character id in the save header, in the spellings tried (with and without dashes, upper and lower case, ASCII and UTF-16). How the key is made is not known. [confirmed]
-- Whether the key differs per account or per storefront is not known. [guess]
+- The key is the MD5 of the Ubisoft account id string (lowercase, dashed GUID text, the folder name under `savegames`), with the 16 MD5 bytes placed as `key[i] = md5[(16 - i) mod 16]` in the convention above. It is the same value as the AC3 Remastered key of the same account (`FORMAT_AC3R.md`). [confirmed: MD5 of the owner's account id gives the recovered key]
+- The 32 character id in the save header is not the account id: its MD5 does not give the key. [confirmed]
+- The key is therefore per account; the reader still recovers it from each file's known plaintext and never stores it. [confirmed]
+- ACViewer decrypts Unity saves when given the account id, which fits the derivation. [confirmed by the owner]
 
 ## Stream and containers
 - Decrypted, the stream is: u32 version `42` (Black Flag 35, Rogue 36) | u32 `0x00FEDBAC` | u32 (differs per slot type, meaning unknown) | u32 205, 203 or 213 | u32 237 or 245 (the uncompressed size of the header container) | first container at 572. [confirmed]
@@ -30,4 +32,3 @@ Reader: `Games/Acu/AcuSaveFile.cs` (read-only: key recovery, decryption, decompr
 ## Open
 - Property names: the main stream parses and most top-level names resolve from `names.txt`. `acu <file> unknown` lists 153 (`50%+ 1`), 135 (`Any% start 1`), 150 (`Any% Done`) and 37 (each options save) keys without a name.
 - Typed models for the game data.
-- How the key is made.
