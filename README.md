@@ -11,7 +11,7 @@ Mainline games in release order. Short name, full name, then progress.
 
 | Short | Game | Encryption | Compression | Property stream | Data decoded |
 |---|---|---|---|---|---|
-| AC1 | Assassin's Creed | no encryption | no compression | done (byte-exact) | mission states, accomplishments, collectibles; names resolved (3 hashes open), see docs/FIELDS_AC1.md |
+| AC1 | Assassin's Creed | no encryption | no compression | done (byte-exact) | mission states, accomplishments, collectibles, map/sync/save-game/horse/tutorial sections; names resolved (3 hashes open), see docs/FIELDS_AC1.md |
 | AC2 | Assassin's Creed II | no encryption | no compression | done (same CRC32-keyed stream as AC4, read-only) | mission history, collectible counters and item IDs, accomplishments, money; see docs/FIELDS_AC2.md |
 | ACB | Assassin's Creed Brotherhood | no encryption | LZO2A | done (AC2-style items, read-only) | missions, accomplishments, stats, trainees and contracts, player progression, economy; see docs/FIELDS_ACB.md |
 | ACR | Assassin's Creed Revelations | options save plain, game saves XOR with a per-user repeating key (recovered from known plaintext, no input needed) | LZO2A (same container as ACB) | read-only reader (`acr` CLI) | see docs/FORMAT_ACR.md |
