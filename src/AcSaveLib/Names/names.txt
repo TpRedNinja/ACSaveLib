@@ -1167,3 +1167,23 @@ CameraXAxisSensitivity
 ScoreHistory
 AssassinsRankTable
 BlackList
+# Syndicate (ACS): names found as strings in ACS.exe whose CRC32 equals a key in the saves (likely, not seen in ACViewer)
+Activated
+Associate
+BuildTag
+CartRaceSaveData
+DistrictAssociateSaveData
+DistrictManagerSaveData
+FightClubSaveData
+GPSVisibility
+Influence
+MissionOutputSaveData
+Output
+ProgressionLogSaveGameData
+SecondaryStoreProfileSaveData
+SecondaryStoreSaveData
+SocialCollectablesSaveData
+StatisticSaveDataItem
+Tags
+TextLanguage
+Tier
