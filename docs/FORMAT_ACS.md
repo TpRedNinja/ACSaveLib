@@ -28,5 +28,5 @@ Reader: `Games/Acs/AcsSaveFile.cs` (read-only: key recovery, decryption, decompr
 - The options saves have `SaveGameID` 3, `IsOptions` 1 and `SaveGameName` `Options`; their `TimePlayed` and `SaveGameDate` are 0. [confirmed]
 
 ## Open
-- 29 distinct keys are unnamed over the six saves (`acs <file> unknown`): 4 in an options save, 24 and 25 in the game saves. See `FIELDS_ACS.md`.
+- 10 distinct keys are unnamed over the six saves (`acs <file> unknown`): 4 in an options save, 6 in the game saves; 2 of them are `Property_0x` keys in ACViewer. See `FIELDS_ACS.md`.
 - Layouts of fields that are empty in the samples; the key derivation function in `ACS.exe`.

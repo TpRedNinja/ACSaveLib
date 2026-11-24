@@ -41,8 +41,12 @@ namespace AcSaveLib.Games.Acs
         public bool BriefingAccepted { get; init; }
         public List<MissionStep> Steps { get; init; } = new();
         public List<MissionConstraint> Constraints { get; init; } = new();
-        /// <summary>MissionOutputSaveData entries: the Output id of each (the second key, e8f53f7a, is unnamed).</summary>
+        /// <summary>MissionOutputSaveData entries: the Output id of each.</summary>
         public List<ulong> Outputs { get; init; } = new();
+        /// <summary>MissionOutputSaveData entries: the CurrentState id of each, in the same order as Outputs.</summary>
+        public List<ulong> OutputStates { get; init; } = new();
+        /// <summary>CompletedSteps (a list of MissionStep handles; empty in every save read).</summary>
+        public List<ulong> CompletedSteps { get; init; } = new();
     }
 
     public sealed class MissionGroup
@@ -103,11 +107,17 @@ namespace AcSaveLib.Games.Acs
                 cons.Add(c);
             }
             var outs = new List<ulong>();
+            var outStates = new List<ulong>();
             foreach (var oe in e.Find("MissionOutputSaveData")?.Elements ?? new())
+            {
                 outs.Add(oe.Find("Output")?.Value ?? 0);
+                outStates.Add(oe.Find("CurrentState")?.Value ?? 0);
+            }
             return new Mission
             {
                 Outputs = outs,
+                OutputStates = outStates,
+                CompletedSteps = e.Find("CompletedSteps")?.Packed ?? new(),
                 Id = e.Find("Mission")?.Value ?? 0,
                 HighestSynchronization = (int)(e.Find("HighestSynchronization")?.Value ?? 0),
                 TimePlayed = (uint)(e.Find("TimePlayed")?.Value ?? 0),

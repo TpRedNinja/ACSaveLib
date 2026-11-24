@@ -25,6 +25,31 @@ namespace AcSaveLib.Games.Acs
         public bool Activated { get; init; }
     }
 
+    public sealed class AcsFightClub
+    {
+        public ulong MissionId { get; init; }
+        public uint HighestRound { get; init; }
+    }
+
+    public sealed class AcsCartRace
+    {
+        public ulong MissionId { get; init; }
+        public ulong BestTime { get; init; }
+        public uint BestPosition { get; init; }
+    }
+
+    /// <summary>SecondaryStoreSaveData: the *Given counters.</summary>
+    public sealed class AcsSecondaryStore
+    {
+        public uint PoundsGiven { get; init; }
+        public uint LeatherGiven { get; init; }
+        public uint MetalGiven { get; init; }
+        public uint GlassGiven { get; init; }
+        public uint SilkGiven { get; init; }
+        public uint ChemicalsGiven { get; init; }
+        public uint JewelsGiven { get; init; }
+    }
+
     /// <summary>The main container of a Syndicate game save: typed models of every named top-level field. Unnamed keys stay in the node tree.</summary>
     public sealed class AcsGameData
     {
@@ -45,10 +70,12 @@ namespace AcSaveLib.Games.Acs
         public AcsPlayerProgression PlayerProgression { get; private set; } = new();
         public AcsPlayerProgression SnapshotPlayerProgression { get; private set; } = new();
         public AcsProgressionDelta SnapshotProgressionDelta { get; private set; } = new();
-        public List<ulong> TutorialData { get; private set; } = new();
-        public List<ulong> CraftingData { get; private set; } = new();
-        public List<ulong> BlackBoxData { get; private set; } = new();
-        public List<ulong> LondonUpgradeData { get; private set; } = new();
+        public List<ulong> UnlockedTutorials { get; private set; } = new();
+        public List<ulong> NewTutorials { get; private set; } = new();
+        public List<ulong> ReadItemsProgressionLog { get; private set; } = new();
+        public List<ulong> ReadRecipes { get; private set; } = new();
+        public List<ulong> DiscoveredPOIElements { get; private set; } = new();
+        public List<ulong> LondonUpgradeReadItems { get; private set; } = new();
         public uint CurrentGoldChestAmount { get; private set; }
         public uint CurrentIncomeDelay { get; private set; }
         public uint PendingIncomeValueForAfs { get; private set; }
@@ -59,16 +86,12 @@ namespace AcSaveLib.Games.Acs
         public List<ulong> DiscoveredIcons { get; private set; } = new();
         public uint CompletedCrowdEvents { get; private set; }
         public List<AcsDistrictAssociate> DistrictAssociates { get; private set; } = new();
-        public int FightClubCount { get; private set; }
-        public int CartRaceCount { get; private set; }
-
-        /// <summary>The four objects TutorialData, CraftingData, BlackBoxData and LondonUpgradeData each hold one unnamed packed list; this returns its values.</summary>
-        private static List<ulong> AllPacked(Node n)
-        {
-            var r = new List<ulong>();
-            if (n.Children != null) foreach (var c in n.Children) if (c.Packed != null) r.AddRange(c.Packed);
-            return r;
-        }
+        public int FightClubCount => FightClubs.Count;
+        public int CartRaceCount => CartRaces.Count;
+        public List<AcsFightClub> FightClubs { get; private set; } = new();
+        public List<AcsCartRace> CartRaces { get; private set; } = new();
+        public AcsSecondaryStore SecondaryStore { get; private set; } = new();
+        public List<ulong> CollectedCollectables { get; private set; } = new();
 
         public static AcsGameData From(List<Node> root)
         {
@@ -95,12 +118,18 @@ namespace AcSaveLib.Games.Acs
                     case "PlayerProgSaveData": r.PlayerProgression = AcsPlayerProgression.From(n); break;
                     case "SnapshotPlayerProgSaveData": r.SnapshotPlayerProgression = AcsPlayerProgression.From(n); break;
                     case "SnapshotPlayerProgressionDelta": r.SnapshotProgressionDelta = AcsProgressionDelta.From(n); break;
-                    case "TutorialData": r.TutorialData = AllPacked(n); break;
-                    case "CraftingData": r.CraftingData = AllPacked(n); break;
-                    case "BlackBoxData": r.BlackBoxData = AllPacked(n); break;
-                    case "LondonUpgradeData": r.LondonUpgradeData = AllPacked(n); break;
+                    case "TutorialData": r.UnlockedTutorials = p.Packed("UnlockedTutorials"); r.NewTutorials = p.Packed("NewTutorials"); break;
+                    case "CraftingData": r.ReadRecipes = p.Packed("ReadRecipes"); break;
+                    case "BlackBoxData": r.DiscoveredPOIElements = p.Packed("DiscoveredPOIElements"); break;
+                    case "LondonUpgradeData": r.LondonUpgradeReadItems = p.Packed("ReadItems"); break;
+                    case "ProgressionLogSaveGameData": r.ReadItemsProgressionLog = p.Packed("ReadItems"); break;
                     case "WorldUpgradeSaveData": r.CurrentGoldChestAmount = p.U32("CurrentGoldChestAmount"); r.CurrentIncomeDelay = p.U32("CurrentIncomeDelay"); r.PendingIncomeValueForAfs = p.U32("PendingIncomeValueForAfs"); break;
                     case "OnlineGameSaveData":
+                        r.CollectedCollectables = p.Obj("SocialCollectablesSaveData").Packed("CollectedCollectables");
+                        {
+                            var s = p.Obj("SecondaryStoreSaveData");
+                            r.SecondaryStore = new AcsSecondaryStore { PoundsGiven = s.U32("PoundsGiven"), LeatherGiven = s.U32("LeatherGiven"), MetalGiven = s.U32("MetalGiven"), GlassGiven = s.U32("GlassGiven"), SilkGiven = s.U32("SilkGiven"), ChemicalsGiven = s.U32("ChemicalsGiven"), JewelsGiven = s.U32("JewelsGiven") };
+                        }
                         foreach (var e in p.Obj("PlayerProfileSaveData").Elements("Statistics")) r.PlayerStatistics.Add(new AcsStatistic { StatId = e.U32("StatId"), StatValue = e.U32("StatValue") });
                         foreach (var e in p.Obj("HeroStatsSaveData").Elements("Statistics")) r.HeroStatistics.Add(new AcsStatistic { StatId = e.U32("StatId"), StatValue = e.U32("StatValue") });
                         break;
@@ -109,7 +138,8 @@ namespace AcSaveLib.Games.Acs
                     case "DistrictManagerSaveData":
                         foreach (var e in p.Elements("DistrictAssociateSaveData"))
                             r.DistrictAssociates.Add(new AcsDistrictAssociate { Associate = e.U64("Associate"), Influence = e.U32("Influence"), Level = e.U32("Level"), Activated = e.Bool("Activated") });
-                        r.FightClubCount = p.ElementCount("FightClubSaveData"); r.CartRaceCount = p.ElementCount("CartRaceSaveData");
+                        foreach (var e in p.Elements("FightClubSaveData")) r.FightClubs.Add(new AcsFightClub { MissionId = e.U64("MissionID"), HighestRound = e.U32("HighestRound") });
+                        foreach (var e in p.Elements("CartRaceSaveData")) r.CartRaces.Add(new AcsCartRace { MissionId = e.U64("MissionID"), BestTime = e.U64("BestTime"), BestPosition = e.U32("BestPosition") });
                         break;
                 }
             }
