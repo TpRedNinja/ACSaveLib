@@ -12,7 +12,7 @@
 | 8 | ACFC | Assassin's Creed Freedom Cry (standalone, PC) | DONE: read by the AC4 reader unchanged, see FORMAT_ACFC.md | 0 (game), 11 (profile) |
 | 9 | ACRogue | Assassin's Creed Rogue | DONE: encryption solved, own reader and typed models `Games/Acrogue` (see FORMAT_ACROGUE.md, FIELDS_ACROGUE.md) | 20 keys (profile saves), 8 to 9 (game saves) |
 | 10 | ACU | Assassin's Creed Unity | DONE: key recovered from known plaintext, decrypt, decompress, property stream and typed models by `Games/Acu` (see FORMAT_ACU.md, FIELDS_ACU.md) | 1 (game save), 5 (options save) |
-| 11 | ACS | Assassin's Creed Syndicate | DONE for the named fields: key recovered from known plaintext (MD5 of the account id, confirmed), decrypt, decompress, property stream and typed models by `Games/Acs` (see FORMAT_ACS.md, FIELDS_ACS.md) | 10 distinct (4 in an options save, 6 in game saves; 2 are Property_0x in ACViewer) |
+| 11 | ACS | Assassin's Creed Syndicate | DONE for the named fields: key recovered from known plaintext (MD5 of the account id, confirmed), decrypt, decompress, property stream and typed models by `Games/Acs` (see FORMAT_ACS.md, FIELDS_ACS.md) | 6 distinct (4 in an options save, 2 Property_0x keys in game saves) |
 | 12 | ACO | Assassin's Creed Origins | not started | - |
 | 13 | ACOdy | Assassin's Creed Odyssey | not started | - |
 | 14 | ACV | Assassin's Creed Valhalla | not started | - |

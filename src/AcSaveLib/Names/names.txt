@@ -1234,3 +1234,8 @@ NewTutorials
 ReadRecipes
 DiscoveredPOIElements
 ReadItems
+# Syndicate (ACS): CRC32 matches whose property type in ACS.exe agrees (likely, not seen in ACViewer)
+CheckpointWorld
+CheckpointMission
+CheckpointPortal
+CheckpointTransitionProfile

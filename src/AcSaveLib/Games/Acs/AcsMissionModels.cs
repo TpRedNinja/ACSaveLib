@@ -61,12 +61,18 @@ namespace AcSaveLib.Games.Acs
         /// <summary>MissionHistoryTrackIdentifiers enum value as stored (low 32 bits are the value, high 32 bits the name hash).</summary>
         public ulong Identifier { get; init; }
         public ulong LastConcurrentStepPortal { get; init; }
+        public ulong CheckpointWorld { get; init; }
+        public ulong CheckpointMission { get; init; }
+        public ulong CheckpointPortal { get; init; }
+        public ulong CheckpointTransitionProfile { get; init; }
         public List<MissionGroup> Groups { get; init; } = new();
         public IEnumerable<Mission> AllMissions { get { foreach (var g in Groups) foreach (var m in g.Missions) yield return m; } }
 
         public static MissionHistory From(Node history)
         {
-            var h = new MissionHistory { Identifier = history.Find("Identifier")?.Value ?? 0, LastConcurrentStepPortal = history.Find("LastConcurrentStepPortal")?.Value ?? 0 };
+            var h = new MissionHistory { Identifier = history.Find("Identifier")?.Value ?? 0, LastConcurrentStepPortal = history.Find("LastConcurrentStepPortal")?.Value ?? 0,
+                CheckpointWorld = history.Find("CheckpointWorld")?.Value ?? 0, CheckpointMission = history.Find("CheckpointMission")?.Value ?? 0,
+                CheckpointPortal = history.Find("CheckpointPortal")?.Value ?? 0, CheckpointTransitionProfile = history.Find("CheckpointTransitionProfile")?.Value ?? 0 };
             var groups = history.Find("GroupSaveData");
             if (groups == null) return h;
             foreach (var ge in groups.Elements)
