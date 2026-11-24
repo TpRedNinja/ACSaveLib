@@ -30,5 +30,5 @@ Reader: `Games/Acu/AcuSaveFile.cs` (read-only: key recovery, decryption, decompr
 - Game saves have `SaveGameID` 0 and `IsOptions` 0. Slot 3 saves have `SaveGameID` 3, `IsOptions` 1 and `SaveGameName` `Options`. [confirmed]
 
 ## Open
-- Property names: `acu <file> unknown` lists 0 keys in `50%+ 1` and `Any% Done`, 1 in `Any% start 1` (`50c0d32d`) and 5 in each options save. See `FIELDS_ACU.md`.
+- Property names: `acu <file> unknown` lists 0 keys in the three game saves and 5 in each options save. See `FIELDS_ACU.md`.
 - Layouts of fields that are empty in the samples.
