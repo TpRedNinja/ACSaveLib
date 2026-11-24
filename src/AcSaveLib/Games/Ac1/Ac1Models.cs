@@ -19,6 +19,29 @@ namespace AcSaveLib.Games.Ac1
         public bool IsCompleted { get; init; }
         /// <summary>Second bool every mission item has (hash 6dcf11f9); the owner's table lists it as "Unknown (mission)".</summary>
         public bool Unknown6DCF11F9 { get; init; }
+        /// <summary>MissionMarker.IsKnown (items with a map marker).</summary>
+        public bool? MissionMarkerKnown { get; init; }
+        /// <summary>DestinationMarker.IsKnown.</summary>
+        public bool? DestinationMarkerKnown { get; init; }
+        public bool? SceneAlreadyPlayed { get; init; }
+        public bool? HarassersKilled { get; init; }
+        public bool? ObjectiveBriefed { get; init; }
+        public bool? TargetSpawned { get; init; }
+        public bool? TargetReady { get; init; }
+        public bool? AssassinationDone { get; init; }
+        public uint? CurStepIdx { get; init; }
+        /// <summary>Four-byte integer (hash 73970a36) saved on 47 items of the 100% save; the name is unknown.</summary>
+        public uint? Unknown73970A36 { get; init; }
+        /// <summary>MissionActions[i].Activated.</summary>
+        public IReadOnlyList<bool> MissionActionsActivated { get; init; } = Array.Empty<bool>();
+        /// <summary>Targets[i].Marker.IsKnown.</summary>
+        public IReadOnlyList<bool> TargetsKnown { get; init; } = Array.Empty<bool>();
+        /// <summary>Clones[i].Marker.IsKnown.</summary>
+        public IReadOnlyList<bool> ClonesKnown { get; init; } = Array.Empty<bool>();
+        /// <summary>Kiosks[i].Marker.IsKnown.</summary>
+        public IReadOnlyList<bool> KiosksKnown { get; init; } = Array.Empty<bool>();
+        /// <summary>Flags[i].Marker.IsKnown (items that own flags).</summary>
+        public IReadOnlyList<bool> FlagsKnown { get; init; } = Array.Empty<bool>();
     }
 
     /// <summary>Static info about one of the 44 achievements (config 1 slot order). Source: AC1_notes.md section 9.1.</summary>
@@ -140,7 +163,36 @@ namespace AcSaveLib.Games.Ac1
                 var st = o.Fields.FirstOrDefault(f => f.EnumType == Ac1MissionItem.StateEnumType);
                 if (st == null) continue;
                 bool B(uint h) => o.Fields.FirstOrDefault(f => f.Path.Count == 1 && f.Path[0].NameHash == h)?.AsBool() ?? false;
-                r.Add(new Ac1MissionItem { ClassId = o.ClassId, State = (Ac1MissionState)st.AsUInt32(), IsCompleted = B(0x523ad0c1), Unknown6DCF11F9 = B(0x6dcf11f9) });
+                List<bool> L(string name, string leaf)
+                {
+                    var l = new List<bool>();
+                    for (int i = 0; ; i++)
+                    {
+                        var f = o.Find($"{name}[{i}].{leaf}");
+                        if (f == null) break;
+                        l.Add(f.AsBool());
+                    }
+                    return l;
+                }
+                r.Add(new Ac1MissionItem
+                {
+                    ClassId = o.ClassId, State = (Ac1MissionState)st.AsUInt32(), IsCompleted = B(0x523ad0c1), Unknown6DCF11F9 = B(0x6dcf11f9),
+                    MissionMarkerKnown = Ac1Read.BoolOrNull(o, "MissionMarker.IsKnown"),
+                    DestinationMarkerKnown = Ac1Read.BoolOrNull(o, "DestinationMarker.IsKnown"),
+                    SceneAlreadyPlayed = Ac1Read.BoolOrNull(o, "SceneAlreadyPlayed"),
+                    HarassersKilled = Ac1Read.BoolOrNull(o, "HarassersKilled"),
+                    ObjectiveBriefed = Ac1Read.BoolOrNull(o, "ObjectiveBriefed"),
+                    TargetSpawned = Ac1Read.BoolOrNull(o, "TargetSpawned"),
+                    TargetReady = Ac1Read.BoolOrNull(o, "TargetReady"),
+                    AssassinationDone = Ac1Read.BoolOrNull(o, "AssassinationDone"),
+                    CurStepIdx = Ac1Read.UIntOrNull(o, "CurStepIdx"),
+                    Unknown73970A36 = Ac1Read.UIntOrNull(o, "73970a36"),
+                    MissionActionsActivated = L("MissionActions", "Activated"),
+                    TargetsKnown = L("Targets", "Marker.IsKnown"),
+                    ClonesKnown = L("Clones", "Marker.IsKnown"),
+                    KiosksKnown = L("Kiosks", "Marker.IsKnown"),
+                    FlagsKnown = L("Flags", "Marker.IsKnown"),
+                });
             }
             return r;
         }

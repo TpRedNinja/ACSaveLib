@@ -4,7 +4,7 @@ using System.Linq;
 using AcSaveLib.Games.Ac1;
 
 // Usage:
-//   AcSaveLib.Cli ac1 <file.sav> summary | roundtrip | object <classId> | unknown
+//   AcSaveLib.Cli ac1 <file.sav> summary | roundtrip | models | object <classId> | unknown
 internal static class Ac1Cli
 {
     public static int Run(string[] args)
@@ -30,6 +30,28 @@ internal static class Ac1Cli
                     Console.WriteLine($"  [{a.Slot,2}] {(a.Completed ? "DONE" : "....")} {a.Info?.Title,-36} resolved={a.IsResolved} count={a.Count?.ToString() ?? "-"} used={a.UsedEvents.Count}");
                 foreach (var c in save.Collectibles()) Console.WriteLine($"  {c.Category}: {c.Collected}/{c.Needed}");
                 Console.WriteLine("PersistedIDs: " + string.Join(", ", save.PersistedIds().Select(i => i.ToString("X8"))));
+                var map = save.MapData();
+                if (map != null)
+                {
+                    Console.WriteLine("MapManager: cities known " + string.Join(", ", map.CityKnown.Select((k, i) => $"{(i < Ac1MapData.CityNames.Count ? Ac1MapData.CityNames[i] : i.ToString())}={k}")));
+                    Console.WriteLine($"  compass known={map.DefaultCompassMarker.IsKnown}, altair known={map.AltairMarker.IsKnown}, set-by-player known={map.SetByPlayerMarker.IsKnown} type={map.SetByPlayerMarker.MarkerType} pos=({string.Join(", ", map.SetByPlayerMarker.MarkerPosition)})");
+                }
+                var dna = save.DnaData();
+                if (dna != null) Console.WriteLine($"DNAMemory: sync blocks {dna.NumSynchBlocks}/{dna.TotalNumSynchBlocks}, unlocked {dna.UnlockedBlocksCount}, optional objectives {dna.OptionalObjectivesCount}, override={dna.NothingIsTrueEverythingIsPermitted}");
+                var sg = save.SaveGameData();
+                if (sg != null)
+                {
+                    Console.WriteLine($"SaveGameData: current world {sg.CurrentSaveWorldId:X8} ({sg.CurrentSaveWorldName}), main {sg.MainSaveWorldId:X8} ({sg.MainSaveWorldName}), always {sg.AlwaysSaveWorldId:X8} ({sg.AlwaysSaveWorldName}), memory block {sg.CurrentMemoryBlock}");
+                    Console.WriteLine($"  rank {sg.AltairCurrentRank} -> {sg.AltairNextRank}, weapon {sg.SelectedWeapon}, daggers belt/shoulder/leg {sg.DaggerBeltCount}/{sg.DaggerShoulderCount}/{sg.DaggerLegCount}, matrix tail ({string.Join(", ", sg.AssassinMatrix.Skip(12))})");
+                }
+                var horse = save.HorseData();
+                if (horse != null) Console.WriteLine($"HorseData: chosen={horse.MountIsChosen}, inWorld={horse.MountIsInWorld}, spawnMode={horse.SpawnMode}, mountIndex={horse.MountIndex}, onMount={horse.AssassinOnMount}");
+                var tut = save.TutorialData();
+                if (tut != null) Console.WriteLine($"TutorialManager: informers {tut.FreeMissionInformerCount}, scholars {tut.FreeMissionScholarsCount}, vigilantes {tut.FreeMissionVigilantesCount}");
+                foreach (var mo in save.MapObjects())
+                    foreach (var c in mo.Components)
+                        Console.WriteLine($"Map object {mo.ClassId}: component {c.Index}, markers {c.Markers.Count(x => x)}/{c.Markers.Count}, automatic {c.AutomaticMarkers.Count(x => x)}/{c.AutomaticMarkers.Count}, fog cells {c.FogCells.Length}, all unfogged={c.IsAllUnfogged}");
+                Console.WriteLine($"mission extras: marker known {items.Count(m => m.MissionMarkerKnown == true)}, scenes played {items.Count(m => m.SceneAlreadyPlayed == true)}, briefed {items.Count(m => m.ObjectiveBriefed == true)}, assassinations done {items.Count(m => m.AssassinationDone == true)}");
                 break;
             }
             case "unknown":

@@ -36,40 +36,44 @@ namespace AcSaveLib.Games.Ac2
         /// <summary>True if the save holds a game (AssassinSaveGameData), false for a profile-only save.</summary>
         public bool HasGameData { get; private set; }
 
-        public bool IsValid { get; private set; }
-        /// <summary>Header flag IsCorrupt (name confirmed in ACViewer; 0 in all samples). Can be checked before overwriting a slot.</summary>
-        public bool IsCorrupt { get; private set; }
-        public bool LoadOrSaveOptionsFailed { get; private set; }
-        public bool IsOptions { get; private set; }
-        /// <summary>SaveGameName: "Desmond" in game saves, "Options" in options saves.</summary>
-        public string SaveGameName { get; private set; } = "";
+        /// <summary>Header properties (version, name, date, current world, flags).</summary>
+        public Ac2Header Header { get; private set; } = new();
         /// <summary>Present when the save holds AssassinGlobalProfileData (options/bonus saves such as 2.save).</summary>
         public Ac2Options? Options { get; private set; }
         public Ac2Profile? Profile { get; private set; }
-        public Ac2GameStats GameStats { get; private set; } = new();
-        public Ac2Villa Villa { get; private set; } = new();
+        /// <summary>All typed models of the game data (AssassinSaveGameData). Empty models for a profile-only save.</summary>
+        public Ac2GameData Game { get; private set; } = new();
 
-        public uint Version { get; private set; }
-        public uint DlcPackagesBits { get; private set; }
-        public uint CodeChangelist { get; private set; }
-        /// <summary>Raw TimePlayed value of the save header (unit not confirmed).</summary>
-        public uint TimePlayed { get; private set; }
+        public bool IsValid => Header.IsValid;
+        /// <summary>Header flag IsCorrupt (name confirmed in ACViewer; 0 in all samples). Can be checked before overwriting a slot.</summary>
+        public bool IsCorrupt => Header.IsCorrupt;
+        public bool LoadOrSaveOptionsFailed => Header.LoadOrSaveOptionsFailed;
+        public bool IsOptions => Header.IsOptions;
+        /// <summary>SaveGameName: "Desmond" in game saves, "Options" in options saves.</summary>
+        public string SaveGameName => Header.SaveGameName;
+        public uint Version => Header.Version;
+        public uint DlcPackagesBits => Header.DlcPackagesBits;
+        public uint CodeChangelist => Header.CodeChangelist;
+        /// <summary>Seconds played, from the save header (owner).</summary>
+        public uint TimePlayed => Header.TimePlayed;
         /// <summary>PlayerGlobalSynch from the header (0x64 = 100 in the 100% save sample).</summary>
-        public uint PlayerGlobalSynch { get; private set; }
+        public uint PlayerGlobalSynch => Header.PlayerGlobalSynch;
         /// <summary>SaveGameDate from the header: Unix time (seconds) as stored.</summary>
-        public uint SaveGameDate { get; private set; }
-        public ulong CurrentWorld { get; private set; }
-        public ulong CurrentMission { get; private set; }
-        public ulong PlayerPortal { get; private set; }
+        public uint SaveGameDate => Header.SaveGameDate;
+        public ulong CurrentWorld => Header.CurrentWorld;
+        public ulong CurrentMission => Header.CurrentMission;
 
-        public Ac2MissionHistory Narrative { get; private set; } = new();
-        public Ac2MissionHistory Side { get; private set; } = new();
-        public List<Ac2AccomplishmentEntry> Accomplishments { get; private set; } = new();
+        public ulong PlayerPortal => Game.PlayerPortal;
+        public Ac2MissionHistory Narrative => Game.Narrative;
+        public Ac2MissionHistory Side => Game.Side;
+        public Ac2GameStats GameStats => Game.GameStats;
+        public Ac2Villa Villa => Game.Villa;
+        public List<Ac2AccomplishmentEntry> Accomplishments => Game.Accomplishments;
         /// <summary>IDs of every inventory item gained (chests, feathers, codex pages, maps, ... : hashes of AC2_InventoryItems).</summary>
-        public List<uint> GainedInventoryItems { get; private set; } = new();
-        public Ac2CollectedAmounts CollectedAmounts { get; private set; } = new();
+        public List<uint> GainedInventoryItems => Game.Progression.GainedInventoryItems;
+        public Ac2CollectedAmounts CollectedAmounts => Game.Progression.CollectedAmounts;
         /// <summary>LIKELY: CurrentItemCount of the first inventory container of the first character (category InvItem_Money).</summary>
-        public uint Money { get; private set; }
+        public uint Money => Game.Progression.Money;
 
         public static Ac2SaveFile Load(string path) => Parse(File.ReadAllBytes(path));
 
@@ -100,25 +104,7 @@ namespace AcSaveLib.Games.Ac2
 
         private void Fill()
         {
-            var header = new Props(Root);
-            Version = header.U32("Version");
-            DlcPackagesBits = header.U32("DLCPackagesBits");
-            CodeChangelist = header.U32("CodeChangelist");
-            IsValid = header.Bool("IsValid");
-            IsCorrupt = header.Bool("IsCorrupt");
-            LoadOrSaveOptionsFailed = header.Bool("LoadOrSaveOptionsFailed");
-            IsOptions = header.Bool("IsOptions");
-            var nameNode = header.Get("SaveGameName");
-            if (nameNode != null && nameNode.Bytes.Length >= 4)
-            {
-                int len = (int)BitConverter.ToUInt32(nameNode.Bytes, 0);
-                if (len >= 0 && len <= nameNode.Bytes.Length - 4) SaveGameName = System.Text.Encoding.ASCII.GetString(nameNode.Bytes, 4, len);
-            }
-            TimePlayed = header.U32("TimePlayed");
-            PlayerGlobalSynch = header.U32("PlayerGlobalSynch");
-            SaveGameDate = header.U32("SaveGameDate");
-            CurrentWorld = header.U64("CurrentWorld");
-            CurrentMission = header.U64("CurrentMission");
+            Header = Ac2Header.From(Root);
             var objs = Root.FirstOrDefault(n => n.Name == "SaveGameDataObjects");
             if (objs != null) DataObjects = objs.Elements;
             var profile = DataObjects.FirstOrDefault(e => e.Name == "AssassinGlobalProfileData");
@@ -131,22 +117,7 @@ namespace AcSaveLib.Games.Ac2
             var game = DataObjects.FirstOrDefault(e => e.Name == "AssassinSaveGameData");
             if (game == null) return;
             HasGameData = true;
-            var g = new Props(game.Children);
-            Narrative = Ac2MissionHistory.From(game.Find("NarrativeMissionHistory"));
-            Side = Ac2MissionHistory.From(game.Find("SideMissionHistory"));
-            PlayerPortal = g.U64("PlayerPortal");
-            GameStats = Ac2GameStats.From(g.Obj("GameStatsSaveData"));
-            Villa = Ac2Villa.From(g.Obj("VillaSaveData"));
-            foreach (var e in g.Obj("AccomplishmentManagerData").Elements("AccomplishmentEntries"))
-                Accomplishments.Add(new Ac2AccomplishmentEntry { ObjectId = e.U64("ObjectID"), Inactive = e.Bool("Inactive"), Completed = e.Bool("Completed"), CurrentCount = e.U32("CurrentCount") });
-            var prog = g.Obj("PlayerProgSaveData");
-            GainedInventoryItems = prog.PackedU32("GainedInventoryItems");
-            CollectedAmounts = new Ac2CollectedAmounts { Values = prog.PackedU32("QuestItemsCollectedAmounts") };
-            var firstChar = prog.Elements("PlayerCharacterData").FirstOrDefault();
-            // The object holding InventoryContainerList has the unnamed key 0x2ABEA3BC.
-            var inv = new Props(firstChar.GetByKey(0x2ABEA3BC)?.Children);
-            var firstContainer = inv.Elements("InventoryContainerList").FirstOrDefault();
-            Money = firstContainer.U32("CurrentItemCount");
+            Game = Ac2GameData.From(game);
         }
 
         private static int IndexOfMagic(byte[] f)

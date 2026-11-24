@@ -19,6 +19,7 @@ if (args.Length >= 3 && args[0] == "ac2") return Ac2Cli.Run(args);
 if (args.Length >= 3 && args[0] == "acb") return AcbCli.Run(args);
 if (args.Length >= 3 && args[0] == "acl") return AclCli.Run(args);
 if (args.Length >= 3 && (args[0] == "ac3" || args[0] == "ac3r")) return Ac3Cli.Run(args);
+if (args.Length >= 3 && args[0] == "acrogue") return AcrogueCli.Run(args);
 if (args.Length >= 3 && args[0] == "acr") return AcrCli.Run(args);
 if (args.Length < 3 || args[0] != "ac4") { Console.WriteLine("usage: AcSaveLib.Cli ac4 <file.save> summary|missions|tree [depth] [name]|unknown"); return 1; }
 
@@ -36,6 +37,13 @@ switch (args[2])
         }
         Console.WriteLine($"CurrentMission=0x{save.CurrentMission:X} World=0x{save.World:X} PlayerPortal=0x{save.PlayerPortal:X}");
         break;
+    case "header":
+    {
+        var h = save.Header;
+        Console.WriteLine($"name={h.SaveGameName} options={h.IsOptions} saveId={h.SaveGameId} version={h.Version} magic={h.MagicNumber} dlcBits={h.DlcPackagesBits} changelist={h.CodeChangelist} timePlayed={h.TimePlayed} globalSynch={h.PlayerGlobalSynch} date={h.SaveGameDate}");
+        foreach (var n in save.HeaderProperties) Console.WriteLine($"  {n.Name} (0x{n.Key:X8}) kind={n.Kind} type=0x{n.TypeId:X} value={n.Value} bytes={n.Bytes.Length}" + (n.Name == "SaveGameName" ? " hex=" + BitConverter.ToString(n.Bytes) : ""));
+        break;
+    }
     case "named":
     {
         // usage: ac4 <file> named <forge-index-folder>
