@@ -28,6 +28,17 @@ namespace AcSaveLib.Games.Acs
         public ulong GpsVisibility { get; private set; }
         public ulong HudAllHidden { get; private set; }
         public Dictionary<string, bool> HudFlags { get; private set; } = new();
+        public bool HudMissionTrackerHidden { get; private set; }
+        public uint UlcUnlocksShown { get; private set; }
+        public float TimeSaverXpBoostElapsedTime { get; private set; }
+        public float TimeSaverXpBoostDuration { get; private set; }
+        public uint TimeSaverXpBoostIncreasePercent { get; private set; }
+        public float UlcXpBoostElapsedTime { get; private set; }
+        public float UlcXpBoostDuration { get; private set; }
+        public uint UlcXpBoostIncreasePercent { get; private set; }
+        public uint LastHelixBalance { get; private set; }
+        public ulong LastExpiredTransactionTimestamp { get; private set; }
+        public bool VirtualCurrencyProfileUpdated { get; private set; }
         public uint UplayRewards { get; private set; }
         public ulong UplayActions { get; private set; }
         public bool UplayWelcomeBackDone { get; private set; }
@@ -59,11 +70,16 @@ namespace AcSaveLib.Games.Acs
                         r.InvertCameraHorizontalAxis = p.Bool("InvertCameraHorizontalAxis"); r.InvertCameraVerticalAxis = p.Bool("InvertCameraVerticalAxis");
                         r.InvertAimingCameraHorizontalAxis = p.Bool("InvertAimingCameraHorizontalAxis"); r.InvertAimingCameraVerticalAxis = p.Bool("InvertAimingCameraVerticalAxis");
                         r.CameraInserts = p.U32("CameraInserts"); r.Brightness = p.U32("Brightness"); r.Blood = p.Bool("Blood"); r.TimeOfDay = p.U32("TimeOfDay");
-                        r.GpsVisibility = p.U64("GPSVisibility"); r.HudAllHidden = p.U64("HUDAllHidden");
+                        r.GpsVisibility = p.U64("GPSVisibility"); r.HudAllHidden = p.U64("HUDAllHidden"); r.HudMissionTrackerHidden = p.Bool("HUDMissionTrackerHidden");
                         foreach (var name in HudNames) r.HudFlags[name] = p.Bool(name);
                         break;
                     case "OnlineProfileSaveData":
                         r.UplayRewards = p.U32("UplayRewards"); r.UplayActions = p.U64("UplayActions"); r.UplayWelcomeBackDone = p.Bool("UplayWelcomeBackDone");
+                        r.UlcUnlocksShown = p.U32("ULCUnlocksShown");
+                        r.TimeSaverXpBoostElapsedTime = p.Float("TimeSaverXPBoostElapsedTime"); r.TimeSaverXpBoostDuration = p.Float("TimeSaverXPBoostDuration"); r.TimeSaverXpBoostIncreasePercent = p.U32("TimeSaverXPBoostIncreasePercent");
+                        r.UlcXpBoostElapsedTime = p.Float("ULCXPBoostElapsedTime"); r.UlcXpBoostDuration = p.Float("ULCXPBoostDuration"); r.UlcXpBoostIncreasePercent = p.U32("ULCXPBoostIncreasePercent");
+                        r.LastHelixBalance = p.Obj("SecondaryStoreProfileSaveData").U32("LastHelixBalance"); r.LastExpiredTransactionTimestamp = p.Obj("SecondaryStoreProfileSaveData").U64("LastExpiredTransactionTimestamp");
+                        r.VirtualCurrencyProfileUpdated = p.Obj("OnlineCoreProfileSaveData").Bool("VirtualCurrencyProfileUpdated");
                         r.EventSessionCount = p.Obj("OnlineCoreProfileSaveData").Obj("EventSaveData").Packed("EventSessions").Count;
                         break;
                 }

@@ -93,6 +93,7 @@ public static class AcsCli
             var c = pp.Characters[i];
             Console.WriteLine($"  character {i} (id {c.ProgressionCharacter}): life {c.Life}/{c.MaxLife} xp {c.Xp} tier {c.Tier} creed points {c.LifetimeCreedPoints} gained items {c.GainedInventoryItems.Count} discovered missions {c.DiscoveredMissions.Count}");
         }
+        Console.WriteLine($"perks: {pp.AcquiredPerks.Count} acquired, {pp.AcknowledgedPerks.Count} acknowledged; snapshot delta: {g.SnapshotProgressionDelta.Characters.Count} characters");
         Console.WriteLine($"world upgrade: gold chest {g.CurrentGoldChestAmount}, income delay {g.CurrentIncomeDelay}, pending income {g.PendingIncomeValueForAfs}");
         Console.WriteLine($"districts: {g.DistrictAssociates.Count} associates ({g.DistrictAssociates.Count(a => a.Activated)} activated), {g.FightClubCount} fight clubs, {g.CartRaceCount} cart races");
         Console.WriteLine($"statistics: {g.PlayerStatistics.Count} player, {g.HeroStatistics.Count} hero");

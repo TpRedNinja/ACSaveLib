@@ -44,6 +44,11 @@ namespace AcSaveLib.Games.Acs
         public List<AcsAccomplishment> Accomplishments { get; private set; } = new();
         public AcsPlayerProgression PlayerProgression { get; private set; } = new();
         public AcsPlayerProgression SnapshotPlayerProgression { get; private set; } = new();
+        public AcsProgressionDelta SnapshotProgressionDelta { get; private set; } = new();
+        public List<ulong> TutorialData { get; private set; } = new();
+        public List<ulong> CraftingData { get; private set; } = new();
+        public List<ulong> BlackBoxData { get; private set; } = new();
+        public List<ulong> LondonUpgradeData { get; private set; } = new();
         public uint CurrentGoldChestAmount { get; private set; }
         public uint CurrentIncomeDelay { get; private set; }
         public uint PendingIncomeValueForAfs { get; private set; }
@@ -56,6 +61,14 @@ namespace AcSaveLib.Games.Acs
         public List<AcsDistrictAssociate> DistrictAssociates { get; private set; } = new();
         public int FightClubCount { get; private set; }
         public int CartRaceCount { get; private set; }
+
+        /// <summary>The four objects TutorialData, CraftingData, BlackBoxData and LondonUpgradeData each hold one unnamed packed list; this returns its values.</summary>
+        private static List<ulong> AllPacked(Node n)
+        {
+            var r = new List<ulong>();
+            if (n.Children != null) foreach (var c in n.Children) if (c.Packed != null) r.AddRange(c.Packed);
+            return r;
+        }
 
         public static AcsGameData From(List<Node> root)
         {
@@ -81,6 +94,11 @@ namespace AcSaveLib.Games.Acs
                         break;
                     case "PlayerProgSaveData": r.PlayerProgression = AcsPlayerProgression.From(n); break;
                     case "SnapshotPlayerProgSaveData": r.SnapshotPlayerProgression = AcsPlayerProgression.From(n); break;
+                    case "SnapshotPlayerProgressionDelta": r.SnapshotProgressionDelta = AcsProgressionDelta.From(n); break;
+                    case "TutorialData": r.TutorialData = AllPacked(n); break;
+                    case "CraftingData": r.CraftingData = AllPacked(n); break;
+                    case "BlackBoxData": r.BlackBoxData = AllPacked(n); break;
+                    case "LondonUpgradeData": r.LondonUpgradeData = AllPacked(n); break;
                     case "WorldUpgradeSaveData": r.CurrentGoldChestAmount = p.U32("CurrentGoldChestAmount"); r.CurrentIncomeDelay = p.U32("CurrentIncomeDelay"); r.PendingIncomeValueForAfs = p.U32("PendingIncomeValueForAfs"); break;
                     case "OnlineGameSaveData":
                         foreach (var e in p.Obj("PlayerProfileSaveData").Elements("Statistics")) r.PlayerStatistics.Add(new AcsStatistic { StatId = e.U32("StatId"), StatValue = e.U32("StatValue") });
