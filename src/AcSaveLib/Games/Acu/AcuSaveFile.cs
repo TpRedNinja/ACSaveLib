@@ -47,6 +47,10 @@ namespace AcSaveLib.Games.Acu
         public List<Node> ProfileRoot { get; private set; } = new();
 
         public AcuHeader Header { get; private set; } = new();
+        /// <summary>Typed game data of a game save (empty for an options save).</summary>
+        public AcuGameData Game { get; private set; } = new();
+        /// <summary>Typed options and profile data of a slot 3 (options) save (empty for a game save).</summary>
+        public AcuOptionsData Options { get; private set; } = new();
         /// <summary>True when the header marks the file as an options save (slot 3).</summary>
         public bool IsOptions => Header.IsOptions;
 
@@ -68,6 +72,8 @@ namespace AcSaveLib.Games.Acu
             r.Root = PropertyReader.Parse(r.Stream, ItemsStart, r.Stream.Length);
             if (r.Containers.Count > 2) r.ProfileRoot = PropertyReader.Parse(r.Containers[1], ItemsStart, r.Containers[1].Length);
             r.Header = AcuHeader.From(r.HeaderProperties);
+            if (r.IsOptions) r.Options = AcuOptionsData.From(r.ProfileRoot, r.Root);
+            else r.Game = AcuGameData.From(r.Root);
             return r;
         }
     }

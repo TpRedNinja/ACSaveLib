@@ -11,7 +11,7 @@
 | 7 | AC4 | Assassin's Creed IV Black Flag | DONE: decrypt/decompress/parse done; all known fields have typed models (see FIELDS_AC4.md) | 0 (in the 3 saves checked) |
 | 8 | ACFC | Assassin's Creed Freedom Cry (standalone, PC) | DONE: read by the AC4 reader unchanged, see FORMAT_ACFC.md | 0 (game), 11 (profile) |
 | 9 | ACRogue | Assassin's Creed Rogue | DONE: encryption solved, own reader and typed models `Games/Acrogue` (see FORMAT_ACROGUE.md, FIELDS_ACROGUE.md) | 20 keys (profile saves), 8 to 9 (game saves) |
-| 10 | ACU | Assassin's Creed Unity | IN PROGRESS: key recovered from known plaintext, decrypt, decompress and property stream read by `Games/Acu` (see FORMAT_ACU.md); no typed models yet | 150 (game save), 37 (options save) |
+| 10 | ACU | Assassin's Creed Unity | DONE for named fields: key recovered from known plaintext, decrypt, decompress, property stream and typed models by `Games/Acu` (see FORMAT_ACU.md, FIELDS_ACU.md) | 1 (game save), 5 (options save) |
 | 11 | ACS | Assassin's Creed Syndicate | not started | - |
 | 12 | ACO | Assassin's Creed Origins | not started | - |
 | 13 | ACOdy | Assassin's Creed Odyssey | not started | - |

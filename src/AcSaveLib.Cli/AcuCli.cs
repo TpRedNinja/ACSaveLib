@@ -6,7 +6,7 @@ using AcSaveLib.Games.Acu;
 using AcSaveLib.Names;
 using AcSaveLib.Stream;
 
-/// <summary>CLI verbs for Unity: acu &lt;file&gt; summary|header|tree [depth] [name]|flat|unknown</summary>
+/// <summary>CLI verbs for Unity: acu &lt;file&gt; summary|header|models|tree [depth] [name]|flat|unknown</summary>
 public static class AcuCli
 {
     public static int Run(string[] args)
@@ -19,6 +19,10 @@ public static class AcuCli
                 { var h = save.Header; Console.WriteLine($"header: name={h.SaveGameName} options={h.IsOptions} saveId={h.SaveGameId} version={h.Version} dlcBits=0x{h.DlcPackagesBits:X} changelist={h.CodeChangelist} timePlayed={h.TimePlayed} globalSynch={h.PlayerGlobalSynch} date={DateTimeOffset.FromUnixTimeSeconds(h.SaveGameDate):u}"); }
                 Console.WriteLine($"key:   {BitConverter.ToString(save.Key)}");
                 Console.WriteLine($"containers: {save.Containers.Count} [{string.Join(", ", save.Containers.Select(c => c.Length))}] options save={save.IsOptions}");
+                break;
+            case "models":
+                if (save.IsOptions) PrintOptions(save.Options);
+                else PrintGame(save.Game);
                 break;
             case "header":
                 foreach (var h in save.HeaderProperties) Console.WriteLine($"{h.Key:x8} {h.Name} = {(h.Text ?? h.Value.ToString())}");
@@ -65,6 +69,50 @@ public static class AcuCli
             }
         }
         return 0;
+    }
+
+    static void PrintMissions(string label, MissionHistory h)
+    {
+        int total = 0, nonZero = 0;
+        foreach (var m in h.AllMissions) { total++; if (m.HighestSynchronization != 0) nonZero++; }
+        Console.WriteLine($"{label}: {h.Groups.Count} groups, {total} missions, {nonZero} with HighestSynchronization != 0, identifier=0x{h.Identifier:X}");
+    }
+
+    static void PrintGame(AcuGameData g)
+    {
+        PrintMissions("narrative missions", g.Narrative);
+        PrintMissions("side missions", g.Side);
+        Console.WriteLine($"currentRoot={g.CurrentRoot} currentMission={g.CurrentMission} trackedMission={g.TrackedMission} world={g.World} playerPortal={g.PlayerPortal}");
+        Console.WriteLine($"animus: {g.AnimusUnlockedEntries.Count} unlocked entries, {g.AnimusNumRecentEntries} recent");
+        Console.WriteLine($"trainings: {g.UnlockedTrainings.Count} unlocked, {g.CompletedTrainings.Count} completed; cases {g.UnlockedCases.Count}, clues {g.DiscoveredClues.Count}");
+        Console.WriteLine($"accomplishments: {g.Accomplishments.Count(a => a.Completed)}/{g.Accomplishments.Count} completed");
+        Console.WriteLine($"discovered icons: {g.DiscoveredIcons.Count}, crowd events: {g.CompletedCrowdEvents}");
+        var pp = g.PlayerProgression;
+        Console.WriteLine($"player progression: {pp.Characters.Count} characters, {pp.UncollectedInventoryItemsOnMap.Count} uncollected map items, loot money {pp.StackOfLootMoney}");
+        for (int i = 0; i < pp.Characters.Count; i++)
+        {
+            var c = pp.Characters[i];
+            Console.WriteLine($"  character {i}: life {c.Life}/{c.MaxLife} creed points {c.LifetimeCreedPoints} (increase {c.CurrentCreedPointsIncrease}) skill points spent {c.SpendedAvatarSkillPoint} gained items {c.Inventory.GainedInventoryItems.Count} discovered missions {c.DiscoveredMissions.Count}");
+        }
+        Console.WriteLine($"world upgrade: {g.WorldUpgrade.Buildings.Count} buildings, {g.WorldUpgrade.GainedWorldUpgradeSettings.Count} settings, gold chest {g.WorldUpgrade.CurrentGoldChestAmount}, income delay {g.WorldUpgrade.CurrentIncomeDelay}");
+        var v = g.Villa;
+        Console.WriteLine($"villa: missions {v.MissionConditions.Count(t => t.Unlocked)}/{v.MissionConditions.Count}, accomplishments {v.AccomplishmentConditions.Count(t => t.Unlocked)}/{v.AccomplishmentConditions.Count}, legacy {v.LegacyConditions.Count(t => t.Unlocked)}/{v.LegacyConditions.Count}, letters {v.EliseLetterConditions.Count(t => t.Unlocked)}/{v.EliseLetterConditions.Count}, achievements {v.UnlockedAchievementCount}");
+        Console.WriteLine($"statistics: {g.Statistics.Local.Count} local, {g.Statistics.Unsent.Count} unsent");
+        var o = g.OnlineEntity;
+        Console.WriteLine($"online: {o.Maps.Count} maps, {o.Maps.Sum(m => m.Districts.Count)} districts, {o.Missions.Count(m => m.IsCompleted)}/{o.Missions.Count} missions completed, glitches {o.GlitchCollectedLocal}/{o.GlitchCollectedGlobal}");
+        Console.WriteLine($"profile: level {o.Profile.PlayerLevel} title {o.Profile.PlayerTitle} clan id {o.Profile.ClanId} tag \"{g.ClanManager.ClanTag}\" gears A{o.Gears.Attack} D{o.Gears.Defense} S{o.Gears.Stealth} Su{o.Gears.Support} rating {o.Gears.Rating}");
+        foreach (var c in o.Profile.MemoryCategories) Console.WriteLine($"  memory category line {c.TitleOasisLineId}: {c.ProgressPercentage}% (low {c.LowSyncMedalPercentage}% medium {c.MediumSyncMedalPercentage}% high {c.HighSyncMedalPercentage}%)");
+        Console.WriteLine($"timed collectibles: {g.TimedCollectibles.Count}");
+    }
+
+    static void PrintOptions(AcuOptionsData o)
+    {
+        Console.WriteLine($"subtitles {o.DisplaySubtitles} vibration {o.Vibration} blood {o.Blood} brightness {o.Brightness} timeOfDay {o.TimeOfDay}");
+        Console.WriteLine($"volume music {o.MusicVolume} voice {o.VoiceVolume} fx {o.SoundFxVolume}; camera sensitivity {o.CameraXAxisSensitivity}/{o.CameraYAxisSensitivity}");
+        Console.WriteLine($"uplay rewards {o.UplayRewards} actions 0x{o.UplayActions:X} exclusive contents 0x{o.ExclusiveContents:X}");
+        Console.WriteLine($"rift ghosts: year {o.RiftYear} week {o.RiftWeek} maxSeeds {o.RiftMaxSeeds} blackList {o.RiftBlackList}");
+        Console.WriteLine($"assassin ranks: {o.AssassinsRanks.Count}, top threshold {(o.AssassinsRanks.Count > 0 ? o.AssassinsRanks[^1].RankThreshold : 0)}");
+        Console.WriteLine($"flying machine controls {o.FlyingMachineControls}; hud flags set: {string.Join(", ", o.HudFlags.Where(kv => kv.Value).Select(kv => kv.Key))}");
     }
 
     static void Dump(Node n, int depth, int maxDepth)
