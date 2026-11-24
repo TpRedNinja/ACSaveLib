@@ -20,6 +20,7 @@ if (args.Length >= 3 && args[0] == "acb") return AcbCli.Run(args);
 if (args.Length >= 3 && args[0] == "acl") return AclCli.Run(args);
 if (args.Length >= 3 && (args[0] == "ac3" || args[0] == "ac3r")) return Ac3Cli.Run(args);
 if (args.Length >= 3 && args[0] == "acrogue") return AcrogueCli.Run(args);
+if (args.Length >= 3 && args[0] == "acu") return AcuCli.Run(args);
 if (args.Length >= 3 && args[0] == "acr") return AcrCli.Run(args);
 if (args.Length < 3 || args[0] != "ac4") { Console.WriteLine("usage: AcSaveLib.Cli ac4 <file.save> summary|missions|tree [depth] [name]|unknown"); return 1; }
 
