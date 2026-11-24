@@ -19,14 +19,14 @@ namespace AcSaveLib.Games.Ac1
         public const string MapObjectClassName = "Menu_Ingame_001";
     }
 
-    /// <summary>World IDs (AC1_notes.md 6.2, from AC Viewer's WorldTransitionManager and observed live). Used by the SaveGameDataManager world fields.</summary>
+    /// <summary>World IDs (AC1_notes.md 6.2, from AC Viewer's WorldTransitionManager and observed live; Arsuf was confirmed by the owner). Used by the SaveGameDataManager world fields.</summary>
     public static class Ac1Worlds
     {
         private static readonly Dictionary<uint, string> Names = new()
         {
             { 0x1A06968B, "LoadingRoom" }, { 0x208EEB47, "WhiteRoom" }, { 0x05DCF562, "PresentRoom" }, { 0x1E3889FE, "MapMenu" },
             { 0x377AC858, "ParadiseFlashback" }, { 0x1BCB96C4, "Kingdom" }, { 0x8E2947C8, "MemoryCorridor" }, { 0x18E63FF1, "Masyaf" },
-            { 0x2051F9F1, "SolomonTemple" }, { 0x1A0D49D6, "Damascus" }, { 0x1A394504, "Acre" }, { 0x1AB6F345, "Jerusalem" },
+            { 0x2051F9F1, "SolomonTemple" }, { 0x1A0D49D6, "Damascus" }, { 0x1A394504, "Acre" }, { 0x1AB6F345, "Jerusalem" }, { 0x1ED8758C, "Arsuf" },
         };
         public static string? Name(uint id) => Names.TryGetValue(id, out var n) ? n : null;
     }

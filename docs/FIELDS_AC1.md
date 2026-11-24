@@ -23,9 +23,10 @@
   (Kingdom 85 = 6258CB2F, Masyaf 16 = 62E0EA76, Damascus 74 = 5E8B413A).
 
 ## Typed sections (Games/Ac1/Ac1ManagerModels.cs)
-- Models are read from the 13 AC1 saves checked (100% save, Tutorial Start and Done, Memory Block 2, 3, 6 and 7 saves, autosplitter test saves); values match the owner's notes (sync blocks 13/13 at the start, 7/7 and 8/8 later; Kingdom world 1BCB96C4 on a Kingdom save; world IDs read as named worlds).
+- Models read all 50 AC1 saves checked (every save in the owner's Ac1 folder, Memory Blocks 1 to 7, autosplitter test saves and the 100% save), each with round trip exact, all five sections and the four map objects present; values match the owner's notes (sync blocks 13/13 at the start, 7/7 and 8/8 later; Kingdom world 1BCB96C4 on a Kingdom save; world IDs read as named worlds).
 - MapManager city order is the order AC Viewer lists the five CitiesInKingdom entries (Acre, Damascus, Masyaf, Jerusalem, Arsuf); the known flags follow the story (Arsuf is the last to become known).
-- SaveGameDataManager: world ID `1ED8758C` is in the Memory Block 6 saves and has no name in the owner's world table; it is shown without a name.
+- SaveGameDataManager: world ID `1ED8758C` (Arsuf, seen in the Memory Block 6 saves) is named from the owner's statement; it is not in the notes' world table 6.2.
+- The Tutorial Start saves have Current and Main world ID `00000000` (no world yet) and Always world `377AC858` (ParadiseFlashback); every other save names a world.
 - SetByPlayerMarker hash `de936275` is exposed as IsMissionMarker (a CRC32 dictionary match, likely).
 - AssassinMatrix is stored as 16 big-endian floats; the last four are `x y z 1` in every save read, so they look like the position.
 
